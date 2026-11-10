@@ -1,0 +1,36 @@
+name: SAFMN_DIV2K_val100_30000_ema
+model_type: SRModel
+scale: 4
+num_gpu: 1
+manual_seed: 0
+
+datasets:
+  test_1:
+    name: DIV2K_val100
+    type: PairedImageDataset
+    dataroot_gt: /root/fsas/sr-repro/datasets/DIV2K/DIV2K_valid_HR
+    dataroot_lq: /root/fsas/sr-repro/datasets/DIV2K/DIV2K_valid_LR_bicubic/X4
+    filename_tmpl: '{}x4'
+    io_backend:
+      type: disk
+
+network_g:
+  type: SAFMN
+  dim: 36
+  n_blocks: 8
+  ffn_scale: 2.0
+  upscaling_factor: 4
+
+path:
+  pretrain_network_g: /root/fsas/sr-repro/SAFMN/experiments/SAFMN_DF2K_x4_cloud_sub_500K/models/net_g_30000.pth
+  param_key_g: params_ema
+  strict_load_g: true
+
+val:
+  save_img: false
+  suffix: ~
+  metrics:
+    psnr:
+      type: calculate_psnr
+      crop_border: 4
+      test_y_channel: false

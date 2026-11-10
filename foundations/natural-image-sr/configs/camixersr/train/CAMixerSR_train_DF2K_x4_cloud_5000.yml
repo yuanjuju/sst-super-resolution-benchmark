@@ -1,0 +1,88 @@
+# Planned BasicSR workflow exercise, not a full paper reproduction.
+# Apply patches/CAMixerSR_training_entry.patch to the pinned CAMixerSR checkout.
+# Train with the checkout's CAModel so its routing loss is handled correctly.
+name: CAMixerSR_DF2K_x4_cloud_5000
+model_type: CAModel
+scale: 4
+num_gpu: 1
+manual_seed: 10
+
+datasets:
+  train:
+    name: DF2K
+    type: PairedImageDataset
+    dataroot_gt: /root/fsas/sr-repro/datasets/DF2K/HR_sub
+    dataroot_lq: /root/fsas/sr-repro/datasets/DF2K/LR_bicubic/X4_sub
+    meta_info_file: /root/fsas/sr-repro/datasets/DF2K/meta_info_HR_sub.txt
+    filename_tmpl: '{}'
+    io_backend:
+      type: disk
+    gt_size: 256
+    use_hflip: true
+    use_rot: true
+    use_shuffle: true
+    num_worker_per_gpu: 4
+    batch_size_per_gpu: 16
+    dataset_enlarge_ratio: 1
+    prefetch_mode: ~
+
+  val:
+    name: DIV2K_val100
+    type: PairedImageDataset
+    dataroot_gt: /root/fsas/sr-repro/datasets/DIV2K/DIV2K_valid_HR
+    dataroot_lq: /root/fsas/sr-repro/datasets/DIV2K/DIV2K_valid_LR_bicubic/X4
+    filename_tmpl: '{}x4'
+    io_backend:
+      type: disk
+
+network_g:
+  type: CAMixerSR
+  ratio: 0.5
+  scale: 4
+
+path:
+  pretrain_network_g: ~
+  strict_load_g: true
+  resume_state: ~
+
+train:
+  ema_decay: 0.999
+  optim_g:
+    type: AdamW
+    lr: !!float 5e-4
+    weight_decay: !!float 1e-4
+    betas: [0.9, 0.99]
+  scheduler:
+    type: MultiStepLR
+    milestones: [250000, 400000, 450000, 475000]
+    gamma: 0.5
+  total_iter: 5000
+  warmup_iter: -1
+  pixel_opt:
+    type: L1Loss
+    loss_weight: 1.0
+    reduction: mean
+  # CAModel adds the routing constraint returned by CAMixerSR as l_ratio.
+
+val:
+  val_freq: 1000
+  save_img: false
+  pbar: false
+  metrics:
+    psnr:
+      type: calculate_psnr
+      crop_border: 4
+      test_y_channel: false
+      better: higher
+
+logger:
+  print_freq: 20
+  save_checkpoint_freq: 1000
+  use_tb_logger: true
+  wandb:
+    project: ~
+    resume_id: ~
+
+dist_params:
+  backend: nccl
+  port: 29501

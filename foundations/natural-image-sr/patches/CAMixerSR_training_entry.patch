@@ -1,0 +1,23 @@
+--- a/codes/basicsr/archs/CAMixerSR_arch.py
++++ b/codes/basicsr/archs/CAMixerSR_arch.py
+@@ -373,6 +373,7 @@
+     def __init__(self, n_block=[4,4,6,6], n_group=4, n_colors=3, n_feats=60, scale=4, ratio=0.5, tile=None):
+         super().__init__()
+         self.n_feats = n_feats
++        self.ratio = ratio
+         self.window_sizes = 16
+         self.tile = tile
+ 
+--- a/codes/basicsr/train.py
++++ b/codes/basicsr/train.py
+@@ -12,6 +12,10 @@
+ from basicsr.utils import (AvgTimer, MessageLogger, check_resume, get_env_info, get_root_logger, get_time_str,
+                            init_tb_logger, init_wandb_logger, make_exp_dirs, mkdir_and_rename, scandir)
+ from basicsr.utils.options import copy_opt_file, dict2str, parse_options
++
++# Register the project-specific network and CAModel before building them.
++import archs
++import models
+ 
+ 
+ def init_tb_loggers(opt):

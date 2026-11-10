@@ -1,0 +1,39 @@
+name: SAFMN_Set5_x4_cloud
+model_type: SRModel
+scale: 4
+num_gpu: 1
+manual_seed: 0
+
+datasets:
+  test_1:
+    name: Set5
+    type: PairedImageDataset
+    dataroot_gt: /root/fsas/sr-repro/datasets/Set5/HR
+    dataroot_lq: /root/fsas/sr-repro/datasets/Set5/LR_bicubic/X4
+    filename_tmpl: '{}'
+    io_backend:
+      type: disk
+
+network_g:
+  type: SAFMN
+  dim: 36
+  n_blocks: 8
+  ffn_scale: 2.0
+  upscaling_factor: 4
+
+path:
+  pretrain_network_g: /root/fsas/sr-repro/SAFMN/experiments/pretrained_model/SAFMN_DF2K_x4.pth
+  strict_load_g: true
+
+val:
+  save_img: true
+  suffix: ~
+  metrics:
+    psnr:
+      type: calculate_psnr
+      crop_border: 4
+      test_y_channel: true
+    ssim:
+      type: calculate_ssim
+      crop_border: 4
+      test_y_channel: true

@@ -1,0 +1,15 @@
+# Install torch==2.1.1 and torchvision==0.16.1 from the PyTorch cu121 index first.
+# These are the remaining packages needed for SAFMN/BasicSR inference on Python 3.10.
+setuptools==69.5.1  # torch 2.1.1 setup import needs pkg_resources
+wheel==0.48.0
+numpy==1.26.4
+opencv-python-headless==4.10.0.84
+Pillow==10.4.0
+PyYAML==6.0.2
+lmdb==1.5.1
+scikit-image==0.22.0
+scipy==1.11.4
+tqdm==4.66.5
+einops==0.7.0
+requests==2.32.3
+matplotlib==3.8.4

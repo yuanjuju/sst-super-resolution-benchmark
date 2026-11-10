@@ -1,0 +1,17 @@
+# Python 3.10. Install torch 2.7.1 + torchvision 0.22.1 from cu128 first.
+# OpenCV headless is intentional: the cloud container has no libGL.
+numpy==1.26.4
+opencv-python-headless==4.10.0.84
+Pillow==10.4.0
+PyYAML==6.0.2
+lmdb==1.5.1
+scikit-image==0.22.0
+scipy==1.11.4
+tqdm==4.66.5
+einops==0.7.0
+requests==2.32.3
+matplotlib==3.8.4
+addict==2.4.0
+future==1.0.0
+yapf==0.40.2
+tb-nightly

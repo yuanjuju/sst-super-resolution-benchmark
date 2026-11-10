@@ -1,0 +1,5 @@
+# Small CPU lessons, separate from the original cloud training environment.
+# Python 3.12; PyTorch's official macOS wheels.
+torch==2.6.0
+numpy==1.26.4
+Pillow==13.0.0

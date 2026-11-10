@@ -1,0 +1,38 @@
+name: CAMixerSR_Set5_x4_cloud
+model_type: SRModel
+scale: 4
+num_gpu: 1
+manual_seed: 0
+
+datasets:
+  test_1:
+    name: Set5
+    type: PairedImageDataset
+    dataroot_gt: /root/fsas/sr-repro/datasets/Set5/HR
+    dataroot_lq: /root/fsas/sr-repro/datasets/Set5/LR_bicubic/X4
+    filename_tmpl: '{}'
+    io_backend:
+      type: disk
+
+network_g:
+  type: CAMixerSR
+  ratio: 0.5
+  scale: 4
+
+path:
+  pretrain_network_g: /root/fsas/sr-repro/CAMixerSR/pretrained_models/LightSR/CAMixerSRx4_DF.pth
+  strict_load_g: true
+  param_key_g: params_ema
+
+val:
+  save_img: true
+  suffix: ~
+  metrics:
+    psnr:
+      type: calculate_psnr
+      crop_border: 4
+      test_y_channel: true
+    ssim:
+      type: calculate_ssim
+      crop_border: 4
+      test_y_channel: true
