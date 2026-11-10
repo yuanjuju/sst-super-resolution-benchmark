@@ -1,0 +1,139 @@
+{
+  "status": "complete",
+  "completed_at": "2026-10-31T16:07:28.354100+00:00",
+  "config": {
+    "dataset": "HYCOM",
+    "scale": 2,
+    "epochs": 100,
+    "batch_size": 8,
+    "seed": 10,
+    "train_count": 800,
+    "test_count": 200,
+    "hr_patch": 96,
+    "lr_patch": 48,
+    "repeat": 1,
+    "optimizer": "Adam",
+    "lr": 0.001,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "scheduler": {
+      "type": "StepLR",
+      "step_size": 20,
+      "gamma": 0.5,
+      "paper_ambiguity": "Paper also says cosine annealing; use explicit every20epochs half"
+    },
+    "loss": {
+      "L1": 0.1,
+      "FFL": 0.9,
+      "FFL_alpha": 1
+    },
+    "architecture": {
+      "implementation": "unmodified pinned author network",
+      "wam_blocks": 4,
+      "initialization": "as released, not the reconstructed initialization",
+      "comparison": "same full data and paper-interpreted training; not the24-WAM paper model"
+    },
+    "model_source_sha256": "8c139340411826f1015fcb3545e19a680b33cd0b491a48ccae2934a6f17a94f7",
+    "dataset_manifest_sha256": "b147b6566fec80357e2bb819b9b846cd723cd449eb54051d4254b3f53ef5b212",
+    "evaluation": {
+      "image": "clamp0..255 then BT601 Y; per-image PSNR/SSIM averaged; no biased rounding",
+      "physical": "unclipped mean of3channels inverse fixed -2..40C normalization",
+      "crop_border": 2,
+      "checkpoint": "fixed final epoch; no test-based model selection"
+    },
+    "protocol_limit": "Unmodified released network with reconstructed public datasets and matched paper-interpreted training; paper24-WAM architecture differs"
+  },
+  "parameters": 2037284,
+  "epochs": 100,
+  "optimizer_steps": 10000,
+  "test_wmsr": {
+    "count": 200,
+    "rmse_c": 0.054320248753921226,
+    "mae_c": 0.03216939048841596,
+    "psnr_y_db": 62.71815363660786,
+    "ssim_y": 0.998876346051693
+  },
+  "test_bicubic": {
+    "count": 200,
+    "rmse_c": 0.06402632426461227,
+    "mae_c": 0.037424154565669596,
+    "psnr_y_db": 61.57930187598578,
+    "ssim_y": 0.9984331741929054
+  },
+  "per_region": {
+    "NP": {
+      "wmsr": {
+        "count": 50,
+        "rmse_c": 0.05959024105627048,
+        "mae_c": 0.035243521230295304,
+        "psnr_y_db": 61.23137769440632,
+        "ssim_y": 0.9987833988666535
+      },
+      "bicubic": {
+        "count": 50,
+        "rmse_c": 0.0740605872964583,
+        "mae_c": 0.04297851060517132,
+        "psnr_y_db": 60.06567968590346,
+        "ssim_y": 0.9980884718894959
+      }
+    },
+    "AGM": {
+      "wmsr": {
+        "count": 50,
+        "rmse_c": 0.0726945545776706,
+        "mae_c": 0.045270740650594235,
+        "psnr_y_db": 58.22882825338778,
+        "ssim_y": 0.9980416834354401
+      },
+      "bicubic": {
+        "count": 50,
+        "rmse_c": 0.08765066158148158,
+        "mae_c": 0.05516428362578154,
+        "psnr_y_db": 56.56208612607672,
+        "ssim_y": 0.9971180105209351
+      }
+    },
+    "NIO": {
+      "wmsr": {
+        "count": 50,
+        "rmse_c": 0.029386187888439715,
+        "mae_c": 0.019242663765326143,
+        "psnr_y_db": 66.70024325574909,
+        "ssim_y": 0.9996218311786652
+      },
+      "bicubic": {
+        "count": 50,
+        "rmse_c": 0.032507050795001484,
+        "mae_c": 0.022109947819262742,
+        "psnr_y_db": 65.28692789363984,
+        "ssim_y": 0.9995274209976196
+      }
+    },
+    "EWP": {
+      "wmsr": {
+        "count": 50,
+        "rmse_c": 0.045866268277967484,
+        "mae_c": 0.02892063630744815,
+        "psnr_y_db": 64.7121653428882,
+        "ssim_y": 0.9990584707260132
+      },
+      "bicubic": {
+        "count": 50,
+        "rmse_c": 0.046617200447823685,
+        "mae_c": 0.029443876212462784,
+        "psnr_y_db": 64.40251379832313,
+        "ssim_y": 0.9989987933635711
+      }
+    }
+  },
+  "delta_psnr_y_db": 1.1388517606220816,
+  "rmse_reduction_percent": 15.159507627795609,
+  "elapsed_seconds": 648.1888814074919,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "torch": "2.2.2+cu121",
+  "cuda_runtime": "12.1",
+  "limits": "Unmodified released network with reconstructed public datasets and matched paper-interpreted training; paper24-WAM architecture differs"
+}

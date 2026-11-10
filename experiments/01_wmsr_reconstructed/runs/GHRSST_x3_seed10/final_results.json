@@ -1,0 +1,82 @@
+{
+  "status": "complete",
+  "completed_at": "2026-10-31T14:42:12.120065+00:00",
+  "config": {
+    "dataset": "GHRSST",
+    "scale": 3,
+    "epochs": 100,
+    "batch_size": 8,
+    "seed": 10,
+    "train_count": 800,
+    "test_count": 200,
+    "hr_patch": 96,
+    "lr_patch": 32,
+    "repeat": 1,
+    "optimizer": "Adam",
+    "lr": 0.001,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "scheduler": {
+      "type": "StepLR",
+      "step_size": 20,
+      "gamma": 0.5,
+      "paper_ambiguity": "Paper also says cosine annealing; use explicit every20epochs half"
+    },
+    "loss": {
+      "L1": 0.1,
+      "FFL": 0.9,
+      "FFL_alpha": 1
+    },
+    "architecture": {
+      "groups": 6,
+      "blocks_per_group": 4,
+      "channels": 64,
+      "group_choice": "Fig.1 and TableII agree on6x4; one text sentence swaps6and4",
+      "internal_projection": "64 outer channels, 32-channel wavelet bottleneck; 1x1 entry and group refinement. Inferred missing dimensions, not author-confirmed",
+      "parameter_constraint": "Bottleneck interpretation approximately0.964M atx4, near reported0.977M; closeness is a consistency check, not proof of original implementation",
+      "ss2d": "Author SS2D, d_state16, expand2; expansion not stated in paper",
+      "hfem": "Fig3 order: linear+DWConv low and high branches, sigmoid high gate, then PDC; Eq14 places PDC differently",
+      "pdc": "Shared across three high-frequency subbands; depthwise branches follow four differential branches of author code",
+      "subband_fusion": "Concatenate LL/HL/LH/HH for valid IDWT dimensions; grouped1x1 refinement preserves four subbands",
+      "normalization": "Post-IDWT LayerNorm retained from public WAM to reconcile omitted detail",
+      "parameter_count": "Measured independently; paper977K cannot be guaranteed from incomplete dimensions"
+    },
+    "model_source_sha256": "e0b0ff61f0cce0d9b4e01bdd789e81b1c451982c8802d24b7bac82812fb6a0cc",
+    "dataset_manifest_sha256": "a9742552ae4103404693e9b58b3b5863a4e3ac95531b2e8e2cdf743aec5ad956",
+    "evaluation": {
+      "image": "clamp0..255 then BT601 Y; per-image PSNR/SSIM averaged; no biased rounding",
+      "physical": "unclipped mean of3channels inverse fixed -2..40C normalization",
+      "crop_border": 3,
+      "checkpoint": "fixed final epoch; no test-based model selection"
+    },
+    "protocol_limit": "Rebuilt public datasets and inferred missing architecture details; not author-confirmed exact reproduction"
+  },
+  "parameters": 951731,
+  "epochs": 100,
+  "optimizer_steps": 10000,
+  "test_wmsr": {
+    "count": 200,
+    "rmse_c": 0.8035735560764616,
+    "mae_c": 0.5960344056785106,
+    "psnr_y_db": 35.41442606852787,
+    "ssim_y": 0.7880438870191574
+  },
+  "test_bicubic": {
+    "count": 200,
+    "rmse_c": 0.0054118656023562,
+    "mae_c": 0.0031416981456277426,
+    "psnr_y_db": 82.6514118238038,
+    "ssim_y": 0.9999888533353806
+  },
+  "per_region": {},
+  "delta_psnr_y_db": -47.23698575527593,
+  "rmse_reduction_percent": -14748.364965430857,
+  "elapsed_seconds": 3741.378276085481,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "torch": "2.2.2+cu121",
+  "cuda_runtime": "12.1",
+  "limits": "Rebuilt public datasets and inferred missing architecture details; not author-confirmed exact reproduction"
+}

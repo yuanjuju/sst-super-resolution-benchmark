@@ -1,0 +1,74 @@
+{
+  "status": "complete",
+  "completed_at": "2026-10-31T15:57:06.959733+00:00",
+  "config": {
+    "dataset": "GHRSST",
+    "scale": 4,
+    "epochs": 100,
+    "batch_size": 8,
+    "seed": 10,
+    "train_count": 800,
+    "test_count": 200,
+    "hr_patch": 96,
+    "lr_patch": 24,
+    "repeat": 1,
+    "optimizer": "Adam",
+    "lr": 0.001,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "scheduler": {
+      "type": "StepLR",
+      "step_size": 20,
+      "gamma": 0.5,
+      "paper_ambiguity": "Paper also says cosine annealing; use explicit every20epochs half"
+    },
+    "loss": {
+      "L1": 0.1,
+      "FFL": 0.9,
+      "FFL_alpha": 1
+    },
+    "architecture": {
+      "implementation": "unmodified pinned author network",
+      "wam_blocks": 4,
+      "initialization": "as released, not the reconstructed initialization",
+      "comparison": "same full data and paper-interpreted training; not the24-WAM paper model"
+    },
+    "model_source_sha256": "8c139340411826f1015fcb3545e19a680b33cd0b491a48ccae2934a6f17a94f7",
+    "dataset_manifest_sha256": "a9742552ae4103404693e9b58b3b5863a4e3ac95531b2e8e2cdf743aec5ad956",
+    "evaluation": {
+      "image": "clamp0..255 then BT601 Y; per-image PSNR/SSIM averaged; no biased rounding",
+      "physical": "unclipped mean of3channels inverse fixed -2..40C normalization",
+      "crop_border": 4,
+      "checkpoint": "fixed final epoch; no test-based model selection"
+    },
+    "protocol_limit": "Unmodified released network with reconstructed public datasets and matched paper-interpreted training; paper24-WAM architecture differs"
+  },
+  "parameters": 2058056,
+  "epochs": 100,
+  "optimizer_steps": 10000,
+  "test_wmsr": {
+    "count": 200,
+    "rmse_c": 0.018382897140567345,
+    "mae_c": 0.01170775648090057,
+    "psnr_y_db": 69.70837228334837,
+    "ssim_y": 0.9999030607938767
+  },
+  "test_bicubic": {
+    "count": 200,
+    "rmse_c": 0.009792015754548801,
+    "mae_c": 0.005683533299015835,
+    "psnr_y_db": 77.91689980511613,
+    "ssim_y": 0.9999673840403557
+  },
+  "per_region": {},
+  "delta_psnr_y_db": -8.208527521767763,
+  "rmse_reduction_percent": -87.73353312904668,
+  "elapsed_seconds": 637.7252947781235,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "torch": "2.2.2+cu121",
+  "cuda_runtime": "12.1",
+  "limits": "Unmodified released network with reconstructed public datasets and matched paper-interpreted training; paper24-WAM architecture differs"
+}

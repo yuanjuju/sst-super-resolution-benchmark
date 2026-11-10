@@ -1,0 +1,147 @@
+{
+  "status": "complete",
+  "completed_at": "2026-10-31T15:27:24.749686+00:00",
+  "config": {
+    "dataset": "HYCOM",
+    "scale": 3,
+    "epochs": 100,
+    "batch_size": 8,
+    "seed": 10,
+    "train_count": 800,
+    "test_count": 200,
+    "hr_patch": 96,
+    "lr_patch": 32,
+    "repeat": 1,
+    "optimizer": "Adam",
+    "lr": 0.001,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "scheduler": {
+      "type": "StepLR",
+      "step_size": 20,
+      "gamma": 0.5,
+      "paper_ambiguity": "Paper also says cosine annealing; use explicit every20epochs half"
+    },
+    "loss": {
+      "L1": 0.1,
+      "FFL": 0.9,
+      "FFL_alpha": 1
+    },
+    "architecture": {
+      "groups": 6,
+      "blocks_per_group": 4,
+      "channels": 64,
+      "group_choice": "Fig.1 and TableII agree on6x4; one text sentence swaps6and4",
+      "internal_projection": "64 outer channels, 32-channel wavelet bottleneck; 1x1 entry and group refinement. Inferred missing dimensions, not author-confirmed",
+      "parameter_constraint": "Bottleneck interpretation approximately0.964M atx4, near reported0.977M; closeness is a consistency check, not proof of original implementation",
+      "ss2d": "Author SS2D, d_state16, expand2; expansion not stated in paper",
+      "hfem": "Fig3 order: linear+DWConv low and high branches, sigmoid high gate, then PDC; Eq14 places PDC differently",
+      "pdc": "Shared across three high-frequency subbands; depthwise branches follow four differential branches of author code",
+      "subband_fusion": "Concatenate LL/HL/LH/HH for valid IDWT dimensions; grouped1x1 refinement preserves four subbands",
+      "normalization": "Post-IDWT LayerNorm retained from public WAM to reconcile omitted detail",
+      "parameter_count": "Measured independently; paper977K cannot be guaranteed from incomplete dimensions"
+    },
+    "model_source_sha256": "e0b0ff61f0cce0d9b4e01bdd789e81b1c451982c8802d24b7bac82812fb6a0cc",
+    "dataset_manifest_sha256": "b147b6566fec80357e2bb819b9b846cd723cd449eb54051d4254b3f53ef5b212",
+    "evaluation": {
+      "image": "clamp0..255 then BT601 Y; per-image PSNR/SSIM averaged; no biased rounding",
+      "physical": "unclipped mean of3channels inverse fixed -2..40C normalization",
+      "crop_border": 3,
+      "checkpoint": "fixed final epoch; no test-based model selection"
+    },
+    "protocol_limit": "Rebuilt public datasets and inferred missing architecture details; not author-confirmed exact reproduction"
+  },
+  "parameters": 951731,
+  "epochs": 100,
+  "optimizer_steps": 10000,
+  "test_wmsr": {
+    "count": 200,
+    "rmse_c": 0.7042327934485294,
+    "mae_c": 0.5286497968435288,
+    "psnr_y_db": 36.44264837164843,
+    "ssim_y": 0.8107759281992912
+  },
+  "test_bicubic": {
+    "count": 200,
+    "rmse_c": 0.09861506289590671,
+    "mae_c": 0.05754663774743676,
+    "psnr_y_db": 57.86446103045896,
+    "ssim_y": 0.996474438905716
+  },
+  "per_region": {
+    "NP": {
+      "wmsr": {
+        "count": 50,
+        "rmse_c": 0.8711698110585244,
+        "mae_c": 0.6621764212846756,
+        "psnr_y_db": 33.9925990517139,
+        "ssim_y": 0.743537665605545
+      },
+      "bicubic": {
+        "count": 50,
+        "rmse_c": 0.12198632101259493,
+        "mae_c": 0.07159742375835776,
+        "psnr_y_db": 56.000145000249184,
+        "ssim_y": 0.9950057744979859
+      }
+    },
+    "AGM": {
+      "wmsr": {
+        "count": 50,
+        "rmse_c": 0.6469324671516644,
+        "mae_c": 0.4843000358343124,
+        "psnr_y_db": 36.90107077306787,
+        "ssim_y": 0.8498123955726623
+      },
+      "bicubic": {
+        "count": 50,
+        "rmse_c": 0.13774770612405574,
+        "mae_c": 0.08879011660814286,
+        "psnr_y_db": 52.57414778462632,
+        "ssim_y": 0.9931062436103821
+      }
+    },
+    "NIO": {
+      "wmsr": {
+        "count": 50,
+        "rmse_c": 0.4058291362479168,
+        "mae_c": 0.32467223167419434,
+        "psnr_y_db": 40.54254759739276,
+        "ssim_y": 0.9217911183834075
+      },
+      "bicubic": {
+        "count": 50,
+        "rmse_c": 0.04612539574451237,
+        "mae_c": 0.03315470546483994,
+        "psnr_y_db": 61.43731769426602,
+        "ssim_y": 0.9990827596187591
+      }
+    },
+    "EWP": {
+      "wmsr": {
+        "count": 50,
+        "rmse_c": 0.8010115884872462,
+        "mae_c": 0.6434504985809326,
+        "psnr_y_db": 34.334376064419196,
+        "ssim_y": 0.7279625332355499
+      },
+      "bicubic": {
+        "count": 50,
+        "rmse_c": 0.05400997436251554,
+        "mae_c": 0.0366443051584065,
+        "psnr_y_db": 61.446233642694104,
+        "ssim_y": 0.9987029778957367
+      }
+    }
+  },
+  "delta_psnr_y_db": -21.42181265881053,
+  "rmse_reduction_percent": -614.122947111927,
+  "elapsed_seconds": 2780.8767716577277,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "torch": "2.2.2+cu121",
+  "cuda_runtime": "12.1",
+  "limits": "Rebuilt public datasets and inferred missing architecture details; not author-confirmed exact reproduction"
+}

@@ -1,0 +1,45 @@
+{
+  "dataset": "OISST",
+  "scale": 2,
+  "epochs": 100,
+  "batch_size": 8,
+  "seed": 10,
+  "train_count": 800,
+  "test_count": 200,
+  "hr_patch": 96,
+  "lr_patch": 48,
+  "repeat": 1,
+  "optimizer": "Adam",
+  "lr": 0.001,
+  "betas": [
+    0.9,
+    0.999
+  ],
+  "eps": 1e-08,
+  "scheduler": {
+    "type": "StepLR",
+    "step_size": 20,
+    "gamma": 0.5,
+    "paper_ambiguity": "Paper also says cosine annealing; use explicit every20epochs half"
+  },
+  "loss": {
+    "L1": 0.1,
+    "FFL": 0.9,
+    "FFL_alpha": 1
+  },
+  "architecture": {
+    "implementation": "unmodified pinned author network",
+    "wam_blocks": 4,
+    "initialization": "as released, not the reconstructed initialization",
+    "comparison": "same full data and paper-interpreted training; not the24-WAM paper model"
+  },
+  "model_source_sha256": "8c139340411826f1015fcb3545e19a680b33cd0b491a48ccae2934a6f17a94f7",
+  "dataset_manifest_sha256": "798fd3aa1c5e2ef44e076ab937c071decf3aca7220c608ddc7c00ce80aa41390",
+  "evaluation": {
+    "image": "clamp0..255 then BT601 Y; per-image PSNR/SSIM averaged; no biased rounding",
+    "physical": "unclipped mean of3channels inverse fixed -2..40C normalization",
+    "crop_border": 2,
+    "checkpoint": "fixed final epoch; no test-based model selection"
+  },
+  "protocol_limit": "Unmodified released network with reconstructed public datasets and matched paper-interpreted training; paper24-WAM architecture differs"
+}
