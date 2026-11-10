@@ -1,0 +1,8 @@
+stage,name,complete,failed,evaluation_split
+01_wmsr_reconstructed,24 WAM结构实现,9,0,test200
+02_wmsr_public,公开4 WAM实现,9,0,test200
+03_extended,补充实验,78,8,test200
+04_mambairv2,MambaIRv2-Light对照,9,0,test200
+05_pft_pilot,PFT与WMSR 1000步,2,0,development80
+06_esc_pilot,ESC 1000步,1,0,development80
+07_esc_wmsr_5000,ESC与WMSR 5000步,2,0,development80
