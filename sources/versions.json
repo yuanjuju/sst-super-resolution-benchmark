@@ -1,0 +1,87 @@
+{
+  "EDSR": {
+    "commit": "8dba5581a7502b92de9641eb431130d6c8ca5d7f",
+    "url": "https://github.com/sanghyun-son/EDSR-PyTorch.git"
+  },
+  "ELAN": {
+    "commit": "97ab3fa00dc5657cf06ae2fbdcd618d22026790f",
+    "url": "https://github.com/xindongzhang/ELAN.git"
+  },
+  "DAT": {
+    "commit": "1645c64fad7c94d94abd090bd1319eec1f26f7cc",
+    "url": "https://github.com/zhengchen1999/DAT.git"
+  },
+  "MambaIR": {
+    "commit": "33d7b3460c4665229334cc8de38c7f4c766ed3be",
+    "url": "https://github.com/csguoh/MambaIR.git"
+  },
+  "CRAN_unofficial": {
+    "commit": "2402b7daf6e7caf26f23d0cec3431a5fb25055cb",
+    "url": "https://github.com/Ast-363/CRAN.git"
+  },
+  "CGC": {
+    "commit": "920557efd10f29172275d3687040124440043fa0",
+    "url": "https://github.com/XudongLinthu/context-gated-convolution.git"
+  },
+  "SAFMN": {
+    "commit": "1a412066e927da640bc7e2a53ea60f9ffc134241",
+    "url": "https://github.com/sunny2109/SAFMN",
+    "retrieval": "pinned raw architecture file; full clone timed out"
+  },
+  "repo": "csguoh/MambaIR",
+  "commit": "33d7b3460c4665229334cc8de38c7f4c766ed3be",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 25752,
+      "sha256": "884e9747afe4d1f556408e4f40edb5c96e4844adeed730674eb282ae776eaaaa"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "basicsr/archs/mambairv2light_arch.py",
+      "bytes": 40216,
+      "sha256": "0f557d608fe9f2c7f2e95eb3556478d97b527dfc801068f57e8a453afac351bf"
+    },
+    {
+      "path": "options/train/mambairv2/train_MambaIRv2_lightSR_x2.yml",
+      "bytes": 2162,
+      "sha256": "7e512d65470038b4fa9bf04904a29e3ebf37f20e391af9feffc64193a42c4368"
+    },
+    {
+      "path": "options/train/mambairv2/train_MambaIRv2_lightSR_x3.yml",
+      "bytes": 2170,
+      "sha256": "5a1b4adffa911f1f98c4df716612b07e266b3b538ce0337f4fce4630ba3e35d4"
+    },
+    {
+      "path": "options/train/mambairv2/train_MambaIRv2_lightSR_x4.yml",
+      "bytes": 2167,
+      "sha256": "d87361b8e7087edb40eebf67bc9b6000be7be415272032a2ca70e7840ff7b166"
+    },
+    {
+      "path": "basicsr/archs/arch_util.py",
+      "bytes": 11485,
+      "sha256": "4f0ee4a75821985f61040ddb516276d889e9c2a228188f5b0813d5620008d6ff"
+    }
+  ],
+  "verification": "Static source download and AST only, no import or GPU test",
+  "WMSR": {
+    "url": "https://github.com/oucailab/WMSR",
+    "commit": "dbb1cff4c4b30375928c6ee62224cb4b37fa337a"
+  },
+  "ESC": {
+    "url": "https://github.com/dslisleedh/ESC",
+    "commit": "f22c712a57c664360f9af3a77cfc527c414067c4"
+  },
+  "PFT": {
+    "url": "https://github.com/CVL-UESTC/PFT-SR",
+    "commit": "3f832e6e150ba927a7741d893d3aa4a7114e9b01"
+  },
+  "MambaIRv2Light": {
+    "url": "https://github.com/csguoh/MambaIR",
+    "commit": "33d7b3460c4665229334cc8de38c7f4c766ed3be"
+  }
+}

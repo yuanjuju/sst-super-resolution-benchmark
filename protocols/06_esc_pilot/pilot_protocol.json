@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "purpose": "One bounded ESC candidate screen; reuse previously frozen WMSR pilot as reference after batch1 re-evaluation",
+  "models": [
+    "ESC"
+  ],
+  "dataset": "OISST",
+  "scale": 4,
+  "seed": 10,
+  "updates": 1000,
+  "development_manifest_sha256": "2b5bec7fa2994daacfbe7c17f4410372cc6101d7b697c71deac249f60563220c",
+  "batch_size": 8,
+  "micro_batch": 2,
+  "accumulation_steps": 4,
+  "optimizer": {
+    "type": "AdamW",
+    "lr": 0.0002,
+    "betas": [
+      0.9,
+      0.99
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.0
+  },
+  "loss": {
+    "L1": 1.0,
+    "FFL": 0.0,
+    "range": "normalized0..1 for both models"
+  },
+  "warmup_updates": 100,
+  "scheduler": "Linear warmup100 then constantLR; pilot horizon1000, not a scaled claim of official500k recipe",
+  "ema_decay": 0.999,
+  "validation_every": 200,
+  "save_every": 100,
+  "augmentations": [
+    "horizontal_flip_p0.5",
+    "vertical_flip_p0.5",
+    "transpose_p0.5"
+  ],
+  "precision": {
+    "dtype": "float32",
+    "matmul_tf32": false,
+    "cudnn_tf32": false
+  },
+  "initialization": "Native random initialization seed10, no pretrained weights for either model",
+  "implementation": "Official pinned ESC standard, native Naive FP32 attention, registry wiring skipped only; native evalbatch1; no custom CUDA patch or pretrained weights; cache derived integerRPE indices onGPU, verified loss/output/parameter-gradient equivalence",
+  "final_test_images_evaluated": 0,
+  "final_fit_count_after_freezing": 800,
+  "final_test_count_after_freezing": 200,
+  "long_training_budget": "No automatic extension beyond1000updates; preserve all negative results and wait for user decision on further budget",
+  "checkpoint_selection": "Record raw and EMA at each validation interval; no fixed200 test image is used. Pilot states are not final comparison weights.",
+  "evaluation_batch": 1,
+  "baseline_reference": "/root/wmsr-repro/strong_models/pft_20261109/pilot/results/WMSR_OISST_x4_s10",
+  "baseline_reference_config_sha256": "de1d86ee21d0959186b71dc68210a71b8580d2053e0ccf9388566cffa3caebd8"
+}

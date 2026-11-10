@@ -1,0 +1,524 @@
+[
+  {
+    "model": "ESC",
+    "repo": "dslisleedh/ESC",
+    "commit": "f22c712a57c664360f9af3a77cfc527c414067c4",
+    "path": "LICENSE",
+    "url": "https://raw.githubusercontent.com/dslisleedh/ESC/f22c712a57c664360f9af3a77cfc527c414067c4/LICENSE",
+    "bytes": 1068,
+    "sha256": "cd89f278525e1a940b16abd807f4c0b9c03a8845fffd4c61511e03ad541ff0a3"
+  },
+  {
+    "model": "ESC",
+    "repo": "dslisleedh/ESC",
+    "commit": "f22c712a57c664360f9af3a77cfc527c414067c4",
+    "path": "README.md",
+    "url": "https://raw.githubusercontent.com/dslisleedh/ESC/f22c712a57c664360f9af3a77cfc527c414067c4/README.md",
+    "bytes": 6525,
+    "sha256": "ebb966de05076a67f1c945a14ac6cf59e0762bc24cd3a0247ce524a2f2d272cd"
+  },
+  {
+    "model": "ESC",
+    "repo": "dslisleedh/ESC",
+    "commit": "f22c712a57c664360f9af3a77cfc527c414067c4",
+    "path": "esc/archs/__init__.py",
+    "url": "https://raw.githubusercontent.com/dslisleedh/ESC/f22c712a57c664360f9af3a77cfc527c414067c4/esc/archs/__init__.py",
+    "bytes": 494,
+    "sha256": "27b0535f2fadbf8fd4b811a030df39959b42e3a72db0a1251b9b6344229858f2"
+  },
+  {
+    "model": "ESC",
+    "repo": "dslisleedh/ESC",
+    "commit": "f22c712a57c664360f9af3a77cfc527c414067c4",
+    "path": "esc/archs/atd_arch.py",
+    "url": "https://raw.githubusercontent.com/dslisleedh/ESC/f22c712a57c664360f9af3a77cfc527c414067c4/esc/archs/atd_arch.py",
+    "bytes": 46378,
+    "sha256": "2e0bb8402c594999815d0102031682c77ad894226cd144c3a44449fcaa5f3065"
+  },
+  {
+    "model": "ESC",
+    "repo": "dslisleedh/ESC",
+    "commit": "f22c712a57c664360f9af3a77cfc527c414067c4",
+    "path": "esc/archs/discriminator_arch.py",
+    "url": "https://raw.githubusercontent.com/dslisleedh/ESC/f22c712a57c664360f9af3a77cfc527c414067c4/esc/archs/discriminator_arch.py",
+    "bytes": 4308,
+    "sha256": "a8769f106a905c96bd29a24965f7d2ba5b796b32a7b3f7d8040b00f9892271f2"
+  },
+  {
+    "model": "ESC",
+    "repo": "dslisleedh/ESC",
+    "commit": "f22c712a57c664360f9af3a77cfc527c414067c4",
+    "path": "esc/archs/esc_arch.py",
+    "url": "https://raw.githubusercontent.com/dslisleedh/ESC/f22c712a57c664360f9af3a77cfc527c414067c4/esc/archs/esc_arch.py",
+    "bytes": 22535,
+    "sha256": "3c40072bdcbed5be07f66aafdeaeb47ba55aad841eb7db4b4a8079c44170e758"
+  },
+  {
+    "model": "ESC",
+    "repo": "dslisleedh/ESC",
+    "commit": "f22c712a57c664360f9af3a77cfc527c414067c4",
+    "path": "esc/archs/esc_fp_arch.py",
+    "url": "https://raw.githubusercontent.com/dslisleedh/ESC/f22c712a57c664360f9af3a77cfc527c414067c4/esc/archs/esc_fp_arch.py",
+    "bytes": 16150,
+    "sha256": "458ffec475588c72105ee32abb96e81929fd538e647bf97efa43c170be11b6fe"
+  },
+  {
+    "model": "ESC",
+    "repo": "dslisleedh/ESC",
+    "commit": "f22c712a57c664360f9af3a77cfc527c414067c4",
+    "path": "esc/archs/esc_real_arch.py",
+    "url": "https://raw.githubusercontent.com/dslisleedh/ESC/f22c712a57c664360f9af3a77cfc527c414067c4/esc/archs/esc_real_arch.py",
+    "bytes": 34229,
+    "sha256": "dfaf4826cfe97e71b20588b71fdb4dbd4f9de531643c708f2cbea3b2437c2a06"
+  },
+  {
+    "model": "ESC",
+    "repo": "dslisleedh/ESC",
+    "commit": "f22c712a57c664360f9af3a77cfc527c414067c4",
+    "path": "esc/archs/hitsrf_arch.py",
+    "url": "https://raw.githubusercontent.com/dslisleedh/ESC/f22c712a57c664360f9af3a77cfc527c414067c4/esc/archs/hitsrf_arch.py",
+    "bytes": 39967,
+    "sha256": "c7b784efc0c06b1b4d788fd4509c6096eceaf79a29767b9f3a1fa1e914dfee3c"
+  },
+  {
+    "model": "ESC",
+    "repo": "dslisleedh/ESC",
+    "commit": "f22c712a57c664360f9af3a77cfc527c414067c4",
+    "path": "esc/archs/srformer_arch.py",
+    "url": "https://raw.githubusercontent.com/dslisleedh/ESC/f22c712a57c664360f9af3a77cfc527c414067c4/esc/archs/srformer_arch.py",
+    "bytes": 43395,
+    "sha256": "82de67e860ca5a88e8d594798f2cdba8e922efc6572830823779e85398f65c80"
+  },
+  {
+    "model": "ESC",
+    "repo": "dslisleedh/ESC",
+    "commit": "f22c712a57c664360f9af3a77cfc527c414067c4",
+    "path": "options/train/ESC_DFLIP_X2.yaml",
+    "url": "https://raw.githubusercontent.com/dslisleedh/ESC/f22c712a57c664360f9af3a77cfc527c414067c4/options/train/ESC_DFLIP_X2.yaml",
+    "bytes": 3009,
+    "sha256": "da0579e1769a770992e4f299ce1172dab11b045b3f8ec0b3357fa52d5b7af744"
+  },
+  {
+    "model": "ESC",
+    "repo": "dslisleedh/ESC",
+    "commit": "f22c712a57c664360f9af3a77cfc527c414067c4",
+    "path": "options/train/ESC_DFLIP_X3.yaml",
+    "url": "https://raw.githubusercontent.com/dslisleedh/ESC/f22c712a57c664360f9af3a77cfc527c414067c4/options/train/ESC_DFLIP_X3.yaml",
+    "bytes": 3068,
+    "sha256": "f8385669c724106647d328a0fbcda1c4eac0798e1e016404fe5663c74dbf3410"
+  },
+  {
+    "model": "ESC",
+    "repo": "dslisleedh/ESC",
+    "commit": "f22c712a57c664360f9af3a77cfc527c414067c4",
+    "path": "options/train/ESC_DFLIP_X4.yaml",
+    "url": "https://raw.githubusercontent.com/dslisleedh/ESC/f22c712a57c664360f9af3a77cfc527c414067c4/options/train/ESC_DFLIP_X4.yaml",
+    "bytes": 3068,
+    "sha256": "9e760463c76d41c5bdb7c3bd770d4272bfb0b5f106f23da3fcb7f1896dfa6cc9"
+  },
+  {
+    "model": "ESC",
+    "repo": "dslisleedh/ESC",
+    "commit": "f22c712a57c664360f9af3a77cfc527c414067c4",
+    "path": "options/train/ESC_DIV2K_X2.yaml",
+    "url": "https://raw.githubusercontent.com/dslisleedh/ESC/f22c712a57c664360f9af3a77cfc527c414067c4/options/train/ESC_DIV2K_X2.yaml",
+    "bytes": 3083,
+    "sha256": "6ccea78544e54b88842136c7bfbb06f996c94699f0aaac44280b9a64d4b364b1"
+  },
+  {
+    "model": "ESC",
+    "repo": "dslisleedh/ESC",
+    "commit": "f22c712a57c664360f9af3a77cfc527c414067c4",
+    "path": "options/train/ESC_DIV2K_X3.yaml",
+    "url": "https://raw.githubusercontent.com/dslisleedh/ESC/f22c712a57c664360f9af3a77cfc527c414067c4/options/train/ESC_DIV2K_X3.yaml",
+    "bytes": 3142,
+    "sha256": "81a932efd8d9e95bcc4949042f2cf50c4c1b4120fe00c341e9dbdb6de4cc6cbf"
+  },
+  {
+    "model": "ESC",
+    "repo": "dslisleedh/ESC",
+    "commit": "f22c712a57c664360f9af3a77cfc527c414067c4",
+    "path": "options/train/ESC_DIV2K_X4.yaml",
+    "url": "https://raw.githubusercontent.com/dslisleedh/ESC/f22c712a57c664360f9af3a77cfc527c414067c4/options/train/ESC_DIV2K_X4.yaml",
+    "bytes": 3142,
+    "sha256": "61271d8cdf590cb3472ccd81197089794342187f8ca2c1cda85b24ca0d32c97e"
+  },
+  {
+    "model": "ESC",
+    "repo": "dslisleedh/ESC",
+    "commit": "f22c712a57c664360f9af3a77cfc527c414067c4",
+    "path": "options/train/ESC_FB_R48_DIV2K_X2.yaml",
+    "url": "https://raw.githubusercontent.com/dslisleedh/ESC/f22c712a57c664360f9af3a77cfc527c414067c4/options/train/ESC_FB_R48_DIV2K_X2.yaml",
+    "bytes": 3287,
+    "sha256": "4198e9fdd6b2954dd339467651b44cee7a732ab8b1e13c2a1e00ccbad59f1f7c"
+  },
+  {
+    "model": "ESC",
+    "repo": "dslisleedh/ESC",
+    "commit": "f22c712a57c664360f9af3a77cfc527c414067c4",
+    "path": "options/train/ESC_FP_X2.yaml",
+    "url": "https://raw.githubusercontent.com/dslisleedh/ESC/f22c712a57c664360f9af3a77cfc527c414067c4/options/train/ESC_FP_X2.yaml",
+    "bytes": 3082,
+    "sha256": "7a6d3ec3ad10f95c7d7f9ceef063a545070b1e897f6593769224f558f421ca4c"
+  },
+  {
+    "model": "ESC",
+    "repo": "dslisleedh/ESC",
+    "commit": "f22c712a57c664360f9af3a77cfc527c414067c4",
+    "path": "options/train/ESC_FP_X3.yaml",
+    "url": "https://raw.githubusercontent.com/dslisleedh/ESC/f22c712a57c664360f9af3a77cfc527c414067c4/options/train/ESC_FP_X3.yaml",
+    "bytes": 3138,
+    "sha256": "05ecc9b0131b9333ab83dfadf51cf01b9fd68c8ec7279ce9fc11929f34e1dddd"
+  },
+  {
+    "model": "ESC",
+    "repo": "dslisleedh/ESC",
+    "commit": "f22c712a57c664360f9af3a77cfc527c414067c4",
+    "path": "options/train/ESC_FP_X4.yaml",
+    "url": "https://raw.githubusercontent.com/dslisleedh/ESC/f22c712a57c664360f9af3a77cfc527c414067c4/options/train/ESC_FP_X4.yaml",
+    "bytes": 3138,
+    "sha256": "3b8984194bcabb02118c3ccaa5c9617019f9bc5d31e6646f9effed13db1831a9"
+  },
+  {
+    "model": "ESC",
+    "repo": "dslisleedh/ESC",
+    "commit": "f22c712a57c664360f9af3a77cfc527c414067c4",
+    "path": "options/train/ESC_Real_X4_GAN.yaml",
+    "url": "https://raw.githubusercontent.com/dslisleedh/ESC/f22c712a57c664360f9af3a77cfc527c414067c4/options/train/ESC_Real_X4_GAN.yaml",
+    "bytes": 3917,
+    "sha256": "5c9bdfdb126032c8ad3aa63544ec1c2ee6769c5c7d7ce422556b6fa5a5fcbf8a"
+  },
+  {
+    "model": "ESC",
+    "repo": "dslisleedh/ESC",
+    "commit": "f22c712a57c664360f9af3a77cfc527c414067c4",
+    "path": "options/train/ESC_Real_X4_MSE.yaml",
+    "url": "https://raw.githubusercontent.com/dslisleedh/ESC/f22c712a57c664360f9af3a77cfc527c414067c4/options/train/ESC_Real_X4_MSE.yaml",
+    "bytes": 2877,
+    "sha256": "51291bee0b3fdecce839d717e96cad5d221d0e9d3772ace2d46a3662d3c8c55d"
+  },
+  {
+    "model": "ESC",
+    "repo": "dslisleedh/ESC",
+    "commit": "f22c712a57c664360f9af3a77cfc527c414067c4",
+    "path": "options/train/ESC_light_X2.yaml",
+    "url": "https://raw.githubusercontent.com/dslisleedh/ESC/f22c712a57c664360f9af3a77cfc527c414067c4/options/train/ESC_light_X2.yaml",
+    "bytes": 3085,
+    "sha256": "2cb810c6452127a46abf34379ab346fb0cf9fbd6198d5713e093635b108d0cbb"
+  },
+  {
+    "model": "ESC",
+    "repo": "dslisleedh/ESC",
+    "commit": "f22c712a57c664360f9af3a77cfc527c414067c4",
+    "path": "options/train/ESC_light_X3.yaml",
+    "url": "https://raw.githubusercontent.com/dslisleedh/ESC/f22c712a57c664360f9af3a77cfc527c414067c4/options/train/ESC_light_X3.yaml",
+    "bytes": 3142,
+    "sha256": "e72237f015050ee68e2e250beffbba607796dcf4cee1281b312329ed501e582c"
+  },
+  {
+    "model": "ESC",
+    "repo": "dslisleedh/ESC",
+    "commit": "f22c712a57c664360f9af3a77cfc527c414067c4",
+    "path": "options/train/ESC_light_X4.yaml",
+    "url": "https://raw.githubusercontent.com/dslisleedh/ESC/f22c712a57c664360f9af3a77cfc527c414067c4/options/train/ESC_light_X4.yaml",
+    "bytes": 3142,
+    "sha256": "ce2974a6c2494c668a8b85eb57167ffd2a20b5a7cc7e34377527f43dc3bcbf73"
+  },
+  {
+    "model": "ESC",
+    "repo": "dslisleedh/ESC",
+    "commit": "f22c712a57c664360f9af3a77cfc527c414067c4",
+    "path": "requirements.txt",
+    "url": "https://raw.githubusercontent.com/dslisleedh/ESC/f22c712a57c664360f9af3a77cfc527c414067c4/requirements.txt",
+    "bytes": 169,
+    "sha256": "b9322efd7c8f2f74fbb4bf34c2d3c3e7efb5ccca50f13d6777ebbc0c48f103db"
+  },
+  {
+    "model": "UADM",
+    "repo": "huanglab-research/UADM",
+    "commit": "abd998553887e82786b16bb6d3c61d97d9917b44",
+    "path": "LICENSE.txt",
+    "url": "https://raw.githubusercontent.com/huanglab-research/UADM/abd998553887e82786b16bb6d3c61d97d9917b44/LICENSE.txt",
+    "bytes": 11350,
+    "sha256": "5447872f21ddc29dc0dc060d5c885513c01c904e9da9931bba69898a6fb4d415"
+  },
+  {
+    "model": "UADM",
+    "repo": "huanglab-research/UADM",
+    "commit": "abd998553887e82786b16bb6d3c61d97d9917b44",
+    "path": "README.md",
+    "url": "https://raw.githubusercontent.com/huanglab-research/UADM/abd998553887e82786b16bb6d3c61d97d9917b44/README.md",
+    "bytes": 4334,
+    "sha256": "3caa47254d886f8439ba44aa84482dd9ca07029062a96458f12ac393735951b3"
+  },
+  {
+    "model": "UADM",
+    "repo": "huanglab-research/UADM",
+    "commit": "abd998553887e82786b16bb6d3c61d97d9917b44",
+    "path": "basicsr/archs/swin_unet_arch.py",
+    "url": "https://raw.githubusercontent.com/huanglab-research/UADM/abd998553887e82786b16bb6d3c61d97d9917b44/basicsr/archs/swin_unet_arch.py",
+    "bytes": 44938,
+    "sha256": "a1a502cf5b4d53b445b56f812c5288d818e26d1235d8d9cb06a304e535d6663a"
+  },
+  {
+    "model": "UADM",
+    "repo": "huanglab-research/UADM",
+    "commit": "abd998553887e82786b16bb6d3c61d97d9917b44",
+    "path": "models/basic_ops.py",
+    "url": "https://raw.githubusercontent.com/huanglab-research/UADM/abd998553887e82786b16bb6d3c61d97d9917b44/models/basic_ops.py",
+    "bytes": 3163,
+    "sha256": "41311c0dd1634324f448a7d3dfe3c81107dbf6a1cfd070891cd7a12f9e691b5e"
+  },
+  {
+    "model": "UADM",
+    "repo": "huanglab-research/UADM",
+    "commit": "abd998553887e82786b16bb6d3c61d97d9917b44",
+    "path": "models/fp16_util.py",
+    "url": "https://raw.githubusercontent.com/huanglab-research/UADM/abd998553887e82786b16bb6d3c61d97d9917b44/models/fp16_util.py",
+    "bytes": 2304,
+    "sha256": "80447c0e9ad264492c1fade0e00f6f02a10ecfa00a1a2f3c79067419e3dabfac"
+  },
+  {
+    "model": "UADM",
+    "repo": "huanglab-research/UADM",
+    "commit": "abd998553887e82786b16bb6d3c61d97d9917b44",
+    "path": "models/gaussian_diffusion_ocean.py",
+    "url": "https://raw.githubusercontent.com/huanglab-research/UADM/abd998553887e82786b16bb6d3c61d97d9917b44/models/gaussian_diffusion_ocean.py",
+    "bytes": 28600,
+    "sha256": "05e466ec3c8a40a5656d7facdf0d34a856d54f4db318a15e4bad2695ec205415"
+  },
+  {
+    "model": "UADM",
+    "repo": "huanglab-research/UADM",
+    "commit": "abd998553887e82786b16bb6d3c61d97d9917b44",
+    "path": "models/losses.py",
+    "url": "https://raw.githubusercontent.com/huanglab-research/UADM/abd998553887e82786b16bb6d3c61d97d9917b44/models/losses.py",
+    "bytes": 2534,
+    "sha256": "0b0f5a5532910fbc7f16d30f2b891d8f1e20aa88881589ce4eacc2cc6ce06026"
+  },
+  {
+    "model": "UADM",
+    "repo": "huanglab-research/UADM",
+    "commit": "abd998553887e82786b16bb6d3c61d97d9917b44",
+    "path": "models/resample.py",
+    "url": "https://raw.githubusercontent.com/huanglab-research/UADM/abd998553887e82786b16bb6d3c61d97d9917b44/models/resample.py",
+    "bytes": 5943,
+    "sha256": "e7a19590deb7dd4dd9ef8e6d7991036182384716046e82fee22af48c7b9f13e8"
+  },
+  {
+    "model": "UADM",
+    "repo": "huanglab-research/UADM",
+    "commit": "abd998553887e82786b16bb6d3c61d97d9917b44",
+    "path": "models/respace.py",
+    "url": "https://raw.githubusercontent.com/huanglab-research/UADM/abd998553887e82786b16bb6d3c61d97d9917b44/models/respace.py",
+    "bytes": 4286,
+    "sha256": "61e9f1dbf2ba9133dd4964c6ddea921192a5e2ca8f68a49e48ab690435a561a9"
+  },
+  {
+    "model": "UADM",
+    "repo": "huanglab-research/UADM",
+    "commit": "abd998553887e82786b16bb6d3c61d97d9917b44",
+    "path": "models/script_util.py",
+    "url": "https://raw.githubusercontent.com/huanglab-research/UADM/abd998553887e82786b16bb6d3c61d97d9917b44/models/script_util.py",
+    "bytes": 2801,
+    "sha256": "d4c681e2225d822cda2419daff3192b5e085353801a37ce75942ba891fb02a18"
+  },
+  {
+    "model": "UADM",
+    "repo": "huanglab-research/UADM",
+    "commit": "abd998553887e82786b16bb6d3c61d97d9917b44",
+    "path": "models/solvers.py",
+    "url": "https://raw.githubusercontent.com/huanglab-research/UADM/abd998553887e82786b16bb6d3c61d97d9917b44/models/solvers.py",
+    "bytes": 4906,
+    "sha256": "bbd767c45620f96a922823338da3a8804e1785e888a1d509c893c872cd256a68"
+  },
+  {
+    "model": "UADM",
+    "repo": "huanglab-research/UADM",
+    "commit": "abd998553887e82786b16bb6d3c61d97d9917b44",
+    "path": "models/swin_transformer.py",
+    "url": "https://raw.githubusercontent.com/huanglab-research/UADM/abd998553887e82786b16bb6d3c61d97d9917b44/models/swin_transformer.py",
+    "bytes": 20986,
+    "sha256": "af57dea3ab9461db436be00c08ec71708ec0f2fb587061ffed3a0016fa2bd714"
+  },
+  {
+    "model": "UADM",
+    "repo": "huanglab-research/UADM",
+    "commit": "abd998553887e82786b16bb6d3c61d97d9917b44",
+    "path": "models/unet.py",
+    "url": "https://raw.githubusercontent.com/huanglab-research/UADM/abd998553887e82786b16bb6d3c61d97d9917b44/models/unet.py",
+    "bytes": 43835,
+    "sha256": "ee27b63c9bb2ba7fae00dd02552466ea772e7eb283803adedd55619b1281b1bb"
+  },
+  {
+    "model": "UADM",
+    "repo": "huanglab-research/UADM",
+    "commit": "abd998553887e82786b16bb6d3c61d97d9917b44",
+    "path": "options/Test_UADM_Ocean_x5.yml",
+    "url": "https://raw.githubusercontent.com/huanglab-research/UADM/abd998553887e82786b16bb6d3c61d97d9917b44/options/Test_UADM_Ocean_x5.yml",
+    "bytes": 3073,
+    "sha256": "9edece17df02160fbe1a3f19b20b12393f654ce4bf575a9666c071a6591bf8cf"
+  },
+  {
+    "model": "UADM",
+    "repo": "huanglab-research/UADM",
+    "commit": "abd998553887e82786b16bb6d3c61d97d9917b44",
+    "path": "options/Train_UADM_Ocean_x5.yml",
+    "url": "https://raw.githubusercontent.com/huanglab-research/UADM/abd998553887e82786b16bb6d3c61d97d9917b44/options/Train_UADM_Ocean_x5.yml",
+    "bytes": 3711,
+    "sha256": "89c339633fdc4157b65d25f35b1782e65b1fa83d0ec6dd8829ccd5304b82ae15"
+  },
+  {
+    "model": "UADM",
+    "repo": "huanglab-research/UADM",
+    "commit": "abd998553887e82786b16bb6d3c61d97d9917b44",
+    "path": "requirements.txt",
+    "url": "https://raw.githubusercontent.com/huanglab-research/UADM/abd998553887e82786b16bb6d3c61d97d9917b44/requirements.txt",
+    "bytes": 182,
+    "sha256": "47fff36fc79d6e4d7f4febcbd77b3bd2092910b50e052f032f9592f1cd223c28"
+  },
+  {
+    "model": "UADM",
+    "repo": "huanglab-research/UADM",
+    "commit": "abd998553887e82786b16bb6d3c61d97d9917b44",
+    "path": "train.py",
+    "url": "https://raw.githubusercontent.com/huanglab-research/UADM/abd998553887e82786b16bb6d3c61d97d9917b44/train.py",
+    "bytes": 10092,
+    "sha256": "93bd72229bee21c5afb20bece19266a694ecdd23f7951595ee81f3d939d5e507"
+  },
+  {
+    "model": "DSCF",
+    "repo": "Yaozzz666/DSCF-SR",
+    "commit": "ef4a32d01b792120707d4cfd64f3993789a84d53",
+    "path": "LICENSE",
+    "url": "https://raw.githubusercontent.com/Yaozzz666/DSCF-SR/ef4a32d01b792120707d4cfd64f3993789a84d53/LICENSE",
+    "bytes": 1063,
+    "sha256": "81032fbef39a967bdc9dc7f5aaaa3b65fe589c931c0cd38c473ecdf493b0e17a"
+  },
+  {
+    "model": "DSCF",
+    "repo": "Yaozzz666/DSCF-SR",
+    "commit": "ef4a32d01b792120707d4cfd64f3993789a84d53",
+    "path": "README.md",
+    "url": "https://raw.githubusercontent.com/Yaozzz666/DSCF-SR/ef4a32d01b792120707d4cfd64f3993789a84d53/README.md",
+    "bytes": 2943,
+    "sha256": "f0d832eed0cab69a5a4ab45fb67223269611870ca91ff16828821b5abc8aeffc"
+  },
+  {
+    "model": "DSCF",
+    "repo": "Yaozzz666/DSCF-SR",
+    "commit": "ef4a32d01b792120707d4cfd64f3993789a84d53",
+    "path": "requirements.txt",
+    "url": "https://raw.githubusercontent.com/Yaozzz666/DSCF-SR/ef4a32d01b792120707d4cfd64f3993789a84d53/requirements.txt",
+    "bytes": 2363,
+    "sha256": "af18e9b2ebdaf60a9f56f02cfbe727938f79bc87d90dc45e98f7776e47163fbe"
+  },
+  {
+    "model": "UADM",
+    "repo": "huanglab-research/UADM",
+    "commit": "abd998553887e82786b16bb6d3c61d97d9917b44",
+    "path": "basicsr/models/ocean_model.py",
+    "url": "https://raw.githubusercontent.com/huanglab-research/UADM/abd998553887e82786b16bb6d3c61d97d9917b44/basicsr/models/ocean_model.py",
+    "bytes": 19514,
+    "sha256": "09dfdc5ba233c04f33c24332e3a4fcffe033a57f380725e4061e938a63e88b8d"
+  },
+  {
+    "model": "UADM",
+    "repo": "huanglab-research/UADM",
+    "commit": "abd998553887e82786b16bb6d3c61d97d9917b44",
+    "path": "basicsr/models/gan_model.py",
+    "url": "https://raw.githubusercontent.com/huanglab-research/UADM/abd998553887e82786b16bb6d3c61d97d9917b44/basicsr/models/gan_model.py",
+    "bytes": 11973,
+    "sha256": "96afa69afe65cf2fa895be50de51e0f15823728e996c2dc6e04c9d1df9acfda8"
+  },
+  {
+    "model": "UADM",
+    "repo": "huanglab-research/UADM",
+    "commit": "abd998553887e82786b16bb6d3c61d97d9917b44",
+    "path": "basicsr/data/ocean_dataset.py",
+    "url": "https://raw.githubusercontent.com/huanglab-research/UADM/abd998553887e82786b16bb6d3c61d97d9917b44/basicsr/data/ocean_dataset.py",
+    "bytes": 4099,
+    "sha256": "982f9ac22e5fcc3936c448176821a623abca624c0c40deb1952b8ab1234d411f"
+  },
+  {
+    "model": "UADM",
+    "repo": "huanglab-research/UADM",
+    "commit": "abd998553887e82786b16bb6d3c61d97d9917b44",
+    "path": "basicsr/archs/dis_arch.py",
+    "url": "https://raw.githubusercontent.com/huanglab-research/UADM/abd998553887e82786b16bb6d3c61d97d9917b44/basicsr/archs/dis_arch.py",
+    "bytes": 4209,
+    "sha256": "1d4ace797709b84c1e21894e0181c315438f8b35b754a2d35e9e76bc41517502"
+  },
+  {
+    "model": "DSCF",
+    "repo": "Yaozzz666/DSCF-SR",
+    "commit": "ef4a32d01b792120707d4cfd64f3993789a84d53",
+    "path": "models/team23_DSCF.py",
+    "url": "https://raw.githubusercontent.com/Yaozzz666/DSCF-SR/ef4a32d01b792120707d4cfd64f3993789a84d53/models/team23_DSCF.py",
+    "bytes": 17427,
+    "sha256": "b19f8637966c56ef7b0e9c5a5016a7c9ce35a239818b882422fdcc40c96e1894"
+  },
+  {
+    "model": "UCAN",
+    "repo": "hokiyoshi/UCAN",
+    "commit": "b812c0adb8ce70d442973db5c87bab7d1e8c3333",
+    "path": "README.md",
+    "url": "https://raw.githubusercontent.com/hokiyoshi/UCAN/b812c0adb8ce70d442973db5c87bab7d1e8c3333/README.md",
+    "bytes": 4735,
+    "sha256": "dd092f58405e860df27a9c438be4359d7eaccc5a60a09781ab8e2e9e70e296ea"
+  },
+  {
+    "model": "UCAN",
+    "repo": "hokiyoshi/UCAN",
+    "commit": "b812c0adb8ce70d442973db5c87bab7d1e8c3333",
+    "path": "basicsr/archs/ucan_arch.py",
+    "url": "https://raw.githubusercontent.com/hokiyoshi/UCAN/b812c0adb8ce70d442973db5c87bab7d1e8c3333/basicsr/archs/ucan_arch.py",
+    "bytes": 57779,
+    "sha256": "d1673486ad78b9a80e46741d94e4267c45e2e763be93b3a25fc5466ec5b1ad3a"
+  },
+  {
+    "model": "UCAN",
+    "repo": "hokiyoshi/UCAN",
+    "commit": "b812c0adb8ce70d442973db5c87bab7d1e8c3333",
+    "path": "basicsr/archs/arch_util.py",
+    "url": "https://raw.githubusercontent.com/hokiyoshi/UCAN/b812c0adb8ce70d442973db5c87bab7d1e8c3333/basicsr/archs/arch_util.py",
+    "bytes": 10086,
+    "sha256": "83779dd8aea23da2f3ab09158d212534afc2a315b8de43b30a8de3a6a006fdee"
+  },
+  {
+    "model": "UCAN",
+    "repo": "hokiyoshi/UCAN",
+    "commit": "b812c0adb8ce70d442973db5c87bab7d1e8c3333",
+    "path": "basicsr/models/ucan_model.py",
+    "url": "https://raw.githubusercontent.com/hokiyoshi/UCAN/b812c0adb8ce70d442973db5c87bab7d1e8c3333/basicsr/models/ucan_model.py",
+    "bytes": 5031,
+    "sha256": "9767c7635b41f013154f0ad3d45470b3755e90a71dc2db57e0c35a62128d7b0e"
+  },
+  {
+    "model": "UCAN",
+    "repo": "hokiyoshi/UCAN",
+    "commit": "b812c0adb8ce70d442973db5c87bab7d1e8c3333",
+    "path": "options/Test/test_UCAN_x2.yml",
+    "url": "https://raw.githubusercontent.com/hokiyoshi/UCAN/b812c0adb8ce70d442973db5c87bab7d1e8c3333/options/Test/test_UCAN_x2.yml",
+    "bytes": 1875,
+    "sha256": "73191aff16948c2534f2f0172bb99981ad9e985582e9c57ad17159ad2089bf5d"
+  },
+  {
+    "model": "UCAN",
+    "repo": "hokiyoshi/UCAN",
+    "commit": "b812c0adb8ce70d442973db5c87bab7d1e8c3333",
+    "path": "options/Test/test_UCAN_x3.yml",
+    "url": "https://raw.githubusercontent.com/hokiyoshi/UCAN/b812c0adb8ce70d442973db5c87bab7d1e8c3333/options/Test/test_UCAN_x3.yml",
+    "bytes": 1844,
+    "sha256": "220a0640a0a146620f4af73ff1abc0b9307074800fc11e428ee488d54793aec7"
+  },
+  {
+    "model": "UCAN",
+    "repo": "hokiyoshi/UCAN",
+    "commit": "b812c0adb8ce70d442973db5c87bab7d1e8c3333",
+    "path": "options/Test/test_UCAN_x4.yml",
+    "url": "https://raw.githubusercontent.com/hokiyoshi/UCAN/b812c0adb8ce70d442973db5c87bab7d1e8c3333/options/Test/test_UCAN_x4.yml",
+    "bytes": 1844,
+    "sha256": "06088d210f1e8b53702b553fe762e33dc7b2787e86b4f5b06d437607a8f0c3c4"
+  }
+]

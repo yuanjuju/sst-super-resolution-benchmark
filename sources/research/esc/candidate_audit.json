@@ -1,0 +1,67 @@
+{
+  "at": "2026-11-09T12:54:14.549111+00:00",
+  "selected": "ESC standard ICCV2025",
+  "shortlist": [
+    {
+      "model": "ESC standard",
+      "year": 2025,
+      "paper": "https://arxiv.org/html/2503.06671v2",
+      "repo": "https://github.com/dslisleedh/ESC",
+      "commit": "f22c712a57c664360f9af3a77cfc527c414067c4",
+      "decision": "First practical next candidate, not guaranteed SST winner",
+      "evidence": "Three-scale native configs and code, explicit image-wise skip,947/955/968K paper params confirmed946728/955383/967500 at GPU; official Naive FP32 branch available; compatibility checks passed",
+      "limitations": "Natural-image evidence only; paper500k and cross-scale finetune are not reproduced by a from-scratch SST budget; nativeeval standard branch batch1 only; actual optimizer throughput and setup recorded separately"
+    },
+    {
+      "model": "UCAN / UCAN-L",
+      "year": 2026,
+      "paper": "https://arxiv.org/html/2603.11680v2",
+      "repo": "https://github.com/hokiyoshi/UCAN",
+      "commit": "b812c0adb8ce70d442973db5c87bab7d1e8c3333",
+      "decision": "Recent backup, not rejected as impossible",
+      "evidence": "Independent author group; CVPR2026 acceptance in author arXiv record; official2/3/4testconfig+fullarchitecture present",
+      "limitations": "Pinned tree lacks README-referenced options/Train and requirements.txt. No separately named UCAN-L config; testcfgembed48/mlp1 must not be advertised as validated UCAN-L. Native forcedefficientSDPA backend and smallinput paths untested on5090. A controlled SST architecture run is possible with disclosed reconstruction, but author training reproduction not established"
+    },
+    {
+      "model": "UADM",
+      "year": 2026,
+      "paper": "https://doi.org/10.1109/TGRS.2026.3677438",
+      "repo": "https://github.com/huanglab-research/UADM",
+      "commit": "abd998553887e82786b16bb6d3c61d97d9917b44",
+      "decision": "SST-specific reserve, not immediate same-protocol candidate",
+      "evidence": "Official SST code; journal title/authors verified against Crossref DOI metadata; author names do not overlap with WMSR",
+      "limitations": "OISST-to-OSTIAx5 with hardcoded25channel/PixelShuffle5 and geostrophic metadata; needs explicit2/3/4 architecture/data adapter. Generator+discriminator+diffusion objective differs from commonL1. AllauthorsOUC according toCrossref, distinct names alone do not establish independent researchgroup. Paper body not obtained, no claims of beating WMSR tables"
+    },
+    {
+      "model": "DSCLoRA / DSCF",
+      "year": 2025,
+      "paper": "https://arxiv.org/abs/2504.11271",
+      "repo": "https://github.com/Yaozzz666/DSCF-SR",
+      "commit": "ef4a32d01b792120707d4cfd64f3993789a84d53",
+      "decision": "Reserve",
+      "limitations": "Public entry points emphasize evaluation; method includes teacher distillation/ConvLoRA, so training plainstudent fromscratch would omit core training ingredients and cannot be advertised as original-method reproduction"
+    },
+    {
+      "model": "DBSD-Net",
+      "year": 2026,
+      "paper": "https://arxiv.org/abs/2608.15423",
+      "decision": "Excluded by user requirement",
+      "limitations": "WankunChen,FengGao,YanhaiGan,JunyuDong,QianDu overlapWMSR; same author group"
+    },
+    {
+      "model": "MambaIR-MSP",
+      "year": 2026,
+      "paper": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2026JH001333",
+      "decision": "Not immediate controlled single-input candidate",
+      "limitations": "Microwave+infraredguided input, whereas currentNPZ has one SSTinput. RemovingIR changes method; addingIR changes available observations."
+    }
+  ],
+  "boundaries": [
+    "No candidate is guaranteed to beat WMSR on currentSST test200",
+    "PFT raw1000 update negative result retained;8train-image train/eval output check maxdiff0 does not establish optimization cause",
+    "Only original training800 subsets used for checks; fixedtest200 never used here",
+    "No local training environment installed; all GPU/source execution under independent cloudfolder, old packages read only",
+    "Completed1000-update pilot is training-only80 validation, not a strict paper reproduction or final200 comparison."
+  ],
+  "current_execution": "ESC1000-update OISSTx4 screen complete after verified832-step resume on2026-11-10; raw80 validation49.2422dB versusWMSR51.9284dB. No final200 test or long training."
+}

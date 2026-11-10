@@ -1,0 +1,29 @@
+{
+  "OISST": {
+    "file": "development_splits/OISST.json",
+    "sha256": "2b5bec7fa2994daacfbe7c17f4410372cc6101d7b697c71deac249f60563220c",
+    "counts": {
+      "fit": 720,
+      "validation": 80,
+      "excluded_for_overlap": 0
+    }
+  },
+  "HYCOM": {
+    "file": "development_splits/HYCOM.json",
+    "sha256": "360d2f1ad59e31b335650cd75bb400a6baed70968419edf206030352f68fb53d",
+    "counts": {
+      "fit": 720,
+      "validation": 80,
+      "excluded_for_overlap": 0
+    }
+  },
+  "GHRSST": {
+    "file": "development_splits/GHRSST.json",
+    "sha256": "6b0aa5bba8b6ccb1bb3975f2ac4ae29dc73652b5cbc1ff7f9c49fe046784c2f8",
+    "counts": {
+      "fit": 720,
+      "validation": 80,
+      "excluded_for_overlap": 0
+    }
+  }
+}

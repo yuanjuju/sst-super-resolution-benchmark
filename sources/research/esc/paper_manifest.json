@@ -1,0 +1,15 @@
+[
+  {
+    "file": "papers/ESC_ICCV2025_arxiv2503.06671v2.pdf",
+    "url": "https://arxiv.org/pdf/2503.06671v2",
+    "bytes": 8457306,
+    "sha256": "05c3859c067b4be6db3a2d061f579890843af9ac35d456a2cea94beb0d260c9c",
+    "retrieved_at": "2026-11-09T12:42:18.101320+00:00"
+  },
+  {
+    "file": "papers/UCAN_CVPR2026_arxiv2603.11680v1.pdf",
+    "url": "https://arxiv.org/pdf/2603.11680v1",
+    "bytes": 6592869,
+    "sha256": "ebc703f042501d0080a231dfe0af70f1e81523d69be8937bc1bd2c745a1af5ae"
+  }
+]

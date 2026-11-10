@@ -1,0 +1,49 @@
+{
+  "checked_at": "2026-11-04T09:07:56.461935+00:00",
+  "repo": "Erweichangwangye/MFMSR",
+  "commit": "5f90080b4880aba29b128bdbd50bbdb522cb2dc3",
+  "source_url": "https://github.com/Erweichangwangye/MFMSR/tree/5f90080b4880aba29b128bdbd50bbdb522cb2dc3",
+  "files": [
+    {
+      "path": "MFMSR_main/createDataset/createdata.py",
+      "bytes": 3636,
+      "sha256": "6d1e7fb8543c9e02ff1edb53d6ec3ffd4f97d385dff0e0c30395551ff8b8b44e"
+    },
+    {
+      "path": "MFMSR_main/dataload/data.py",
+      "bytes": 807,
+      "sha256": "4aa595531f734ee49e7ed219d979a6a02eb4fc76514470e5b576b73973254e09"
+    },
+    {
+      "path": "MFMSR_main/dataload/dataset.py",
+      "bytes": 4278,
+      "sha256": "8d0a5c992ef7e56015bcaafae585f388f68561669e167f63317194be0a0e400a"
+    },
+    {
+      "path": "MFMSR_main/eval_4x.py",
+      "bytes": 9274,
+      "sha256": "5cf7f31a52a7ca5e07e9a27f27558fd834a2f0426e30ef9b19fe92fec2774e21"
+    },
+    {
+      "path": "MFMSR_main/model_archs/mfmsr_mamba.py",
+      "bytes": 56927,
+      "sha256": "cd3e2be85bea99b5851dcbde150951931c9154c6645d84053af339adc6b4f393"
+    },
+    {
+      "path": "MFMSR_main/model_archs/utils.py",
+      "bytes": 42148,
+      "sha256": "184588f0412db631748f7809140994a908d657c02f09afc6345fb5eee3db6584"
+    },
+    {
+      "path": "MFMSR_main/train_4x.py",
+      "bytes": 8867,
+      "sha256": "de6e377bed8d61e48fdde24e52f663ca267bd8d8848b5d94221a8eb3bb64921f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2087,
+      "sha256": "271a47513adf5a5ced9b6b0736d93f91d8612ee3d622caa3c943e0a0b857bc72"
+    }
+  ],
+  "verification": "Downloaded source only; AST parse passed. No model import, dependency install, execution or GPU check."
+}

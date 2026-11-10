@@ -1,0 +1,290 @@
+[
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_563_AGM_201601.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_56.3?var=water_temp&north=-5&south=-45&west=-75&east=-35&horizStride=1&time_start=2016-01-01T00%3A00%3A00Z&time_end=2016-01-31T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 4523938,
+    "sha256": "1c287181c300db2c9ea6674faba87bd8bfe241560879175af3e9bd9ad564dba2"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_563_NP_201601.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_56.3?var=water_temp&north=45&south=5&west=140&east=180&horizStride=1&time_start=2016-01-01T00%3A00%3A00Z&time_end=2016-01-31T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 9708470,
+    "sha256": "a9523f816e89b858c712d333fe15108afc625beafbe7bade4fe01a1ed10abb62"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_563_NIO_201601.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_56.3?var=water_temp&north=5&south=-35&west=-90&east=-50&horizStride=1&time_start=2016-01-01T00%3A00%3A00Z&time_end=2016-01-31T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 3444435,
+    "sha256": "11da07ab6ea614c474e3e15d0c5b530c8f7ac09cdb639ceb8710dd135226bd2f"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_563_EWP_201601.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_56.3?var=water_temp&north=20&south=-20&west=-160&east=-120&horizStride=1&time_start=2016-01-01T00%3A00%3A00Z&time_end=2016-01-31T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 8008221,
+    "sha256": "bcebab86e17a2cc9be206f6940929e0d36023ef3834616510cdc799b93a9a903"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_563_NP_201602.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_56.3?var=water_temp&north=45&south=5&west=140&east=180&horizStride=1&time_start=2016-02-01T00%3A00%3A00Z&time_end=2016-02-29T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 9057836,
+    "sha256": "d2c20bee37ec5630675f5b0502eccd49e4bc0c05d5053a4df2c683d37bb353e3"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_563_AGM_201602.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_56.3?var=water_temp&north=-5&south=-45&west=-75&east=-35&horizStride=1&time_start=2016-02-01T00%3A00%3A00Z&time_end=2016-02-29T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 4215714,
+    "sha256": "95ee5af0933d064463a8110928478ced80ca28fefd998a3404b0e84f95971e3b"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_563_NIO_201602.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_56.3?var=water_temp&north=5&south=-35&west=-90&east=-50&horizStride=1&time_start=2016-02-01T00%3A00%3A00Z&time_end=2016-02-29T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 3212358,
+    "sha256": "b9af298a616ba0b96e9450a5d690fc533cc2c20241a8e1bd66bc31aeeacfca48"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_563_EWP_201602.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_56.3?var=water_temp&north=20&south=-20&west=-160&east=-120&horizStride=1&time_start=2016-02-01T00%3A00%3A00Z&time_end=2016-02-29T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 7390155,
+    "sha256": "1e18565fa2304775eaa5d55161fd608c97ae24559f6bb51b8d2ae6d92a6bd739"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_563_NP_201603.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_56.3?var=water_temp&north=45&south=5&west=140&east=180&horizStride=1&time_start=2016-03-01T00%3A00%3A00Z&time_end=2016-03-31T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 9801171,
+    "sha256": "74b63a9861a164a71c4b183a0b261c2287de45f6bca82c60be6450aad40b9e16"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_563_AGM_201603.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_56.3?var=water_temp&north=-5&south=-45&west=-75&east=-35&horizStride=1&time_start=2016-03-01T00%3A00%3A00Z&time_end=2016-03-31T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 4549514,
+    "sha256": "906267407508e2e0a1f7f5c43d1c4addf62d7ad8afe8f9fb2779fefcce3e34c3"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_563_NIO_201603.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_56.3?var=water_temp&north=5&south=-35&west=-90&east=-50&horizStride=1&time_start=2016-03-01T00%3A00%3A00Z&time_end=2016-03-31T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 3502148,
+    "sha256": "64066ef00edf2846f8e19fd6ae4850d6e66b0bb003a84acc6910a6b693481032"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_563_EWP_201603.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_56.3?var=water_temp&north=20&south=-20&west=-160&east=-120&horizStride=1&time_start=2016-03-01T00%3A00%3A00Z&time_end=2016-03-31T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 8007108,
+    "sha256": "216aefff7d0509f2bb90a20f6f311456eb2be7cd56341e6831fd3050b23b23d5"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_563_NP_201604.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_56.3?var=water_temp&north=45&south=5&west=140&east=180&horizStride=1&time_start=2016-04-01T00%3A00%3A00Z&time_end=2016-04-30T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 9436947,
+    "sha256": "62aafe7917c0a69923b346d13b040d21d2180f88fd5ee2ca6768339594ba9fb7"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_563_AGM_201604.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_56.3?var=water_temp&north=-5&south=-45&west=-75&east=-35&horizStride=1&time_start=2016-04-01T00%3A00%3A00Z&time_end=2016-04-30T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 4411483,
+    "sha256": "20e7db9b1bdfd24ab94265cbcd0a9efe52562061defe38fc6e871a2342d66730"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_563_NIO_201604.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_56.3?var=water_temp&north=5&south=-35&west=-90&east=-50&horizStride=1&time_start=2016-04-01T00%3A00%3A00Z&time_end=2016-04-30T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 3405155,
+    "sha256": "bbd1be0a0c4ae9abbbf6ca6c1f568e98231b72a0d9dc2874a9bcff8915fef8a6"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_563_EWP_201604.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_56.3?var=water_temp&north=20&south=-20&west=-160&east=-120&horizStride=1&time_start=2016-04-01T00%3A00%3A00Z&time_end=2016-04-30T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 7772951,
+    "sha256": "97b5e4d52ac60d8c13ff268c0fc42f33a90f3d6092918de9f6a9fbac5c211a92"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_572_NP_201605.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_57.2?var=water_temp&north=45&south=5&west=140&east=180&horizStride=1&time_start=2016-05-01T12%3A00%3A00Z&time_end=2016-05-31T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 9890304,
+    "sha256": "325a07110990a31577a45ed46c5df3259fdabeff72d012175a3c475c2fd5e448"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_572_AGM_201605.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_57.2?var=water_temp&north=-5&south=-45&west=-75&east=-35&horizStride=1&time_start=2016-05-01T12%3A00%3A00Z&time_end=2016-05-31T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 4642798,
+    "sha256": "c5ff637a8f51c9080a9bc8248ba24edbb9cb53b01ff81e63d6d07cf144391697"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_572_NIO_201605.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_57.2?var=water_temp&north=5&south=-35&west=-90&east=-50&horizStride=1&time_start=2016-05-01T12%3A00%3A00Z&time_end=2016-05-31T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 3579207,
+    "sha256": "ce8d825dc0343c12a197303d51fedf19939af717b9ae44b411e5e25a59410647"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_572_EWP_201605.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_57.2?var=water_temp&north=20&south=-20&west=-160&east=-120&horizStride=1&time_start=2016-05-01T12%3A00%3A00Z&time_end=2016-05-31T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 8332653,
+    "sha256": "f6c51e33c3a86d04490b2b90b921c846d1b1ea72f16244549a3d7b78a28baf41"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_572_NP_201606.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_57.2?var=water_temp&north=45&south=5&west=140&east=180&horizStride=1&time_start=2016-06-01T00%3A00%3A00Z&time_end=2016-06-30T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 9540282,
+    "sha256": "59e9f5232a824ec15fffe9a54463db80b487c40af2b76cb75af4146b15dec653"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_572_AGM_201606.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_57.2?var=water_temp&north=-5&south=-45&west=-75&east=-35&horizStride=1&time_start=2016-06-01T00%3A00%3A00Z&time_end=2016-06-30T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 4480730,
+    "sha256": "8ca69ba58cd17f5c896cdeda07cdae735e5a3fe24dbfff697e85fc18dd340240"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_572_NIO_201606.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_57.2?var=water_temp&north=5&south=-35&west=-90&east=-50&horizStride=1&time_start=2016-06-01T00%3A00%3A00Z&time_end=2016-06-30T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 3422115,
+    "sha256": "07a7c5fe6097c071b244a9ee4386e67b643ddca7a278099626f55c1fb5aeb652"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_572_EWP_201606.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_57.2?var=water_temp&north=20&south=-20&west=-160&east=-120&horizStride=1&time_start=2016-06-01T00%3A00%3A00Z&time_end=2016-06-30T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 8038658,
+    "sha256": "f95829557eb31bb08265c5d889d29e79f89412cdf451e6e3219e56714d4d36ef"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_572_AGM_201607.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_57.2?var=water_temp&north=-5&south=-45&west=-75&east=-35&horizStride=1&time_start=2016-07-01T00%3A00%3A00Z&time_end=2016-07-31T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 4628573,
+    "sha256": "97a8856c7ca1068cef1b39995dab9b2db9a1aadce35cfe201eef5d3c716a4254"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_572_NP_201607.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_57.2?var=water_temp&north=45&south=5&west=140&east=180&horizStride=1&time_start=2016-07-01T00%3A00%3A00Z&time_end=2016-07-31T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 9825067,
+    "sha256": "a0ccec50f270c9d3cc3f745bed2affc4a3113f444074c21a415050bda95b17df"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_572_NIO_201607.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_57.2?var=water_temp&north=5&south=-35&west=-90&east=-50&horizStride=1&time_start=2016-07-01T00%3A00%3A00Z&time_end=2016-07-31T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 3518188,
+    "sha256": "dadcda3e4c124cc86f25da856db0d4ce746de873d8ec31bd7aedb479ed4c592b"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_572_EWP_201607.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_57.2?var=water_temp&north=20&south=-20&west=-160&east=-120&horizStride=1&time_start=2016-07-01T00%3A00%3A00Z&time_end=2016-07-31T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 8370707,
+    "sha256": "97e5e2ce21cf5f61ebb0550931a1d9f61ca88bc2eb82913a4cc980c88ca9deb4"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_572_AGM_201608.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_57.2?var=water_temp&north=-5&south=-45&west=-75&east=-35&horizStride=1&time_start=2016-08-01T00%3A00%3A00Z&time_end=2016-08-31T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 4604618,
+    "sha256": "d2d0e694cfda4d8c3ab5a2e910ec6ef5929c202ecd78dfdd0603b8ca2ac6f54f"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_572_NIO_201608.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_57.2?var=water_temp&north=5&south=-35&west=-90&east=-50&horizStride=1&time_start=2016-08-01T00%3A00%3A00Z&time_end=2016-08-31T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 3503882,
+    "sha256": "2d4e2adde2860627ad4126d9a26b25e42527843f36c37e5ea6f2d1d7109db1d3"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_572_NP_201608.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_57.2?var=water_temp&north=45&south=5&west=140&east=180&horizStride=1&time_start=2016-08-01T00%3A00%3A00Z&time_end=2016-08-31T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 9668182,
+    "sha256": "cb7173687028eef2b7f6fd0f66106a3f29ff7d98f6197cafe1f8ca0dc25afd40"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_572_NP_201609.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_57.2?var=water_temp&north=45&south=5&west=140&east=180&horizStride=1&time_start=2016-09-01T00%3A00%3A00Z&time_end=2016-09-30T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 9310013,
+    "sha256": "e4df9c034886899a6f6fa43ff8e80a688ff7450bea792101067acc37cbaef59a"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_572_AGM_201609.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_57.2?var=water_temp&north=-5&south=-45&west=-75&east=-35&horizStride=1&time_start=2016-09-01T00%3A00%3A00Z&time_end=2016-09-30T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 4416134,
+    "sha256": "8610e63313882985de4c341c3cc0eed36e11a36fb50bac6342f5067facaeeec5"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_572_NIO_201609.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_57.2?var=water_temp&north=5&south=-35&west=-90&east=-50&horizStride=1&time_start=2016-09-01T00%3A00%3A00Z&time_end=2016-09-30T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 3403860,
+    "sha256": "b960277b616379f905226bf272a7c436ba5ebddfdd8f729e88d7f155f17e1cb8"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_572_EWP_201609.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_57.2?var=water_temp&north=20&south=-20&west=-160&east=-120&horizStride=1&time_start=2016-09-01T00%3A00%3A00Z&time_end=2016-09-30T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 8061607,
+    "sha256": "49fe65efccf5e4a626e290ebc044156968bb34b767eb4f8d715999e09ac8b340"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_572_EWP_201608.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_57.2?var=water_temp&north=20&south=-20&west=-160&east=-120&horizStride=1&time_start=2016-08-01T00%3A00%3A00Z&time_end=2016-08-31T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 8368550,
+    "sha256": "42ca9c9dc4975d329cd812eb0b8528ab08bb0da5f9caf55613a5e93e0b3a20f6"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_572_AGM_201610.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_57.2?var=water_temp&north=-5&south=-45&west=-75&east=-35&horizStride=1&time_start=2016-10-01T00%3A00%3A00Z&time_end=2016-10-31T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 4585913,
+    "sha256": "4ebc01ec884ff9c2beaeebabbfe78eac10ab1b01e0883e76ef09c31b94885e94"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_572_NP_201610.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_57.2?var=water_temp&north=45&south=5&west=140&east=180&horizStride=1&time_start=2016-10-01T00%3A00%3A00Z&time_end=2016-10-31T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 9657335,
+    "sha256": "04b5050243442ae5ef7137c453ee67415caf2dbe659f7bb5d3b7f746fad19d2a"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_572_NIO_201610.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_57.2?var=water_temp&north=5&south=-35&west=-90&east=-50&horizStride=1&time_start=2016-10-01T00%3A00%3A00Z&time_end=2016-10-31T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 3520262,
+    "sha256": "ca6389fcc307a530ff88fa1dccf7805a061c3db8d7029c88649be4416d64d0f4"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_572_NP_201611.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_57.2?var=water_temp&north=45&south=5&west=140&east=180&horizStride=1&time_start=2016-11-01T00%3A00%3A00Z&time_end=2016-11-30T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 9355032,
+    "sha256": "1c4288b63643636652d67474472e5e37a49568ce729c3be7dff16820d0bce1a2"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_572_EWP_201610.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_57.2?var=water_temp&north=20&south=-20&west=-160&east=-120&horizStride=1&time_start=2016-10-01T00%3A00%3A00Z&time_end=2016-10-31T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 8388238,
+    "sha256": "bb23fbb70f9e50a3328de39f01a16ce11938af902dab124bb4003f13daceb74c"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_572_AGM_201611.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_57.2?var=water_temp&north=-5&south=-45&west=-75&east=-35&horizStride=1&time_start=2016-11-01T00%3A00%3A00Z&time_end=2016-11-30T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 4405510,
+    "sha256": "9fb9cbd26f806d5652d48c03a25a5ca3cb701b752e0bf789f3bfcbf23569787f"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_572_NIO_201611.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_57.2?var=water_temp&north=5&south=-35&west=-90&east=-50&horizStride=1&time_start=2016-11-01T00%3A00%3A00Z&time_end=2016-11-30T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 3399410,
+    "sha256": "1432ed45a5e15f60b9a975131d9ea9d04f55029ccaf6a033ca021a4fe347c502"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_572_EWP_201611.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_57.2?var=water_temp&north=20&south=-20&west=-160&east=-120&horizStride=1&time_start=2016-11-01T00%3A00%3A00Z&time_end=2016-11-30T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 8108704,
+    "sha256": "5dcbb4c6d660a35305c266b68937ebe14c99eab959cd1048c6be0f385b8d96ac"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_572_NP_201612.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_57.2?var=water_temp&north=45&south=5&west=140&east=180&horizStride=1&time_start=2016-12-01T00%3A00%3A00Z&time_end=2016-12-31T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 9706071,
+    "sha256": "5b4578b3472767fc2fcc1615c968175640950ddf6072ed136ccffa6e09f654d3"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_572_NIO_201612.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_57.2?var=water_temp&north=5&south=-35&west=-90&east=-50&horizStride=1&time_start=2016-12-01T00%3A00%3A00Z&time_end=2016-12-31T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 3530339,
+    "sha256": "367fdcb8ec8bb753bc5c3a1203d5db499454ae197c016fe1e5306767d0e62815"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_572_AGM_201612.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_57.2?var=water_temp&north=-5&south=-45&west=-75&east=-35&horizStride=1&time_start=2016-12-01T00%3A00%3A00Z&time_end=2016-12-31T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 4549727,
+    "sha256": "6d6c1c1910a0f337b21d1686f3f7e445b3adaa8230a0d2603088970911b020d3"
+  },
+  {
+    "file": "data/raw/HYCOM3H/HYCOM3H_572_EWP_201612.nc",
+    "url": "https://ncss.hycom.org/thredds/ncss/grid/GLBv0.08/expt_57.2?var=water_temp&north=20&south=-20&west=-160&east=-120&horizStride=1&time_start=2016-12-01T00%3A00%3A00Z&time_end=2016-12-31T21%3A00%3A00Z&timeStride=9&vertCoord=0&accept=netcdf4",
+    "bytes": 8269656,
+    "sha256": "b8cd81ce746d341b4f382535480879fc8d25efdd0a5b18588c2a08d19e09d560"
+  }
+]

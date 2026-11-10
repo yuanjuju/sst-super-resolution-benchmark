@@ -1,0 +1,291 @@
+{
+  "selected_at": "2026-11-09T10:43:50.309717+00:00",
+  "selected_model": "PFT classical/full, not PFT-light",
+  "publication": "CVPR2025",
+  "paper": "https://arxiv.org/abs/2503.20337",
+  "repository": "https://github.com/CVL-UESTC/PFT-SR",
+  "commit": "3f832e6e150ba927a7741d893d3aa4a7114e9b01",
+  "authors": [
+    "Wei Long",
+    "Xingyu Zhou",
+    "Leheng Zhang",
+    "Shuhang Gu"
+  ],
+  "authors_overlap_with_WMSR": false,
+  "paper_reported_parameters_millions": {
+    "2": 19.6,
+    "3": 19.8,
+    "4": 19.8
+  },
+  "parameter_count_status": "paper values; GPU instantiation still pending",
+  "official_network_and_training_configs": {
+    "2": {
+      "network_g": {
+        "type": "PFT",
+        "upscale": 2,
+        "in_chans": 3,
+        "img_size": 64,
+        "embed_dim": 240,
+        "depths": [
+          4,
+          4,
+          4,
+          6,
+          6,
+          6
+        ],
+        "num_heads": 6,
+        "window_size": 32,
+        "convffn_kernel_size": 7,
+        "img_range": 1.0,
+        "mlp_ratio": 2.0,
+        "upsampler": "pixelshuffle",
+        "resi_connection": "1conv",
+        "use_checkpoint": false,
+        "num_topk": [
+          1024,
+          1024,
+          1024,
+          1024,
+          256,
+          256,
+          256,
+          256,
+          128,
+          128,
+          128,
+          128,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16
+        ]
+      },
+      "official_train": {
+        "lr": 0.0002,
+        "betas": [
+          0.9,
+          0.99
+        ],
+        "total_iter": 500000,
+        "warmup_iter": 20000,
+        "milestones": [
+          250000,
+          400000,
+          450000,
+          475000,
+          490000
+        ],
+        "ema_decay": 0.999,
+        "pretrain_network_g": null,
+        "optimizer": "AdamW",
+        "loss": "L1",
+        "weight_decay": 0
+      },
+      "config_file": "options/train/001_PFT_SRx2_scratch.yml",
+      "config_sha256": "6991484d8994634fd1cb3cbf7007337439d6da337c4548ac29f7830e12623253"
+    },
+    "3": {
+      "network_g": {
+        "type": "PFT",
+        "upscale": 3,
+        "in_chans": 3,
+        "img_size": 64,
+        "embed_dim": 240,
+        "depths": [
+          4,
+          4,
+          4,
+          6,
+          6,
+          6
+        ],
+        "num_heads": 6,
+        "window_size": 32,
+        "convffn_kernel_size": 7,
+        "img_range": 1.0,
+        "mlp_ratio": 2.0,
+        "upsampler": "pixelshuffle",
+        "resi_connection": "1conv",
+        "use_checkpoint": false,
+        "num_topk": [
+          1024,
+          1024,
+          1024,
+          1024,
+          256,
+          256,
+          256,
+          256,
+          128,
+          128,
+          128,
+          128,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16
+        ]
+      },
+      "official_train": {
+        "lr": 0.0002,
+        "betas": [
+          0.9,
+          0.99
+        ],
+        "total_iter": 250000,
+        "warmup_iter": 10000,
+        "milestones": [
+          150000,
+          200000,
+          225000,
+          240000
+        ],
+        "ema_decay": 0.999,
+        "pretrain_network_g": "experiments/pretrained_models/001_PFT_SRx2_scratch.pth",
+        "optimizer": "AdamW",
+        "loss": "L1",
+        "weight_decay": 0
+      },
+      "config_file": "options/train/002_PFT_SRx3_finetune.yml",
+      "config_sha256": "e436c7a73dd190ea48d482b1a0e85aff6bae307194b822e87875d80ef5bfae2d"
+    },
+    "4": {
+      "network_g": {
+        "type": "PFT",
+        "upscale": 4,
+        "in_chans": 3,
+        "img_size": 64,
+        "embed_dim": 240,
+        "depths": [
+          4,
+          4,
+          4,
+          6,
+          6,
+          6
+        ],
+        "num_heads": 6,
+        "window_size": 32,
+        "convffn_kernel_size": 7,
+        "img_range": 1.0,
+        "mlp_ratio": 2.0,
+        "upsampler": "pixelshuffle",
+        "resi_connection": "1conv",
+        "use_checkpoint": false,
+        "num_topk": [
+          1024,
+          1024,
+          1024,
+          1024,
+          256,
+          256,
+          256,
+          256,
+          128,
+          128,
+          128,
+          128,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          32,
+          32,
+          32,
+          32,
+          32,
+          32,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16
+        ]
+      },
+      "official_train": {
+        "lr": 0.0002,
+        "betas": [
+          0.9,
+          0.99
+        ],
+        "total_iter": 250000,
+        "warmup_iter": 10000,
+        "milestones": [
+          150000,
+          200000,
+          225000,
+          240000
+        ],
+        "ema_decay": 0.999,
+        "pretrain_network_g": "experiments/pretrained_models/001_PFT_SRx2_scratch.pth",
+        "optimizer": "AdamW",
+        "loss": "L1",
+        "weight_decay": 0
+      },
+      "config_file": "options/train/003_PFT_SRx4_finetune.yml",
+      "config_sha256": "0a50dd7e7bd0ef54643e5f4665be383304c4a0f3ea442cf6080707ac99766619"
+    }
+  },
+  "padding_static_analysis": {
+    "LR48_for_x2": {
+      "window": 32,
+      "native_padded_lr": 64,
+      "output_crop_hr": 96
+    },
+    "LR32_for_x3": {
+      "window": 32,
+      "native_padded_lr": 32,
+      "output_crop_hr": 96
+    },
+    "LR24_for_x4": {
+      "window": 32,
+      "native_padded_lr": 32,
+      "output_crop_hr": 96
+    }
+  },
+  "original_data_reference_protocol": "ARCHIVE_ROOT/下一阶段/近期模型三方对比/protocol.json",
+  "original_data_reference_protocol_sha256": "dfa57218e05a5d3ebc99e6aa94fc2b73f548a297b96316c7b7187b5eb9dd2596",
+  "reuse_data_manifest_sha256": {
+    "OISST": "798fd3aa1c5e2ef44e076ab937c071decf3aca7220c608ddc7c00ce80aa41390",
+    "HYCOM": "b147b6566fec80357e2bb819b9b846cd723cd449eb54051d4254b3f53ef5b212",
+    "GHRSST": "a9742552ae4103404693e9b58b3b5863a4e3ac95531b2e8e2cdf743aec5ad956"
+  },
+  "status": "selected_and_static_audited_not_trained",
+  "cuda_dependency": "Official ops_smm CUDA extension; sm120 compile and official forward/backward tests required before formal training",
+  "new_SST_test_scores": null,
+  "can_guarantee_beating_WMSR": false,
+  "sources_executed": false,
+  "pretrained_weights_downloaded": false
+}

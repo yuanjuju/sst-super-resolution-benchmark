@@ -1,0 +1,2564 @@
+[
+  {
+    "date": "2016-01-01",
+    "file": "oisst-avhrr-v02r01.20160101.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201601/oisst-avhrr-v02r01.20160101.nc",
+    "bytes": 1687444,
+    "sha256": "afbfeadefa4b3e5beb0ed2cc1e0566e02bec53f443de6af9587d4401faedf8af"
+  },
+  {
+    "date": "2016-01-02",
+    "file": "oisst-avhrr-v02r01.20160102.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201601/oisst-avhrr-v02r01.20160102.nc",
+    "bytes": 1688761,
+    "sha256": "ec84d989a5a89d07035fbaac52ed3d73dd3ab127c55f1152717594e577df9a47"
+  },
+  {
+    "date": "2016-01-03",
+    "file": "oisst-avhrr-v02r01.20160103.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201601/oisst-avhrr-v02r01.20160103.nc",
+    "bytes": 1689559,
+    "sha256": "6b99743ac9fb95b987d50a33a92b247df0f8984661e01e9bb7d7030aa2bf56cc"
+  },
+  {
+    "date": "2016-01-04",
+    "file": "oisst-avhrr-v02r01.20160104.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201601/oisst-avhrr-v02r01.20160104.nc",
+    "bytes": 1688870,
+    "sha256": "501978e8125f92c3e2cdd9c4497d2bf92d9c323319a23cdddd3acc0be7d41a20"
+  },
+  {
+    "date": "2016-01-05",
+    "file": "oisst-avhrr-v02r01.20160105.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201601/oisst-avhrr-v02r01.20160105.nc",
+    "bytes": 1686155,
+    "sha256": "f9d5ed76af019a3d10d88ce567d196833240958f43b3ceccdf507b2f60b0f85d"
+  },
+  {
+    "date": "2016-01-06",
+    "file": "oisst-avhrr-v02r01.20160106.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201601/oisst-avhrr-v02r01.20160106.nc",
+    "bytes": 1694707,
+    "sha256": "c8794b2ce32f6028c88c9506489f9eba558b4fa309304afa6f9923192fc8fbd2"
+  },
+  {
+    "date": "2016-01-07",
+    "file": "oisst-avhrr-v02r01.20160107.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201601/oisst-avhrr-v02r01.20160107.nc",
+    "bytes": 1638561,
+    "sha256": "fc0d153b64067d0d7800ad5d2c578e77b76209e98e2dd7f31ecc290148620902"
+  },
+  {
+    "date": "2016-01-08",
+    "file": "oisst-avhrr-v02r01.20160108.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201601/oisst-avhrr-v02r01.20160108.nc",
+    "bytes": 1638789,
+    "sha256": "045b0aebe9265129e4069e6996b57add3259fee641ce9032dd5447dbdbeb3f9a"
+  },
+  {
+    "date": "2016-01-09",
+    "file": "oisst-avhrr-v02r01.20160109.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201601/oisst-avhrr-v02r01.20160109.nc",
+    "bytes": 1636768,
+    "sha256": "022ed64388efdf192c9672f364ba9e337866be8bf9e4d4c8052a8798e84b6bd3"
+  },
+  {
+    "date": "2016-01-10",
+    "file": "oisst-avhrr-v02r01.20160110.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201601/oisst-avhrr-v02r01.20160110.nc",
+    "bytes": 1674220,
+    "sha256": "b3110c08497c54fb64bfe63efa4d65901ddd18cf4dc5ecd1679e69ce378b79af"
+  },
+  {
+    "date": "2016-01-11",
+    "file": "oisst-avhrr-v02r01.20160111.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201601/oisst-avhrr-v02r01.20160111.nc",
+    "bytes": 1675475,
+    "sha256": "3519986aaced2d899abb6d22c5faee732279a4b50c8829ed4522e4b504ff69c2"
+  },
+  {
+    "date": "2016-01-12",
+    "file": "oisst-avhrr-v02r01.20160112.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201601/oisst-avhrr-v02r01.20160112.nc",
+    "bytes": 1677255,
+    "sha256": "052800f6e23e142b3c1f10528d1c91029cfffb60b7a79d0fb339a6823bfdfbcc"
+  },
+  {
+    "date": "2016-01-13",
+    "file": "oisst-avhrr-v02r01.20160113.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201601/oisst-avhrr-v02r01.20160113.nc",
+    "bytes": 1676235,
+    "sha256": "aa7a48a019c3b6da9993b22bc606d89022b6b69d773ef2ccccf95a7000afa943"
+  },
+  {
+    "date": "2016-01-14",
+    "file": "oisst-avhrr-v02r01.20160114.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201601/oisst-avhrr-v02r01.20160114.nc",
+    "bytes": 1678920,
+    "sha256": "2fc2bf405ed97cb81901c38a38b8d2009f628256e66a015e142afc385685a51e"
+  },
+  {
+    "date": "2016-01-15",
+    "file": "oisst-avhrr-v02r01.20160115.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201601/oisst-avhrr-v02r01.20160115.nc",
+    "bytes": 1680362,
+    "sha256": "f83dad95d65118c7fc3953e69e95f6788b4b73454fe0bf3dae77db173bd50abb"
+  },
+  {
+    "date": "2016-01-16",
+    "file": "oisst-avhrr-v02r01.20160116.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201601/oisst-avhrr-v02r01.20160116.nc",
+    "bytes": 1680676,
+    "sha256": "80ca90d1bcf37d4885f12eae216aff4ac1d1002f4fd6346db828ca1d9df6e613"
+  },
+  {
+    "date": "2016-01-17",
+    "file": "oisst-avhrr-v02r01.20160117.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201601/oisst-avhrr-v02r01.20160117.nc",
+    "bytes": 1683995,
+    "sha256": "9644dbc9aadd9d5ab87f329751b938a35789ccb85b2d0e0895ffa3b61cacd28b"
+  },
+  {
+    "date": "2016-01-18",
+    "file": "oisst-avhrr-v02r01.20160118.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201601/oisst-avhrr-v02r01.20160118.nc",
+    "bytes": 1684861,
+    "sha256": "283e438b8b77b701009d4ae90981ccd58e9e180f5130cc9b690d75b39233062a"
+  },
+  {
+    "date": "2016-01-19",
+    "file": "oisst-avhrr-v02r01.20160119.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201601/oisst-avhrr-v02r01.20160119.nc",
+    "bytes": 1683808,
+    "sha256": "0bf270eb8478070bcbad62740ffbbea98313450d6859c0a0ef91d1ec4640fb1f"
+  },
+  {
+    "date": "2016-01-20",
+    "file": "oisst-avhrr-v02r01.20160120.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201601/oisst-avhrr-v02r01.20160120.nc",
+    "bytes": 1686358,
+    "sha256": "160ad84c8d9984bcbf31066190a6d5dc5acac07136fa113929ced9aa7d939d23"
+  },
+  {
+    "date": "2016-01-21",
+    "file": "oisst-avhrr-v02r01.20160121.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201601/oisst-avhrr-v02r01.20160121.nc",
+    "bytes": 1685055,
+    "sha256": "420781449896a5216cdb00963e2a9c4001f977e97f2b27973da2acaf6b1576a3"
+  },
+  {
+    "date": "2016-01-22",
+    "file": "oisst-avhrr-v02r01.20160122.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201601/oisst-avhrr-v02r01.20160122.nc",
+    "bytes": 1681360,
+    "sha256": "47f2249a539cc5a6c4d7e605a05893ac838c5619409690b77ca398d72cc48f5f"
+  },
+  {
+    "date": "2016-01-23",
+    "file": "oisst-avhrr-v02r01.20160123.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201601/oisst-avhrr-v02r01.20160123.nc",
+    "bytes": 1679688,
+    "sha256": "e2dc9a5aa5a443779ccf6413985461bea20583fee78e982907b96f83a3236738"
+  },
+  {
+    "date": "2016-01-24",
+    "file": "oisst-avhrr-v02r01.20160124.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201601/oisst-avhrr-v02r01.20160124.nc",
+    "bytes": 1682088,
+    "sha256": "703df683c35ef2266e9d88713fcb83af29fd40fde182f4dfb353122a436e6193"
+  },
+  {
+    "date": "2016-01-25",
+    "file": "oisst-avhrr-v02r01.20160125.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201601/oisst-avhrr-v02r01.20160125.nc",
+    "bytes": 1684128,
+    "sha256": "1eb0a20021e57b26719731fe6929ea36dabe0aa0e12dadd72dd68103496be3a7"
+  },
+  {
+    "date": "2016-01-26",
+    "file": "oisst-avhrr-v02r01.20160126.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201601/oisst-avhrr-v02r01.20160126.nc",
+    "bytes": 1683130,
+    "sha256": "589cdf7b71711d558bd4646edd5d0670d167ae44da6abe160d709c6c01103aa9"
+  },
+  {
+    "date": "2016-01-27",
+    "file": "oisst-avhrr-v02r01.20160127.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201601/oisst-avhrr-v02r01.20160127.nc",
+    "bytes": 1681276,
+    "sha256": "b39e54869bfe669308fd00738cf0b864024975be0388af9e8443471f3e8a4417"
+  },
+  {
+    "date": "2016-01-28",
+    "file": "oisst-avhrr-v02r01.20160128.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201601/oisst-avhrr-v02r01.20160128.nc",
+    "bytes": 1682523,
+    "sha256": "d125b4a97580968f661ddd3bd6585141fa3b278c8472e22a0825bf19e712b24a"
+  },
+  {
+    "date": "2016-01-29",
+    "file": "oisst-avhrr-v02r01.20160129.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201601/oisst-avhrr-v02r01.20160129.nc",
+    "bytes": 1683027,
+    "sha256": "dd073828faa4c3a42cd71cfc7fe795fb8a32fcd9bf49f50803496f59313138ac"
+  },
+  {
+    "date": "2016-01-30",
+    "file": "oisst-avhrr-v02r01.20160130.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201601/oisst-avhrr-v02r01.20160130.nc",
+    "bytes": 1686149,
+    "sha256": "2fdad21d80e8b4f0d40216ab1b370fcd665d9a23036e26f49d1c4ea44acb3687"
+  },
+  {
+    "date": "2016-01-31",
+    "file": "oisst-avhrr-v02r01.20160131.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201601/oisst-avhrr-v02r01.20160131.nc",
+    "bytes": 1684800,
+    "sha256": "7a0aba6d66e28a3e9a3f5f3fc99807c40e2987bf3f84c8407e0f8b39962c0d4f"
+  },
+  {
+    "date": "2016-02-01",
+    "file": "oisst-avhrr-v02r01.20160201.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201602/oisst-avhrr-v02r01.20160201.nc",
+    "bytes": 1679144,
+    "sha256": "78aa913b7b1037d5834a108a8cd995704a0150556a2dace23bf3ed76c6bb7a26"
+  },
+  {
+    "date": "2016-02-02",
+    "file": "oisst-avhrr-v02r01.20160202.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201602/oisst-avhrr-v02r01.20160202.nc",
+    "bytes": 1678115,
+    "sha256": "2ba8287bcfe30a39efb93a2200c1ba2b6783f7834f102ead76d16c457e6c80a9"
+  },
+  {
+    "date": "2016-02-03",
+    "file": "oisst-avhrr-v02r01.20160203.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201602/oisst-avhrr-v02r01.20160203.nc",
+    "bytes": 1677962,
+    "sha256": "531eac6fb4f7d33d5113b1e1b924686f9e782582d22d5d9e2303d06a6226a07f"
+  },
+  {
+    "date": "2016-02-04",
+    "file": "oisst-avhrr-v02r01.20160204.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201602/oisst-avhrr-v02r01.20160204.nc",
+    "bytes": 1677755,
+    "sha256": "79a71d119860df5b5cd5e4b160a62a9e32ee1e86ee3c418fcf71e6192d4ab0ef"
+  },
+  {
+    "date": "2016-02-05",
+    "file": "oisst-avhrr-v02r01.20160205.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201602/oisst-avhrr-v02r01.20160205.nc",
+    "bytes": 1679552,
+    "sha256": "de0e2addc932df44dcbf53b80fb9f31a13445631be5da68111fa9bdd7867011b"
+  },
+  {
+    "date": "2016-02-06",
+    "file": "oisst-avhrr-v02r01.20160206.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201602/oisst-avhrr-v02r01.20160206.nc",
+    "bytes": 1681477,
+    "sha256": "dd3ec92abd5edea1083a8a6e022dda01512e0853f28be0a9380c19c7ceeba32d"
+  },
+  {
+    "date": "2016-02-07",
+    "file": "oisst-avhrr-v02r01.20160207.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201602/oisst-avhrr-v02r01.20160207.nc",
+    "bytes": 1683049,
+    "sha256": "2eddf8206f670f6784ee134be40498fb658e998c5afff5ababf091afc1f1ee75"
+  },
+  {
+    "date": "2016-02-08",
+    "file": "oisst-avhrr-v02r01.20160208.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201602/oisst-avhrr-v02r01.20160208.nc",
+    "bytes": 1683474,
+    "sha256": "c388e3eaa310b329ad0a0667c84eedde74f9247cc22d4b3f4251b4b573bdd197"
+  },
+  {
+    "date": "2016-02-09",
+    "file": "oisst-avhrr-v02r01.20160209.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201602/oisst-avhrr-v02r01.20160209.nc",
+    "bytes": 1684040,
+    "sha256": "63346846a1c21e1e979b985db5e0dd6bb6df8c5475eaecc0ec8c5d3e777ce66a"
+  },
+  {
+    "date": "2016-02-10",
+    "file": "oisst-avhrr-v02r01.20160210.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201602/oisst-avhrr-v02r01.20160210.nc",
+    "bytes": 1682008,
+    "sha256": "f7974b897fd09e89f80fa714e3068a1113eb164ce5483374fc5d72ac68882c72"
+  },
+  {
+    "date": "2016-02-11",
+    "file": "oisst-avhrr-v02r01.20160211.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201602/oisst-avhrr-v02r01.20160211.nc",
+    "bytes": 1683854,
+    "sha256": "46962605f279dfa16c41b1c3154faa005d5f4e7258ed0dd89ebc68f8513ecaa4"
+  },
+  {
+    "date": "2016-02-12",
+    "file": "oisst-avhrr-v02r01.20160212.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201602/oisst-avhrr-v02r01.20160212.nc",
+    "bytes": 1681789,
+    "sha256": "bd56abdeccf30793b66abb22616cef31981bfca99af1590e39ff44aabc1d1b13"
+  },
+  {
+    "date": "2016-02-13",
+    "file": "oisst-avhrr-v02r01.20160213.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201602/oisst-avhrr-v02r01.20160213.nc",
+    "bytes": 1683907,
+    "sha256": "34670f1a4dc1fc89e1990f6f25beabdd8fa32907fbb7994b41115e2e3ea7ec89"
+  },
+  {
+    "date": "2016-02-14",
+    "file": "oisst-avhrr-v02r01.20160214.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201602/oisst-avhrr-v02r01.20160214.nc",
+    "bytes": 1686219,
+    "sha256": "084dee32386ea59eb4cd2c09d29130fb25b47c5a799bbe5f56a58ffb4a0026a5"
+  },
+  {
+    "date": "2016-02-15",
+    "file": "oisst-avhrr-v02r01.20160215.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201602/oisst-avhrr-v02r01.20160215.nc",
+    "bytes": 1688180,
+    "sha256": "9ca5023f8809c3d92425ad205f0177927be1bf1b1ae791b7ee95297084166dd4"
+  },
+  {
+    "date": "2016-02-16",
+    "file": "oisst-avhrr-v02r01.20160216.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201602/oisst-avhrr-v02r01.20160216.nc",
+    "bytes": 1685378,
+    "sha256": "74e5357dc1db9af2f2e2d9e1514442fdf852c1219351c56cc473014b5dd71c7e"
+  },
+  {
+    "date": "2016-02-17",
+    "file": "oisst-avhrr-v02r01.20160217.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201602/oisst-avhrr-v02r01.20160217.nc",
+    "bytes": 1681936,
+    "sha256": "f928bfb5cb6b0d0cba965cd4b7f728fc5eadc050a69dbfe84748fc0e800a1298"
+  },
+  {
+    "date": "2016-02-18",
+    "file": "oisst-avhrr-v02r01.20160218.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201602/oisst-avhrr-v02r01.20160218.nc",
+    "bytes": 1683376,
+    "sha256": "7d2c845012ce10e99e88102367a503eefc40329eb11b349aaf700234bd42c63f"
+  },
+  {
+    "date": "2016-02-19",
+    "file": "oisst-avhrr-v02r01.20160219.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201602/oisst-avhrr-v02r01.20160219.nc",
+    "bytes": 1679754,
+    "sha256": "a9fd68772a9901b2f43da3a90961794a5cdbf9f526596ce6134dd0b0f8bf6b11"
+  },
+  {
+    "date": "2016-02-20",
+    "file": "oisst-avhrr-v02r01.20160220.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201602/oisst-avhrr-v02r01.20160220.nc",
+    "bytes": 1676705,
+    "sha256": "cbf20ec55fabf6282813dea4b16a974956e5c7469fa14bb51251072c8c770e57"
+  },
+  {
+    "date": "2016-02-21",
+    "file": "oisst-avhrr-v02r01.20160221.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201602/oisst-avhrr-v02r01.20160221.nc",
+    "bytes": 1674080,
+    "sha256": "14f40208d54c546cbea517b8e07789d023f257f7ee7396def9869324f29eb279"
+  },
+  {
+    "date": "2016-02-22",
+    "file": "oisst-avhrr-v02r01.20160222.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201602/oisst-avhrr-v02r01.20160222.nc",
+    "bytes": 1673016,
+    "sha256": "a8eef3cfbb2c48635da8df289504b728aa4f12d6a3f753c357f3f1ed1f3e75bd"
+  },
+  {
+    "date": "2016-02-23",
+    "file": "oisst-avhrr-v02r01.20160223.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201602/oisst-avhrr-v02r01.20160223.nc",
+    "bytes": 1672140,
+    "sha256": "2a510dcb03ff0281391997b262704aac615a21f93ad70d34c86bde84a493cf28"
+  },
+  {
+    "date": "2016-02-24",
+    "file": "oisst-avhrr-v02r01.20160224.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201602/oisst-avhrr-v02r01.20160224.nc",
+    "bytes": 1673545,
+    "sha256": "e28558b3e98cf79a0823a3b84caeff5e483442320e9a2782ed406f11a5c655cd"
+  },
+  {
+    "date": "2016-02-25",
+    "file": "oisst-avhrr-v02r01.20160225.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201602/oisst-avhrr-v02r01.20160225.nc",
+    "bytes": 1677105,
+    "sha256": "322c870cf1f7663520308a326529f78996ae144fe873a526522dd88b00aa6cbd"
+  },
+  {
+    "date": "2016-02-26",
+    "file": "oisst-avhrr-v02r01.20160226.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201602/oisst-avhrr-v02r01.20160226.nc",
+    "bytes": 1678168,
+    "sha256": "9db5f974cf9eda6018f5e9e83772135a6fccfbd2b1803e48d54d9e826624033b"
+  },
+  {
+    "date": "2016-02-27",
+    "file": "oisst-avhrr-v02r01.20160227.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201602/oisst-avhrr-v02r01.20160227.nc",
+    "bytes": 1680408,
+    "sha256": "608f00e7ca09fab2521b3877ac5776e7b0368c765d6adfcae68c57e56b111c8a"
+  },
+  {
+    "date": "2016-02-28",
+    "file": "oisst-avhrr-v02r01.20160228.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201602/oisst-avhrr-v02r01.20160228.nc",
+    "bytes": 1681580,
+    "sha256": "6932846635386d1f2d795345b78925dfc24899a112224cada7dd7b0d428e1937"
+  },
+  {
+    "date": "2016-02-29",
+    "file": "oisst-avhrr-v02r01.20160229.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201602/oisst-avhrr-v02r01.20160229.nc",
+    "bytes": 1681463,
+    "sha256": "4e09f7603a13867be8722a3d722df2c7aebbe975d7ae3fb2a00b4680cf25653d"
+  },
+  {
+    "date": "2016-03-01",
+    "file": "oisst-avhrr-v02r01.20160301.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201603/oisst-avhrr-v02r01.20160301.nc",
+    "bytes": 1680522,
+    "sha256": "15b656aa3216e8c8ca2748d0cec3f7767274cc2aaba1479192ecec669614afd3"
+  },
+  {
+    "date": "2016-03-02",
+    "file": "oisst-avhrr-v02r01.20160302.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201603/oisst-avhrr-v02r01.20160302.nc",
+    "bytes": 1681350,
+    "sha256": "edf849856bbd549b79604feb354de4d941097a3c4149b65ae7b7486935aa1481"
+  },
+  {
+    "date": "2016-03-03",
+    "file": "oisst-avhrr-v02r01.20160303.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201603/oisst-avhrr-v02r01.20160303.nc",
+    "bytes": 1679576,
+    "sha256": "23aa9c683367ae77ae2e08d4e95671c2bf6529ba2f7ab526c8968888aa1f5271"
+  },
+  {
+    "date": "2016-03-04",
+    "file": "oisst-avhrr-v02r01.20160304.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201603/oisst-avhrr-v02r01.20160304.nc",
+    "bytes": 1675994,
+    "sha256": "d8d049624d4503d921b5a701275b9255b8544ec736473d8722bbe4d3bb132a6c"
+  },
+  {
+    "date": "2016-03-05",
+    "file": "oisst-avhrr-v02r01.20160305.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201603/oisst-avhrr-v02r01.20160305.nc",
+    "bytes": 1671399,
+    "sha256": "f632a7f84ce6ad8a1e57ef3bc5e074d9ecad43926ad05b4ae6d6af4487f58792"
+  },
+  {
+    "date": "2016-03-06",
+    "file": "oisst-avhrr-v02r01.20160306.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201603/oisst-avhrr-v02r01.20160306.nc",
+    "bytes": 1669030,
+    "sha256": "958f58cfaf68131f05939e9d0b6d048a9105e1bcf80575dcfa03216a7812c87e"
+  },
+  {
+    "date": "2016-03-07",
+    "file": "oisst-avhrr-v02r01.20160307.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201603/oisst-avhrr-v02r01.20160307.nc",
+    "bytes": 1670335,
+    "sha256": "f7a231c1e0cc266305f7e429aff0a09e78433706d17c71cb148cfcfec340c53b"
+  },
+  {
+    "date": "2016-03-08",
+    "file": "oisst-avhrr-v02r01.20160308.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201603/oisst-avhrr-v02r01.20160308.nc",
+    "bytes": 1669790,
+    "sha256": "9ac24458c7ee25b79f938ee55faedaacee7179fa3d0efcc57827f79a64cbf42c"
+  },
+  {
+    "date": "2016-03-09",
+    "file": "oisst-avhrr-v02r01.20160309.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201603/oisst-avhrr-v02r01.20160309.nc",
+    "bytes": 1668978,
+    "sha256": "0404c683d70fc02b10cd17469ad6cd69707eeb40f1f8464a5d934e06f5784e75"
+  },
+  {
+    "date": "2016-03-10",
+    "file": "oisst-avhrr-v02r01.20160310.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201603/oisst-avhrr-v02r01.20160310.nc",
+    "bytes": 1670813,
+    "sha256": "440230a7deef8bc6c7340c87250241027afad8edf7eeefc2184cc3b20dc7fdc5"
+  },
+  {
+    "date": "2016-03-11",
+    "file": "oisst-avhrr-v02r01.20160311.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201603/oisst-avhrr-v02r01.20160311.nc",
+    "bytes": 1672233,
+    "sha256": "0d46d13f9f30b6cf1ccfcf795f47a9a86e185228751781612e9764b8b0020b31"
+  },
+  {
+    "date": "2016-03-12",
+    "file": "oisst-avhrr-v02r01.20160312.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201603/oisst-avhrr-v02r01.20160312.nc",
+    "bytes": 1671118,
+    "sha256": "2bf2eccc310a0bc00901672086a4d35e2e8d9ceafdaf1a0286b7fdf8c6a16638"
+  },
+  {
+    "date": "2016-03-13",
+    "file": "oisst-avhrr-v02r01.20160313.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201603/oisst-avhrr-v02r01.20160313.nc",
+    "bytes": 1671765,
+    "sha256": "4f094a793566a2a928ddf3c2761d8dfa02a5b4719f184d8e61d06573b29660a7"
+  },
+  {
+    "date": "2016-03-14",
+    "file": "oisst-avhrr-v02r01.20160314.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201603/oisst-avhrr-v02r01.20160314.nc",
+    "bytes": 1670057,
+    "sha256": "8e6e1253d0105bee0549a6e91c7e60872091f196a7031acb540cfcf86a28eb86"
+  },
+  {
+    "date": "2016-03-15",
+    "file": "oisst-avhrr-v02r01.20160315.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201603/oisst-avhrr-v02r01.20160315.nc",
+    "bytes": 1673353,
+    "sha256": "52bd04f665a78a1658dc5c825c3f9318450af68eea930498fa163d6190bf8984"
+  },
+  {
+    "date": "2016-03-16",
+    "file": "oisst-avhrr-v02r01.20160316.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201603/oisst-avhrr-v02r01.20160316.nc",
+    "bytes": 1674103,
+    "sha256": "e41a07c830aa788a60da7229253662ce8745bf1c152e911778721ac426809b75"
+  },
+  {
+    "date": "2016-03-17",
+    "file": "oisst-avhrr-v02r01.20160317.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201603/oisst-avhrr-v02r01.20160317.nc",
+    "bytes": 1673468,
+    "sha256": "c386cd1546bbb33fc0bb4f893dc4b5dad42c6d508fd6f40559278edb46c979d6"
+  },
+  {
+    "date": "2016-03-18",
+    "file": "oisst-avhrr-v02r01.20160318.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201603/oisst-avhrr-v02r01.20160318.nc",
+    "bytes": 1669524,
+    "sha256": "e797d581dea78329f9cd793dd2b8e066e69dd6cdb64b8c4152b862193ebd5d9f"
+  },
+  {
+    "date": "2016-03-19",
+    "file": "oisst-avhrr-v02r01.20160319.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201603/oisst-avhrr-v02r01.20160319.nc",
+    "bytes": 1667495,
+    "sha256": "6bc8d679cf34c5b25e858f64c20062505ac786fb79e2af5b0febe0a4dd2fca5e"
+  },
+  {
+    "date": "2016-03-20",
+    "file": "oisst-avhrr-v02r01.20160320.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201603/oisst-avhrr-v02r01.20160320.nc",
+    "bytes": 1670739,
+    "sha256": "95c75fabc81cb340055e76d68230d913c427d94a4f1b1ed822bbd1e9a75ea93c"
+  },
+  {
+    "date": "2016-03-21",
+    "file": "oisst-avhrr-v02r01.20160321.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201603/oisst-avhrr-v02r01.20160321.nc",
+    "bytes": 1672110,
+    "sha256": "0c2d04e305f943151451626031120b89cec065464c17b1458c40264d957f9a05"
+  },
+  {
+    "date": "2016-03-22",
+    "file": "oisst-avhrr-v02r01.20160322.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201603/oisst-avhrr-v02r01.20160322.nc",
+    "bytes": 1670248,
+    "sha256": "22c02c29b53f19c8b7bbd3e4ba87c2752f41e6d4fa6db17dcdfbf8f565d12136"
+  },
+  {
+    "date": "2016-03-23",
+    "file": "oisst-avhrr-v02r01.20160323.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201603/oisst-avhrr-v02r01.20160323.nc",
+    "bytes": 1669020,
+    "sha256": "f1a6720999f39368d1e13e1273bfb71f849c97b9fff7aab5b74881acdc506e84"
+  },
+  {
+    "date": "2016-03-24",
+    "file": "oisst-avhrr-v02r01.20160324.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201603/oisst-avhrr-v02r01.20160324.nc",
+    "bytes": 1666303,
+    "sha256": "3e1a692fee286e68b782a0e8c2725d0b704d3b4e6f34366169ff26a8aeceedbf"
+  },
+  {
+    "date": "2016-03-25",
+    "file": "oisst-avhrr-v02r01.20160325.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201603/oisst-avhrr-v02r01.20160325.nc",
+    "bytes": 1663131,
+    "sha256": "358d437f806a4e784c11e61f13200ed9986499841b8862313846f152b3388d71"
+  },
+  {
+    "date": "2016-03-26",
+    "file": "oisst-avhrr-v02r01.20160326.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201603/oisst-avhrr-v02r01.20160326.nc",
+    "bytes": 1661119,
+    "sha256": "fc0a7a85b58272e1f2f960a7c1abd7ad5ea601a469674439100309e610aad04f"
+  },
+  {
+    "date": "2016-03-27",
+    "file": "oisst-avhrr-v02r01.20160327.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201603/oisst-avhrr-v02r01.20160327.nc",
+    "bytes": 1662050,
+    "sha256": "740e33c3c73e561f3d375188bbb73f0c08c56277bebbc7be7c1e8858f32b2750"
+  },
+  {
+    "date": "2016-03-28",
+    "file": "oisst-avhrr-v02r01.20160328.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201603/oisst-avhrr-v02r01.20160328.nc",
+    "bytes": 1663665,
+    "sha256": "66df71a07c9c56fd4ef3bfc5f2ae0dbacf5df7caabd09dc12e0544010586d4ef"
+  },
+  {
+    "date": "2016-03-29",
+    "file": "oisst-avhrr-v02r01.20160329.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201603/oisst-avhrr-v02r01.20160329.nc",
+    "bytes": 1662031,
+    "sha256": "9b8141426f89fe9011edc086531050e664e96b851e901f87ed7a67ef5ea58048"
+  },
+  {
+    "date": "2016-03-30",
+    "file": "oisst-avhrr-v02r01.20160330.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201603/oisst-avhrr-v02r01.20160330.nc",
+    "bytes": 1662335,
+    "sha256": "d44e5190730eecf911c99b1874272a68b4837c0867c21c66a90f6e075ab7222f"
+  },
+  {
+    "date": "2016-03-31",
+    "file": "oisst-avhrr-v02r01.20160331.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201603/oisst-avhrr-v02r01.20160331.nc",
+    "bytes": 1661880,
+    "sha256": "61b316cea32eaaf8ce38a31abe70b702ff1a3190e1d697ab1cbefda49cf03882"
+  },
+  {
+    "date": "2016-04-01",
+    "file": "oisst-avhrr-v02r01.20160401.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201604/oisst-avhrr-v02r01.20160401.nc",
+    "bytes": 1661677,
+    "sha256": "da77cb248281baa5dec81571e73d93f1195539bb258bd1023d34cabb99d58f0f"
+  },
+  {
+    "date": "2016-04-02",
+    "file": "oisst-avhrr-v02r01.20160402.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201604/oisst-avhrr-v02r01.20160402.nc",
+    "bytes": 1663155,
+    "sha256": "b37bb0eb7469b2f0fbea33aea5e37f2ff5dda26df0c99c0b35c0fc53681ff986"
+  },
+  {
+    "date": "2016-04-03",
+    "file": "oisst-avhrr-v02r01.20160403.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201604/oisst-avhrr-v02r01.20160403.nc",
+    "bytes": 1669284,
+    "sha256": "b5da09ba28c833d18ef6369094ba4228a734c8c2c2b383fa926111fe07028dcc"
+  },
+  {
+    "date": "2016-04-04",
+    "file": "oisst-avhrr-v02r01.20160404.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201604/oisst-avhrr-v02r01.20160404.nc",
+    "bytes": 1669351,
+    "sha256": "d808ed181b3eb9d4f988cae50e80927144f7894c78edeffe1be61acacd33b774"
+  },
+  {
+    "date": "2016-04-05",
+    "file": "oisst-avhrr-v02r01.20160405.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201604/oisst-avhrr-v02r01.20160405.nc",
+    "bytes": 1671193,
+    "sha256": "f091e5a97fca2fba2cde03e2e2f3bcec249e49be3fc4c1a89436277b459342ec"
+  },
+  {
+    "date": "2016-04-06",
+    "file": "oisst-avhrr-v02r01.20160406.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201604/oisst-avhrr-v02r01.20160406.nc",
+    "bytes": 1673010,
+    "sha256": "1b06bbd631863728d671323faae6820be75b5453c958c5f70b1737e4870000ca"
+  },
+  {
+    "date": "2016-04-07",
+    "file": "oisst-avhrr-v02r01.20160407.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201604/oisst-avhrr-v02r01.20160407.nc",
+    "bytes": 1669438,
+    "sha256": "571fd934400691551c88e882f1087bd9a2e798ba25144c10c8105d28f824d021"
+  },
+  {
+    "date": "2016-04-08",
+    "file": "oisst-avhrr-v02r01.20160408.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201604/oisst-avhrr-v02r01.20160408.nc",
+    "bytes": 1665386,
+    "sha256": "67683c2adedeb9a613fc4e18f414d30a7779f18a8e0d57921bc25a902259436b"
+  },
+  {
+    "date": "2016-04-09",
+    "file": "oisst-avhrr-v02r01.20160409.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201604/oisst-avhrr-v02r01.20160409.nc",
+    "bytes": 1665384,
+    "sha256": "33f2a356ab91d26f4d4817fb508ce9cbd408fe8caad64968a499251fea6aae2d"
+  },
+  {
+    "date": "2016-04-10",
+    "file": "oisst-avhrr-v02r01.20160410.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201604/oisst-avhrr-v02r01.20160410.nc",
+    "bytes": 1664386,
+    "sha256": "1233290b6e95b367d24e98ea7d6b91592f14159876b6476a1e3c4077e12273a4"
+  },
+  {
+    "date": "2016-04-11",
+    "file": "oisst-avhrr-v02r01.20160411.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201604/oisst-avhrr-v02r01.20160411.nc",
+    "bytes": 1663453,
+    "sha256": "d0313f76f53dcd3b8531627c31333058b9714e18a1a09f5665849a3f69904c33"
+  },
+  {
+    "date": "2016-04-12",
+    "file": "oisst-avhrr-v02r01.20160412.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201604/oisst-avhrr-v02r01.20160412.nc",
+    "bytes": 1661074,
+    "sha256": "b843e902ea9e93abae8ee54d7bdc1f80bf1176833c7f7fc462d8419558e68043"
+  },
+  {
+    "date": "2016-04-13",
+    "file": "oisst-avhrr-v02r01.20160413.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201604/oisst-avhrr-v02r01.20160413.nc",
+    "bytes": 1660324,
+    "sha256": "2487e1d4433ec45570f0daae11892860589ce8c4622e6c74d5d2cf3dae49b5c7"
+  },
+  {
+    "date": "2016-04-14",
+    "file": "oisst-avhrr-v02r01.20160414.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201604/oisst-avhrr-v02r01.20160414.nc",
+    "bytes": 1661494,
+    "sha256": "100c840309ddb533fdd8bc64885fc7c2c7e31fae7ef0e40ee5680168b5614562"
+  },
+  {
+    "date": "2016-04-15",
+    "file": "oisst-avhrr-v02r01.20160415.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201604/oisst-avhrr-v02r01.20160415.nc",
+    "bytes": 1662801,
+    "sha256": "1ee14cd808bfab66ac1460e28a21d6f6da50c4216a4ea446cdb8af879b63548e"
+  },
+  {
+    "date": "2016-04-16",
+    "file": "oisst-avhrr-v02r01.20160416.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201604/oisst-avhrr-v02r01.20160416.nc",
+    "bytes": 1665298,
+    "sha256": "7b4b706e551bba1ecd31fcbc118582cb148727f9a1791bf21a6a0d54e2fcb967"
+  },
+  {
+    "date": "2016-04-17",
+    "file": "oisst-avhrr-v02r01.20160417.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201604/oisst-avhrr-v02r01.20160417.nc",
+    "bytes": 1677219,
+    "sha256": "a1bbe73523eab986b819999e0af774b820422937499165b87b2a9f6def137513"
+  },
+  {
+    "date": "2016-04-18",
+    "file": "oisst-avhrr-v02r01.20160418.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201604/oisst-avhrr-v02r01.20160418.nc",
+    "bytes": 1631580,
+    "sha256": "a6c2960adea8d0fc16e2124ef4a705dc9950374c8a3af36d3822caed33544b05"
+  },
+  {
+    "date": "2016-04-19",
+    "file": "oisst-avhrr-v02r01.20160419.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201604/oisst-avhrr-v02r01.20160419.nc",
+    "bytes": 1631462,
+    "sha256": "3862bf61f0884afd033632815d7528517671b9ef4a2343256d2d7ba3f9ed4aa7"
+  },
+  {
+    "date": "2016-04-20",
+    "file": "oisst-avhrr-v02r01.20160420.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201604/oisst-avhrr-v02r01.20160420.nc",
+    "bytes": 1626274,
+    "sha256": "b95d19dd1cf8604bb18977803a90c3818e21dec4a459dd8d7cb9bc6ccf6d7651"
+  },
+  {
+    "date": "2016-04-21",
+    "file": "oisst-avhrr-v02r01.20160421.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201604/oisst-avhrr-v02r01.20160421.nc",
+    "bytes": 1631139,
+    "sha256": "07e15caf4aab81e727d797e0222405bbaf62f7f2f02e89166f09dc65878f8e56"
+  },
+  {
+    "date": "2016-04-22",
+    "file": "oisst-avhrr-v02r01.20160422.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201604/oisst-avhrr-v02r01.20160422.nc",
+    "bytes": 1623131,
+    "sha256": "8a8b26924fe4dca469144979a4e926b24e46c11a06cc45e10002c6fd8155e7c4"
+  },
+  {
+    "date": "2016-04-23",
+    "file": "oisst-avhrr-v02r01.20160423.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201604/oisst-avhrr-v02r01.20160423.nc",
+    "bytes": 1621452,
+    "sha256": "79061d45cc712bbb77502d350b661dff81df40a02dbe9d0c07775d3419bbd97b"
+  },
+  {
+    "date": "2016-04-24",
+    "file": "oisst-avhrr-v02r01.20160424.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201604/oisst-avhrr-v02r01.20160424.nc",
+    "bytes": 1618206,
+    "sha256": "df94c08b7e251d25d258f24af6a3ce9a0b01bdeda2821c2df37443c593073915"
+  },
+  {
+    "date": "2016-04-25",
+    "file": "oisst-avhrr-v02r01.20160425.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201604/oisst-avhrr-v02r01.20160425.nc",
+    "bytes": 1621252,
+    "sha256": "53c027870a28209a20f8c60aee7f6b1de85533937deac28e9627122e6725e529"
+  },
+  {
+    "date": "2016-04-26",
+    "file": "oisst-avhrr-v02r01.20160426.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201604/oisst-avhrr-v02r01.20160426.nc",
+    "bytes": 1624003,
+    "sha256": "9fae124836f26342bebdd266b728cd05c699941d50152e5fab3997537844cbe8"
+  },
+  {
+    "date": "2016-04-27",
+    "file": "oisst-avhrr-v02r01.20160427.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201604/oisst-avhrr-v02r01.20160427.nc",
+    "bytes": 1626371,
+    "sha256": "261b7e41c8197035e9d0d6dfe104450cd22cc2bbc13e69785b6fe3fc7a5d2d17"
+  },
+  {
+    "date": "2016-04-28",
+    "file": "oisst-avhrr-v02r01.20160428.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201604/oisst-avhrr-v02r01.20160428.nc",
+    "bytes": 1619932,
+    "sha256": "afd930946969d7541cc2af9cbf5d070e9def458ccc6add5da9983b2bb2a18306"
+  },
+  {
+    "date": "2016-04-29",
+    "file": "oisst-avhrr-v02r01.20160429.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201604/oisst-avhrr-v02r01.20160429.nc",
+    "bytes": 1620958,
+    "sha256": "8b9114eccb72f46c8500b996de66695df2859335017b8a228a032689ee0453d5"
+  },
+  {
+    "date": "2016-04-30",
+    "file": "oisst-avhrr-v02r01.20160430.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201604/oisst-avhrr-v02r01.20160430.nc",
+    "bytes": 1620356,
+    "sha256": "b56b650c8136e65ad20cb8fb69534c17a91ab551987fd84a84c5abcb6a34ae19"
+  },
+  {
+    "date": "2016-05-01",
+    "file": "oisst-avhrr-v02r01.20160501.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201605/oisst-avhrr-v02r01.20160501.nc",
+    "bytes": 1622697,
+    "sha256": "77744090fa60836b1cfff147a0ecf2a0a10bac2af6992d3b14fb50d195dad780"
+  },
+  {
+    "date": "2016-05-02",
+    "file": "oisst-avhrr-v02r01.20160502.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201605/oisst-avhrr-v02r01.20160502.nc",
+    "bytes": 1623996,
+    "sha256": "016f348d1c64e3cec8ee81c61d3ac16726883391501479da0789cba1bbf987b6"
+  },
+  {
+    "date": "2016-05-03",
+    "file": "oisst-avhrr-v02r01.20160503.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201605/oisst-avhrr-v02r01.20160503.nc",
+    "bytes": 1625846,
+    "sha256": "2a1d0fc88f9b17c30dfbc3988046c87ab04e4fd5e68efdc018fb08a49822b82c"
+  },
+  {
+    "date": "2016-05-04",
+    "file": "oisst-avhrr-v02r01.20160504.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201605/oisst-avhrr-v02r01.20160504.nc",
+    "bytes": 1617627,
+    "sha256": "f77edcda9922269fa7859f2d8531cd8af70737b816b182849609c192d41f59d9"
+  },
+  {
+    "date": "2016-05-05",
+    "file": "oisst-avhrr-v02r01.20160505.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201605/oisst-avhrr-v02r01.20160505.nc",
+    "bytes": 1616376,
+    "sha256": "8a972dfb688d6b12564132acfc36ac78124491e6609bfe32df1660ff9d42bc57"
+  },
+  {
+    "date": "2016-05-06",
+    "file": "oisst-avhrr-v02r01.20160506.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201605/oisst-avhrr-v02r01.20160506.nc",
+    "bytes": 1616599,
+    "sha256": "71c7f07c0c3651c5cdb3656922035d41ccd90fdf4f76a0a79220dfd62dad740e"
+  },
+  {
+    "date": "2016-05-07",
+    "file": "oisst-avhrr-v02r01.20160507.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201605/oisst-avhrr-v02r01.20160507.nc",
+    "bytes": 1615922,
+    "sha256": "4f45c6b3c1d977ff15ebd77638731e8b633877af48545fcd66a8748d603e1896"
+  },
+  {
+    "date": "2016-05-08",
+    "file": "oisst-avhrr-v02r01.20160508.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201605/oisst-avhrr-v02r01.20160508.nc",
+    "bytes": 1618281,
+    "sha256": "a9996cd9477718cca1d2403416cd0b964673b0aa957ce4085ba2134a7eabfd0d"
+  },
+  {
+    "date": "2016-05-09",
+    "file": "oisst-avhrr-v02r01.20160509.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201605/oisst-avhrr-v02r01.20160509.nc",
+    "bytes": 1618167,
+    "sha256": "1c2d2e3a518ad885c8aa2a9ad73e14abe5d751fe5e34322fab97cee0e911ddaa"
+  },
+  {
+    "date": "2016-05-10",
+    "file": "oisst-avhrr-v02r01.20160510.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201605/oisst-avhrr-v02r01.20160510.nc",
+    "bytes": 1621497,
+    "sha256": "5ed393416d27f9be31668d74f9c98982a27ac2e9dda6d22ff67ff31d2199cb8d"
+  },
+  {
+    "date": "2016-05-11",
+    "file": "oisst-avhrr-v02r01.20160511.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201605/oisst-avhrr-v02r01.20160511.nc",
+    "bytes": 1618853,
+    "sha256": "e71ad9815ddcf4fca02787431e01bf81012c84f55ba6f5d324f91fed3ccc514d"
+  },
+  {
+    "date": "2016-05-12",
+    "file": "oisst-avhrr-v02r01.20160512.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201605/oisst-avhrr-v02r01.20160512.nc",
+    "bytes": 1620162,
+    "sha256": "1cd880c5c39e3eab609f5e0eef16a3298d77460792e1e60479c07d5bc1cc5fbe"
+  },
+  {
+    "date": "2016-05-13",
+    "file": "oisst-avhrr-v02r01.20160513.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201605/oisst-avhrr-v02r01.20160513.nc",
+    "bytes": 1620402,
+    "sha256": "a9a77b8e9eab859df15527b747fd1ebcdea19cdc84c8a1d75a3029444a78b7e9"
+  },
+  {
+    "date": "2016-05-14",
+    "file": "oisst-avhrr-v02r01.20160514.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201605/oisst-avhrr-v02r01.20160514.nc",
+    "bytes": 1614786,
+    "sha256": "e6df6cf0006ac5ac07b58dfea00c163e4ba2c63384c648184bcad66cbcdbc8a0"
+  },
+  {
+    "date": "2016-05-15",
+    "file": "oisst-avhrr-v02r01.20160515.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201605/oisst-avhrr-v02r01.20160515.nc",
+    "bytes": 1613009,
+    "sha256": "9ef83929d56463a69396f08f6700596aae1ad0d3fc520841fbf6eeb8a62bd843"
+  },
+  {
+    "date": "2016-05-16",
+    "file": "oisst-avhrr-v02r01.20160516.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201605/oisst-avhrr-v02r01.20160516.nc",
+    "bytes": 1610053,
+    "sha256": "8f55b31b153b6dd65dc53967cbbaab2e599716e732bdb32ee53c57dd412fdec9"
+  },
+  {
+    "date": "2016-05-17",
+    "file": "oisst-avhrr-v02r01.20160517.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201605/oisst-avhrr-v02r01.20160517.nc",
+    "bytes": 1613783,
+    "sha256": "ec3c0e80b64ff2b781b54e3ea08adde83d41fdff99b30ee13f75630cc9946375"
+  },
+  {
+    "date": "2016-05-18",
+    "file": "oisst-avhrr-v02r01.20160518.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201605/oisst-avhrr-v02r01.20160518.nc",
+    "bytes": 1615252,
+    "sha256": "87612b057b6382dbade867fab6883275e11150ce59a6d698525bb3ca8fc9a52d"
+  },
+  {
+    "date": "2016-05-19",
+    "file": "oisst-avhrr-v02r01.20160519.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201605/oisst-avhrr-v02r01.20160519.nc",
+    "bytes": 1615919,
+    "sha256": "755d49c7e6f143bcb6331fb518f5c53d7156f50d9bb666320174b017fed4e1b6"
+  },
+  {
+    "date": "2016-05-20",
+    "file": "oisst-avhrr-v02r01.20160520.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201605/oisst-avhrr-v02r01.20160520.nc",
+    "bytes": 1623197,
+    "sha256": "b80dd466478852e7b926117a3253b048d8c90db9a30b048abeba4dfbdc3d467a"
+  },
+  {
+    "date": "2016-05-21",
+    "file": "oisst-avhrr-v02r01.20160521.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201605/oisst-avhrr-v02r01.20160521.nc",
+    "bytes": 1616728,
+    "sha256": "863284e850e71c3aa93425ca9dcba2e2c48c335663c8bff33443fdc97b11bd38"
+  },
+  {
+    "date": "2016-05-22",
+    "file": "oisst-avhrr-v02r01.20160522.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201605/oisst-avhrr-v02r01.20160522.nc",
+    "bytes": 1614323,
+    "sha256": "ff3cd299ee88688bc806bb53b96d53443e551854b8b76923334212b0378759b1"
+  },
+  {
+    "date": "2016-05-23",
+    "file": "oisst-avhrr-v02r01.20160523.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201605/oisst-avhrr-v02r01.20160523.nc",
+    "bytes": 1617886,
+    "sha256": "25672222aa3426c89f89065964fd11796c9a8a7708d3f8edef207a7b4c8aa5da"
+  },
+  {
+    "date": "2016-05-24",
+    "file": "oisst-avhrr-v02r01.20160524.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201605/oisst-avhrr-v02r01.20160524.nc",
+    "bytes": 1618000,
+    "sha256": "f832c20468d957c263035147aac4dcc98cd0ca3b342842653029242813e6d341"
+  },
+  {
+    "date": "2016-05-25",
+    "file": "oisst-avhrr-v02r01.20160525.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201605/oisst-avhrr-v02r01.20160525.nc",
+    "bytes": 1616763,
+    "sha256": "45b41352a92991f41be2ca91e1127d1ecd69523432eaebb7b81ca30b403d2f58"
+  },
+  {
+    "date": "2016-05-26",
+    "file": "oisst-avhrr-v02r01.20160526.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201605/oisst-avhrr-v02r01.20160526.nc",
+    "bytes": 1612997,
+    "sha256": "0e8f446e42468dc15ec4c0bd68d1d0cc45b2e63afdd874a8ee5a698195dea9e8"
+  },
+  {
+    "date": "2016-05-27",
+    "file": "oisst-avhrr-v02r01.20160527.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201605/oisst-avhrr-v02r01.20160527.nc",
+    "bytes": 1614907,
+    "sha256": "cfd23f86320aeca3e2dd499305f45f0fe94ec830e5d2e0f4bd4bc767899608a5"
+  },
+  {
+    "date": "2016-05-28",
+    "file": "oisst-avhrr-v02r01.20160528.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201605/oisst-avhrr-v02r01.20160528.nc",
+    "bytes": 1613560,
+    "sha256": "0ff074e1b536f0e746deb7ec2f27954405a68b90681b8e6b39df689862cf4d8f"
+  },
+  {
+    "date": "2016-05-29",
+    "file": "oisst-avhrr-v02r01.20160529.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201605/oisst-avhrr-v02r01.20160529.nc",
+    "bytes": 1612789,
+    "sha256": "62b32003225d00d6506638165dc953df177a5d28cf9f9e139a3bd0ecf59c6a36"
+  },
+  {
+    "date": "2016-05-30",
+    "file": "oisst-avhrr-v02r01.20160530.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201605/oisst-avhrr-v02r01.20160530.nc",
+    "bytes": 1613517,
+    "sha256": "7719f1de93c8869434d11dd97f3b01e91701adfcc95a75cdf5a191e51743a856"
+  },
+  {
+    "date": "2016-05-31",
+    "file": "oisst-avhrr-v02r01.20160531.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201605/oisst-avhrr-v02r01.20160531.nc",
+    "bytes": 1617605,
+    "sha256": "8eba3dac52f2bcadf6cf8da721f9484a82d3c2779a5f8e0f1afb1157a2ec9d14"
+  },
+  {
+    "date": "2016-06-01",
+    "file": "oisst-avhrr-v02r01.20160601.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201606/oisst-avhrr-v02r01.20160601.nc",
+    "bytes": 1617498,
+    "sha256": "bda4b16df8eec649aeb0d6b8322f584808cd72b3017afd18db2240f1c97386e4"
+  },
+  {
+    "date": "2016-06-02",
+    "file": "oisst-avhrr-v02r01.20160602.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201606/oisst-avhrr-v02r01.20160602.nc",
+    "bytes": 1618022,
+    "sha256": "dfe3933d915a8b3a7c5afc9d4f94c798e743d5ac509632638a2eb26fff7aaa9a"
+  },
+  {
+    "date": "2016-06-03",
+    "file": "oisst-avhrr-v02r01.20160603.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201606/oisst-avhrr-v02r01.20160603.nc",
+    "bytes": 1621188,
+    "sha256": "da20685e7bc8ede648e389207fd2b9ebf2d592019b144057497a7608f3c480e2"
+  },
+  {
+    "date": "2016-06-04",
+    "file": "oisst-avhrr-v02r01.20160604.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201606/oisst-avhrr-v02r01.20160604.nc",
+    "bytes": 1622143,
+    "sha256": "60ce83291e5db7a4e01afa6b1b71f5160ffda3e2a084b15cea735edc5a0c935a"
+  },
+  {
+    "date": "2016-06-05",
+    "file": "oisst-avhrr-v02r01.20160605.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201606/oisst-avhrr-v02r01.20160605.nc",
+    "bytes": 1622555,
+    "sha256": "d7e35415f2be2d7d7b29a587d4e8cf34e79e559436cf8211b72653b5b1c611f5"
+  },
+  {
+    "date": "2016-06-06",
+    "file": "oisst-avhrr-v02r01.20160606.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201606/oisst-avhrr-v02r01.20160606.nc",
+    "bytes": 1623475,
+    "sha256": "8127e65d061b2340a12377f92bbee35d0efece56561a684a39f4c020ad0fad2e"
+  },
+  {
+    "date": "2016-06-07",
+    "file": "oisst-avhrr-v02r01.20160607.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201606/oisst-avhrr-v02r01.20160607.nc",
+    "bytes": 1626589,
+    "sha256": "bffc91ee2e34d3c8d189c53e306f8f0fc41b230c949fa6d9063328d6a78c3cdb"
+  },
+  {
+    "date": "2016-06-08",
+    "file": "oisst-avhrr-v02r01.20160608.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201606/oisst-avhrr-v02r01.20160608.nc",
+    "bytes": 1626179,
+    "sha256": "a04e1d1b30fba2f6675fb0fc6b9bd78019ac79facf34a06919636ee4269917f3"
+  },
+  {
+    "date": "2016-06-09",
+    "file": "oisst-avhrr-v02r01.20160609.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201606/oisst-avhrr-v02r01.20160609.nc",
+    "bytes": 1622444,
+    "sha256": "f1faae142401d116fd58d88b586d9819b60a41517a9cb7c7f5b71b6163d656c2"
+  },
+  {
+    "date": "2016-06-10",
+    "file": "oisst-avhrr-v02r01.20160610.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201606/oisst-avhrr-v02r01.20160610.nc",
+    "bytes": 1625283,
+    "sha256": "bf5f37b199348dbc3a78cea794dc4edd8d23e35fef381c970aa429de968c22f0"
+  },
+  {
+    "date": "2016-06-11",
+    "file": "oisst-avhrr-v02r01.20160611.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201606/oisst-avhrr-v02r01.20160611.nc",
+    "bytes": 1624328,
+    "sha256": "e22932a0f4744cae9c56f6c01fc3f67a93ca6bdcad81f4fee3ebd9ac872669aa"
+  },
+  {
+    "date": "2016-06-12",
+    "file": "oisst-avhrr-v02r01.20160612.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201606/oisst-avhrr-v02r01.20160612.nc",
+    "bytes": 1623316,
+    "sha256": "7820694cb9fed366d57b00dc32d2842c9986d6677fcbcbb277d87627a46fd691"
+  },
+  {
+    "date": "2016-06-13",
+    "file": "oisst-avhrr-v02r01.20160613.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201606/oisst-avhrr-v02r01.20160613.nc",
+    "bytes": 1625866,
+    "sha256": "c5123e8e9b5560ed80c4f256ef8b7cf2167308eabb3d4718a2299886f504bd15"
+  },
+  {
+    "date": "2016-06-14",
+    "file": "oisst-avhrr-v02r01.20160614.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201606/oisst-avhrr-v02r01.20160614.nc",
+    "bytes": 1624756,
+    "sha256": "3e3d2c3bcdb0f8c466858e7dc03caa1a778d09f758e2ff7d4b473eb308db8c61"
+  },
+  {
+    "date": "2016-06-15",
+    "file": "oisst-avhrr-v02r01.20160615.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201606/oisst-avhrr-v02r01.20160615.nc",
+    "bytes": 1626973,
+    "sha256": "c10e983eb8ffb122ac1b0cfe3f17ef49366856d0f01201b44a4bf13b556c8746"
+  },
+  {
+    "date": "2016-06-16",
+    "file": "oisst-avhrr-v02r01.20160616.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201606/oisst-avhrr-v02r01.20160616.nc",
+    "bytes": 1622504,
+    "sha256": "d3deba10d5433c9ed0d2c310658c3f8d011c0694db784166030ab68ce2619214"
+  },
+  {
+    "date": "2016-06-17",
+    "file": "oisst-avhrr-v02r01.20160617.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201606/oisst-avhrr-v02r01.20160617.nc",
+    "bytes": 1621204,
+    "sha256": "e87b347b0f8a22fe3cc9ee4a34bbf354992779e443d3f677c431c2b4e3cb5aa3"
+  },
+  {
+    "date": "2016-06-18",
+    "file": "oisst-avhrr-v02r01.20160618.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201606/oisst-avhrr-v02r01.20160618.nc",
+    "bytes": 1624927,
+    "sha256": "9608bd109c5f64cfd31fb925c45a702a8133c3fe570481005ad196077e58a143"
+  },
+  {
+    "date": "2016-06-19",
+    "file": "oisst-avhrr-v02r01.20160619.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201606/oisst-avhrr-v02r01.20160619.nc",
+    "bytes": 1623295,
+    "sha256": "564feedaaea739c6f365ab1728fa898d193a63b03577571f2a0c2c0a5b8be427"
+  },
+  {
+    "date": "2016-06-20",
+    "file": "oisst-avhrr-v02r01.20160620.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201606/oisst-avhrr-v02r01.20160620.nc",
+    "bytes": 1622165,
+    "sha256": "c7e85238e2c01a709b799a57401321745ce34d80d10ef495f54af040372c9cc6"
+  },
+  {
+    "date": "2016-06-21",
+    "file": "oisst-avhrr-v02r01.20160621.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201606/oisst-avhrr-v02r01.20160621.nc",
+    "bytes": 1620336,
+    "sha256": "bf77e8f38aa6722706c1b047633fbd8008e7c4183f65dbfa17607d4576fe0edf"
+  },
+  {
+    "date": "2016-06-22",
+    "file": "oisst-avhrr-v02r01.20160622.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201606/oisst-avhrr-v02r01.20160622.nc",
+    "bytes": 1624189,
+    "sha256": "de3df9286d22f6e69172bb0f8c52768d996073a30813b22b7f9c8056552b1161"
+  },
+  {
+    "date": "2016-06-23",
+    "file": "oisst-avhrr-v02r01.20160623.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201606/oisst-avhrr-v02r01.20160623.nc",
+    "bytes": 1624059,
+    "sha256": "9376960f1be352acfbdfe3b679ffd17cfcce32a992a52fb0070613cc90b288d0"
+  },
+  {
+    "date": "2016-06-24",
+    "file": "oisst-avhrr-v02r01.20160624.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201606/oisst-avhrr-v02r01.20160624.nc",
+    "bytes": 1626559,
+    "sha256": "c297af0492ea66e1dbf0b11cc9d2483d6fb642f51ab23dd8832ce8952baf7501"
+  },
+  {
+    "date": "2016-06-25",
+    "file": "oisst-avhrr-v02r01.20160625.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201606/oisst-avhrr-v02r01.20160625.nc",
+    "bytes": 1630996,
+    "sha256": "81c4f965e35185139e26f7a9c8c67d011e571807a52a89f9bf60c01193ba4c48"
+  },
+  {
+    "date": "2016-06-26",
+    "file": "oisst-avhrr-v02r01.20160626.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201606/oisst-avhrr-v02r01.20160626.nc",
+    "bytes": 1630013,
+    "sha256": "e698af8638104e3d89f3621456217c7e671e6db96f7280b6404628a02f8c460d"
+  },
+  {
+    "date": "2016-06-27",
+    "file": "oisst-avhrr-v02r01.20160627.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201606/oisst-avhrr-v02r01.20160627.nc",
+    "bytes": 1631069,
+    "sha256": "debdad7e19e6641fb079ccf8049270892d36da15a27717401682071ad0301082"
+  },
+  {
+    "date": "2016-06-28",
+    "file": "oisst-avhrr-v02r01.20160628.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201606/oisst-avhrr-v02r01.20160628.nc",
+    "bytes": 1631235,
+    "sha256": "45d224249785d968f71c1e20e6a0a69a10ccfaedc3db0a628f97c314941fae60"
+  },
+  {
+    "date": "2016-06-29",
+    "file": "oisst-avhrr-v02r01.20160629.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201606/oisst-avhrr-v02r01.20160629.nc",
+    "bytes": 1628949,
+    "sha256": "af978cf904e3bcfbeb170624bd8586c516a4cbf3a938f5abe68920bb87b4becf"
+  },
+  {
+    "date": "2016-06-30",
+    "file": "oisst-avhrr-v02r01.20160630.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201606/oisst-avhrr-v02r01.20160630.nc",
+    "bytes": 1630341,
+    "sha256": "c3a387b36182cdb019f613fe10ab2ac25406557b1c5838abb78b986ede40ea19"
+  },
+  {
+    "date": "2016-07-01",
+    "file": "oisst-avhrr-v02r01.20160701.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201607/oisst-avhrr-v02r01.20160701.nc",
+    "bytes": 1672839,
+    "sha256": "387d5c6f5efed57759c715a76b5485edffbf5266b27d57fde8ac06eef115339b"
+  },
+  {
+    "date": "2016-07-02",
+    "file": "oisst-avhrr-v02r01.20160702.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201607/oisst-avhrr-v02r01.20160702.nc",
+    "bytes": 1675042,
+    "sha256": "6c4a9b57b39b6e4d65f4487745459271c0e24fc3727eff28ad3b4a6c7e273256"
+  },
+  {
+    "date": "2016-07-03",
+    "file": "oisst-avhrr-v02r01.20160703.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201607/oisst-avhrr-v02r01.20160703.nc",
+    "bytes": 1673929,
+    "sha256": "a0d6dad37750c2c3daec9b2d99630ce85ba20d3dfc28ec56ee8062df1d053299"
+  },
+  {
+    "date": "2016-07-04",
+    "file": "oisst-avhrr-v02r01.20160704.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201607/oisst-avhrr-v02r01.20160704.nc",
+    "bytes": 1668715,
+    "sha256": "cf821fd393dce02ac5b6b3d143112021c5fa4abcf1ba5b6162acc1445cb7fdb9"
+  },
+  {
+    "date": "2016-07-05",
+    "file": "oisst-avhrr-v02r01.20160705.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201607/oisst-avhrr-v02r01.20160705.nc",
+    "bytes": 1670711,
+    "sha256": "d3e203bbe0ff1776da3572b6ec1b287438a2d6d0e2cd3e1d4c25fad22e13a3ea"
+  },
+  {
+    "date": "2016-07-06",
+    "file": "oisst-avhrr-v02r01.20160706.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201607/oisst-avhrr-v02r01.20160706.nc",
+    "bytes": 1668920,
+    "sha256": "043bb2e524db2c6cacf4b67f1666d4dc8304a9ea40f29d85c5f080cfb4a11e01"
+  },
+  {
+    "date": "2016-07-07",
+    "file": "oisst-avhrr-v02r01.20160707.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201607/oisst-avhrr-v02r01.20160707.nc",
+    "bytes": 1673571,
+    "sha256": "994567e438867769528e158632aa42f1ce66ad71a9a9d10edcc40025f3046a9a"
+  },
+  {
+    "date": "2016-07-08",
+    "file": "oisst-avhrr-v02r01.20160708.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201607/oisst-avhrr-v02r01.20160708.nc",
+    "bytes": 1674500,
+    "sha256": "9f7a2f5194dc5833f9ebbb8704f49aecf1da22d5a18e35a4e5c57f297979f4d7"
+  },
+  {
+    "date": "2016-07-09",
+    "file": "oisst-avhrr-v02r01.20160709.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201607/oisst-avhrr-v02r01.20160709.nc",
+    "bytes": 1678967,
+    "sha256": "9c94fd8b46ac302dcab5bc015cc3d813d21f7eed50ea6e00a6b7696dfbe51816"
+  },
+  {
+    "date": "2016-07-10",
+    "file": "oisst-avhrr-v02r01.20160710.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201607/oisst-avhrr-v02r01.20160710.nc",
+    "bytes": 1678197,
+    "sha256": "41a53fe64db92bee65c21da3a4bd22b2fa2cd2d24ee8923bffdaa74b918abd80"
+  },
+  {
+    "date": "2016-07-11",
+    "file": "oisst-avhrr-v02r01.20160711.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201607/oisst-avhrr-v02r01.20160711.nc",
+    "bytes": 1676029,
+    "sha256": "0dad6c8d06bf7705bba24b319e34ff3235b01423c6851956a0c0ba28beb27e3f"
+  },
+  {
+    "date": "2016-07-12",
+    "file": "oisst-avhrr-v02r01.20160712.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201607/oisst-avhrr-v02r01.20160712.nc",
+    "bytes": 1676104,
+    "sha256": "d79f27fe156f920359733bcf2e28d3b48638e7bc81bca8454846196206284997"
+  },
+  {
+    "date": "2016-07-13",
+    "file": "oisst-avhrr-v02r01.20160713.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201607/oisst-avhrr-v02r01.20160713.nc",
+    "bytes": 1676401,
+    "sha256": "2e5855515de8258c07a41d58e783fa7cb0f906c3fa30db5c7a10219a01ea001c"
+  },
+  {
+    "date": "2016-07-14",
+    "file": "oisst-avhrr-v02r01.20160714.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201607/oisst-avhrr-v02r01.20160714.nc",
+    "bytes": 1677007,
+    "sha256": "f043296c472290c6c56e9f441bc25182bf0100e752d6a78af1c13d72aadeafb1"
+  },
+  {
+    "date": "2016-07-15",
+    "file": "oisst-avhrr-v02r01.20160715.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201607/oisst-avhrr-v02r01.20160715.nc",
+    "bytes": 1677821,
+    "sha256": "95b81b45827c41ae5a495357249bc4cbadf1799ba9d50ddce181ca8ead1f8e99"
+  },
+  {
+    "date": "2016-07-16",
+    "file": "oisst-avhrr-v02r01.20160716.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201607/oisst-avhrr-v02r01.20160716.nc",
+    "bytes": 1678695,
+    "sha256": "239d0b8bcdcc93dee8d93c7a2a83e9938de5f7c5365942120845d44706c64f51"
+  },
+  {
+    "date": "2016-07-17",
+    "file": "oisst-avhrr-v02r01.20160717.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201607/oisst-avhrr-v02r01.20160717.nc",
+    "bytes": 1674972,
+    "sha256": "0e2921b218b1eabfd3b9f5ee8e4d646bce4e4bc4aa05fcf8501ffd0c8874c5b6"
+  },
+  {
+    "date": "2016-07-18",
+    "file": "oisst-avhrr-v02r01.20160718.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201607/oisst-avhrr-v02r01.20160718.nc",
+    "bytes": 1672087,
+    "sha256": "0719cb2f7ea97db0ec72ebf6c867362949ae4945a9c390d6f3f6e72ea184ff14"
+  },
+  {
+    "date": "2016-07-19",
+    "file": "oisst-avhrr-v02r01.20160719.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201607/oisst-avhrr-v02r01.20160719.nc",
+    "bytes": 1673119,
+    "sha256": "da1c8ac280ccd8fde5cc60a537b3a51000d369f88724e1e4ca4e1cd9e20796ab"
+  },
+  {
+    "date": "2016-07-20",
+    "file": "oisst-avhrr-v02r01.20160720.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201607/oisst-avhrr-v02r01.20160720.nc",
+    "bytes": 1676335,
+    "sha256": "b4592becbbb05b29cbe4be5cdd6d71399ba6ba879d22b198aee28afd45677a1d"
+  },
+  {
+    "date": "2016-07-21",
+    "file": "oisst-avhrr-v02r01.20160721.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201607/oisst-avhrr-v02r01.20160721.nc",
+    "bytes": 1678258,
+    "sha256": "96573654e03ea5d36515f4157f899858164dd07be65f490b4e6581a6cc2f7e29"
+  },
+  {
+    "date": "2016-07-22",
+    "file": "oisst-avhrr-v02r01.20160722.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201607/oisst-avhrr-v02r01.20160722.nc",
+    "bytes": 1680180,
+    "sha256": "822d1112970c8a3bb59e68ac44577515bce8f648adc4c7c2735580b163e8f988"
+  },
+  {
+    "date": "2016-07-23",
+    "file": "oisst-avhrr-v02r01.20160723.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201607/oisst-avhrr-v02r01.20160723.nc",
+    "bytes": 1679002,
+    "sha256": "d09af81394f37b5298c129a5bfcc4b410a1334385ac0ab34e0eb4a0b6a35cb99"
+  },
+  {
+    "date": "2016-07-24",
+    "file": "oisst-avhrr-v02r01.20160724.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201607/oisst-avhrr-v02r01.20160724.nc",
+    "bytes": 1681698,
+    "sha256": "6097cadc1a2ca0177f890a889e5d5db53d3fdba57ee877b8885db8589fa0dc87"
+  },
+  {
+    "date": "2016-07-25",
+    "file": "oisst-avhrr-v02r01.20160725.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201607/oisst-avhrr-v02r01.20160725.nc",
+    "bytes": 1680358,
+    "sha256": "9de603b03263834756401f88aa767f41a9d9ebde0b677dce3f0ff690c3ddde4e"
+  },
+  {
+    "date": "2016-07-26",
+    "file": "oisst-avhrr-v02r01.20160726.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201607/oisst-avhrr-v02r01.20160726.nc",
+    "bytes": 1679868,
+    "sha256": "ad3a6e35ca46848e1f8cb2535511fb185b11a1f67d19087a6a21f70c9117f3b7"
+  },
+  {
+    "date": "2016-07-27",
+    "file": "oisst-avhrr-v02r01.20160727.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201607/oisst-avhrr-v02r01.20160727.nc",
+    "bytes": 1674135,
+    "sha256": "2f9eb9c7428de11de25a2ffc2e3980b0dda7da5e4e5603291c42d85fcb5c98e5"
+  },
+  {
+    "date": "2016-07-28",
+    "file": "oisst-avhrr-v02r01.20160728.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201607/oisst-avhrr-v02r01.20160728.nc",
+    "bytes": 1673952,
+    "sha256": "2c1cc3c892c8f532cb6bd496875d67333365907b151a272db41523d03c9b3d80"
+  },
+  {
+    "date": "2016-07-29",
+    "file": "oisst-avhrr-v02r01.20160729.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201607/oisst-avhrr-v02r01.20160729.nc",
+    "bytes": 1676633,
+    "sha256": "0f7d012612db56fdb980a52c49e3701baf392e0ad33930b86236452e46ebc221"
+  },
+  {
+    "date": "2016-07-30",
+    "file": "oisst-avhrr-v02r01.20160730.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201607/oisst-avhrr-v02r01.20160730.nc",
+    "bytes": 1674849,
+    "sha256": "4fa42cdb5747cbf1aaad165571a5dd90837d26276147db1bd89410111af0fc9c"
+  },
+  {
+    "date": "2016-07-31",
+    "file": "oisst-avhrr-v02r01.20160731.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201607/oisst-avhrr-v02r01.20160731.nc",
+    "bytes": 1675591,
+    "sha256": "b6d7663c8e4f862cd0c10c2896efac0bc49e9b41b1435f7c012926db5854a3dd"
+  },
+  {
+    "date": "2016-08-01",
+    "file": "oisst-avhrr-v02r01.20160801.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201608/oisst-avhrr-v02r01.20160801.nc",
+    "bytes": 1675881,
+    "sha256": "7793facd7a7ab14900e3f4222d33e4885db45140202d2e65ff352216681fd1c7"
+  },
+  {
+    "date": "2016-08-02",
+    "file": "oisst-avhrr-v02r01.20160802.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201608/oisst-avhrr-v02r01.20160802.nc",
+    "bytes": 1673559,
+    "sha256": "085f8be99717d4a2dd4f6e35e0737803cea01d105b50117dd0937da806694c88"
+  },
+  {
+    "date": "2016-08-03",
+    "file": "oisst-avhrr-v02r01.20160803.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201608/oisst-avhrr-v02r01.20160803.nc",
+    "bytes": 1674111,
+    "sha256": "23f53692452cbf5fd1c749f1a7526d41e659bf76362812a4fd00ee8f40d3bc8c"
+  },
+  {
+    "date": "2016-08-04",
+    "file": "oisst-avhrr-v02r01.20160804.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201608/oisst-avhrr-v02r01.20160804.nc",
+    "bytes": 1673000,
+    "sha256": "82f797b998d4e2eb489ba30cea508ad8f748f5f2327adea3a18848457eac71a6"
+  },
+  {
+    "date": "2016-08-05",
+    "file": "oisst-avhrr-v02r01.20160805.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201608/oisst-avhrr-v02r01.20160805.nc",
+    "bytes": 1675177,
+    "sha256": "ace72e6be215152a69675e9eceb4fe1a76069aceb81776042711659927a67990"
+  },
+  {
+    "date": "2016-08-06",
+    "file": "oisst-avhrr-v02r01.20160806.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201608/oisst-avhrr-v02r01.20160806.nc",
+    "bytes": 1671982,
+    "sha256": "79a10094852739d6143f0ce4dc541484ba0f9b4c267882be55074787817337a1"
+  },
+  {
+    "date": "2016-08-07",
+    "file": "oisst-avhrr-v02r01.20160807.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201608/oisst-avhrr-v02r01.20160807.nc",
+    "bytes": 1673024,
+    "sha256": "6cb708613cbe9041078dba5c96333e9550faa58c6455aecdbb13348f95fda460"
+  },
+  {
+    "date": "2016-08-08",
+    "file": "oisst-avhrr-v02r01.20160808.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201608/oisst-avhrr-v02r01.20160808.nc",
+    "bytes": 1673708,
+    "sha256": "1b7f507b2f1f3c2b825d486bb5f6ba4a82328ba7de815a8d2b237ecf38af3dbd"
+  },
+  {
+    "date": "2016-08-09",
+    "file": "oisst-avhrr-v02r01.20160809.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201608/oisst-avhrr-v02r01.20160809.nc",
+    "bytes": 1675966,
+    "sha256": "d27dc1d1b9353cb6e6f6d350c2fa4122dbf1db1e1dc921070499fb68096cc57e"
+  },
+  {
+    "date": "2016-08-10",
+    "file": "oisst-avhrr-v02r01.20160810.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201608/oisst-avhrr-v02r01.20160810.nc",
+    "bytes": 1672067,
+    "sha256": "def0873f1dc7888d0346fa228b7fe887a1d0c295ade115daa00ae5b17958b1e6"
+  },
+  {
+    "date": "2016-08-11",
+    "file": "oisst-avhrr-v02r01.20160811.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201608/oisst-avhrr-v02r01.20160811.nc",
+    "bytes": 1668677,
+    "sha256": "42ffd09f6cd19ef081626c03b9e5f3f4c68885677d694343a0e7ae854b95af41"
+  },
+  {
+    "date": "2016-08-12",
+    "file": "oisst-avhrr-v02r01.20160812.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201608/oisst-avhrr-v02r01.20160812.nc",
+    "bytes": 1669750,
+    "sha256": "926a9c1e41c8c17b3cca83601833c30368cf9e941ccf5111f16ee29ad5ad6ae7"
+  },
+  {
+    "date": "2016-08-13",
+    "file": "oisst-avhrr-v02r01.20160813.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201608/oisst-avhrr-v02r01.20160813.nc",
+    "bytes": 1671254,
+    "sha256": "0045228c5f44e178941e0bb3844a6497f490fd2412c3a7effd42671fa993194a"
+  },
+  {
+    "date": "2016-08-14",
+    "file": "oisst-avhrr-v02r01.20160814.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201608/oisst-avhrr-v02r01.20160814.nc",
+    "bytes": 1670955,
+    "sha256": "4ed79b1810646d7c4136e47af927415251e1fa1d149e0a949d0d5ce9f6b3dccc"
+  },
+  {
+    "date": "2016-08-15",
+    "file": "oisst-avhrr-v02r01.20160815.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201608/oisst-avhrr-v02r01.20160815.nc",
+    "bytes": 1670634,
+    "sha256": "e67a0200720e12a03acfc26f2f251164faf0e9e59e2ceecd971498a38223a45c"
+  },
+  {
+    "date": "2016-08-16",
+    "file": "oisst-avhrr-v02r01.20160816.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201608/oisst-avhrr-v02r01.20160816.nc",
+    "bytes": 1671355,
+    "sha256": "711643ab94b2291e8234139a7cd7e9dad06ad76b6ff04a779ba57f80e7490e0e"
+  },
+  {
+    "date": "2016-08-17",
+    "file": "oisst-avhrr-v02r01.20160817.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201608/oisst-avhrr-v02r01.20160817.nc",
+    "bytes": 1674211,
+    "sha256": "54dc015a45928c17c759b9582e88251d86822f20afb7e1a341d6698a26c558b9"
+  },
+  {
+    "date": "2016-08-18",
+    "file": "oisst-avhrr-v02r01.20160818.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201608/oisst-avhrr-v02r01.20160818.nc",
+    "bytes": 1676669,
+    "sha256": "6b23741961df5c6d540091a49ddd93053353278a23415f4b485f8cc5fdcaf29d"
+  },
+  {
+    "date": "2016-08-19",
+    "file": "oisst-avhrr-v02r01.20160819.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201608/oisst-avhrr-v02r01.20160819.nc",
+    "bytes": 1676942,
+    "sha256": "3bbe94b006c92e8dab9f3e2ee8a15682ab45300ac188b8ec6dc7f82a0ba3a302"
+  },
+  {
+    "date": "2016-08-20",
+    "file": "oisst-avhrr-v02r01.20160820.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201608/oisst-avhrr-v02r01.20160820.nc",
+    "bytes": 1677826,
+    "sha256": "c5babdfd7376450f3d44233808714278c143329162bf5d6c4f23c2de45079890"
+  },
+  {
+    "date": "2016-08-21",
+    "file": "oisst-avhrr-v02r01.20160821.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201608/oisst-avhrr-v02r01.20160821.nc",
+    "bytes": 1674891,
+    "sha256": "e39f322a806097ba461645304aebb0a0f7cc82e5200e9ae9957b45d0ba008ec0"
+  },
+  {
+    "date": "2016-08-22",
+    "file": "oisst-avhrr-v02r01.20160822.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201608/oisst-avhrr-v02r01.20160822.nc",
+    "bytes": 1674198,
+    "sha256": "05c7083d6e57407f9e769751a72aebdd34b1b71708c6d28a1ea75778e1aca771"
+  },
+  {
+    "date": "2016-08-23",
+    "file": "oisst-avhrr-v02r01.20160823.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201608/oisst-avhrr-v02r01.20160823.nc",
+    "bytes": 1674004,
+    "sha256": "c61baa924d73d8420284f7ad3caa50fe4c4c5709821cb599e9e3848bd219beaf"
+  },
+  {
+    "date": "2016-08-24",
+    "file": "oisst-avhrr-v02r01.20160824.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201608/oisst-avhrr-v02r01.20160824.nc",
+    "bytes": 1673891,
+    "sha256": "3f262c33ab292e3ba3a96a60dc241048e5412f344214ee66846198527da5aa33"
+  },
+  {
+    "date": "2016-08-25",
+    "file": "oisst-avhrr-v02r01.20160825.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201608/oisst-avhrr-v02r01.20160825.nc",
+    "bytes": 1674212,
+    "sha256": "1d99b3dee1d54d452c81a852f8123dda60bb3c4780fa5281daa198816b3f26e5"
+  },
+  {
+    "date": "2016-08-26",
+    "file": "oisst-avhrr-v02r01.20160826.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201608/oisst-avhrr-v02r01.20160826.nc",
+    "bytes": 1674892,
+    "sha256": "58bba26ba91021e0a52d2bc19c560a9c003f4809efc9b2777fc799618d928450"
+  },
+  {
+    "date": "2016-08-27",
+    "file": "oisst-avhrr-v02r01.20160827.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201608/oisst-avhrr-v02r01.20160827.nc",
+    "bytes": 1678099,
+    "sha256": "f7e3efca677d9e31c2e233872468b3207df1ff04a7736e825b9f6f3962fd8bcb"
+  },
+  {
+    "date": "2016-08-28",
+    "file": "oisst-avhrr-v02r01.20160828.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201608/oisst-avhrr-v02r01.20160828.nc",
+    "bytes": 1678728,
+    "sha256": "ff3f3b017793b01744fd59242fe968c45f8d0bfc121f83c9ce489428d2a8f1b4"
+  },
+  {
+    "date": "2016-08-29",
+    "file": "oisst-avhrr-v02r01.20160829.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201608/oisst-avhrr-v02r01.20160829.nc",
+    "bytes": 1681206,
+    "sha256": "e6af2991943c9e6f5a26cf412205a04ee63416533a12fd7fa6ff0df7448d0670"
+  },
+  {
+    "date": "2016-08-30",
+    "file": "oisst-avhrr-v02r01.20160830.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201608/oisst-avhrr-v02r01.20160830.nc",
+    "bytes": 1681190,
+    "sha256": "ccc8b401355d5a0818ac83ffb7bc761040c257871302f55a8205729523ba3545"
+  },
+  {
+    "date": "2016-08-31",
+    "file": "oisst-avhrr-v02r01.20160831.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201608/oisst-avhrr-v02r01.20160831.nc",
+    "bytes": 1680506,
+    "sha256": "fe32f0c2ad0266dde0469583c76a3ba77789bb0d0b0a0e713f9d9d6aad2ca936"
+  },
+  {
+    "date": "2016-09-01",
+    "file": "oisst-avhrr-v02r01.20160901.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201609/oisst-avhrr-v02r01.20160901.nc",
+    "bytes": 1678691,
+    "sha256": "fa0eb5c779b9e2a4b3b705fce25224a2538d1017c9b1028e827c765e4b326492"
+  },
+  {
+    "date": "2016-09-02",
+    "file": "oisst-avhrr-v02r01.20160902.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201609/oisst-avhrr-v02r01.20160902.nc",
+    "bytes": 1676606,
+    "sha256": "8ab672eb20b154b1ddc90eccc781a373459ddef6c6ef8b5f67c310e01d4b4f85"
+  },
+  {
+    "date": "2016-09-03",
+    "file": "oisst-avhrr-v02r01.20160903.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201609/oisst-avhrr-v02r01.20160903.nc",
+    "bytes": 1674345,
+    "sha256": "35825011086fb877482682faa5a573aadc03627f8747a33e8dbccbc302113509"
+  },
+  {
+    "date": "2016-09-04",
+    "file": "oisst-avhrr-v02r01.20160904.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201609/oisst-avhrr-v02r01.20160904.nc",
+    "bytes": 1672037,
+    "sha256": "b4bb7fddf4ca9962061fd55f896f0d568eaa1783ea023cc0f54113bd434bea73"
+  },
+  {
+    "date": "2016-09-05",
+    "file": "oisst-avhrr-v02r01.20160905.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201609/oisst-avhrr-v02r01.20160905.nc",
+    "bytes": 1672365,
+    "sha256": "71c52d8e5823581cb8f9062bc4a7f236531dd7bcb6215de117708a0e706249ee"
+  },
+  {
+    "date": "2016-09-06",
+    "file": "oisst-avhrr-v02r01.20160906.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201609/oisst-avhrr-v02r01.20160906.nc",
+    "bytes": 1674993,
+    "sha256": "48a79e028049a352fdb2a066bd9fac33604b9cf1b20f623cc05e8eb722f45b0c"
+  },
+  {
+    "date": "2016-09-07",
+    "file": "oisst-avhrr-v02r01.20160907.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201609/oisst-avhrr-v02r01.20160907.nc",
+    "bytes": 1674425,
+    "sha256": "5a15f57c66ce5bee8694b82b2bdea7b0d1d03327867aee5625fce44e7462531c"
+  },
+  {
+    "date": "2016-09-08",
+    "file": "oisst-avhrr-v02r01.20160908.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201609/oisst-avhrr-v02r01.20160908.nc",
+    "bytes": 1669344,
+    "sha256": "42d1a5f81ec7c2d6eb1f82ce37696969ef58e84dac33f5c48744a57e26e9d08a"
+  },
+  {
+    "date": "2016-09-09",
+    "file": "oisst-avhrr-v02r01.20160909.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201609/oisst-avhrr-v02r01.20160909.nc",
+    "bytes": 1667001,
+    "sha256": "5d4e08b1b27373d9c65ed508689b555efc33416d338f93df051dc30fd579f661"
+  },
+  {
+    "date": "2016-09-10",
+    "file": "oisst-avhrr-v02r01.20160910.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201609/oisst-avhrr-v02r01.20160910.nc",
+    "bytes": 1664948,
+    "sha256": "ed730af9fb4fb109dc35d188df0f095902f36c369aa1dfee9d0f185283593749"
+  },
+  {
+    "date": "2016-09-11",
+    "file": "oisst-avhrr-v02r01.20160911.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201609/oisst-avhrr-v02r01.20160911.nc",
+    "bytes": 1662952,
+    "sha256": "c0c2e13dc82147c788ebf9e819e7ffd8a0038d3c45080cbbdf3f367c114abf80"
+  },
+  {
+    "date": "2016-09-12",
+    "file": "oisst-avhrr-v02r01.20160912.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201609/oisst-avhrr-v02r01.20160912.nc",
+    "bytes": 1661832,
+    "sha256": "8b092b6cf7a66f5c01f6d9083f53036d8f44c900517480cd765a55c853a0e4f8"
+  },
+  {
+    "date": "2016-09-13",
+    "file": "oisst-avhrr-v02r01.20160913.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201609/oisst-avhrr-v02r01.20160913.nc",
+    "bytes": 1661846,
+    "sha256": "8992c1e0eb22c49caf60a82906c25430b76719689430b06fedf1b06ccacc008e"
+  },
+  {
+    "date": "2016-09-14",
+    "file": "oisst-avhrr-v02r01.20160914.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201609/oisst-avhrr-v02r01.20160914.nc",
+    "bytes": 1664472,
+    "sha256": "0aefe9d1a48587f1608a1e5c24d6baed38d5d8b20837a7f94b787476e8dcebbf"
+  },
+  {
+    "date": "2016-09-15",
+    "file": "oisst-avhrr-v02r01.20160915.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201609/oisst-avhrr-v02r01.20160915.nc",
+    "bytes": 1664984,
+    "sha256": "d51036f40383069337c2d409dd5ee5e3dd48f00135f5a62e0b14531c0331a24c"
+  },
+  {
+    "date": "2016-09-16",
+    "file": "oisst-avhrr-v02r01.20160916.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201609/oisst-avhrr-v02r01.20160916.nc",
+    "bytes": 1665901,
+    "sha256": "9b00688a23da15ed5857d46e19f20cd7dfbc12f0cdca79d64440f3389224e47f"
+  },
+  {
+    "date": "2016-09-17",
+    "file": "oisst-avhrr-v02r01.20160917.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201609/oisst-avhrr-v02r01.20160917.nc",
+    "bytes": 1666463,
+    "sha256": "2a7e6c3ad15b118d348dbe9c89a103b468c488b71d6aa5e7c7da1eac19bd6350"
+  },
+  {
+    "date": "2016-09-18",
+    "file": "oisst-avhrr-v02r01.20160918.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201609/oisst-avhrr-v02r01.20160918.nc",
+    "bytes": 1668885,
+    "sha256": "5f64abd1d14b23baad92e24f166457d3b6b323654c39fd1b21ea2b07067623f9"
+  },
+  {
+    "date": "2016-09-19",
+    "file": "oisst-avhrr-v02r01.20160919.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201609/oisst-avhrr-v02r01.20160919.nc",
+    "bytes": 1664425,
+    "sha256": "51f8ce02b272a43395828b562ead03fdf8a693963c01ed12455c2312c6189ce3"
+  },
+  {
+    "date": "2016-09-20",
+    "file": "oisst-avhrr-v02r01.20160920.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201609/oisst-avhrr-v02r01.20160920.nc",
+    "bytes": 1658902,
+    "sha256": "a6d36e0cfbf70482d9d1f68b100f4f645fea3a53748bc5c3355de0fa0b757177"
+  },
+  {
+    "date": "2016-09-21",
+    "file": "oisst-avhrr-v02r01.20160921.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201609/oisst-avhrr-v02r01.20160921.nc",
+    "bytes": 1656987,
+    "sha256": "8f6d91b8be7fab4a78f4f82f4d53b8f6413c12ef6ca0abb06c53c8eca6913238"
+  },
+  {
+    "date": "2016-09-22",
+    "file": "oisst-avhrr-v02r01.20160922.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201609/oisst-avhrr-v02r01.20160922.nc",
+    "bytes": 1658305,
+    "sha256": "836b6796935bcd810c56d154fc96714abd8ae33e37ebb9d547090bfcc013d17c"
+  },
+  {
+    "date": "2016-09-23",
+    "file": "oisst-avhrr-v02r01.20160923.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201609/oisst-avhrr-v02r01.20160923.nc",
+    "bytes": 1658440,
+    "sha256": "e7f7d82adf6edcb6b46f30b631fabf2f18d0332d10f5ffe90dd88b936aa4eaff"
+  },
+  {
+    "date": "2016-09-24",
+    "file": "oisst-avhrr-v02r01.20160924.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201609/oisst-avhrr-v02r01.20160924.nc",
+    "bytes": 1658724,
+    "sha256": "395552b6d2dd4aff6d3ba6de5a7b68af07b66f31c418e5753e850c156e0e3ee9"
+  },
+  {
+    "date": "2016-09-25",
+    "file": "oisst-avhrr-v02r01.20160925.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201609/oisst-avhrr-v02r01.20160925.nc",
+    "bytes": 1660309,
+    "sha256": "90ad98b47ac04f1cf5020305000993fa0223cb7e456cac78ca952db987ef4f40"
+  },
+  {
+    "date": "2016-09-26",
+    "file": "oisst-avhrr-v02r01.20160926.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201609/oisst-avhrr-v02r01.20160926.nc",
+    "bytes": 1659772,
+    "sha256": "dc2ff649ca1e4950eea8994b78ab84341237fedae2bfeb90ef0015c3b168e8eb"
+  },
+  {
+    "date": "2016-09-27",
+    "file": "oisst-avhrr-v02r01.20160927.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201609/oisst-avhrr-v02r01.20160927.nc",
+    "bytes": 1659348,
+    "sha256": "82f718fec72a4344b35b16faa779f4ebc0bfd86a3e667d78a0f01488a2cd0e29"
+  },
+  {
+    "date": "2016-09-28",
+    "file": "oisst-avhrr-v02r01.20160928.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201609/oisst-avhrr-v02r01.20160928.nc",
+    "bytes": 1660583,
+    "sha256": "f405c248860862b2ac8365c2c246641766822c463d8c628d5c52e367c0922f8d"
+  },
+  {
+    "date": "2016-09-29",
+    "file": "oisst-avhrr-v02r01.20160929.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201609/oisst-avhrr-v02r01.20160929.nc",
+    "bytes": 1660015,
+    "sha256": "419af8b50ac3f487aa8c7a2f510241da59ae97e05b693460ea4d321ffd2fc1b3"
+  },
+  {
+    "date": "2016-09-30",
+    "file": "oisst-avhrr-v02r01.20160930.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201609/oisst-avhrr-v02r01.20160930.nc",
+    "bytes": 1659220,
+    "sha256": "eadc81b3e1fc90cdb06536f01060e87923a9302e0c311c179d9b4b6c2157f214"
+  },
+  {
+    "date": "2016-10-01",
+    "file": "oisst-avhrr-v02r01.20161001.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201610/oisst-avhrr-v02r01.20161001.nc",
+    "bytes": 1658085,
+    "sha256": "63385c086cf4cd4b0ca6b2b05f454cdfb051ed0a17ecd1f590317974450c68e2"
+  },
+  {
+    "date": "2016-10-02",
+    "file": "oisst-avhrr-v02r01.20161002.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201610/oisst-avhrr-v02r01.20161002.nc",
+    "bytes": 1656385,
+    "sha256": "e69732d40784ddd492bef8b51a7a98adacb805b16ace916b4bb2e789c312b3aa"
+  },
+  {
+    "date": "2016-10-03",
+    "file": "oisst-avhrr-v02r01.20161003.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201610/oisst-avhrr-v02r01.20161003.nc",
+    "bytes": 1655069,
+    "sha256": "2470957411dabcdac582d16793aa913ecd3c49978d668ebbfe5bf805bcd5708e"
+  },
+  {
+    "date": "2016-10-04",
+    "file": "oisst-avhrr-v02r01.20161004.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201610/oisst-avhrr-v02r01.20161004.nc",
+    "bytes": 1655304,
+    "sha256": "ed22d4291c49288053871608425561d54d50e9d4997340a9bef07816c921242c"
+  },
+  {
+    "date": "2016-10-05",
+    "file": "oisst-avhrr-v02r01.20161005.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201610/oisst-avhrr-v02r01.20161005.nc",
+    "bytes": 1660334,
+    "sha256": "286f13078bc0f9b2a93b39b0730ba5a96f6de23c3ff6a24e3727b6192d6eb72d"
+  },
+  {
+    "date": "2016-10-06",
+    "file": "oisst-avhrr-v02r01.20161006.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201610/oisst-avhrr-v02r01.20161006.nc",
+    "bytes": 1664060,
+    "sha256": "41d7916c3801cf71a765333a4ef5cce2143252caf3cb15971964d00133442307"
+  },
+  {
+    "date": "2016-10-07",
+    "file": "oisst-avhrr-v02r01.20161007.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201610/oisst-avhrr-v02r01.20161007.nc",
+    "bytes": 1663469,
+    "sha256": "c5024af19b7d2e6c40bfb819f3d82d6321cb5bbe70d043271d2a28b5fb3822d9"
+  },
+  {
+    "date": "2016-10-08",
+    "file": "oisst-avhrr-v02r01.20161008.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201610/oisst-avhrr-v02r01.20161008.nc",
+    "bytes": 1660629,
+    "sha256": "54cc6dffb50198da203b384ce976cd032d8c16098d53514392a9a3c641a79420"
+  },
+  {
+    "date": "2016-10-09",
+    "file": "oisst-avhrr-v02r01.20161009.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201610/oisst-avhrr-v02r01.20161009.nc",
+    "bytes": 1659796,
+    "sha256": "9660209371ca343442e1e1ccb3f067c6dc1fbd0febe7ca5c00f3fc26c131aad4"
+  },
+  {
+    "date": "2016-10-10",
+    "file": "oisst-avhrr-v02r01.20161010.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201610/oisst-avhrr-v02r01.20161010.nc",
+    "bytes": 1665272,
+    "sha256": "b3aea2855169e397665b5f8e68557a79f8bca021d23977cf419f341efb75c896"
+  },
+  {
+    "date": "2016-10-11",
+    "file": "oisst-avhrr-v02r01.20161011.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201610/oisst-avhrr-v02r01.20161011.nc",
+    "bytes": 1665578,
+    "sha256": "85c1d6ea73e7e95774bdc23af89292072500200fa4f6cf1d3214babd95331a01"
+  },
+  {
+    "date": "2016-10-12",
+    "file": "oisst-avhrr-v02r01.20161012.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201610/oisst-avhrr-v02r01.20161012.nc",
+    "bytes": 1665502,
+    "sha256": "51ec26e2b182a767c4dc81d01c452205fd94223055da7431a2de429c22c10205"
+  },
+  {
+    "date": "2016-10-13",
+    "file": "oisst-avhrr-v02r01.20161013.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201610/oisst-avhrr-v02r01.20161013.nc",
+    "bytes": 1664617,
+    "sha256": "47438e087d3f3d6d19870eb1cb548e98b71cc47f62d3a62f8cefe94bdb8d56cb"
+  },
+  {
+    "date": "2016-10-14",
+    "file": "oisst-avhrr-v02r01.20161014.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201610/oisst-avhrr-v02r01.20161014.nc",
+    "bytes": 1667099,
+    "sha256": "7251ba02a9d86f8785ecfe0bcda1dd1f6ff9db836d8cfa58655ead71a0773cb1"
+  },
+  {
+    "date": "2016-10-15",
+    "file": "oisst-avhrr-v02r01.20161015.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201610/oisst-avhrr-v02r01.20161015.nc",
+    "bytes": 1667052,
+    "sha256": "b83f33d4bbb3ded88143376e44cd3ca9b3f90eefb5b77ce1d3a46b5ddff5fe98"
+  },
+  {
+    "date": "2016-10-16",
+    "file": "oisst-avhrr-v02r01.20161016.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201610/oisst-avhrr-v02r01.20161016.nc",
+    "bytes": 1665075,
+    "sha256": "c9d0963d75c1e94b93416ba0c2009411e401b602095817cbdcf1b36dc5b7bb25"
+  },
+  {
+    "date": "2016-10-17",
+    "file": "oisst-avhrr-v02r01.20161017.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201610/oisst-avhrr-v02r01.20161017.nc",
+    "bytes": 1664628,
+    "sha256": "369c2ae7a1cdd941863bda092299aec0324f006caa86af455ed04259816168cf"
+  },
+  {
+    "date": "2016-10-18",
+    "file": "oisst-avhrr-v02r01.20161018.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201610/oisst-avhrr-v02r01.20161018.nc",
+    "bytes": 1664172,
+    "sha256": "767e192d4712a1c2a8340a8407525d15ac9dab335f83f6fa69e9eac2501e65f1"
+  },
+  {
+    "date": "2016-10-19",
+    "file": "oisst-avhrr-v02r01.20161019.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201610/oisst-avhrr-v02r01.20161019.nc",
+    "bytes": 1669368,
+    "sha256": "d5789b69e724a151cc5932e3a7f2c63a08f7f66de677075edd41edbd8cf5b922"
+  },
+  {
+    "date": "2016-10-20",
+    "file": "oisst-avhrr-v02r01.20161020.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201610/oisst-avhrr-v02r01.20161020.nc",
+    "bytes": 1669824,
+    "sha256": "f22d3791db08a54b85fc736e67baad50543fd4b5b9f4bf553e2f595cfb083e5b"
+  },
+  {
+    "date": "2016-10-21",
+    "file": "oisst-avhrr-v02r01.20161021.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201610/oisst-avhrr-v02r01.20161021.nc",
+    "bytes": 1668437,
+    "sha256": "7ad5539f9c4892359a7a4f5695575df0fb3b64f2434e094664b2c935a6eba4de"
+  },
+  {
+    "date": "2016-10-22",
+    "file": "oisst-avhrr-v02r01.20161022.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201610/oisst-avhrr-v02r01.20161022.nc",
+    "bytes": 1668490,
+    "sha256": "277ead0f06f5a6441cf1beb1ea0d7d1353597a273b3d4275cd9557a9b0329af8"
+  },
+  {
+    "date": "2016-10-23",
+    "file": "oisst-avhrr-v02r01.20161023.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201610/oisst-avhrr-v02r01.20161023.nc",
+    "bytes": 1665337,
+    "sha256": "24b7d79557364da363f6c69c57ab9f157d119050483a77b80a0642011599223e"
+  },
+  {
+    "date": "2016-10-24",
+    "file": "oisst-avhrr-v02r01.20161024.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201610/oisst-avhrr-v02r01.20161024.nc",
+    "bytes": 1666625,
+    "sha256": "6e44fe3241318853a8802f85c29c8cdd7887278428cf1d80df62dc1c80ea8852"
+  },
+  {
+    "date": "2016-10-25",
+    "file": "oisst-avhrr-v02r01.20161025.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201610/oisst-avhrr-v02r01.20161025.nc",
+    "bytes": 1665313,
+    "sha256": "c4e56afa2f6549d21f70f4a6375c2aa73db23bb4d3b0c9bc85afec03f075844a"
+  },
+  {
+    "date": "2016-10-26",
+    "file": "oisst-avhrr-v02r01.20161026.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201610/oisst-avhrr-v02r01.20161026.nc",
+    "bytes": 1663846,
+    "sha256": "e1c2936cc70ccf8fec4f8bd2516ea769dff46cea5362580ed333945ef99b65b2"
+  },
+  {
+    "date": "2016-10-27",
+    "file": "oisst-avhrr-v02r01.20161027.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201610/oisst-avhrr-v02r01.20161027.nc",
+    "bytes": 1663943,
+    "sha256": "a84774dfd6466fd15590a0e1fbdd8bc98c9d4f9c945d5194cdd4da33ea40500c"
+  },
+  {
+    "date": "2016-10-28",
+    "file": "oisst-avhrr-v02r01.20161028.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201610/oisst-avhrr-v02r01.20161028.nc",
+    "bytes": 1664388,
+    "sha256": "f38d9b5c9e4a924d10ea1ab832289ffb5e75f7366730f594c6bbe991a09950e8"
+  },
+  {
+    "date": "2016-10-29",
+    "file": "oisst-avhrr-v02r01.20161029.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201610/oisst-avhrr-v02r01.20161029.nc",
+    "bytes": 1664969,
+    "sha256": "245c6ec09a986f93e339baa1ab031312b4bf4e2c3d0782fe450bfbbd8a33e882"
+  },
+  {
+    "date": "2016-10-30",
+    "file": "oisst-avhrr-v02r01.20161030.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201610/oisst-avhrr-v02r01.20161030.nc",
+    "bytes": 1666677,
+    "sha256": "ee837d1769326f5a64cdf53536e9d1a287a4bdd7217c0a8229a2e76eed68ecd5"
+  },
+  {
+    "date": "2016-10-31",
+    "file": "oisst-avhrr-v02r01.20161031.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201610/oisst-avhrr-v02r01.20161031.nc",
+    "bytes": 1666332,
+    "sha256": "41242f2b0d668ad3a6092c1fc2a4a415005960ef249fe540464d8999cdbf5077"
+  },
+  {
+    "date": "2016-11-01",
+    "file": "oisst-avhrr-v02r01.20161101.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201611/oisst-avhrr-v02r01.20161101.nc",
+    "bytes": 1668372,
+    "sha256": "570aa5fa4a9ceebecef84c81e8437ea6d96f45b13e60d7619e0f30768995ae46"
+  },
+  {
+    "date": "2016-11-02",
+    "file": "oisst-avhrr-v02r01.20161102.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201611/oisst-avhrr-v02r01.20161102.nc",
+    "bytes": 1670019,
+    "sha256": "4f93641fd4adc628a89bb1f4dee9894b1777d5e472654496906acc6a5fecba20"
+  },
+  {
+    "date": "2016-11-03",
+    "file": "oisst-avhrr-v02r01.20161103.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201611/oisst-avhrr-v02r01.20161103.nc",
+    "bytes": 1674293,
+    "sha256": "c96502911b9badd351f7e24a007b1b4dc0202855c2525523f2846374b95a357c"
+  },
+  {
+    "date": "2016-11-04",
+    "file": "oisst-avhrr-v02r01.20161104.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201611/oisst-avhrr-v02r01.20161104.nc",
+    "bytes": 1673741,
+    "sha256": "4fb732a6ff31d859f0ad296234eca551b400e048fc1763388e37ff38829dafae"
+  },
+  {
+    "date": "2016-11-05",
+    "file": "oisst-avhrr-v02r01.20161105.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201611/oisst-avhrr-v02r01.20161105.nc",
+    "bytes": 1674220,
+    "sha256": "8e06b492ee9a0fa04e980ef7ba5e025d7d58f27ea49d8f3ff214a0ccbf3b5625"
+  },
+  {
+    "date": "2016-11-06",
+    "file": "oisst-avhrr-v02r01.20161106.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201611/oisst-avhrr-v02r01.20161106.nc",
+    "bytes": 1674600,
+    "sha256": "32c4db5184c6c07981abae44ea2892e23da5bca4796e1f657efcecd25160d990"
+  },
+  {
+    "date": "2016-11-07",
+    "file": "oisst-avhrr-v02r01.20161107.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201611/oisst-avhrr-v02r01.20161107.nc",
+    "bytes": 1674590,
+    "sha256": "fc125d346b2ea5998ea4681cbe0b2da0e7bded0a928697bcd0d14dd20ff8cac7"
+  },
+  {
+    "date": "2016-11-08",
+    "file": "oisst-avhrr-v02r01.20161108.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201611/oisst-avhrr-v02r01.20161108.nc",
+    "bytes": 1675932,
+    "sha256": "4767f43ef825f9509b4ea626d0ca9d86a73fb9bb633a0519ea80f09b0f579010"
+  },
+  {
+    "date": "2016-11-09",
+    "file": "oisst-avhrr-v02r01.20161109.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201611/oisst-avhrr-v02r01.20161109.nc",
+    "bytes": 1675228,
+    "sha256": "e8c8bd2f90c9de682441cb65d1a99bea01d45f3ca690d7b1bb8ad88f8d3f0f38"
+  },
+  {
+    "date": "2016-11-10",
+    "file": "oisst-avhrr-v02r01.20161110.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201611/oisst-avhrr-v02r01.20161110.nc",
+    "bytes": 1675922,
+    "sha256": "57faebb6532ba65c535a018b193fd64e0aec5e77fa52acf75a8e179aca7fca8b"
+  },
+  {
+    "date": "2016-11-11",
+    "file": "oisst-avhrr-v02r01.20161111.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201611/oisst-avhrr-v02r01.20161111.nc",
+    "bytes": 1672133,
+    "sha256": "e114294adaefcea69b69160d66c1de6c1b9e18c189b5219bcdc20e173932665b"
+  },
+  {
+    "date": "2016-11-12",
+    "file": "oisst-avhrr-v02r01.20161112.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201611/oisst-avhrr-v02r01.20161112.nc",
+    "bytes": 1671601,
+    "sha256": "2dcbe24252aac33ac882412e04a2edfbd791134e0b52c25091364b9e054a7cc9"
+  },
+  {
+    "date": "2016-11-13",
+    "file": "oisst-avhrr-v02r01.20161113.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201611/oisst-avhrr-v02r01.20161113.nc",
+    "bytes": 1671691,
+    "sha256": "6748540eb73ced92a5d160fef82009cd4415be8b8aed85add9875c1b495d5319"
+  },
+  {
+    "date": "2016-11-14",
+    "file": "oisst-avhrr-v02r01.20161114.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201611/oisst-avhrr-v02r01.20161114.nc",
+    "bytes": 1672280,
+    "sha256": "749cefd6d66a274c0fb27bf500cbdc4dcb21b43bb55210c614c5c74d442a3263"
+  },
+  {
+    "date": "2016-11-15",
+    "file": "oisst-avhrr-v02r01.20161115.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201611/oisst-avhrr-v02r01.20161115.nc",
+    "bytes": 1675953,
+    "sha256": "e29bd17ba2a2503acc955d09f0b0e7a0e4e3b8b0fe9ff6e79796443a7652e060"
+  },
+  {
+    "date": "2016-11-16",
+    "file": "oisst-avhrr-v02r01.20161116.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201611/oisst-avhrr-v02r01.20161116.nc",
+    "bytes": 1676728,
+    "sha256": "b260e1c9b4306d4d2ee8b69ebc492a60de446719a11adb8036da8feb39ea6145"
+  },
+  {
+    "date": "2016-11-17",
+    "file": "oisst-avhrr-v02r01.20161117.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201611/oisst-avhrr-v02r01.20161117.nc",
+    "bytes": 1679446,
+    "sha256": "1e88db9efb5f53bad9bde3bda99c40a14d314f0b864cce40b048a114b09ce1fa"
+  },
+  {
+    "date": "2016-11-18",
+    "file": "oisst-avhrr-v02r01.20161118.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201611/oisst-avhrr-v02r01.20161118.nc",
+    "bytes": 1681509,
+    "sha256": "64be95b360906399853cd9ac984925f4d49d5af6cac57e79f7f509d0e0e2f4db"
+  },
+  {
+    "date": "2016-11-19",
+    "file": "oisst-avhrr-v02r01.20161119.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201611/oisst-avhrr-v02r01.20161119.nc",
+    "bytes": 1683524,
+    "sha256": "aa089ed33a0832ddbb6ff9c20ac58cce774cd23bafaee0c52eeb616ce350df29"
+  },
+  {
+    "date": "2016-11-20",
+    "file": "oisst-avhrr-v02r01.20161120.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201611/oisst-avhrr-v02r01.20161120.nc",
+    "bytes": 1688167,
+    "sha256": "c4632c5434c6cc78aa79658398a56d832afa2d97dfb0a813a1943cf069dbcf41"
+  },
+  {
+    "date": "2016-11-21",
+    "file": "oisst-avhrr-v02r01.20161121.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201611/oisst-avhrr-v02r01.20161121.nc",
+    "bytes": 1688244,
+    "sha256": "948dfbcb0f502d6c5bb951aa7c819d5aac7923b4d41e3b2e95a6418f4b416304"
+  },
+  {
+    "date": "2016-11-22",
+    "file": "oisst-avhrr-v02r01.20161122.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201611/oisst-avhrr-v02r01.20161122.nc",
+    "bytes": 1688943,
+    "sha256": "540b5b4b8f5dd4a6770848e45bbe5af5082ef212c4be8c9ced3f0315331a936c"
+  },
+  {
+    "date": "2016-11-23",
+    "file": "oisst-avhrr-v02r01.20161123.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201611/oisst-avhrr-v02r01.20161123.nc",
+    "bytes": 1683819,
+    "sha256": "16ebb7b87c296596e3a70d48f6c27f061f6514bf2696b2e7a805c96dfb10680d"
+  },
+  {
+    "date": "2016-11-24",
+    "file": "oisst-avhrr-v02r01.20161124.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201611/oisst-avhrr-v02r01.20161124.nc",
+    "bytes": 1683322,
+    "sha256": "6be5cb54b78e6f7c926a3041a0a2ea0ec46defe647e2f200cbc73b1e05eeba84"
+  },
+  {
+    "date": "2016-11-25",
+    "file": "oisst-avhrr-v02r01.20161125.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201611/oisst-avhrr-v02r01.20161125.nc",
+    "bytes": 1681303,
+    "sha256": "9cc2a7997792de4001096006e61d7362fc7518e4c19aa31d0a99fd53465d7695"
+  },
+  {
+    "date": "2016-11-26",
+    "file": "oisst-avhrr-v02r01.20161126.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201611/oisst-avhrr-v02r01.20161126.nc",
+    "bytes": 1684655,
+    "sha256": "4f2a899cf81403847e463becb042b9d8c5a81ab7a434184438f85bfd64aa76c7"
+  },
+  {
+    "date": "2016-11-27",
+    "file": "oisst-avhrr-v02r01.20161127.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201611/oisst-avhrr-v02r01.20161127.nc",
+    "bytes": 1683645,
+    "sha256": "4cf6f5908d6bda58cc158d730edd3acd4ee2cf947d29ad2cd575a574ddaabb00"
+  },
+  {
+    "date": "2016-11-28",
+    "file": "oisst-avhrr-v02r01.20161128.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201611/oisst-avhrr-v02r01.20161128.nc",
+    "bytes": 1682157,
+    "sha256": "97d6eeebb63c2dbeefede4f816ada919a48b7faeba6b92c9bde5c5eb6990aab0"
+  },
+  {
+    "date": "2016-11-29",
+    "file": "oisst-avhrr-v02r01.20161129.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201611/oisst-avhrr-v02r01.20161129.nc",
+    "bytes": 1680281,
+    "sha256": "02e5f9aa40479045083703c6d120d57268bee5792fb6e06c1f203cda44c95e04"
+  },
+  {
+    "date": "2016-11-30",
+    "file": "oisst-avhrr-v02r01.20161130.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201611/oisst-avhrr-v02r01.20161130.nc",
+    "bytes": 1678248,
+    "sha256": "ba476d4504093a819a830ab40a3530793875d8295bc21cad57ec3d722e2f30a5"
+  },
+  {
+    "date": "2016-12-01",
+    "file": "oisst-avhrr-v02r01.20161201.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201612/oisst-avhrr-v02r01.20161201.nc",
+    "bytes": 1678597,
+    "sha256": "ad4e7d9aaea4174610bfc4c1437d5d645de31385d5f631755cf7432016671644"
+  },
+  {
+    "date": "2016-12-02",
+    "file": "oisst-avhrr-v02r01.20161202.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201612/oisst-avhrr-v02r01.20161202.nc",
+    "bytes": 1678632,
+    "sha256": "e29b0227c8e4d13ffd086eebf95b33ec7d4bcdb7f86aa4654fe71b5ccd939a75"
+  },
+  {
+    "date": "2016-12-03",
+    "file": "oisst-avhrr-v02r01.20161203.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201612/oisst-avhrr-v02r01.20161203.nc",
+    "bytes": 1680428,
+    "sha256": "9acb6e9c2a3bbe869fb9c3ad1956c5b89f206c866e0a57e1026e8c35c281060c"
+  },
+  {
+    "date": "2016-12-04",
+    "file": "oisst-avhrr-v02r01.20161204.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201612/oisst-avhrr-v02r01.20161204.nc",
+    "bytes": 1680323,
+    "sha256": "a42f5e9507701beaba1207994b4c4b9a4336f83c790c44e80195fc255b99d0c4"
+  },
+  {
+    "date": "2016-12-05",
+    "file": "oisst-avhrr-v02r01.20161205.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201612/oisst-avhrr-v02r01.20161205.nc",
+    "bytes": 1681772,
+    "sha256": "6d48d70d6cc195f89c58681fdfda3734e14b54234f0ed57ecf4f78e2813a2311"
+  },
+  {
+    "date": "2016-12-06",
+    "file": "oisst-avhrr-v02r01.20161206.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201612/oisst-avhrr-v02r01.20161206.nc",
+    "bytes": 1684096,
+    "sha256": "6484f4803f107b1b1a6a57210ee9624f66e5b807a0262b116f66ff1e94adc155"
+  },
+  {
+    "date": "2016-12-07",
+    "file": "oisst-avhrr-v02r01.20161207.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201612/oisst-avhrr-v02r01.20161207.nc",
+    "bytes": 1687878,
+    "sha256": "3a58314605832a218dc8d4336608627a67f418cb0e3a391d4ad59668aa75014b"
+  },
+  {
+    "date": "2016-12-08",
+    "file": "oisst-avhrr-v02r01.20161208.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201612/oisst-avhrr-v02r01.20161208.nc",
+    "bytes": 1688084,
+    "sha256": "d1cd91b236f71bfb9d03e39f2da631056a576a763eafb7b59f7ed3e742dbbf8a"
+  },
+  {
+    "date": "2016-12-09",
+    "file": "oisst-avhrr-v02r01.20161209.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201612/oisst-avhrr-v02r01.20161209.nc",
+    "bytes": 1687741,
+    "sha256": "51a1c897030ad671a5a61a99ea21eae396ddd5c15cbadcdaaf28a2e1978e94d5"
+  },
+  {
+    "date": "2016-12-10",
+    "file": "oisst-avhrr-v02r01.20161210.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201612/oisst-avhrr-v02r01.20161210.nc",
+    "bytes": 1688278,
+    "sha256": "a96a82b72ca819293dcf97ba4d98f86917104b1de126def0b941b585dfba566a"
+  },
+  {
+    "date": "2016-12-11",
+    "file": "oisst-avhrr-v02r01.20161211.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201612/oisst-avhrr-v02r01.20161211.nc",
+    "bytes": 1686665,
+    "sha256": "76129a4ba4c5b7827fd21384a261436741e80383a8510df001e342e0f172bc59"
+  },
+  {
+    "date": "2016-12-12",
+    "file": "oisst-avhrr-v02r01.20161212.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201612/oisst-avhrr-v02r01.20161212.nc",
+    "bytes": 1684893,
+    "sha256": "2a243fed0b37edde712f6ff03f1586ebf1a99531b6ee2d27e1d3cd182c49faef"
+  },
+  {
+    "date": "2016-12-13",
+    "file": "oisst-avhrr-v02r01.20161213.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201612/oisst-avhrr-v02r01.20161213.nc",
+    "bytes": 1685315,
+    "sha256": "4b315ee9daa3ad9faf90d1bb655f09f10401dad0b55eee6a0ef814cc6df978f1"
+  },
+  {
+    "date": "2016-12-14",
+    "file": "oisst-avhrr-v02r01.20161214.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201612/oisst-avhrr-v02r01.20161214.nc",
+    "bytes": 1685655,
+    "sha256": "98135a25dadcb1c8e96f30ae64bc9269f5b2b2ac328ecc857404f66b692b3fc4"
+  },
+  {
+    "date": "2016-12-15",
+    "file": "oisst-avhrr-v02r01.20161215.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201612/oisst-avhrr-v02r01.20161215.nc",
+    "bytes": 1685389,
+    "sha256": "ebe0b3a27f5c5614b37c3aac259a820790c67349cd0e7113c616063bd16e4046"
+  },
+  {
+    "date": "2016-12-16",
+    "file": "oisst-avhrr-v02r01.20161216.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201612/oisst-avhrr-v02r01.20161216.nc",
+    "bytes": 1691207,
+    "sha256": "6378a276e11c3ce4d230e419529d8432c3328e61e791088e80c5497806b7583c"
+  },
+  {
+    "date": "2016-12-17",
+    "file": "oisst-avhrr-v02r01.20161217.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201612/oisst-avhrr-v02r01.20161217.nc",
+    "bytes": 1691329,
+    "sha256": "5727d683c6e867a2e80b79d677241844172d9e1b05b672f5fd8b7983b955d5fe"
+  },
+  {
+    "date": "2016-12-18",
+    "file": "oisst-avhrr-v02r01.20161218.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201612/oisst-avhrr-v02r01.20161218.nc",
+    "bytes": 1693006,
+    "sha256": "cba1953d0d910835be5e6e7488360bc891f6a505616640d94e848f9347c0c9b1"
+  },
+  {
+    "date": "2016-12-19",
+    "file": "oisst-avhrr-v02r01.20161219.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201612/oisst-avhrr-v02r01.20161219.nc",
+    "bytes": 1690195,
+    "sha256": "d9ebfec3aa6da6daef07f282a6e2eb42e6f33976ddb8b9b53c0d1d1fe5556a60"
+  },
+  {
+    "date": "2016-12-20",
+    "file": "oisst-avhrr-v02r01.20161220.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201612/oisst-avhrr-v02r01.20161220.nc",
+    "bytes": 1690551,
+    "sha256": "e0cf340b9d7fd886620fe3b21cc2bef23f2713e3ab15046832df8f5da3ed3240"
+  },
+  {
+    "date": "2016-12-21",
+    "file": "oisst-avhrr-v02r01.20161221.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201612/oisst-avhrr-v02r01.20161221.nc",
+    "bytes": 1688536,
+    "sha256": "64e0c5bee2e42b28188d69c0677ddd010e86d036e0d709f8971fcf89cbf5fc21"
+  },
+  {
+    "date": "2016-12-22",
+    "file": "oisst-avhrr-v02r01.20161222.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201612/oisst-avhrr-v02r01.20161222.nc",
+    "bytes": 1687056,
+    "sha256": "0a488dab1c3bece7c655866e926cc9c0f0ba74c0ebba36699ad99f485a735dca"
+  },
+  {
+    "date": "2016-12-23",
+    "file": "oisst-avhrr-v02r01.20161223.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201612/oisst-avhrr-v02r01.20161223.nc",
+    "bytes": 1688370,
+    "sha256": "5f589127f14067beb935699f92937ad36590116718047a1a7fb3e71e1b917ed0"
+  },
+  {
+    "date": "2016-12-24",
+    "file": "oisst-avhrr-v02r01.20161224.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201612/oisst-avhrr-v02r01.20161224.nc",
+    "bytes": 1691009,
+    "sha256": "c2dd2af5f4c7b5edf6f48d478049dd9f567eedfacdea924cce3404567c17c739"
+  },
+  {
+    "date": "2016-12-25",
+    "file": "oisst-avhrr-v02r01.20161225.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201612/oisst-avhrr-v02r01.20161225.nc",
+    "bytes": 1690747,
+    "sha256": "b7e93a8ce2592e9d42beecfb78c1873ff4d73c0eecebd7f30a9ec6e633ef141e"
+  },
+  {
+    "date": "2016-12-26",
+    "file": "oisst-avhrr-v02r01.20161226.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201612/oisst-avhrr-v02r01.20161226.nc",
+    "bytes": 1689295,
+    "sha256": "1d3f73c91215f42f004878ef52d808b9860f77a832fea167105ea46b26dd2781"
+  },
+  {
+    "date": "2016-12-27",
+    "file": "oisst-avhrr-v02r01.20161227.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201612/oisst-avhrr-v02r01.20161227.nc",
+    "bytes": 1688375,
+    "sha256": "4c82150ee90afc5c1fd0240812000f6cfd044a6e0f64b967a7a8ab2bc6acd8f9"
+  },
+  {
+    "date": "2016-12-28",
+    "file": "oisst-avhrr-v02r01.20161228.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201612/oisst-avhrr-v02r01.20161228.nc",
+    "bytes": 1688444,
+    "sha256": "0d3ef2ff65e1bb5a7221152bf2b14ffba111cf5c088e3d44e4562255cd82fb41"
+  },
+  {
+    "date": "2016-12-29",
+    "file": "oisst-avhrr-v02r01.20161229.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201612/oisst-avhrr-v02r01.20161229.nc",
+    "bytes": 1685878,
+    "sha256": "dac61eb09f70e44dc0b17d24d9311ed99a5fd96367c6b258688bace132810c99"
+  },
+  {
+    "date": "2016-12-30",
+    "file": "oisst-avhrr-v02r01.20161230.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201612/oisst-avhrr-v02r01.20161230.nc",
+    "bytes": 1685283,
+    "sha256": "b9d962dc3b6f98ba4839fecbaffd8ee341d11d2319adc4a0eab709e5b7d4e073"
+  },
+  {
+    "date": "2016-12-31",
+    "file": "oisst-avhrr-v02r01.20161231.nc",
+    "url": "https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/201612/oisst-avhrr-v02r01.20161231.nc",
+    "bytes": 1687367,
+    "sha256": "99c5a11b7c22be65dbe26cf5784b2d699fd4c042f2a86f88696bec9e095b0b28"
+  }
+]

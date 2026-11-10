@@ -1,0 +1,8 @@
+{
+  "upstream_url": "https://github.com/oucailab/WMSR",
+  "commit": "dbb1cff4c4b30375928c6ee62224cb4b37fa337a",
+  "tracked_files_unchanged": true,
+  "ss2d_haar_meanshift_source": "upstream/models/wmsr_block.py",
+  "upstream_block_sha256": "f7ff6cdd84f4d5834fd384e283c8dbdb407c372628067305d699185c828a3d35",
+  "reconstructed_model_sha256": "e0b0ff61f0cce0d9b4e01bdd789e81b1c451982c8802d24b7bac82812fb6a0cc"
+}

@@ -1,0 +1,82 @@
+{
+  "selected_at": "2026-11-09T12:47:20.226304+00:00",
+  "model": "ESC standard classical SR, not ESC-light/ESC-FP/ESC-Real/ESC-RIB/FlashBias",
+  "paper": "https://arxiv.org/abs/2503.06671",
+  "venue": "ICCV2025",
+  "initial_preprint_date": "2025-03-09",
+  "publication_date": "2025-10",
+  "authors": [
+    "Dongheon Lee",
+    "Seokju Yun",
+    "Youngmin Ro"
+  ],
+  "authors_overlap_with_WMSR": false,
+  "affiliation": "University of Seoul",
+  "repo": "https://github.com/dslisleedh/ESC",
+  "commit": "f22c712a57c664360f9af3a77cfc527c414067c4",
+  "architecture_sha256": "3c40072bdcbed5be07f66aafdeaeb47ba55aad841eb7db4b4a8079c44170e758",
+  "network_kwargs": {
+    "2": {
+      "dim": 64,
+      "pdim": 16,
+      "kernel_size": 13,
+      "n_blocks": 5,
+      "conv_blocks": 5,
+      "window_size": 32,
+      "num_heads": 4,
+      "upscaling_factor": 2,
+      "exp_ratio": 1.25,
+      "attn_type": "Naive"
+    },
+    "3": {
+      "dim": 64,
+      "pdim": 16,
+      "kernel_size": 13,
+      "n_blocks": 5,
+      "conv_blocks": 5,
+      "window_size": 32,
+      "num_heads": 4,
+      "upscaling_factor": 3,
+      "exp_ratio": 1.25,
+      "attn_type": "Naive"
+    },
+    "4": {
+      "dim": 64,
+      "pdim": 16,
+      "kernel_size": 13,
+      "n_blocks": 5,
+      "conv_blocks": 5,
+      "window_size": 32,
+      "num_heads": 4,
+      "upscaling_factor": 4,
+      "exp_ratio": 1.25,
+      "attn_type": "Naive"
+    }
+  },
+  "reported_parameters_K": {
+    "2": 947,
+    "3": 955,
+    "4": 968
+  },
+  "attention_choice": "Native official Naive FP32 with exact RPE; no FlashBias decomposition or custom CUDA implementation",
+  "evaluation_constraint": "Official standard ESC ConvolutionalAttention.eval branch reshapes kernel without batch dimension; evaluate batch1. Do not patch to pretend arbitrary-batch native support.",
+  "OISST_manifest_sha256": "798fd3aa1c5e2ef44e076ab937c071decf3aca7220c608ddc7c00ce80aa41390",
+  "data": "Same HYCOM/OISST/GHRSST manifest IDs and NPZ, final800/200, HR96, nativeLR48/32/24",
+  "no_external_pretraining": true,
+  "SST_test_scores": null,
+  "can_guarantee_beating_WMSR": false,
+  "training_started": true,
+  "status": "1000update_screen_complete_verified",
+  "actual_parameters": {
+    "2": 946728,
+    "3": 955383,
+    "4": 967500
+  },
+  "gpu_compatibility": "RTX5090 three scales forward/backward finite; train/eval batch1 consistency passed; no optimizer/pilot updates in this compatibility probe",
+  "implementation_note": "Registry wiring omitted only. Separate nonpersistent derived integer RPE index tensors may be cached on GPU; output/loss/gradient equivalence checked in resource probe before any trial.",
+  "pilot_updates": 1000,
+  "full1000_trial_complete": true,
+  "auto_resume_allowed": false,
+  "training_active": false,
+  "current_report": "筛选结论与ESC预实验.md"
+}

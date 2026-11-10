@@ -1,0 +1,16 @@
+.DS_Store
+__pycache__/
+*.pyc
+.venv*/
+.cache/
+node_modules/
+*.pt
+*.pth
+*.ckpt
+*.tar.gz
+data/raw/
+data/processed/
+downloads/
+outputs/
+.env*
+*.sock

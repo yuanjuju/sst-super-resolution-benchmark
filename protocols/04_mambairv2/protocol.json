@@ -1,0 +1,749 @@
+{
+  "selected_model": "MambaIRv2-Light",
+  "publication": "CVPR2025",
+  "arxiv": "https://arxiv.org/abs/2411.15269",
+  "repo": "https://github.com/csguoh/MambaIR",
+  "commit": "33d7b3460c4665229334cc8de38c7f4c766ed3be",
+  "cloud_root": "/root/wmsr-repro/recent_models",
+  "jobs": [
+    {
+      "id": "controlled_MambaIRv2Light_OISST_x4_s10",
+      "kind": "recent_controlled",
+      "model": "MambaIRv2Light",
+      "dataset": "OISST",
+      "scale": 4,
+      "epochs": 100,
+      "seed": 10,
+      "l1_weight": 0.1,
+      "ffl_weight": 0.9,
+      "network_kwargs": {
+        "upscale": 4,
+        "in_chans": 3,
+        "img_size": 64,
+        "img_range": 1.0,
+        "embed_dim": 48,
+        "d_state": 8,
+        "depths": [
+          5,
+          5,
+          5,
+          5
+        ],
+        "num_heads": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "window_size": 16,
+        "inner_rank": 32,
+        "num_tokens": 64,
+        "convffn_kernel_size": 5,
+        "mlp_ratio": 1.0,
+        "upsampler": "pixelshuffledirect",
+        "resi_connection": "1conv"
+      },
+      "reference_id": "compare_WMSR_OISST_x4_s10",
+      "reference_config_sha256": "52359fb751784b966e53d38185536401bfa89aeb608c66f03bffb5cec2b67836",
+      "data_manifest_sha256": "798fd3aa1c5e2ef44e076ab937c071decf3aca7220c608ddc7c00ce80aa41390",
+      "controlled_reference": {
+        "train_count": 800,
+        "test_count": 200,
+        "hr_patch": 96,
+        "lr_patch": 24,
+        "batch_size": 8,
+        "repeat": 1,
+        "seed": 10,
+        "epochs": 100,
+        "expected_steps": 10000,
+        "optimizer": {
+          "type": "Adam",
+          "lr": 0.001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08
+        },
+        "scheduler": {
+          "type": "StepLR",
+          "step_size": 20,
+          "gamma": 0.5
+        },
+        "loss": {
+          "L1": 0.1,
+          "FFL": 0.9,
+          "alpha": 1
+        },
+        "precision": {
+          "dtype": "float32",
+          "cudnn_allow_tf32": true,
+          "matmul_allow_tf32": false
+        },
+        "evaluation": {
+          "checkpoint": "final epoch, no test-based selection",
+          "image": "BT601 Y, range255, scale border, per-image mean",
+          "physical": "unclipped mean of3channels inverse fixed[-2,40]C mapping, same border"
+        }
+      }
+    },
+    {
+      "id": "controlled_MambaIRv2Light_HYCOM_x4_s10",
+      "kind": "recent_controlled",
+      "model": "MambaIRv2Light",
+      "dataset": "HYCOM",
+      "scale": 4,
+      "epochs": 100,
+      "seed": 10,
+      "l1_weight": 0.1,
+      "ffl_weight": 0.9,
+      "network_kwargs": {
+        "upscale": 4,
+        "in_chans": 3,
+        "img_size": 64,
+        "img_range": 1.0,
+        "embed_dim": 48,
+        "d_state": 8,
+        "depths": [
+          5,
+          5,
+          5,
+          5
+        ],
+        "num_heads": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "window_size": 16,
+        "inner_rank": 32,
+        "num_tokens": 64,
+        "convffn_kernel_size": 5,
+        "mlp_ratio": 1.0,
+        "upsampler": "pixelshuffledirect",
+        "resi_connection": "1conv"
+      },
+      "reference_id": "compare_WMSR_HYCOM_x4_s10",
+      "reference_config_sha256": "c7d370e522524b794fbf5519794c826b869c8b0c2163c20d652177bc1313fc60",
+      "data_manifest_sha256": "b147b6566fec80357e2bb819b9b846cd723cd449eb54051d4254b3f53ef5b212",
+      "controlled_reference": {
+        "train_count": 800,
+        "test_count": 200,
+        "hr_patch": 96,
+        "lr_patch": 24,
+        "batch_size": 8,
+        "repeat": 1,
+        "seed": 10,
+        "epochs": 100,
+        "expected_steps": 10000,
+        "optimizer": {
+          "type": "Adam",
+          "lr": 0.001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08
+        },
+        "scheduler": {
+          "type": "StepLR",
+          "step_size": 20,
+          "gamma": 0.5
+        },
+        "loss": {
+          "L1": 0.1,
+          "FFL": 0.9,
+          "alpha": 1
+        },
+        "precision": {
+          "dtype": "float32",
+          "cudnn_allow_tf32": true,
+          "matmul_allow_tf32": false
+        },
+        "evaluation": {
+          "checkpoint": "final epoch, no test-based selection",
+          "image": "BT601 Y, range255, scale border, per-image mean",
+          "physical": "unclipped mean of3channels inverse fixed[-2,40]C mapping, same border"
+        }
+      }
+    },
+    {
+      "id": "controlled_MambaIRv2Light_GHRSST_x4_s10",
+      "kind": "recent_controlled",
+      "model": "MambaIRv2Light",
+      "dataset": "GHRSST",
+      "scale": 4,
+      "epochs": 100,
+      "seed": 10,
+      "l1_weight": 0.1,
+      "ffl_weight": 0.9,
+      "network_kwargs": {
+        "upscale": 4,
+        "in_chans": 3,
+        "img_size": 64,
+        "img_range": 1.0,
+        "embed_dim": 48,
+        "d_state": 8,
+        "depths": [
+          5,
+          5,
+          5,
+          5
+        ],
+        "num_heads": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "window_size": 16,
+        "inner_rank": 32,
+        "num_tokens": 64,
+        "convffn_kernel_size": 5,
+        "mlp_ratio": 1.0,
+        "upsampler": "pixelshuffledirect",
+        "resi_connection": "1conv"
+      },
+      "reference_id": "compare_WMSR_GHRSST_x4_s10",
+      "reference_config_sha256": "c2483abc370660b324deb84f9c5c1ec38b38f9bab9069e5fc8890a14c33fa010",
+      "data_manifest_sha256": "a9742552ae4103404693e9b58b3b5863a4e3ac95531b2e8e2cdf743aec5ad956",
+      "controlled_reference": {
+        "train_count": 800,
+        "test_count": 200,
+        "hr_patch": 96,
+        "lr_patch": 24,
+        "batch_size": 8,
+        "repeat": 1,
+        "seed": 10,
+        "epochs": 100,
+        "expected_steps": 10000,
+        "optimizer": {
+          "type": "Adam",
+          "lr": 0.001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08
+        },
+        "scheduler": {
+          "type": "StepLR",
+          "step_size": 20,
+          "gamma": 0.5
+        },
+        "loss": {
+          "L1": 0.1,
+          "FFL": 0.9,
+          "alpha": 1
+        },
+        "precision": {
+          "dtype": "float32",
+          "cudnn_allow_tf32": true,
+          "matmul_allow_tf32": false
+        },
+        "evaluation": {
+          "checkpoint": "final epoch, no test-based selection",
+          "image": "BT601 Y, range255, scale border, per-image mean",
+          "physical": "unclipped mean of3channels inverse fixed[-2,40]C mapping, same border"
+        }
+      }
+    },
+    {
+      "id": "controlled_MambaIRv2Light_OISST_x3_s10",
+      "kind": "recent_controlled",
+      "model": "MambaIRv2Light",
+      "dataset": "OISST",
+      "scale": 3,
+      "epochs": 100,
+      "seed": 10,
+      "l1_weight": 0.1,
+      "ffl_weight": 0.9,
+      "network_kwargs": {
+        "upscale": 3,
+        "in_chans": 3,
+        "img_size": 64,
+        "img_range": 1.0,
+        "embed_dim": 48,
+        "d_state": 8,
+        "depths": [
+          5,
+          5,
+          5,
+          5
+        ],
+        "num_heads": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "window_size": 16,
+        "inner_rank": 32,
+        "num_tokens": 64,
+        "convffn_kernel_size": 5,
+        "mlp_ratio": 1.0,
+        "upsampler": "pixelshuffledirect",
+        "resi_connection": "1conv"
+      },
+      "reference_id": "compare_WMSR_OISST_x3_s10",
+      "reference_config_sha256": "fcf16ccb52419927c896aa3e16b6f0a38da49724e90e8494d1076bd333fcd093",
+      "data_manifest_sha256": "798fd3aa1c5e2ef44e076ab937c071decf3aca7220c608ddc7c00ce80aa41390",
+      "controlled_reference": {
+        "train_count": 800,
+        "test_count": 200,
+        "hr_patch": 96,
+        "lr_patch": 32,
+        "batch_size": 8,
+        "repeat": 1,
+        "seed": 10,
+        "epochs": 100,
+        "expected_steps": 10000,
+        "optimizer": {
+          "type": "Adam",
+          "lr": 0.001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08
+        },
+        "scheduler": {
+          "type": "StepLR",
+          "step_size": 20,
+          "gamma": 0.5
+        },
+        "loss": {
+          "L1": 0.1,
+          "FFL": 0.9,
+          "alpha": 1
+        },
+        "precision": {
+          "dtype": "float32",
+          "cudnn_allow_tf32": true,
+          "matmul_allow_tf32": false
+        },
+        "evaluation": {
+          "checkpoint": "final epoch, no test-based selection",
+          "image": "BT601 Y, range255, scale border, per-image mean",
+          "physical": "unclipped mean of3channels inverse fixed[-2,40]C mapping, same border"
+        }
+      }
+    },
+    {
+      "id": "controlled_MambaIRv2Light_HYCOM_x3_s10",
+      "kind": "recent_controlled",
+      "model": "MambaIRv2Light",
+      "dataset": "HYCOM",
+      "scale": 3,
+      "epochs": 100,
+      "seed": 10,
+      "l1_weight": 0.1,
+      "ffl_weight": 0.9,
+      "network_kwargs": {
+        "upscale": 3,
+        "in_chans": 3,
+        "img_size": 64,
+        "img_range": 1.0,
+        "embed_dim": 48,
+        "d_state": 8,
+        "depths": [
+          5,
+          5,
+          5,
+          5
+        ],
+        "num_heads": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "window_size": 16,
+        "inner_rank": 32,
+        "num_tokens": 64,
+        "convffn_kernel_size": 5,
+        "mlp_ratio": 1.0,
+        "upsampler": "pixelshuffledirect",
+        "resi_connection": "1conv"
+      },
+      "reference_id": "compare_WMSR_HYCOM_x3_s10",
+      "reference_config_sha256": "7fa56cd22abde55225034060cb841108f3500db873265b9eb64fffa7a6610a8c",
+      "data_manifest_sha256": "b147b6566fec80357e2bb819b9b846cd723cd449eb54051d4254b3f53ef5b212",
+      "controlled_reference": {
+        "train_count": 800,
+        "test_count": 200,
+        "hr_patch": 96,
+        "lr_patch": 32,
+        "batch_size": 8,
+        "repeat": 1,
+        "seed": 10,
+        "epochs": 100,
+        "expected_steps": 10000,
+        "optimizer": {
+          "type": "Adam",
+          "lr": 0.001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08
+        },
+        "scheduler": {
+          "type": "StepLR",
+          "step_size": 20,
+          "gamma": 0.5
+        },
+        "loss": {
+          "L1": 0.1,
+          "FFL": 0.9,
+          "alpha": 1
+        },
+        "precision": {
+          "dtype": "float32",
+          "cudnn_allow_tf32": true,
+          "matmul_allow_tf32": false
+        },
+        "evaluation": {
+          "checkpoint": "final epoch, no test-based selection",
+          "image": "BT601 Y, range255, scale border, per-image mean",
+          "physical": "unclipped mean of3channels inverse fixed[-2,40]C mapping, same border"
+        }
+      }
+    },
+    {
+      "id": "controlled_MambaIRv2Light_GHRSST_x3_s10",
+      "kind": "recent_controlled",
+      "model": "MambaIRv2Light",
+      "dataset": "GHRSST",
+      "scale": 3,
+      "epochs": 100,
+      "seed": 10,
+      "l1_weight": 0.1,
+      "ffl_weight": 0.9,
+      "network_kwargs": {
+        "upscale": 3,
+        "in_chans": 3,
+        "img_size": 64,
+        "img_range": 1.0,
+        "embed_dim": 48,
+        "d_state": 8,
+        "depths": [
+          5,
+          5,
+          5,
+          5
+        ],
+        "num_heads": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "window_size": 16,
+        "inner_rank": 32,
+        "num_tokens": 64,
+        "convffn_kernel_size": 5,
+        "mlp_ratio": 1.0,
+        "upsampler": "pixelshuffledirect",
+        "resi_connection": "1conv"
+      },
+      "reference_id": "compare_WMSR_GHRSST_x3_s10",
+      "reference_config_sha256": "52bcf39af96b6862a977f11e48f8f45f67add694ec3ce191cf88284be80ca2eb",
+      "data_manifest_sha256": "a9742552ae4103404693e9b58b3b5863a4e3ac95531b2e8e2cdf743aec5ad956",
+      "controlled_reference": {
+        "train_count": 800,
+        "test_count": 200,
+        "hr_patch": 96,
+        "lr_patch": 32,
+        "batch_size": 8,
+        "repeat": 1,
+        "seed": 10,
+        "epochs": 100,
+        "expected_steps": 10000,
+        "optimizer": {
+          "type": "Adam",
+          "lr": 0.001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08
+        },
+        "scheduler": {
+          "type": "StepLR",
+          "step_size": 20,
+          "gamma": 0.5
+        },
+        "loss": {
+          "L1": 0.1,
+          "FFL": 0.9,
+          "alpha": 1
+        },
+        "precision": {
+          "dtype": "float32",
+          "cudnn_allow_tf32": true,
+          "matmul_allow_tf32": false
+        },
+        "evaluation": {
+          "checkpoint": "final epoch, no test-based selection",
+          "image": "BT601 Y, range255, scale border, per-image mean",
+          "physical": "unclipped mean of3channels inverse fixed[-2,40]C mapping, same border"
+        }
+      }
+    },
+    {
+      "id": "controlled_MambaIRv2Light_OISST_x2_s10",
+      "kind": "recent_controlled",
+      "model": "MambaIRv2Light",
+      "dataset": "OISST",
+      "scale": 2,
+      "epochs": 100,
+      "seed": 10,
+      "l1_weight": 0.1,
+      "ffl_weight": 0.9,
+      "network_kwargs": {
+        "upscale": 2,
+        "in_chans": 3,
+        "img_size": 64,
+        "img_range": 1.0,
+        "embed_dim": 48,
+        "d_state": 8,
+        "depths": [
+          5,
+          5,
+          5,
+          5
+        ],
+        "num_heads": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "window_size": 16,
+        "inner_rank": 32,
+        "num_tokens": 64,
+        "convffn_kernel_size": 5,
+        "mlp_ratio": 1.0,
+        "upsampler": "pixelshuffledirect",
+        "resi_connection": "1conv"
+      },
+      "reference_id": "compare_WMSR_OISST_x2_s10",
+      "reference_config_sha256": "5f25c9bffbb66d67fdb099239534a0e26e7c25c79ee0f9d7a9576e97940a9870",
+      "data_manifest_sha256": "798fd3aa1c5e2ef44e076ab937c071decf3aca7220c608ddc7c00ce80aa41390",
+      "controlled_reference": {
+        "train_count": 800,
+        "test_count": 200,
+        "hr_patch": 96,
+        "lr_patch": 48,
+        "batch_size": 8,
+        "repeat": 1,
+        "seed": 10,
+        "epochs": 100,
+        "expected_steps": 10000,
+        "optimizer": {
+          "type": "Adam",
+          "lr": 0.001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08
+        },
+        "scheduler": {
+          "type": "StepLR",
+          "step_size": 20,
+          "gamma": 0.5
+        },
+        "loss": {
+          "L1": 0.1,
+          "FFL": 0.9,
+          "alpha": 1
+        },
+        "precision": {
+          "dtype": "float32",
+          "cudnn_allow_tf32": true,
+          "matmul_allow_tf32": false
+        },
+        "evaluation": {
+          "checkpoint": "final epoch, no test-based selection",
+          "image": "BT601 Y, range255, scale border, per-image mean",
+          "physical": "unclipped mean of3channels inverse fixed[-2,40]C mapping, same border"
+        }
+      }
+    },
+    {
+      "id": "controlled_MambaIRv2Light_HYCOM_x2_s10",
+      "kind": "recent_controlled",
+      "model": "MambaIRv2Light",
+      "dataset": "HYCOM",
+      "scale": 2,
+      "epochs": 100,
+      "seed": 10,
+      "l1_weight": 0.1,
+      "ffl_weight": 0.9,
+      "network_kwargs": {
+        "upscale": 2,
+        "in_chans": 3,
+        "img_size": 64,
+        "img_range": 1.0,
+        "embed_dim": 48,
+        "d_state": 8,
+        "depths": [
+          5,
+          5,
+          5,
+          5
+        ],
+        "num_heads": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "window_size": 16,
+        "inner_rank": 32,
+        "num_tokens": 64,
+        "convffn_kernel_size": 5,
+        "mlp_ratio": 1.0,
+        "upsampler": "pixelshuffledirect",
+        "resi_connection": "1conv"
+      },
+      "reference_id": "compare_WMSR_HYCOM_x2_s10",
+      "reference_config_sha256": "f0ad00c9b3c5b6340a8b88aa771193fcac4feab654c2ceaf294915a6a5dc7912",
+      "data_manifest_sha256": "b147b6566fec80357e2bb819b9b846cd723cd449eb54051d4254b3f53ef5b212",
+      "controlled_reference": {
+        "train_count": 800,
+        "test_count": 200,
+        "hr_patch": 96,
+        "lr_patch": 48,
+        "batch_size": 8,
+        "repeat": 1,
+        "seed": 10,
+        "epochs": 100,
+        "expected_steps": 10000,
+        "optimizer": {
+          "type": "Adam",
+          "lr": 0.001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08
+        },
+        "scheduler": {
+          "type": "StepLR",
+          "step_size": 20,
+          "gamma": 0.5
+        },
+        "loss": {
+          "L1": 0.1,
+          "FFL": 0.9,
+          "alpha": 1
+        },
+        "precision": {
+          "dtype": "float32",
+          "cudnn_allow_tf32": true,
+          "matmul_allow_tf32": false
+        },
+        "evaluation": {
+          "checkpoint": "final epoch, no test-based selection",
+          "image": "BT601 Y, range255, scale border, per-image mean",
+          "physical": "unclipped mean of3channels inverse fixed[-2,40]C mapping, same border"
+        }
+      }
+    },
+    {
+      "id": "controlled_MambaIRv2Light_GHRSST_x2_s10",
+      "kind": "recent_controlled",
+      "model": "MambaIRv2Light",
+      "dataset": "GHRSST",
+      "scale": 2,
+      "epochs": 100,
+      "seed": 10,
+      "l1_weight": 0.1,
+      "ffl_weight": 0.9,
+      "network_kwargs": {
+        "upscale": 2,
+        "in_chans": 3,
+        "img_size": 64,
+        "img_range": 1.0,
+        "embed_dim": 48,
+        "d_state": 8,
+        "depths": [
+          5,
+          5,
+          5,
+          5
+        ],
+        "num_heads": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "window_size": 16,
+        "inner_rank": 32,
+        "num_tokens": 64,
+        "convffn_kernel_size": 5,
+        "mlp_ratio": 1.0,
+        "upsampler": "pixelshuffledirect",
+        "resi_connection": "1conv"
+      },
+      "reference_id": "compare_WMSR_GHRSST_x2_s10",
+      "reference_config_sha256": "100286cccb83f5a6f4bfe51ea93d18f0c01da2aea64e6587479b11ae86f1288d",
+      "data_manifest_sha256": "a9742552ae4103404693e9b58b3b5863a4e3ac95531b2e8e2cdf743aec5ad956",
+      "controlled_reference": {
+        "train_count": 800,
+        "test_count": 200,
+        "hr_patch": 96,
+        "lr_patch": 48,
+        "batch_size": 8,
+        "repeat": 1,
+        "seed": 10,
+        "epochs": 100,
+        "expected_steps": 10000,
+        "optimizer": {
+          "type": "Adam",
+          "lr": 0.001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08
+        },
+        "scheduler": {
+          "type": "StepLR",
+          "step_size": 20,
+          "gamma": 0.5
+        },
+        "loss": {
+          "L1": 0.1,
+          "FFL": 0.9,
+          "alpha": 1
+        },
+        "precision": {
+          "dtype": "float32",
+          "cudnn_allow_tf32": true,
+          "matmul_allow_tf32": false
+        },
+        "evaluation": {
+          "checkpoint": "final epoch, no test-based selection",
+          "image": "BT601 Y, range255, scale border, per-image mean",
+          "physical": "unclipped mean of3channels inverse fixed[-2,40]C mapping, same border"
+        }
+      }
+    }
+  ],
+  "number_of_new_training_jobs": 9,
+  "status": "prepared_not_started",
+  "gates": [
+    "Same GPU/environment checked",
+    "Reference configs and all six NPZ SHA256 match",
+    "Three-scale batch8 forward/backward finite",
+    "Seeded eval repeatable",
+    "WMSR old weight replay verified on current environment"
+  ],
+  "comparison_boundary": "Paper WMSR is literature-only; actual controlled pair is recovered WMSR vs new MambaIRv2-Light on identical SST protocol. No new model SST scores exist yet."
+}

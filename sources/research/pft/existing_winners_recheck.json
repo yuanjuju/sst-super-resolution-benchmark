@@ -1,0 +1,1154 @@
+{
+  "scope": "Previous experiments re-audited; no new training",
+  "strict_architecture_only_comparison": false,
+  "reason": "The loss differs: ELAN and MambaIR v1 use L1, WMSR uses0.1L1+0.9FFL; data/budget/optimizer/evaluation match",
+  "verified_models": [
+    "ELAN-light",
+    "MambaIR v1 light"
+  ],
+  "rows": [
+    {
+      "model": "ELAN",
+      "dataset": "OISST",
+      "scale": 2,
+      "wmsr_psnr": 66.2285752614922,
+      "model_psnr": 66.98483741527741,
+      "delta_psnr": 0.7562621537852152,
+      "wmsr_rmse": 0.025343972413598717,
+      "model_rmse": 0.0232897061384958,
+      "parameters": 620916,
+      "reference_parameters": 2037284,
+      "architecture": {
+        "variant": "official ELAN-light",
+        "kwargs": {
+          "model": "elan",
+          "scale": 2,
+          "rgb_range": 255,
+          "colors": 3,
+          "m_elan": 24,
+          "c_elan": 60,
+          "n_share": 1,
+          "r_expand": 2,
+          "act_type": "relu",
+          "window_sizes": [
+            4,
+            8,
+            16
+          ],
+          "pretrain": null,
+          "patch_size": 256,
+          "batch_size": 64,
+          "data_repeat": 80,
+          "data_augment": 1,
+          "epochs": 1000,
+          "lr": 0.0002,
+          "decays": [
+            250,
+            400,
+            450,
+            475,
+            500
+          ],
+          "gamma": 0.5,
+          "log_every": 100,
+          "test_every": 1,
+          "log_path": "./experiments",
+          "log_name": null,
+          "gpu_ids": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "threads": 8,
+          "data_path": "/home/xindongzhang/SR_datasets",
+          "eval_sets": [
+            "Set5",
+            "Set14",
+            "B100",
+            "Urban100",
+            "Manga109"
+          ]
+        }
+      },
+      "checkpoint_sha256": "d99a68aa6153ba60ed1f41abc2cedc3b85ad4ab4c46632feb4e053e835a21251",
+      "common_data_budget_optimizer_scheduler_precision_evaluation_match": true,
+      "loss_difference": {
+        "WMSR": {
+          "L1": 0.1,
+          "FFL": 0.9,
+          "alpha": 1
+        },
+        "candidate": {
+          "L1": 1.0,
+          "FFL": 0.0,
+          "alpha": 1
+        }
+      },
+      "source_final_results": "ARCHIVE_ROOT/云端实验结果/论文补充实验/results/extended/compare_ELAN_OISST_x2_s10/final_results.json"
+    },
+    {
+      "model": "ELAN",
+      "dataset": "OISST",
+      "scale": 3,
+      "wmsr_psnr": 59.47123299678649,
+      "model_psnr": 59.94668722732345,
+      "delta_psnr": 0.4754542305369611,
+      "wmsr_rmse": 0.057306162266011144,
+      "model_rmse": 0.05387615801099786,
+      "parameters": 629031,
+      "reference_parameters": 2045939,
+      "architecture": {
+        "variant": "official ELAN-light",
+        "kwargs": {
+          "model": "elan",
+          "scale": 3,
+          "rgb_range": 255,
+          "colors": 3,
+          "m_elan": 24,
+          "c_elan": 60,
+          "n_share": 1,
+          "r_expand": 2,
+          "act_type": "relu",
+          "window_sizes": [
+            4,
+            8,
+            16
+          ],
+          "pretrain": null,
+          "patch_size": 256,
+          "batch_size": 64,
+          "data_repeat": 80,
+          "data_augment": 1,
+          "epochs": 1000,
+          "lr": 0.0002,
+          "decays": [
+            250,
+            400,
+            450,
+            475,
+            500
+          ],
+          "gamma": 0.5,
+          "log_every": 100,
+          "test_every": 1,
+          "log_path": "./experiments",
+          "log_name": null,
+          "gpu_ids": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "threads": 8,
+          "data_path": "/home/xindongzhang/SR_datasets",
+          "eval_sets": [
+            "Set5",
+            "Set14",
+            "B100",
+            "Urban100",
+            "Manga109"
+          ]
+        }
+      },
+      "checkpoint_sha256": "ea2ecd45b20cab0554d70ff9c87fdbd64a2bc41ed944ce5618c76ab1b20fbdd3",
+      "common_data_budget_optimizer_scheduler_precision_evaluation_match": true,
+      "loss_difference": {
+        "WMSR": {
+          "L1": 0.1,
+          "FFL": 0.9,
+          "alpha": 1
+        },
+        "candidate": {
+          "L1": 1.0,
+          "FFL": 0.0,
+          "alpha": 1
+        }
+      },
+      "source_final_results": "ARCHIVE_ROOT/云端实验结果/论文补充实验/results/extended/compare_ELAN_OISST_x3_s10/final_results.json"
+    },
+    {
+      "model": "ELAN",
+      "dataset": "OISST",
+      "scale": 4,
+      "wmsr_psnr": 54.07267311318728,
+      "model_psnr": 54.35593595964755,
+      "delta_psnr": 0.2832628464602749,
+      "wmsr_rmse": 0.10989857002521863,
+      "model_rmse": 0.10571869245073959,
+      "parameters": 640392,
+      "reference_parameters": 2058056,
+      "architecture": {
+        "variant": "official ELAN-light",
+        "kwargs": {
+          "model": "elan",
+          "scale": 4,
+          "rgb_range": 255,
+          "colors": 3,
+          "m_elan": 24,
+          "c_elan": 60,
+          "n_share": 1,
+          "r_expand": 2,
+          "act_type": "relu",
+          "window_sizes": [
+            4,
+            8,
+            16
+          ],
+          "pretrain": null,
+          "patch_size": 256,
+          "batch_size": 64,
+          "data_repeat": 80,
+          "data_augment": 1,
+          "epochs": 1000,
+          "lr": 0.0002,
+          "decays": [
+            250,
+            400,
+            450,
+            475,
+            500
+          ],
+          "gamma": 0.5,
+          "log_every": 100,
+          "test_every": 1,
+          "log_path": "./experiments",
+          "log_name": null,
+          "gpu_ids": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "threads": 8,
+          "data_path": "/home/xindongzhang/SR_datasets",
+          "eval_sets": [
+            "Set5",
+            "Set14",
+            "B100",
+            "Urban100",
+            "Manga109"
+          ]
+        }
+      },
+      "checkpoint_sha256": "142c7fa3c3ef907c3560c0f66574399a32aaa75fd35bf4822b623f98f27f31ce",
+      "common_data_budget_optimizer_scheduler_precision_evaluation_match": true,
+      "loss_difference": {
+        "WMSR": {
+          "L1": 0.1,
+          "FFL": 0.9,
+          "alpha": 1
+        },
+        "candidate": {
+          "L1": 1.0,
+          "FFL": 0.0,
+          "alpha": 1
+        }
+      },
+      "source_final_results": "ARCHIVE_ROOT/云端实验结果/论文补充实验/results/extended/compare_ELAN_OISST_x4_s10/final_results.json"
+    },
+    {
+      "model": "ELAN",
+      "dataset": "HYCOM",
+      "scale": 2,
+      "wmsr_psnr": 62.51424176943124,
+      "model_psnr": 63.53807163006001,
+      "delta_psnr": 1.0238298606287728,
+      "wmsr_rmse": 0.054238773521993335,
+      "model_rmse": 0.04993709048863368,
+      "parameters": 620916,
+      "reference_parameters": 2037284,
+      "architecture": {
+        "variant": "official ELAN-light",
+        "kwargs": {
+          "model": "elan",
+          "scale": 2,
+          "rgb_range": 255,
+          "colors": 3,
+          "m_elan": 24,
+          "c_elan": 60,
+          "n_share": 1,
+          "r_expand": 2,
+          "act_type": "relu",
+          "window_sizes": [
+            4,
+            8,
+            16
+          ],
+          "pretrain": null,
+          "patch_size": 256,
+          "batch_size": 64,
+          "data_repeat": 80,
+          "data_augment": 1,
+          "epochs": 1000,
+          "lr": 0.0002,
+          "decays": [
+            250,
+            400,
+            450,
+            475,
+            500
+          ],
+          "gamma": 0.5,
+          "log_every": 100,
+          "test_every": 1,
+          "log_path": "./experiments",
+          "log_name": null,
+          "gpu_ids": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "threads": 8,
+          "data_path": "/home/xindongzhang/SR_datasets",
+          "eval_sets": [
+            "Set5",
+            "Set14",
+            "B100",
+            "Urban100",
+            "Manga109"
+          ]
+        }
+      },
+      "checkpoint_sha256": "0f819f0c6b6dcfd2a478bbefdb10102090f51cb56895d5866c6471805fe95dfd",
+      "common_data_budget_optimizer_scheduler_precision_evaluation_match": true,
+      "loss_difference": {
+        "WMSR": {
+          "L1": 0.1,
+          "FFL": 0.9,
+          "alpha": 1
+        },
+        "candidate": {
+          "L1": 1.0,
+          "FFL": 0.0,
+          "alpha": 1
+        }
+      },
+      "source_final_results": "ARCHIVE_ROOT/云端实验结果/论文补充实验/results/extended/compare_ELAN_HYCOM_x2_s10/final_results.json"
+    },
+    {
+      "model": "ELAN",
+      "dataset": "HYCOM",
+      "scale": 3,
+      "wmsr_psnr": 58.30867467162315,
+      "model_psnr": 58.71991042121704,
+      "delta_psnr": 0.4112357495938852,
+      "wmsr_rmse": 0.08782581128030745,
+      "model_rmse": 0.08192064972012235,
+      "parameters": 629031,
+      "reference_parameters": 2045939,
+      "architecture": {
+        "variant": "official ELAN-light",
+        "kwargs": {
+          "model": "elan",
+          "scale": 3,
+          "rgb_range": 255,
+          "colors": 3,
+          "m_elan": 24,
+          "c_elan": 60,
+          "n_share": 1,
+          "r_expand": 2,
+          "act_type": "relu",
+          "window_sizes": [
+            4,
+            8,
+            16
+          ],
+          "pretrain": null,
+          "patch_size": 256,
+          "batch_size": 64,
+          "data_repeat": 80,
+          "data_augment": 1,
+          "epochs": 1000,
+          "lr": 0.0002,
+          "decays": [
+            250,
+            400,
+            450,
+            475,
+            500
+          ],
+          "gamma": 0.5,
+          "log_every": 100,
+          "test_every": 1,
+          "log_path": "./experiments",
+          "log_name": null,
+          "gpu_ids": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "threads": 8,
+          "data_path": "/home/xindongzhang/SR_datasets",
+          "eval_sets": [
+            "Set5",
+            "Set14",
+            "B100",
+            "Urban100",
+            "Manga109"
+          ]
+        }
+      },
+      "checkpoint_sha256": "69c688273db76047a4b764537c171a71d85ab62429234819985cbdc1b49f6296",
+      "common_data_budget_optimizer_scheduler_precision_evaluation_match": true,
+      "loss_difference": {
+        "WMSR": {
+          "L1": 0.1,
+          "FFL": 0.9,
+          "alpha": 1
+        },
+        "candidate": {
+          "L1": 1.0,
+          "FFL": 0.0,
+          "alpha": 1
+        }
+      },
+      "source_final_results": "ARCHIVE_ROOT/云端实验结果/论文补充实验/results/extended/compare_ELAN_HYCOM_x3_s10/final_results.json"
+    },
+    {
+      "model": "ELAN",
+      "dataset": "HYCOM",
+      "scale": 4,
+      "wmsr_psnr": 55.951163197678724,
+      "model_psnr": 56.821844892338675,
+      "delta_psnr": 0.8706816946599503,
+      "wmsr_rmse": 0.11811402087832083,
+      "model_rmse": 0.10992847698787499,
+      "parameters": 640392,
+      "reference_parameters": 2058056,
+      "architecture": {
+        "variant": "official ELAN-light",
+        "kwargs": {
+          "model": "elan",
+          "scale": 4,
+          "rgb_range": 255,
+          "colors": 3,
+          "m_elan": 24,
+          "c_elan": 60,
+          "n_share": 1,
+          "r_expand": 2,
+          "act_type": "relu",
+          "window_sizes": [
+            4,
+            8,
+            16
+          ],
+          "pretrain": null,
+          "patch_size": 256,
+          "batch_size": 64,
+          "data_repeat": 80,
+          "data_augment": 1,
+          "epochs": 1000,
+          "lr": 0.0002,
+          "decays": [
+            250,
+            400,
+            450,
+            475,
+            500
+          ],
+          "gamma": 0.5,
+          "log_every": 100,
+          "test_every": 1,
+          "log_path": "./experiments",
+          "log_name": null,
+          "gpu_ids": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "threads": 8,
+          "data_path": "/home/xindongzhang/SR_datasets",
+          "eval_sets": [
+            "Set5",
+            "Set14",
+            "B100",
+            "Urban100",
+            "Manga109"
+          ]
+        }
+      },
+      "checkpoint_sha256": "dbc107b167383cd9f0ede858371d609f0875afb718e3de585eff6f8e967cdd68",
+      "common_data_budget_optimizer_scheduler_precision_evaluation_match": true,
+      "loss_difference": {
+        "WMSR": {
+          "L1": 0.1,
+          "FFL": 0.9,
+          "alpha": 1
+        },
+        "candidate": {
+          "L1": 1.0,
+          "FFL": 0.0,
+          "alpha": 1
+        }
+      },
+      "source_final_results": "ARCHIVE_ROOT/云端实验结果/论文补充实验/results/extended/compare_ELAN_HYCOM_x4_s10/final_results.json"
+    },
+    {
+      "model": "ELAN",
+      "dataset": "GHRSST",
+      "scale": 2,
+      "wmsr_psnr": 73.08206107999439,
+      "model_psnr": 83.78577281954415,
+      "delta_psnr": 10.70371173954976,
+      "wmsr_rmse": 0.010326022200795839,
+      "model_rmse": 0.003140013316325369,
+      "parameters": 620916,
+      "reference_parameters": 2037284,
+      "architecture": {
+        "variant": "official ELAN-light",
+        "kwargs": {
+          "model": "elan",
+          "scale": 2,
+          "rgb_range": 255,
+          "colors": 3,
+          "m_elan": 24,
+          "c_elan": 60,
+          "n_share": 1,
+          "r_expand": 2,
+          "act_type": "relu",
+          "window_sizes": [
+            4,
+            8,
+            16
+          ],
+          "pretrain": null,
+          "patch_size": 256,
+          "batch_size": 64,
+          "data_repeat": 80,
+          "data_augment": 1,
+          "epochs": 1000,
+          "lr": 0.0002,
+          "decays": [
+            250,
+            400,
+            450,
+            475,
+            500
+          ],
+          "gamma": 0.5,
+          "log_every": 100,
+          "test_every": 1,
+          "log_path": "./experiments",
+          "log_name": null,
+          "gpu_ids": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "threads": 8,
+          "data_path": "/home/xindongzhang/SR_datasets",
+          "eval_sets": [
+            "Set5",
+            "Set14",
+            "B100",
+            "Urban100",
+            "Manga109"
+          ]
+        }
+      },
+      "checkpoint_sha256": "889c24f346b21c0c45ed5f1505355672b7d1587e70127d0ba7a500889cd543c0",
+      "common_data_budget_optimizer_scheduler_precision_evaluation_match": true,
+      "loss_difference": {
+        "WMSR": {
+          "L1": 0.1,
+          "FFL": 0.9,
+          "alpha": 1
+        },
+        "candidate": {
+          "L1": 1.0,
+          "FFL": 0.0,
+          "alpha": 1
+        }
+      },
+      "source_final_results": "ARCHIVE_ROOT/云端实验结果/论文补充实验/results/extended/compare_ELAN_GHRSST_x2_s10/final_results.json"
+    },
+    {
+      "model": "ELAN",
+      "dataset": "GHRSST",
+      "scale": 3,
+      "wmsr_psnr": 69.04157745118249,
+      "model_psnr": 77.70269294264,
+      "delta_psnr": 8.661115491457508,
+      "wmsr_rmse": 0.01551219170014129,
+      "model_rmse": 0.007438575788553807,
+      "parameters": 629031,
+      "reference_parameters": 2045939,
+      "architecture": {
+        "variant": "official ELAN-light",
+        "kwargs": {
+          "model": "elan",
+          "scale": 3,
+          "rgb_range": 255,
+          "colors": 3,
+          "m_elan": 24,
+          "c_elan": 60,
+          "n_share": 1,
+          "r_expand": 2,
+          "act_type": "relu",
+          "window_sizes": [
+            4,
+            8,
+            16
+          ],
+          "pretrain": null,
+          "patch_size": 256,
+          "batch_size": 64,
+          "data_repeat": 80,
+          "data_augment": 1,
+          "epochs": 1000,
+          "lr": 0.0002,
+          "decays": [
+            250,
+            400,
+            450,
+            475,
+            500
+          ],
+          "gamma": 0.5,
+          "log_every": 100,
+          "test_every": 1,
+          "log_path": "./experiments",
+          "log_name": null,
+          "gpu_ids": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "threads": 8,
+          "data_path": "/home/xindongzhang/SR_datasets",
+          "eval_sets": [
+            "Set5",
+            "Set14",
+            "B100",
+            "Urban100",
+            "Manga109"
+          ]
+        }
+      },
+      "checkpoint_sha256": "4f6176f41e45fe0eedb47cb0734f59520fa95c61d7d2772b098d962849c9ace1",
+      "common_data_budget_optimizer_scheduler_precision_evaluation_match": true,
+      "loss_difference": {
+        "WMSR": {
+          "L1": 0.1,
+          "FFL": 0.9,
+          "alpha": 1
+        },
+        "candidate": {
+          "L1": 1.0,
+          "FFL": 0.0,
+          "alpha": 1
+        }
+      },
+      "source_final_results": "ARCHIVE_ROOT/云端实验结果/论文补充实验/results/extended/compare_ELAN_GHRSST_x3_s10/final_results.json"
+    },
+    {
+      "model": "ELAN",
+      "dataset": "GHRSST",
+      "scale": 4,
+      "wmsr_psnr": 66.79124381364555,
+      "model_psnr": 78.82881771574672,
+      "delta_psnr": 12.037573902101173,
+      "wmsr_rmse": 0.021523268007464017,
+      "model_rmse": 0.007601353897774675,
+      "parameters": 640392,
+      "reference_parameters": 2058056,
+      "architecture": {
+        "variant": "official ELAN-light",
+        "kwargs": {
+          "model": "elan",
+          "scale": 4,
+          "rgb_range": 255,
+          "colors": 3,
+          "m_elan": 24,
+          "c_elan": 60,
+          "n_share": 1,
+          "r_expand": 2,
+          "act_type": "relu",
+          "window_sizes": [
+            4,
+            8,
+            16
+          ],
+          "pretrain": null,
+          "patch_size": 256,
+          "batch_size": 64,
+          "data_repeat": 80,
+          "data_augment": 1,
+          "epochs": 1000,
+          "lr": 0.0002,
+          "decays": [
+            250,
+            400,
+            450,
+            475,
+            500
+          ],
+          "gamma": 0.5,
+          "log_every": 100,
+          "test_every": 1,
+          "log_path": "./experiments",
+          "log_name": null,
+          "gpu_ids": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "threads": 8,
+          "data_path": "/home/xindongzhang/SR_datasets",
+          "eval_sets": [
+            "Set5",
+            "Set14",
+            "B100",
+            "Urban100",
+            "Manga109"
+          ]
+        }
+      },
+      "checkpoint_sha256": "b8e42bc7cb44d28016e078d584a78eee1944899ade4bbd661697572a4f044564",
+      "common_data_budget_optimizer_scheduler_precision_evaluation_match": true,
+      "loss_difference": {
+        "WMSR": {
+          "L1": 0.1,
+          "FFL": 0.9,
+          "alpha": 1
+        },
+        "candidate": {
+          "L1": 1.0,
+          "FFL": 0.0,
+          "alpha": 1
+        }
+      },
+      "source_final_results": "ARCHIVE_ROOT/云端实验结果/论文补充实验/results/extended/compare_ELAN_GHRSST_x4_s10/final_results.json"
+    },
+    {
+      "model": "MambaIR",
+      "dataset": "OISST",
+      "scale": 2,
+      "wmsr_psnr": 66.2285752614922,
+      "model_psnr": 67.02726675788541,
+      "delta_psnr": 0.7986914963932179,
+      "wmsr_rmse": 0.025343972413598717,
+      "model_rmse": 0.02321129220669121,
+      "parameters": 905016,
+      "reference_parameters": 2037284,
+      "architecture": {
+        "variant": "official MambaIR lightSR configuration",
+        "kwargs": {
+          "upscale": 2,
+          "in_chans": 3,
+          "img_size": 64,
+          "img_range": 1.0,
+          "d_state": 10,
+          "depths": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "embed_dim": 60,
+          "mlp_ratio": 1.2,
+          "upsampler": "pixelshuffledirect",
+          "resi_connection": "1conv"
+        }
+      },
+      "checkpoint_sha256": "b8166cb7acd07a23238ac58f44bef1f9abb2cfa3d5565dc123daa297f9ab0be7",
+      "common_data_budget_optimizer_scheduler_precision_evaluation_match": true,
+      "loss_difference": {
+        "WMSR": {
+          "L1": 0.1,
+          "FFL": 0.9,
+          "alpha": 1
+        },
+        "candidate": {
+          "L1": 1.0,
+          "FFL": 0.0,
+          "alpha": 1
+        }
+      },
+      "source_final_results": "ARCHIVE_ROOT/云端实验结果/论文补充实验/results/extended/compare_MambaIR_OISST_x2_s10/final_results.json"
+    },
+    {
+      "model": "MambaIR",
+      "dataset": "OISST",
+      "scale": 3,
+      "wmsr_psnr": 59.47123299678649,
+      "model_psnr": 59.835744431177815,
+      "delta_psnr": 0.36451143439132494,
+      "wmsr_rmse": 0.057306162266011144,
+      "model_rmse": 0.054925114050549034,
+      "parameters": 913131,
+      "reference_parameters": 2045939,
+      "architecture": {
+        "variant": "official MambaIR lightSR configuration",
+        "kwargs": {
+          "upscale": 3,
+          "in_chans": 3,
+          "img_size": 64,
+          "img_range": 1.0,
+          "d_state": 10,
+          "depths": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "embed_dim": 60,
+          "mlp_ratio": 1.2,
+          "upsampler": "pixelshuffledirect",
+          "resi_connection": "1conv"
+        }
+      },
+      "checkpoint_sha256": "ab1c8ceeabcc813ba9436bc60c13ad8b908aee4b13aa738fefc4a08beb3c631d",
+      "common_data_budget_optimizer_scheduler_precision_evaluation_match": true,
+      "loss_difference": {
+        "WMSR": {
+          "L1": 0.1,
+          "FFL": 0.9,
+          "alpha": 1
+        },
+        "candidate": {
+          "L1": 1.0,
+          "FFL": 0.0,
+          "alpha": 1
+        }
+      },
+      "source_final_results": "ARCHIVE_ROOT/云端实验结果/论文补充实验/results/extended/compare_MambaIR_OISST_x3_s10/final_results.json"
+    },
+    {
+      "model": "MambaIR",
+      "dataset": "OISST",
+      "scale": 4,
+      "wmsr_psnr": 54.07267311318728,
+      "model_psnr": 54.35875972733818,
+      "delta_psnr": 0.28608661415090353,
+      "wmsr_rmse": 0.10989857002521863,
+      "model_rmse": 0.10641012168656912,
+      "parameters": 924492,
+      "reference_parameters": 2058056,
+      "architecture": {
+        "variant": "official MambaIR lightSR configuration",
+        "kwargs": {
+          "upscale": 4,
+          "in_chans": 3,
+          "img_size": 64,
+          "img_range": 1.0,
+          "d_state": 10,
+          "depths": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "embed_dim": 60,
+          "mlp_ratio": 1.2,
+          "upsampler": "pixelshuffledirect",
+          "resi_connection": "1conv"
+        }
+      },
+      "checkpoint_sha256": "908fdf8e1d8db5c3ab4eb41eb58770187cd4ce46a4ccab6400560653c9183747",
+      "common_data_budget_optimizer_scheduler_precision_evaluation_match": true,
+      "loss_difference": {
+        "WMSR": {
+          "L1": 0.1,
+          "FFL": 0.9,
+          "alpha": 1
+        },
+        "candidate": {
+          "L1": 1.0,
+          "FFL": 0.0,
+          "alpha": 1
+        }
+      },
+      "source_final_results": "ARCHIVE_ROOT/云端实验结果/论文补充实验/results/extended/compare_MambaIR_OISST_x4_s10/final_results.json"
+    },
+    {
+      "model": "MambaIR",
+      "dataset": "HYCOM",
+      "scale": 2,
+      "wmsr_psnr": 62.51424176943124,
+      "model_psnr": 63.148045483294375,
+      "delta_psnr": 0.6338037138631378,
+      "wmsr_rmse": 0.054238773521993335,
+      "model_rmse": 0.05068283166077284,
+      "parameters": 905016,
+      "reference_parameters": 2037284,
+      "architecture": {
+        "variant": "official MambaIR lightSR configuration",
+        "kwargs": {
+          "upscale": 2,
+          "in_chans": 3,
+          "img_size": 64,
+          "img_range": 1.0,
+          "d_state": 10,
+          "depths": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "embed_dim": 60,
+          "mlp_ratio": 1.2,
+          "upsampler": "pixelshuffledirect",
+          "resi_connection": "1conv"
+        }
+      },
+      "checkpoint_sha256": "01fded8b6c5bdb2d929686204d71c5148d53a539d051aac5957c58c31dd0eaaf",
+      "common_data_budget_optimizer_scheduler_precision_evaluation_match": true,
+      "loss_difference": {
+        "WMSR": {
+          "L1": 0.1,
+          "FFL": 0.9,
+          "alpha": 1
+        },
+        "candidate": {
+          "L1": 1.0,
+          "FFL": 0.0,
+          "alpha": 1
+        }
+      },
+      "source_final_results": "ARCHIVE_ROOT/云端实验结果/论文补充实验/results/extended/compare_MambaIR_HYCOM_x2_s10/final_results.json"
+    },
+    {
+      "model": "MambaIR",
+      "dataset": "HYCOM",
+      "scale": 3,
+      "wmsr_psnr": 58.30867467162315,
+      "model_psnr": 59.37646240056037,
+      "delta_psnr": 1.067787728937219,
+      "wmsr_rmse": 0.08782581128030745,
+      "model_rmse": 0.08196402817807208,
+      "parameters": 913131,
+      "reference_parameters": 2045939,
+      "architecture": {
+        "variant": "official MambaIR lightSR configuration",
+        "kwargs": {
+          "upscale": 3,
+          "in_chans": 3,
+          "img_size": 64,
+          "img_range": 1.0,
+          "d_state": 10,
+          "depths": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "embed_dim": 60,
+          "mlp_ratio": 1.2,
+          "upsampler": "pixelshuffledirect",
+          "resi_connection": "1conv"
+        }
+      },
+      "checkpoint_sha256": "2d820fe0f2f9252e04c07aa366650e41303911c1d1f01ae324535d538b3f000a",
+      "common_data_budget_optimizer_scheduler_precision_evaluation_match": true,
+      "loss_difference": {
+        "WMSR": {
+          "L1": 0.1,
+          "FFL": 0.9,
+          "alpha": 1
+        },
+        "candidate": {
+          "L1": 1.0,
+          "FFL": 0.0,
+          "alpha": 1
+        }
+      },
+      "source_final_results": "ARCHIVE_ROOT/云端实验结果/论文补充实验/results/extended/compare_MambaIR_HYCOM_x3_s10/final_results.json"
+    },
+    {
+      "model": "MambaIR",
+      "dataset": "HYCOM",
+      "scale": 4,
+      "wmsr_psnr": 55.951163197678724,
+      "model_psnr": 56.421220820393,
+      "delta_psnr": 0.470057622714279,
+      "wmsr_rmse": 0.11811402087832083,
+      "model_rmse": 0.1150925482784393,
+      "parameters": 924492,
+      "reference_parameters": 2058056,
+      "architecture": {
+        "variant": "official MambaIR lightSR configuration",
+        "kwargs": {
+          "upscale": 4,
+          "in_chans": 3,
+          "img_size": 64,
+          "img_range": 1.0,
+          "d_state": 10,
+          "depths": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "embed_dim": 60,
+          "mlp_ratio": 1.2,
+          "upsampler": "pixelshuffledirect",
+          "resi_connection": "1conv"
+        }
+      },
+      "checkpoint_sha256": "d800cb2d3937f8a9a8d25846aa6f2d0e2e341a040ed26a1e3de9bfe01a934ed1",
+      "common_data_budget_optimizer_scheduler_precision_evaluation_match": true,
+      "loss_difference": {
+        "WMSR": {
+          "L1": 0.1,
+          "FFL": 0.9,
+          "alpha": 1
+        },
+        "candidate": {
+          "L1": 1.0,
+          "FFL": 0.0,
+          "alpha": 1
+        }
+      },
+      "source_final_results": "ARCHIVE_ROOT/云端实验结果/论文补充实验/results/extended/compare_MambaIR_HYCOM_x4_s10/final_results.json"
+    },
+    {
+      "model": "MambaIR",
+      "dataset": "GHRSST",
+      "scale": 2,
+      "wmsr_psnr": 73.08206107999439,
+      "model_psnr": 76.50609483101475,
+      "delta_psnr": 3.4240337510203602,
+      "wmsr_rmse": 0.010326022200795839,
+      "model_rmse": 0.008019641717527429,
+      "parameters": 905016,
+      "reference_parameters": 2037284,
+      "architecture": {
+        "variant": "official MambaIR lightSR configuration",
+        "kwargs": {
+          "upscale": 2,
+          "in_chans": 3,
+          "img_size": 64,
+          "img_range": 1.0,
+          "d_state": 10,
+          "depths": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "embed_dim": 60,
+          "mlp_ratio": 1.2,
+          "upsampler": "pixelshuffledirect",
+          "resi_connection": "1conv"
+        }
+      },
+      "checkpoint_sha256": "26b3c32a1b6dffe23bafe0e451d7f44cb58d14903841b4c203b8152174310d6c",
+      "common_data_budget_optimizer_scheduler_precision_evaluation_match": true,
+      "loss_difference": {
+        "WMSR": {
+          "L1": 0.1,
+          "FFL": 0.9,
+          "alpha": 1
+        },
+        "candidate": {
+          "L1": 1.0,
+          "FFL": 0.0,
+          "alpha": 1
+        }
+      },
+      "source_final_results": "ARCHIVE_ROOT/云端实验结果/论文补充实验/results/extended/compare_MambaIR_GHRSST_x2_s10/final_results.json"
+    },
+    {
+      "model": "MambaIR",
+      "dataset": "GHRSST",
+      "scale": 3,
+      "wmsr_psnr": 69.04157745118249,
+      "model_psnr": 74.34333247618036,
+      "delta_psnr": 5.301755024997874,
+      "wmsr_rmse": 0.01551219170014129,
+      "model_rmse": 0.010125646008918025,
+      "parameters": 913131,
+      "reference_parameters": 2045939,
+      "architecture": {
+        "variant": "official MambaIR lightSR configuration",
+        "kwargs": {
+          "upscale": 3,
+          "in_chans": 3,
+          "img_size": 64,
+          "img_range": 1.0,
+          "d_state": 10,
+          "depths": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "embed_dim": 60,
+          "mlp_ratio": 1.2,
+          "upsampler": "pixelshuffledirect",
+          "resi_connection": "1conv"
+        }
+      },
+      "checkpoint_sha256": "75c424c049b1697fe990cc30db16193c35191d4fab0a377e4aa52e4cfcc15717",
+      "common_data_budget_optimizer_scheduler_precision_evaluation_match": true,
+      "loss_difference": {
+        "WMSR": {
+          "L1": 0.1,
+          "FFL": 0.9,
+          "alpha": 1
+        },
+        "candidate": {
+          "L1": 1.0,
+          "FFL": 0.0,
+          "alpha": 1
+        }
+      },
+      "source_final_results": "ARCHIVE_ROOT/云端实验结果/论文补充实验/results/extended/compare_MambaIR_GHRSST_x3_s10/final_results.json"
+    },
+    {
+      "model": "MambaIR",
+      "dataset": "GHRSST",
+      "scale": 4,
+      "wmsr_psnr": 66.79124381364555,
+      "model_psnr": 71.6357252842325,
+      "delta_psnr": 4.844481470586956,
+      "wmsr_rmse": 0.021523268007464017,
+      "model_rmse": 0.013684623783412706,
+      "parameters": 924492,
+      "reference_parameters": 2058056,
+      "architecture": {
+        "variant": "official MambaIR lightSR configuration",
+        "kwargs": {
+          "upscale": 4,
+          "in_chans": 3,
+          "img_size": 64,
+          "img_range": 1.0,
+          "d_state": 10,
+          "depths": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "embed_dim": 60,
+          "mlp_ratio": 1.2,
+          "upsampler": "pixelshuffledirect",
+          "resi_connection": "1conv"
+        }
+      },
+      "checkpoint_sha256": "f08ca0dc56978874ffd95d250a150d286858ba5eb8a66efb02f20036c3d28904",
+      "common_data_budget_optimizer_scheduler_precision_evaluation_match": true,
+      "loss_difference": {
+        "WMSR": {
+          "L1": 0.1,
+          "FFL": 0.9,
+          "alpha": 1
+        },
+        "candidate": {
+          "L1": 1.0,
+          "FFL": 0.0,
+          "alpha": 1
+        }
+      },
+      "source_final_results": "ARCHIVE_ROOT/云端实验结果/论文补充实验/results/extended/compare_MambaIR_GHRSST_x4_s10/final_results.json"
+    }
+  ]
+}

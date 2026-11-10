@@ -1,0 +1,16 @@
+{
+  "ESC": {
+    "source_root": "/root/wmsr-repro/strong_models/candidate_screen_20261109",
+    "source_checkpoint_sha256": "1f041b4527f9b57f4f8dabd97cab537376212af2692ebfec4ee109295f1d4ae6",
+    "source_checkpoint": "/root/wmsr-repro/strong_models/candidate_screen_20261109/pilot/results/ESC_OISST_x4_s10/checkpoints/last.pt",
+    "source_step": 1000,
+    "local_input": "resume_inputs/ESC_1000_full.pt"
+  },
+  "WMSR": {
+    "source_root": "/root/wmsr-repro/strong_models/pft_20261109",
+    "source_checkpoint_sha256": "85b1f52d767380077142c82cb14f23c1825398007327929f210f0b7cc9236539",
+    "source_checkpoint": "/root/wmsr-repro/strong_models/pft_20261109/pilot/results/WMSR_OISST_x4_s10/checkpoints/last.pt",
+    "source_step": 1000,
+    "local_input": "resume_inputs/WMSR_1000_full.pt"
+  }
+}

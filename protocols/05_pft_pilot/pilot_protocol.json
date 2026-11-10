@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "purpose": "Bounded training-only paired development pilot; not final benchmark evaluation",
+  "models": [
+    "PFT",
+    "WMSR"
+  ],
+  "dataset": "OISST",
+  "scale": 4,
+  "seed": 10,
+  "updates": 1000,
+  "development_manifest_sha256": "2b5bec7fa2994daacfbe7c17f4410372cc6101d7b697c71deac249f60563220c",
+  "batch_size": 8,
+  "micro_batch": 2,
+  "accumulation_steps": 4,
+  "optimizer": {
+    "type": "AdamW",
+    "lr": 0.0002,
+    "betas": [
+      0.9,
+      0.99
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.0
+  },
+  "loss": {
+    "L1": 1.0,
+    "FFL": 0.0,
+    "range": "normalized0..1 for both models"
+  },
+  "warmup_updates": 100,
+  "scheduler": "Linear warmup100 then constantLR; pilot horizon1000, not a scaled claim of official500k recipe",
+  "ema_decay": 0.999,
+  "validation_every": 200,
+  "save_every": 100,
+  "augmentations": [
+    "horizontal_flip_p0.5",
+    "vertical_flip_p0.5",
+    "transpose_p0.5"
+  ],
+  "precision": {
+    "dtype": "float32",
+    "matmul_tf32": false,
+    "cudnn_tf32": false
+  },
+  "initialization": "Native random initialization seed10, no pretrained weights for either model",
+  "implementation": "Pinned PFT full topology; recorded atomic grad_B correction. WMSR old public4-WAM network wrapped255input/output to0..1. Both use same micro2 accumulation4.",
+  "final_test_images_evaluated": 0,
+  "final_fit_count_after_freezing": 800,
+  "final_test_count_after_freezing": 200,
+  "long_training_budget": "Pending pilot validation curves and user runtime preference. Queue must stop after these2jobs; no automatic expansion.",
+  "checkpoint_selection": "Record raw and EMA at each validation interval; no fixed200 test image is used. Pilot states are not final comparison weights."
+}

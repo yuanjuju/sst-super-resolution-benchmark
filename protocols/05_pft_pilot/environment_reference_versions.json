@@ -1,0 +1,68 @@
+[
+  {
+    "package": "pip",
+    "version": "25.1.1",
+    "primary_metadata_url": "https://pypi.org/pypi/pip/25.1.1/json",
+    "files": [
+      {
+        "filename": "pip-25.1.1.tar.gz",
+        "sha256": "3de45d411d308d5054c2168185d8da7f9a2cd753dbac8acbfa88a8909ecd9077"
+      }
+    ]
+  },
+  {
+    "package": "setuptools",
+    "version": "75.8.2",
+    "primary_metadata_url": "https://pypi.org/pypi/setuptools/75.8.2/json",
+    "files": [
+      {
+        "filename": "setuptools-75.8.2.tar.gz",
+        "sha256": "4880473a969e5f23f2a2be3646b2dfd84af9028716d398e46192f84bc36900d2"
+      }
+    ]
+  },
+  {
+    "package": "wheel",
+    "version": "0.45.1",
+    "primary_metadata_url": "https://pypi.org/pypi/wheel/0.45.1/json",
+    "files": [
+      {
+        "filename": "wheel-0.45.1.tar.gz",
+        "sha256": "661e1abd9198507b1409a20c02106d9670b2576e916d58f520316666abca6729"
+      }
+    ]
+  },
+  {
+    "package": "numpy",
+    "version": "1.26.4",
+    "primary_metadata_url": "https://pypi.org/pypi/numpy/1.26.4/json",
+    "files": [
+      {
+        "filename": "numpy-1.26.4.tar.gz",
+        "sha256": "2a02aba9ed12e4ac4eb3ea9421c420301a0c6460d9830d74a9df87efa4912010"
+      }
+    ]
+  },
+  {
+    "package": "fairscale",
+    "version": "0.4.13",
+    "primary_metadata_url": "https://pypi.org/pypi/fairscale/0.4.13/json",
+    "files": [
+      {
+        "filename": "fairscale-0.4.13.tar.gz",
+        "sha256": "1b797825c427f5dba92253fd0d8daa574e8bd651a2423497775fab1b30cfb768"
+      }
+    ]
+  },
+  {
+    "package": "ninja",
+    "version": "1.11.1.4",
+    "primary_metadata_url": "https://pypi.org/pypi/ninja/1.11.1.4/json",
+    "files": [
+      {
+        "filename": "ninja-1.11.1.4.tar.gz",
+        "sha256": "6aa39f6e894e0452e5b297327db00019383ae55d5d9c57c73b04f13bf79d438a"
+      }
+    ]
+  }
+]

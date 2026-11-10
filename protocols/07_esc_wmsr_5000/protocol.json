@@ -1,0 +1,57 @@
+{
+  "version": 2,
+  "purpose": "User-authorized paired continuation from1000 to5000 total updates, training-only development experiment",
+  "models": [
+    "ESC",
+    "WMSR"
+  ],
+  "dataset": "OISST",
+  "scale": 4,
+  "seed": 10,
+  "updates": 5000,
+  "development_manifest_sha256": "2b5bec7fa2994daacfbe7c17f4410372cc6101d7b697c71deac249f60563220c",
+  "batch_size": 8,
+  "micro_batch": 2,
+  "accumulation_steps": 4,
+  "optimizer": {
+    "type": "AdamW",
+    "lr": 0.0002,
+    "betas": [
+      0.9,
+      0.99
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.0
+  },
+  "loss": {
+    "L1": 1.0,
+    "FFL": 0.0,
+    "range": "normalized0..1 for both models"
+  },
+  "warmup_updates": 100,
+  "scheduler": "Continue existing linear warmup100 then constantLR; warmup already completed at source step1000, no restart",
+  "ema_decay": 0.999,
+  "validation_every": 200,
+  "save_every": 100,
+  "augmentations": [
+    "horizontal_flip_p0.5",
+    "vertical_flip_p0.5",
+    "transpose_p0.5"
+  ],
+  "precision": {
+    "dtype": "float32",
+    "matmul_tf32": false,
+    "cudnn_tf32": false
+  },
+  "initialization": "Native random initialization seed10, no pretrained weights for either model",
+  "implementation": "Pinned ESC standard native Naive attention; pinned public4-WAM WMSR with255input/output adapter; both same micro2 accumulation4 and batch1 evaluation. Preserve native model initialization and architecture.",
+  "final_test_images_evaluated": 0,
+  "final_fit_count_after_freezing": 800,
+  "final_test_count_after_freezing": 200,
+  "long_training_budget": "Explicitly authorized on2026-11-10: stop after each of two models reaches5000 total updates; no automatic extension, new models or9-task sweep.",
+  "checkpoint_selection": "Report prescribed step5000 raw and EMA plus all validation curves; do not pick best step or use original200test for selection.",
+  "evaluation_batch": 1,
+  "starting_updates": 1000,
+  "new_updates_per_model": 4000,
+  "resume_policy": "Restore full model, EMA, AdamW, sampler position/permutation and all RNG states from verified step1000; source files remain unchanged."
+}
