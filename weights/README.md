@@ -14,3 +14,7 @@ python tools/verify_weights.py downloads
 ```
 
 `final.pt`用于200图测试任务；`pilot_final.pt`同时保存预实验raw与EMA参数。`weights-resume.tar.gz`另含ESC/WMSR的1000步起点和5000步完整断点，保留优化器、采样器及RNG。
+
+## 基础超分模型
+
+早期SAFMN 30k权重和训练状态单独提供在[自然图像Release](https://github.com/yuanjuju/sst-super-resolution-benchmark/releases/tag/natural-image-sr-v2026.11.10)。[下载与哈希说明](../foundations/natural-image-sr/weights/README.md)。
