@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "model": "WMSR",
+  "step": 1000,
+  "total_steps": 1000,
+  "elapsed_seconds": 325.22594592534006,
+  "pid": 611,
+  "updated_at": "2026-11-09T12:31:28.711675+00:00",
+  "final_test_images_evaluated": 0
+}

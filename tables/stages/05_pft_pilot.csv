@@ -1,0 +1,3 @@
+stage,id,model,dataset,scale,status,kind,epochs,updates,fit_count,evaluation_count,evaluation_split,seed,result_path,config_path,checkpoint_sha256
+05_pft_pilot,PFT_OISST_x4_s10,PFT,OISST,4,complete,pilot,,1000,720,80,development80,10,experiments/05_pft_pilot/runs/PFT_OISST_x4_s10/pilot_results.json,experiments/05_pft_pilot/runs/PFT_OISST_x4_s10/config.json,e7b698236ce2f064e3378d8b6db5a5515b9466eb42fc137a65ce44c6b2a9988a
+05_pft_pilot,WMSR_OISST_x4_s10,WMSR,OISST,4,complete,pilot,,1000,720,80,development80,10,experiments/05_pft_pilot/runs/WMSR_OISST_x4_s10/pilot_results.json,experiments/05_pft_pilot/runs/WMSR_OISST_x4_s10/config.json,0188d7c899f9d7d00dd1ed6d265b915b54a75a0f5bce1f7234a364133a73c88b

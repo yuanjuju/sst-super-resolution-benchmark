@@ -1,0 +1,6 @@
+{
+  "upstream_sha256": "a7a1ef31a4eece7a8e63904dff75607f2ceacac6e6f16f227ac1ed991a000d37",
+  "patched_sha256": "7430b77f8d366e5455b29cf68e213ab159fe99bf41a35986ac0ecb34caabcc4d",
+  "reason": "Avoid lost gradient accumulation from concurrent non-atomic writes to grad_B",
+  "changes": "Two += accumulations replaced by atomicAdd, plus dynamic module-name binding for side-by-side audit; forward, topology, parameter initialization unchanged"
+}

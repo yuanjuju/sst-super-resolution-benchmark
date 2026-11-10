@@ -1,0 +1,29 @@
+--- upstream/smm_cuda.cu
++++ atomic_corrected/smm_cuda.cu
+@@ -96,7 +96,7 @@
+             float a_val = A_T[batch * C_dim * N + row * N + n]; // A_T shape: (Batch, C, N)
+             float g = grad_output[batch * N * K + n * K + col];
+             // atomicAdd(&grad_B[batch * C_dim * B_cols + row * B_cols + b_col], a_val * g);
+-            grad_B[batch * C_dim * B_cols + row * B_cols + b_col] += a_val * g;
++            atomicAdd(&grad_B[batch * C_dim * B_cols + row * B_cols + b_col], a_val * g);
+         }
+     }
+ }
+@@ -246,7 +246,7 @@
+             float a_val = A_T[batch * K * N + row * N + n];
+             float g = grad_output[batch * N * C_dim + n * C_dim + col];
+             // atomicAdd(&grad_B[batch * N * C_dim + b_row * C_dim + col], a_val * g);
+-            grad_B[batch * M * C_dim + b_row * C_dim + col] += a_val * g;
++            atomicAdd(&grad_B[batch * M * C_dim + b_row * C_dim + col], a_val * g);
+         }
+     }
+ }
+@@ -299,7 +299,7 @@
+ 
+ 
+ // Module registration
+-PYBIND11_MODULE(smm_cuda, m) {
++PYBIND11_MODULE(TORCH_EXTENSION_NAME, m) {
+     m.def("SMM_QmK_forward_cuda", &SMM_QmK_forward_cuda, "Sparse Matrix Multiplication Forward for Q @ K (CUDA)");
+     m.def("SMM_QmK_backward_cuda", &SMM_QmK_backward_cuda, "Sparse Matrix Multiplication Backward for Q @ K (CUDA)");
+ 

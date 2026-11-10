@@ -1,0 +1,78 @@
+{
+  "model": "WMSR",
+  "protocol": {
+    "version": 2,
+    "purpose": "User-authorized paired continuation from1000 to5000 total updates, training-only development experiment",
+    "models": [
+      "ESC",
+      "WMSR"
+    ],
+    "dataset": "OISST",
+    "scale": 4,
+    "seed": 10,
+    "updates": 5000,
+    "development_manifest_sha256": "2b5bec7fa2994daacfbe7c17f4410372cc6101d7b697c71deac249f60563220c",
+    "batch_size": 8,
+    "micro_batch": 2,
+    "accumulation_steps": 4,
+    "optimizer": {
+      "type": "AdamW",
+      "lr": 0.0002,
+      "betas": [
+        0.9,
+        0.99
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0.0
+    },
+    "loss": {
+      "L1": 1.0,
+      "FFL": 0.0,
+      "range": "normalized0..1 for both models"
+    },
+    "warmup_updates": 100,
+    "scheduler": "Continue existing linear warmup100 then constantLR; warmup already completed at source step1000, no restart",
+    "ema_decay": 0.999,
+    "validation_every": 200,
+    "save_every": 100,
+    "augmentations": [
+      "horizontal_flip_p0.5",
+      "vertical_flip_p0.5",
+      "transpose_p0.5"
+    ],
+    "precision": {
+      "dtype": "float32",
+      "matmul_tf32": false,
+      "cudnn_tf32": false
+    },
+    "initialization": "Native random initialization seed10, no pretrained weights for either model",
+    "implementation": "Pinned ESC standard native Naive attention; pinned public4-WAM WMSR with255input/output adapter; both same micro2 accumulation4 and batch1 evaluation. Preserve native model initialization and architecture.",
+    "final_test_images_evaluated": 0,
+    "final_fit_count_after_freezing": 800,
+    "final_test_count_after_freezing": 200,
+    "long_training_budget": "Explicitly authorized on2026-11-10: stop after each of two models reaches5000 total updates; no automatic extension, new models or9-task sweep.",
+    "checkpoint_selection": "Report prescribed step5000 raw and EMA plus all validation curves; do not pick best step or use original200test for selection.",
+    "evaluation_batch": 1,
+    "starting_updates": 1000,
+    "new_updates_per_model": 4000,
+    "resume_policy": "Restore full model, EMA, AdamW, sampler position/permutation and all RNG states from verified step1000; source files remain unchanged."
+  },
+  "protocol_sha256": "e01102e16985247539ebb4595f022564c5eef7a12fbe904235ded7f9e9fd7b9b",
+  "trainer_sha256": "08c8d9054026ec160040174e92b9374ff58d8ed171c81468075a81b0692fb999",
+  "helper_sha256": "765e742049dbb78583b88d1423cd8d8ea1ef05e984d4ed1497d7d052d5d8b482",
+  "model_adapter_sha256": "6fcbfed6419e4c76150a5f020e14959b63739d6c3a39c9144209ec378d8c8840",
+  "base_factory_sha256": "ffebd0e8ed4c23fdac123a7d104f46b30edcb69cebc2421a834b84afde0aecc9",
+  "upstream_architecture_sha256": null,
+  "candidate_commit": "dbb1cff4c4b30375928c6ee62224cb4b37fa337a",
+  "resume_lineage": {
+    "source_root": "/root/wmsr-repro/strong_models/pft_20261109",
+    "source_checkpoint_sha256": "85b1f52d767380077142c82cb14f23c1825398007327929f210f0b7cc9236539",
+    "source_checkpoint": "/root/wmsr-repro/strong_models/pft_20261109/pilot/results/WMSR_OISST_x4_s10/checkpoints/last.pt",
+    "source_step": 1000,
+    "local_input": "resume_inputs/WMSR_1000_full.pt"
+  },
+  "origin_config_sha256": "de1d86ee21d0959186b71dc68210a71b8580d2053e0ccf9388566cffa3caebd8",
+  "fit_count": 720,
+  "validation_count": 80,
+  "final_test_images_evaluated": 0
+}

@@ -1,0 +1,28 @@
+{
+  "status": "complete",
+  "model": "ESC",
+  "updates": 5000,
+  "elapsed_seconds": 2124.558106360957,
+  "last_validation": {
+    "step": 5000,
+    "split": "training_only_development80",
+    "final_test_images_evaluated": 0,
+    "raw": {
+      "count": 80,
+      "rmse_c": 0.24353542045183052,
+      "mae_c": 0.18963908310979605,
+      "psnr_y_db": 45.99471228186148,
+      "ssim_y": 0.9773046776652337
+    },
+    "ema": {
+      "count": 80,
+      "rmse_c": 0.11702983101628653,
+      "mae_c": 0.07807641085237264,
+      "psnr_y_db": 53.52249771912498,
+      "ssim_y": 0.9958002097904682
+    }
+  },
+  "checkpoint_sha256": "b06cee7a072fa9813ab92af78e5694dc8b4b0e5814662cf27b67843f163e5e91",
+  "completed_at": "2026-11-10T06:37:21.696513+00:00",
+  "boundary": "5000-total-update paired training-only development experiment. No final200 test evaluation; no general-superiority or full-convergence claim."
+}

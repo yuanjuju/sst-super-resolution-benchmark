@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "model": "ESC",
+  "step": 1000,
+  "total_steps": 1000,
+  "elapsed_seconds": 416.2784690428525,
+  "pid": 138,
+  "updated_at": "2026-11-10T05:25:22.786075+00:00",
+  "final_test_images_evaluated": 0
+}

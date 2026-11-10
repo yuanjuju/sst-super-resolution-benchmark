@@ -1,0 +1,2 @@
+stage,id,model,dataset,scale,status,kind,epochs,updates,fit_count,evaluation_count,evaluation_split,seed,result_path,config_path,checkpoint_sha256
+06_esc_pilot,ESC_OISST_x4_s10,ESC,OISST,4,complete,pilot,,1000,720,80,development80,10,experiments/06_esc_pilot/runs/ESC_OISST_x4_s10/pilot_results.json,experiments/06_esc_pilot/runs/ESC_OISST_x4_s10/config.json,207bd9523b6f265e419c0d83f63d3f75702c3957e590e9d1402574a01332cfb2

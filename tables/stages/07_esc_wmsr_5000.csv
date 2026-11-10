@@ -1,0 +1,3 @@
+stage,id,model,dataset,scale,status,kind,epochs,updates,fit_count,evaluation_count,evaluation_split,seed,result_path,config_path,checkpoint_sha256
+07_esc_wmsr_5000,ESC_OISST_x4_s10,ESC,OISST,4,complete,pilot,,5000,720,80,development80,10,experiments/07_esc_wmsr_5000/runs/ESC_OISST_x4_s10/pilot_results.json,experiments/07_esc_wmsr_5000/runs/ESC_OISST_x4_s10/config.json,b06cee7a072fa9813ab92af78e5694dc8b4b0e5814662cf27b67843f163e5e91
+07_esc_wmsr_5000,WMSR_OISST_x4_s10,WMSR,OISST,4,complete,pilot,,5000,720,80,development80,10,experiments/07_esc_wmsr_5000/runs/WMSR_OISST_x4_s10/pilot_results.json,experiments/07_esc_wmsr_5000/runs/WMSR_OISST_x4_s10/config.json,ae77d04d995f8c775dee8cabb0c1b18553ea7bc4dfb1893f33958f6d7296e3b8

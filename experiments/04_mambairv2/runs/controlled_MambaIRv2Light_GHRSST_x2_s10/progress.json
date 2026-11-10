@@ -1,0 +1,324 @@
+{
+  "status": "complete",
+  "spec": {
+    "id": "controlled_MambaIRv2Light_GHRSST_x2_s10",
+    "kind": "recent_controlled",
+    "model": "MambaIRv2Light",
+    "dataset": "GHRSST",
+    "scale": 2,
+    "epochs": 100,
+    "seed": 10,
+    "l1_weight": 0.1,
+    "ffl_weight": 0.9,
+    "network_kwargs": {
+      "upscale": 2,
+      "in_chans": 3,
+      "img_size": 64,
+      "img_range": 1.0,
+      "embed_dim": 48,
+      "d_state": 8,
+      "depths": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "num_heads": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "window_size": 16,
+      "inner_rank": 32,
+      "num_tokens": 64,
+      "convffn_kernel_size": 5,
+      "mlp_ratio": 1.0,
+      "upsampler": "pixelshuffledirect",
+      "resi_connection": "1conv"
+    },
+    "reference_id": "compare_WMSR_GHRSST_x2_s10",
+    "reference_config_sha256": "100286cccb83f5a6f4bfe51ea93d18f0c01da2aea64e6587479b11ae86f1288d",
+    "data_manifest_sha256": "a9742552ae4103404693e9b58b3b5863a4e3ac95531b2e8e2cdf743aec5ad956",
+    "controlled_reference": {
+      "train_count": 800,
+      "test_count": 200,
+      "hr_patch": 96,
+      "lr_patch": 48,
+      "batch_size": 8,
+      "repeat": 1,
+      "seed": 10,
+      "epochs": 100,
+      "expected_steps": 10000,
+      "optimizer": {
+        "type": "Adam",
+        "lr": 0.001,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-08
+      },
+      "scheduler": {
+        "type": "StepLR",
+        "step_size": 20,
+        "gamma": 0.5
+      },
+      "loss": {
+        "L1": 0.1,
+        "FFL": 0.9,
+        "alpha": 1
+      },
+      "precision": {
+        "dtype": "float32",
+        "cudnn_allow_tf32": true,
+        "matmul_allow_tf32": false
+      },
+      "evaluation": {
+        "checkpoint": "final epoch, no test-based selection",
+        "image": "BT601 Y, range255, scale border, per-image mean",
+        "physical": "unclipped mean of3channels inverse fixed[-2,40]C mapping, same border"
+      }
+    }
+  },
+  "config": {
+    "spec": {
+      "id": "controlled_MambaIRv2Light_GHRSST_x2_s10",
+      "kind": "recent_controlled",
+      "model": "MambaIRv2Light",
+      "dataset": "GHRSST",
+      "scale": 2,
+      "epochs": 100,
+      "seed": 10,
+      "l1_weight": 0.1,
+      "ffl_weight": 0.9,
+      "network_kwargs": {
+        "upscale": 2,
+        "in_chans": 3,
+        "img_size": 64,
+        "img_range": 1.0,
+        "embed_dim": 48,
+        "d_state": 8,
+        "depths": [
+          5,
+          5,
+          5,
+          5
+        ],
+        "num_heads": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "window_size": 16,
+        "inner_rank": 32,
+        "num_tokens": 64,
+        "convffn_kernel_size": 5,
+        "mlp_ratio": 1.0,
+        "upsampler": "pixelshuffledirect",
+        "resi_connection": "1conv"
+      },
+      "reference_id": "compare_WMSR_GHRSST_x2_s10",
+      "reference_config_sha256": "100286cccb83f5a6f4bfe51ea93d18f0c01da2aea64e6587479b11ae86f1288d",
+      "data_manifest_sha256": "a9742552ae4103404693e9b58b3b5863a4e3ac95531b2e8e2cdf743aec5ad956",
+      "controlled_reference": {
+        "train_count": 800,
+        "test_count": 200,
+        "hr_patch": 96,
+        "lr_patch": 48,
+        "batch_size": 8,
+        "repeat": 1,
+        "seed": 10,
+        "epochs": 100,
+        "expected_steps": 10000,
+        "optimizer": {
+          "type": "Adam",
+          "lr": 0.001,
+          "betas": [
+            0.9,
+            0.999
+          ],
+          "eps": 1e-08
+        },
+        "scheduler": {
+          "type": "StepLR",
+          "step_size": 20,
+          "gamma": 0.5
+        },
+        "loss": {
+          "L1": 0.1,
+          "FFL": 0.9,
+          "alpha": 1
+        },
+        "precision": {
+          "dtype": "float32",
+          "cudnn_allow_tf32": true,
+          "matmul_allow_tf32": false
+        },
+        "evaluation": {
+          "checkpoint": "final epoch, no test-based selection",
+          "image": "BT601 Y, range255, scale border, per-image mean",
+          "physical": "unclipped mean of3channels inverse fixed[-2,40]C mapping, same border"
+        }
+      }
+    },
+    "architecture": {
+      "variant": "official MambaIRv2-Light architecture and lightweight SR YAML",
+      "repository": "https://github.com/csguoh/MambaIR",
+      "commit": "33d7b3460c4665229334cc8de38c7f4c766ed3be",
+      "kwargs": {
+        "upscale": 2,
+        "in_chans": 3,
+        "img_size": 64,
+        "img_range": 1.0,
+        "embed_dim": 48,
+        "d_state": 8,
+        "depths": [
+          5,
+          5,
+          5,
+          5
+        ],
+        "num_heads": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "window_size": 16,
+        "inner_rank": 32,
+        "num_tokens": 64,
+        "convffn_kernel_size": 5,
+        "mlp_ratio": 1.0,
+        "upsampler": "pixelshuffledirect",
+        "resi_connection": "1conv"
+      },
+      "upstream_sha256": {
+        "README.md": "884e9747afe4d1f556408e4f40edb5c96e4844adeed730674eb282ae776eaaaa",
+        "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "basicsr/archs/mambairv2light_arch.py": "0f557d608fe9f2c7f2e95eb3556478d97b527dfc801068f57e8a453afac351bf",
+        "options/train/mambairv2/train_MambaIRv2_lightSR_x2.yml": "7e512d65470038b4fa9bf04904a29e3ebf37f20e391af9feffc64193a42c4368",
+        "options/train/mambairv2/train_MambaIRv2_lightSR_x3.yml": "5a1b4adffa911f1f98c4df716612b07e266b3b538ce0337f4fce4630ba3e35d4",
+        "options/train/mambairv2/train_MambaIRv2_lightSR_x4.yml": "d87361b8e7087edb40eebf67bc9b6000be7be415272032a2ca70e7840ff7b166",
+        "basicsr/archs/arch_util.py": "4f0ee4a75821985f61040ddb516276d889e9c2a228188f5b0813d5620008d6ff"
+      },
+      "compatibility_changes": "Skip BasicSR registry-only decorator/import; execute exact pinned tuple/init helpers. No forward, ASSM, SGN, layer or parameter change.",
+      "external_range": "0..255 -> model 0..1 -> output 0..255; no image quantization",
+      "evaluation_rng": "Upstream gumbel_softmax remains unchanged in eval; reset Torch CPU/CUDA to seed10 before full fixed-batch test.",
+      "boundary": "Controlled SST protocol comparison, not the original natural-image training recipe or an original-paper numeric reproduction."
+    },
+    "train_count": 800,
+    "test_count": 200,
+    "hr_patch": 96,
+    "lr_patch": 48,
+    "batch_size": 8,
+    "repeat": 1,
+    "seed": 10,
+    "epochs": 100,
+    "expected_steps": 10000,
+    "optimizer": {
+      "type": "Adam",
+      "lr": 0.001,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08
+    },
+    "scheduler": {
+      "type": "StepLR",
+      "step_size": 20,
+      "gamma": 0.5
+    },
+    "loss": {
+      "L1": 0.1,
+      "FFL": 0.9,
+      "alpha": 1
+    },
+    "sources": {
+      "repo": "csguoh/MambaIR",
+      "commit": "33d7b3460c4665229334cc8de38c7f4c766ed3be",
+      "files": [
+        {
+          "path": "README.md",
+          "bytes": 25752,
+          "sha256": "884e9747afe4d1f556408e4f40edb5c96e4844adeed730674eb282ae776eaaaa"
+        },
+        {
+          "path": "LICENSE",
+          "bytes": 11357,
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        },
+        {
+          "path": "basicsr/archs/mambairv2light_arch.py",
+          "bytes": 40216,
+          "sha256": "0f557d608fe9f2c7f2e95eb3556478d97b527dfc801068f57e8a453afac351bf"
+        },
+        {
+          "path": "options/train/mambairv2/train_MambaIRv2_lightSR_x2.yml",
+          "bytes": 2162,
+          "sha256": "7e512d65470038b4fa9bf04904a29e3ebf37f20e391af9feffc64193a42c4368"
+        },
+        {
+          "path": "options/train/mambairv2/train_MambaIRv2_lightSR_x3.yml",
+          "bytes": 2170,
+          "sha256": "5a1b4adffa911f1f98c4df716612b07e266b3b538ce0337f4fce4630ba3e35d4"
+        },
+        {
+          "path": "options/train/mambairv2/train_MambaIRv2_lightSR_x4.yml",
+          "bytes": 2167,
+          "sha256": "d87361b8e7087edb40eebf67bc9b6000be7be415272032a2ca70e7840ff7b166"
+        },
+        {
+          "path": "basicsr/archs/arch_util.py",
+          "bytes": 11485,
+          "sha256": "4f0ee4a75821985f61040ddb516276d889e9c2a228188f5b0813d5620008d6ff"
+        }
+      ],
+      "verification": "Static source download and AST only, no import or GPU test"
+    },
+    "factory_sha256": "7ce821b22d5b47559317f9088861c4fe338ba98a18d610cdaf9b624f2532aa80",
+    "trainer_sha256": "08f65c8414014c96440696cf36205b3412951472e861a3bf0feb53b0c59492d3",
+    "precision": {
+      "dtype": "float32",
+      "cudnn_allow_tf32": true,
+      "matmul_allow_tf32": false
+    },
+    "vendor_manifest_sha256": "3c088147aecc6231a176b2b2307f4b48d614a09bce696bb156099e88ecffc5ca",
+    "data_manifest_sha256": "a9742552ae4103404693e9b58b3b5863a4e3ac95531b2e8e2cdf743aec5ad956",
+    "evaluation": {
+      "checkpoint": "final epoch, no test-based selection",
+      "image": "BT601 Y, range255, scale border, per-image mean",
+      "physical": "unclipped mean of3channels inverse fixed[-2,40]C mapping, same border"
+    },
+    "boundary": "Explicit public-data protocol and source variants, not author-confirmed original paper experiment",
+    "storage": "Keep active last.pt; after final checkpoint and metrics are safely written, retain compact final.pt only"
+  },
+  "epochs": 100,
+  "optimizer_steps": 10000,
+  "test_model": {
+    "count": 200,
+    "rmse_c": 0.03805863965630369,
+    "mae_c": 0.022525117616169155,
+    "psnr_y_db": 62.22656921997463,
+    "ssim_y": 0.9997907915711403
+  },
+  "test_bicubic": {
+    "count": 200,
+    "rmse_c": 0.0031272102487597303,
+    "mae_c": 0.002112064812827157,
+    "psnr_y_db": 85.93324541013189,
+    "ssim_y": 0.9999959927797317
+  },
+  "per_region": {},
+  "delta_psnr_y_db": -23.70667619015726,
+  "parameters": 774092,
+  "trainable_parameters": 774092,
+  "completed_at": "2026-11-09T07:04:04.252094+00:00",
+  "elapsed_seconds": 2500.5549633894116,
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "torch": "2.7.1+cu128",
+  "cuda_runtime": "12.8",
+  "checkpoint_sha256": "20720e3e4494857c1d2d303f6d1c3f51949284a35a5f8f0d5f9ab5ce92e0210c"
+}

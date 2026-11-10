@@ -1,0 +1,28 @@
+{
+  "status": "complete",
+  "model": "ESC",
+  "updates": 1000,
+  "elapsed_seconds": 416.267834674567,
+  "last_validation": {
+    "step": 1000,
+    "split": "training_only_development80",
+    "final_test_images_evaluated": 0,
+    "raw": {
+      "count": 80,
+      "rmse_c": 0.1805807326138379,
+      "mae_c": 0.12552081756293773,
+      "psnr_y_db": 49.242164131985945,
+      "ssim_y": 0.9900617673993111
+    },
+    "ema": {
+      "count": 80,
+      "rmse_c": 1.5117227108235676,
+      "mae_c": 1.1612312711775303,
+      "psnr_y_db": 30.378120404680963,
+      "ssim_y": 0.5277046084403991
+    }
+  },
+  "checkpoint_sha256": "207bd9523b6f265e419c0d83f63d3f75702c3957e590e9d1402574a01332cfb2",
+  "completed_at": "2026-11-10T05:25:22.676306+00:00",
+  "boundary": "1000-update ESC development screen only. No final200 test evaluation; no convergence or general-superiority claim."
+}

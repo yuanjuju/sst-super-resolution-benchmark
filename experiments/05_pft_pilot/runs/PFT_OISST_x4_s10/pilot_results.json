@@ -1,0 +1,28 @@
+{
+  "status": "complete",
+  "model": "PFT",
+  "updates": 1000,
+  "elapsed_seconds": 808.7013467084616,
+  "last_validation": {
+    "step": 1000,
+    "split": "training_only_development80",
+    "final_test_images_evaluated": 0,
+    "raw": {
+      "count": 80,
+      "rmse_c": 0.8802605625698154,
+      "mae_c": 0.8295595973730088,
+      "psnr_y_db": 35.06253666750136,
+      "ssim_y": 0.98461037799716
+    },
+    "ema": {
+      "count": 80,
+      "rmse_c": 4.094184724824822,
+      "mae_c": 3.3987606681883333,
+      "psnr_y_db": 22.987992523264978,
+      "ssim_y": 0.8259096961468458
+    }
+  },
+  "checkpoint_sha256": "e7b698236ce2f064e3378d8b6db5a5515b9466eb42fc137a65ce44c6b2a9988a",
+  "completed_at": "2026-11-09T12:25:58.263545+00:00",
+  "boundary": "1000-update development pilot only. No final200 test evaluation, no convergence or superiority claim."
+}

@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "model": "PFT",
+  "step": 1000,
+  "total_steps": 1000,
+  "elapsed_seconds": 808.9388819355518,
+  "pid": 581,
+  "updated_at": "2026-11-09T12:25:58.735989+00:00",
+  "final_test_images_evaluated": 0
+}

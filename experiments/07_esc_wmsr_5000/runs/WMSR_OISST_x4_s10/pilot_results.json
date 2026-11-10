@@ -1,0 +1,28 @@
+{
+  "status": "complete",
+  "model": "WMSR",
+  "updates": 5000,
+  "elapsed_seconds": 1651.090695163235,
+  "last_validation": {
+    "step": 5000,
+    "split": "training_only_development80",
+    "final_test_images_evaluated": 0,
+    "raw": {
+      "count": 80,
+      "rmse_c": 0.11589030535130487,
+      "mae_c": 0.07488728202879429,
+      "psnr_y_db": 54.00291044795857,
+      "ssim_y": 0.9960807725787163
+    },
+    "ema": {
+      "count": 80,
+      "rmse_c": 0.13926150611239826,
+      "mae_c": 0.1047379250638187,
+      "psnr_y_db": 51.64662604168414,
+      "ssim_y": 0.9960265561938286
+    }
+  },
+  "checkpoint_sha256": "ae77d04d995f8c775dee8cabb0c1b18553ea7bc4dfb1893f33958f6d7296e3b8",
+  "completed_at": "2026-11-10T06:59:35.064138+00:00",
+  "boundary": "5000-total-update paired training-only development experiment. No final200 test evaluation; no general-superiority or full-convergence claim."
+}
