@@ -1,0 +1,23 @@
+EPOCH compare_CRAN_OISST_x2_s10 {"epoch": 1, "step": 100, "lr": 0.001, "loss": 25222.51517677307, "l1": 25222.51517677307, "ffl": 16645540908.716908, "epoch_seconds": 25.33888749597827, "elapsed_seconds": 25.33940709696617}
+EPOCH compare_CRAN_OISST_x2_s10 {"epoch": 2, "step": 200, "lr": 0.001, "loss": 1724.766678352356, "l1": 1724.766678352356, "ffl": 91822146.3458252, "epoch_seconds": 24.503627772966865, "elapsed_seconds": 50.45817238197196}
+EPOCH compare_CRAN_OISST_x2_s10 {"epoch": 3, "step": 300, "lr": 0.001, "loss": 30.983847007751464, "l1": 30.983847007751464, "ffl": 1299.213794555664, "epoch_seconds": 24.630974247993436, "elapsed_seconds": 75.60772342799464}
+EPOCH compare_CRAN_OISST_x2_s10 {"epoch": 4, "step": 400, "lr": 0.001, "loss": 30.64860373497009, "l1": 30.64860373497009, "ffl": 1436.9089601135254, "epoch_seconds": 23.464746265963186, "elapsed_seconds": 99.56678652396658}
+EPOCH compare_CRAN_OISST_x2_s10 {"epoch": 5, "step": 500, "lr": 0.001, "loss": 45.42904805183411, "l1": 45.42904805183411, "ffl": 3260.627221069336, "epoch_seconds": 23.324992372014094, "elapsed_seconds": 123.45419400598621}
+EPOCH compare_CRAN_OISST_x2_s10 {"epoch": 6, "step": 600, "lr": 0.001, "loss": 18.35533073425293, "l1": 18.35533073425293, "ffl": 315.9196346282959, "epoch_seconds": 23.203566567972302, "elapsed_seconds": 147.15224533196306}
+EPOCH compare_CRAN_OISST_x2_s10 {"epoch": 7, "step": 700, "lr": 0.001, "loss": 13.203241815567017, "l1": 13.203241815567017, "ffl": 171.7884009552002, "epoch_seconds": 22.989934508979786, "elapsed_seconds": 170.7017386649968}
+EPOCH compare_CRAN_OISST_x2_s10 {"epoch": 8, "step": 800, "lr": 0.001, "loss": 10.985564079284668, "l1": 10.985564079284668, "ffl": 132.5566606903076, "epoch_seconds": 23.302503111946862, "elapsed_seconds": 194.49028187897056}
+EPOCH compare_CRAN_OISST_x2_s10 {"epoch": 9, "step": 900, "lr": 0.001, "loss": 11.891079320907593, "l1": 11.891079320907593, "ffl": 156.66952865600587, "epoch_seconds": 23.05740056798095, "elapsed_seconds": 218.03173714398872}
+EPOCH compare_CRAN_OISST_x2_s10 {"epoch": 10, "step": 1000, "lr": 0.001, "loss": 12.445218162536621, "l1": 12.445218162536621, "ffl": 154.69704078674317, "epoch_seconds": 23.068810430995654, "elapsed_seconds": 241.58459808997577}
+EPOCH compare_CRAN_OISST_x2_s10 {"epoch": 11, "step": 1100, "lr": 0.001, "loss": 15.33535210609436, "l1": 15.33535210609436, "ffl": 351.274034576416, "epoch_seconds": 22.946646580996457, "elapsed_seconds": 265.0844749370008}
+EPOCH compare_CRAN_OISST_x2_s10 {"epoch": 12, "step": 1200, "lr": 0.001, "loss": 9.514450192451477, "l1": 9.514450192451477, "ffl": 97.45858386993409, "epoch_seconds": 23.044851644022856, "elapsed_seconds": 288.7177800779464}
+EPOCH compare_CRAN_OISST_x2_s10 {"epoch": 13, "step": 1300, "lr": 0.001, "loss": 7.795576891899109, "l1": 7.795576891899109, "ffl": 65.81166198730469, "epoch_seconds": 23.26027776999399, "elapsed_seconds": 312.5014468949521}
+EPOCH compare_CRAN_OISST_x2_s10 {"epoch": 14, "step": 1400, "lr": 0.001, "loss": 7.11527684211731, "l1": 7.11527684211731, "ffl": 56.91917161941528, "epoch_seconds": 22.858374830975663, "elapsed_seconds": 335.8381857809727}
+EPOCH compare_CRAN_OISST_x2_s10 {"epoch": 15, "step": 1500, "lr": 0.001, "loss": 11.098715834617614, "l1": 11.098715834617614, "ffl": 157.75538234710694, "epoch_seconds": 24.643516502983402, "elapsed_seconds": 360.9601302910014}
+EPOCH compare_CRAN_OISST_x2_s10 {"epoch": 16, "step": 1600, "lr": 0.001, "loss": 19.484349908828737, "l1": 19.484349908828737, "ffl": 939.9371927261352, "epoch_seconds": 23.616069281997625, "elapsed_seconds": 385.1539843569626}
+EPOCH compare_CRAN_OISST_x2_s10 {"epoch": 17, "step": 1700, "lr": 0.001, "loss": 10.247563996315002, "l1": 10.247563996315002, "ffl": 97.84771820068359, "epoch_seconds": 23.195047157991212, "elapsed_seconds": 408.8414605939761}
+Traceback (most recent call last):
+  File "/root/wmsr-repro/scripts/34_train_experiment.py", line 138, in <module>
+    if __name__=='__main__':main()
+  File "/root/wmsr-repro/scripts/34_train_experiment.py", line 83, in main
+    if not torch.isfinite(loss):raise RuntimeError('Nonfinite loss at '+str(step))
+RuntimeError: Nonfinite loss at 1790

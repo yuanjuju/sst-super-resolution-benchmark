@@ -1,0 +1,244 @@
+{
+  "status": "complete",
+  "spec": {
+    "id": "compare_ELAN_HYCOM_x2_s10",
+    "kind": "comparison",
+    "model": "ELAN",
+    "dataset": "HYCOM",
+    "scale": 2,
+    "epochs": 100,
+    "seed": 10,
+    "preflight_key": "9905c7a88b1ef391"
+  },
+  "config": {
+    "spec": {
+      "id": "compare_ELAN_HYCOM_x2_s10",
+      "kind": "comparison",
+      "model": "ELAN",
+      "dataset": "HYCOM",
+      "scale": 2,
+      "epochs": 100,
+      "seed": 10,
+      "preflight_key": "9905c7a88b1ef391"
+    },
+    "architecture": {
+      "variant": "official ELAN-light",
+      "kwargs": {
+        "model": "elan",
+        "scale": 2,
+        "rgb_range": 255,
+        "colors": 3,
+        "m_elan": 24,
+        "c_elan": 60,
+        "n_share": 1,
+        "r_expand": 2,
+        "act_type": "relu",
+        "window_sizes": [
+          4,
+          8,
+          16
+        ],
+        "pretrain": null,
+        "patch_size": 256,
+        "batch_size": 64,
+        "data_repeat": 80,
+        "data_augment": 1,
+        "epochs": 1000,
+        "lr": 0.0002,
+        "decays": [
+          250,
+          400,
+          450,
+          475,
+          500
+        ],
+        "gamma": 0.5,
+        "log_every": 100,
+        "test_every": 1,
+        "log_path": "./experiments",
+        "log_name": null,
+        "gpu_ids": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "threads": 8,
+        "data_path": "/home/xindongzhang/SR_datasets",
+        "eval_sets": [
+          "Set5",
+          "Set14",
+          "B100",
+          "Urban100",
+          "Manga109"
+        ]
+      }
+    },
+    "train_count": 800,
+    "test_count": 200,
+    "hr_patch": 96,
+    "lr_patch": 48,
+    "batch_size": 8,
+    "repeat": 1,
+    "seed": 10,
+    "epochs": 100,
+    "expected_steps": 10000,
+    "optimizer": {
+      "type": "Adam",
+      "lr": 0.001,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08
+    },
+    "scheduler": {
+      "type": "StepLR",
+      "step_size": 20,
+      "gamma": 0.5
+    },
+    "loss": {
+      "L1": 1.0,
+      "FFL": 0.0,
+      "alpha": 1
+    },
+    "sources": {
+      "EDSR": {
+        "commit": "8dba5581a7502b92de9641eb431130d6c8ca5d7f",
+        "url": "https://github.com/sanghyun-son/EDSR-PyTorch.git"
+      },
+      "ELAN": {
+        "commit": "97ab3fa00dc5657cf06ae2fbdcd618d22026790f",
+        "url": "https://github.com/xindongzhang/ELAN.git"
+      },
+      "DAT": {
+        "commit": "1645c64fad7c94d94abd090bd1319eec1f26f7cc",
+        "url": "https://github.com/zhengchen1999/DAT.git"
+      },
+      "MambaIR": {
+        "commit": "33d7b3460c4665229334cc8de38c7f4c766ed3be",
+        "url": "https://github.com/csguoh/MambaIR.git"
+      },
+      "CRAN_unofficial": {
+        "commit": "2402b7daf6e7caf26f23d0cec3431a5fb25055cb",
+        "url": "https://github.com/Ast-363/CRAN.git"
+      },
+      "CGC": {
+        "commit": "920557efd10f29172275d3687040124440043fa0",
+        "url": "https://github.com/XudongLinthu/context-gated-convolution.git"
+      },
+      "SAFMN": {
+        "commit": "1a412066e927da640bc7e2a53ea60f9ffc134241",
+        "url": "https://github.com/sunny2109/SAFMN",
+        "retrieval": "pinned raw architecture file; full clone timed out"
+      }
+    },
+    "factory_sha256": "ffebd0e8ed4c23fdac123a7d104f46b30edcb69cebc2421a834b84afde0aecc9",
+    "trainer_sha256": "7126a713d4e0a957a9a2208cc9f32c5261067e88284e5127dbaa3df87384ac9a",
+    "precision": {
+      "dtype": "float32",
+      "cudnn_allow_tf32": true,
+      "matmul_allow_tf32": false
+    },
+    "vendor_manifest_sha256": "3c088147aecc6231a176b2b2307f4b48d614a09bce696bb156099e88ecffc5ca",
+    "data_manifest_sha256": "b147b6566fec80357e2bb819b9b846cd723cd449eb54051d4254b3f53ef5b212",
+    "evaluation": {
+      "checkpoint": "final epoch, no test-based selection",
+      "image": "BT601 Y, range255, scale border, per-image mean",
+      "physical": "unclipped mean of3channels inverse fixed[-2,40]C mapping, same border"
+    },
+    "boundary": "Explicit public-data protocol and source variants, not author-confirmed original paper experiment",
+    "storage": "Keep active last.pt; after final checkpoint and metrics are safely written, retain compact final.pt only"
+  },
+  "epochs": 100,
+  "optimizer_steps": 10000,
+  "test_model": {
+    "count": 200,
+    "rmse_c": 0.04993709048863368,
+    "mae_c": 0.029123523038579152,
+    "psnr_y_db": 63.53807163006001,
+    "ssim_y": 0.9990216913819313
+  },
+  "test_bicubic": {
+    "count": 200,
+    "rmse_c": 0.06402632426461227,
+    "mae_c": 0.037424154565669596,
+    "psnr_y_db": 61.57930187598578,
+    "ssim_y": 0.9984331741929054
+  },
+  "per_region": {
+    "NP": {
+      "model": {
+        "count": 50,
+        "rmse_c": 0.052352167584062054,
+        "mae_c": 0.03042578880675137,
+        "psnr_y_db": 62.381699025051084,
+        "ssim_y": 0.9990271890163421
+      },
+      "bicubic": {
+        "count": 50,
+        "rmse_c": 0.0740605872964583,
+        "mae_c": 0.04297851060517132,
+        "psnr_y_db": 60.06567968590346,
+        "ssim_y": 0.9980884718894959
+      }
+    },
+    "AGM": {
+      "model": {
+        "count": 50,
+        "rmse_c": 0.0666318449000686,
+        "mae_c": 0.04129675954580307,
+        "psnr_y_db": 58.96375911924604,
+        "ssim_y": 0.9983344495296478
+      },
+      "bicubic": {
+        "count": 50,
+        "rmse_c": 0.08765066158148158,
+        "mae_c": 0.05516428362578154,
+        "psnr_y_db": 56.56208612607672,
+        "ssim_y": 0.9971180105209351
+      }
+    },
+    "NIO": {
+      "model": {
+        "count": 50,
+        "rmse_c": 0.02822507800630191,
+        "mae_c": 0.017921624835580588,
+        "psnr_y_db": 67.35752323985726,
+        "ssim_y": 0.9996462440490723
+      },
+      "bicubic": {
+        "count": 50,
+        "rmse_c": 0.032507050795001484,
+        "mae_c": 0.022109947819262742,
+        "psnr_y_db": 65.28692789363984,
+        "ssim_y": 0.9995274209976196
+      }
+    },
+    "EWP": {
+      "model": {
+        "count": 50,
+        "rmse_c": 0.044695019765983016,
+        "mae_c": 0.026849918966181576,
+        "psnr_y_db": 65.44930513608571,
+        "ssim_y": 0.999078882932663
+      },
+      "bicubic": {
+        "count": 50,
+        "rmse_c": 0.046617200447823685,
+        "mae_c": 0.029443876212462784,
+        "psnr_y_db": 64.40251379832313,
+        "ssim_y": 0.9989987933635711
+      }
+    }
+  },
+  "delta_psnr_y_db": 1.9587697540742326,
+  "parameters": 620916,
+  "trainable_parameters": 582012,
+  "completed_at": "2026-11-02T08:32:12.561342+00:00",
+  "elapsed_seconds": 1140.3820338809746,
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "torch": "2.7.1+cu128",
+  "cuda_runtime": "12.8",
+  "checkpoint_sha256": "0f819f0c6b6dcfd2a478bbefdb10102090f51cb56895d5866c6471805fe95dfd"
+}

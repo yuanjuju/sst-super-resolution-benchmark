@@ -1,0 +1,48 @@
+{
+  "selection": {
+    "HYCOM": [
+      {
+        "test_index": 0,
+        "sample_id": "HYCOM_EWP_20161208T2100_155_136"
+      },
+      {
+        "test_index": 66,
+        "sample_id": "HYCOM_NP_20161201T0000_209_362"
+      },
+      {
+        "test_index": 133,
+        "sample_id": "HYCOM_AGM_20161230T0600_226_357"
+      }
+    ],
+    "OISST": [
+      {
+        "test_index": 0,
+        "sample_id": "OISST_20161207_257_740"
+      },
+      {
+        "test_index": 66,
+        "sample_id": "OISST_20161124_230_949"
+      },
+      {
+        "test_index": 133,
+        "sample_id": "OISST_20161125_244_277"
+      }
+    ],
+    "GHRSST": [
+      {
+        "test_index": 0,
+        "sample_id": "GHRSST_20160812_2651_5652"
+      },
+      {
+        "test_index": 66,
+        "sample_id": "GHRSST_20160812_10751_3952"
+      },
+      {
+        "test_index": 133,
+        "sample_id": "GHRSST_20160812_3251_10352"
+      }
+    ]
+  },
+  "rule": "Fixed indices0,66,133, no score-based selection",
+  "display": "Whole HR96 patch; mean of3channels in Celsius. Main metrics retain scale-pixel crop."
+}

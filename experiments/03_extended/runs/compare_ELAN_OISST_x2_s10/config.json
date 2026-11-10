@@ -1,0 +1,140 @@
+{
+  "spec": {
+    "id": "compare_ELAN_OISST_x2_s10",
+    "kind": "comparison",
+    "model": "ELAN",
+    "dataset": "OISST",
+    "scale": 2,
+    "epochs": 100,
+    "seed": 10,
+    "preflight_key": "9905c7a88b1ef391"
+  },
+  "architecture": {
+    "variant": "official ELAN-light",
+    "kwargs": {
+      "model": "elan",
+      "scale": 2,
+      "rgb_range": 255,
+      "colors": 3,
+      "m_elan": 24,
+      "c_elan": 60,
+      "n_share": 1,
+      "r_expand": 2,
+      "act_type": "relu",
+      "window_sizes": [
+        4,
+        8,
+        16
+      ],
+      "pretrain": null,
+      "patch_size": 256,
+      "batch_size": 64,
+      "data_repeat": 80,
+      "data_augment": 1,
+      "epochs": 1000,
+      "lr": 0.0002,
+      "decays": [
+        250,
+        400,
+        450,
+        475,
+        500
+      ],
+      "gamma": 0.5,
+      "log_every": 100,
+      "test_every": 1,
+      "log_path": "./experiments",
+      "log_name": null,
+      "gpu_ids": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "threads": 8,
+      "data_path": "/home/xindongzhang/SR_datasets",
+      "eval_sets": [
+        "Set5",
+        "Set14",
+        "B100",
+        "Urban100",
+        "Manga109"
+      ]
+    }
+  },
+  "train_count": 800,
+  "test_count": 200,
+  "hr_patch": 96,
+  "lr_patch": 48,
+  "batch_size": 8,
+  "repeat": 1,
+  "seed": 10,
+  "epochs": 100,
+  "expected_steps": 10000,
+  "optimizer": {
+    "type": "Adam",
+    "lr": 0.001,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08
+  },
+  "scheduler": {
+    "type": "StepLR",
+    "step_size": 20,
+    "gamma": 0.5
+  },
+  "loss": {
+    "L1": 1.0,
+    "FFL": 0.0,
+    "alpha": 1
+  },
+  "sources": {
+    "EDSR": {
+      "commit": "8dba5581a7502b92de9641eb431130d6c8ca5d7f",
+      "url": "https://github.com/sanghyun-son/EDSR-PyTorch.git"
+    },
+    "ELAN": {
+      "commit": "97ab3fa00dc5657cf06ae2fbdcd618d22026790f",
+      "url": "https://github.com/xindongzhang/ELAN.git"
+    },
+    "DAT": {
+      "commit": "1645c64fad7c94d94abd090bd1319eec1f26f7cc",
+      "url": "https://github.com/zhengchen1999/DAT.git"
+    },
+    "MambaIR": {
+      "commit": "33d7b3460c4665229334cc8de38c7f4c766ed3be",
+      "url": "https://github.com/csguoh/MambaIR.git"
+    },
+    "CRAN_unofficial": {
+      "commit": "2402b7daf6e7caf26f23d0cec3431a5fb25055cb",
+      "url": "https://github.com/Ast-363/CRAN.git"
+    },
+    "CGC": {
+      "commit": "920557efd10f29172275d3687040124440043fa0",
+      "url": "https://github.com/XudongLinthu/context-gated-convolution.git"
+    },
+    "SAFMN": {
+      "commit": "1a412066e927da640bc7e2a53ea60f9ffc134241",
+      "url": "https://github.com/sunny2109/SAFMN",
+      "retrieval": "pinned raw architecture file; full clone timed out"
+    }
+  },
+  "factory_sha256": "ffebd0e8ed4c23fdac123a7d104f46b30edcb69cebc2421a834b84afde0aecc9",
+  "trainer_sha256": "7126a713d4e0a957a9a2208cc9f32c5261067e88284e5127dbaa3df87384ac9a",
+  "precision": {
+    "dtype": "float32",
+    "cudnn_allow_tf32": true,
+    "matmul_allow_tf32": false
+  },
+  "vendor_manifest_sha256": "3c088147aecc6231a176b2b2307f4b48d614a09bce696bb156099e88ecffc5ca",
+  "data_manifest_sha256": "798fd3aa1c5e2ef44e076ab937c071decf3aca7220c608ddc7c00ce80aa41390",
+  "evaluation": {
+    "checkpoint": "final epoch, no test-based selection",
+    "image": "BT601 Y, range255, scale border, per-image mean",
+    "physical": "unclipped mean of3channels inverse fixed[-2,40]C mapping, same border"
+  },
+  "boundary": "Explicit public-data protocol and source variants, not author-confirmed original paper experiment",
+  "storage": "Keep active last.pt; after final checkpoint and metrics are safely written, retain compact final.pt only"
+}

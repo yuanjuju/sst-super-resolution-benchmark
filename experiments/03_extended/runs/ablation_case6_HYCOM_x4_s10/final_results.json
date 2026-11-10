@@ -1,0 +1,204 @@
+{
+  "status": "complete",
+  "spec": {
+    "id": "ablation_case6_HYCOM_x4_s10",
+    "kind": "ablation",
+    "model": "WMSR_ABLATION",
+    "dataset": "HYCOM",
+    "scale": 4,
+    "epochs": 20,
+    "seed": 10,
+    "case": 6,
+    "l1_weight": 0.1,
+    "ffl_weight": 0.9,
+    "preflight_key": "33b4fd78dad5071d"
+  },
+  "config": {
+    "spec": {
+      "id": "ablation_case6_HYCOM_x4_s10",
+      "kind": "ablation",
+      "model": "WMSR_ABLATION",
+      "dataset": "HYCOM",
+      "scale": 4,
+      "epochs": 20,
+      "seed": 10,
+      "case": 6,
+      "l1_weight": 0.1,
+      "ffl_weight": 0.9,
+      "preflight_key": "33b4fd78dad5071d"
+    },
+    "architecture": {
+      "variant": "pinned public WMSR block/network",
+      "channels": 64,
+      "actual_wam_blocks": 4,
+      "case": 6,
+      "boundary": "Ablations of released blocks; no-DWT branch/fusion interpretation is explicit, not author-confirmed TableVI code."
+    },
+    "train_count": 800,
+    "test_count": 200,
+    "hr_patch": 96,
+    "lr_patch": 24,
+    "batch_size": 8,
+    "repeat": 1,
+    "seed": 10,
+    "epochs": 20,
+    "expected_steps": 2000,
+    "optimizer": {
+      "type": "Adam",
+      "lr": 0.001,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08
+    },
+    "scheduler": {
+      "type": "StepLR",
+      "step_size": 20,
+      "gamma": 0.5
+    },
+    "loss": {
+      "L1": 0.1,
+      "FFL": 0.9,
+      "alpha": 1
+    },
+    "sources": {
+      "EDSR": {
+        "commit": "8dba5581a7502b92de9641eb431130d6c8ca5d7f",
+        "url": "https://github.com/sanghyun-son/EDSR-PyTorch.git"
+      },
+      "ELAN": {
+        "commit": "97ab3fa00dc5657cf06ae2fbdcd618d22026790f",
+        "url": "https://github.com/xindongzhang/ELAN.git"
+      },
+      "DAT": {
+        "commit": "1645c64fad7c94d94abd090bd1319eec1f26f7cc",
+        "url": "https://github.com/zhengchen1999/DAT.git"
+      },
+      "MambaIR": {
+        "commit": "33d7b3460c4665229334cc8de38c7f4c766ed3be",
+        "url": "https://github.com/csguoh/MambaIR.git"
+      },
+      "CRAN_unofficial": {
+        "commit": "2402b7daf6e7caf26f23d0cec3431a5fb25055cb",
+        "url": "https://github.com/Ast-363/CRAN.git"
+      },
+      "CGC": {
+        "commit": "920557efd10f29172275d3687040124440043fa0",
+        "url": "https://github.com/XudongLinthu/context-gated-convolution.git"
+      },
+      "SAFMN": {
+        "commit": "1a412066e927da640bc7e2a53ea60f9ffc134241",
+        "url": "https://github.com/sunny2109/SAFMN",
+        "retrieval": "pinned raw architecture file; full clone timed out"
+      }
+    },
+    "factory_sha256": "ffebd0e8ed4c23fdac123a7d104f46b30edcb69cebc2421a834b84afde0aecc9",
+    "trainer_sha256": "7126a713d4e0a957a9a2208cc9f32c5261067e88284e5127dbaa3df87384ac9a",
+    "precision": {
+      "dtype": "float32",
+      "cudnn_allow_tf32": true,
+      "matmul_allow_tf32": false
+    },
+    "vendor_manifest_sha256": "3c088147aecc6231a176b2b2307f4b48d614a09bce696bb156099e88ecffc5ca",
+    "data_manifest_sha256": "b147b6566fec80357e2bb819b9b846cd723cd449eb54051d4254b3f53ef5b212",
+    "evaluation": {
+      "checkpoint": "final epoch, no test-based selection",
+      "image": "BT601 Y, range255, scale border, per-image mean",
+      "physical": "unclipped mean of3channels inverse fixed[-2,40]C mapping, same border"
+    },
+    "boundary": "Explicit public-data protocol and source variants, not author-confirmed original paper experiment",
+    "storage": "Keep active last.pt; after final checkpoint and metrics are safely written, retain compact final.pt only"
+  },
+  "epochs": 20,
+  "optimizer_steps": 2000,
+  "test_model": {
+    "count": 200,
+    "rmse_c": 0.1345748295565703,
+    "mae_c": 0.08346627058461309,
+    "psnr_y_db": 54.00791211522183,
+    "ssim_y": 0.9940134134888648
+  },
+  "test_bicubic": {
+    "count": 200,
+    "rmse_c": 0.13016271174065147,
+    "mae_c": 0.0771000648010522,
+    "psnr_y_db": 55.378115112936506,
+    "ssim_y": 0.9943248638510704
+  },
+  "per_region": {
+    "NP": {
+      "model": {
+        "count": 50,
+        "rmse_c": 0.17104118435920085,
+        "mae_c": 0.1071697835624218,
+        "psnr_y_db": 51.69670514626274,
+        "ssim_y": 0.9908526980876923
+      },
+      "bicubic": {
+        "count": 50,
+        "rmse_c": 0.1657526099154724,
+        "mae_c": 0.09946147441864013,
+        "psnr_y_db": 53.38279695666549,
+        "ssim_y": 0.9914399564266205
+      }
+    },
+    "AGM": {
+      "model": {
+        "count": 50,
+        "rmse_c": 0.1822214042550892,
+        "mae_c": 0.1208532102406025,
+        "psnr_y_db": 49.960997615567706,
+        "ssim_y": 0.988543107509613
+      },
+      "bicubic": {
+        "count": 50,
+        "rmse_c": 0.180530176788448,
+        "mae_c": 0.11932153180241585,
+        "psnr_y_db": 50.16231897829962,
+        "ssim_y": 0.9889803123474121
+      }
+    },
+    "NIO": {
+      "model": {
+        "count": 50,
+        "rmse_c": 0.06462439881732034,
+        "mae_c": 0.04867253616452217,
+        "psnr_y_db": 57.824808714308766,
+        "ssim_y": 0.9984545576572418
+      },
+      "bicubic": {
+        "count": 50,
+        "rmse_c": 0.060289790380128674,
+        "mae_c": 0.044566226191818714,
+        "psnr_y_db": 58.874800426343946,
+        "ssim_y": 0.9985532701015473
+      }
+    },
+    "EWP": {
+      "model": {
+        "count": 50,
+        "rmse_c": 0.0761938262756566,
+        "mae_c": 0.057169552370905874,
+        "psnr_y_db": 56.54913698474798,
+        "ssim_y": 0.9982032907009125
+      },
+      "bicubic": {
+        "count": 50,
+        "rmse_c": 0.06379180873420037,
+        "mae_c": 0.04505102679133415,
+        "psnr_y_db": 59.09254409043693,
+        "ssim_y": 0.9983259165287017
+      }
+    }
+  },
+  "delta_psnr_y_db": -1.370202997714678,
+  "parameters": 708680,
+  "trainable_parameters": 708656,
+  "completed_at": "2026-11-02T07:30:04.513666+00:00",
+  "elapsed_seconds": 88.55475074300193,
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "torch": "2.7.1+cu128",
+  "cuda_runtime": "12.8",
+  "checkpoint_sha256": "d85815768a60b76b3c2238f7255d493e91287330dcb982129e393bea4977b153"
+}

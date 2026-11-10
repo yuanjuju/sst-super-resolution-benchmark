@@ -1,0 +1,10 @@
+EPOCH compare_CRAN_OISST_x3_s10 {"epoch": 1, "step": 100, "lr": 0.001, "loss": 6820.08739490509, "l1": 6820.08739490509, "ffl": 1927134532.988572, "epoch_seconds": 22.97681098501198, "elapsed_seconds": 22.976911556965206}
+EPOCH compare_CRAN_OISST_x3_s10 {"epoch": 2, "step": 200, "lr": 0.001, "loss": 30.0653755569458, "l1": 30.0653755569458, "ffl": 939.1652174377441, "epoch_seconds": 22.650415600975975, "elapsed_seconds": 46.29095164098544}
+EPOCH compare_CRAN_OISST_x3_s10 {"epoch": 3, "step": 300, "lr": 0.001, "loss": 21.40119022369385, "l1": 21.40119022369385, "ffl": 388.18742752075195, "epoch_seconds": 23.700656305998564, "elapsed_seconds": 70.5125056260149}
+EPOCH compare_CRAN_OISST_x3_s10 {"epoch": 4, "step": 400, "lr": 0.001, "loss": 1069513.8550883578, "l1": 1069513.8550883578, "ffl": 145163811940030.44, "epoch_seconds": 22.30895632796455, "elapsed_seconds": 93.3150202279794}
+Traceback (most recent call last):
+  File "/root/wmsr-repro/scripts/34_train_experiment.py", line 138, in <module>
+    if __name__=='__main__':main()
+  File "/root/wmsr-repro/scripts/34_train_experiment.py", line 83, in main
+    if not torch.isfinite(loss):raise RuntimeError('Nonfinite loss at '+str(step))
+RuntimeError: Nonfinite loss at 410

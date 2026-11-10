@@ -1,0 +1,135 @@
+{
+  "status": "complete",
+  "spec": {
+    "id": "compare_WMSR_GHRSST_x2_s10",
+    "kind": "comparison",
+    "model": "WMSR",
+    "dataset": "GHRSST",
+    "scale": 2,
+    "epochs": 100,
+    "seed": 10,
+    "l1_weight": 0.1,
+    "ffl_weight": 0.9,
+    "preflight_key": "425d40c9353d4941"
+  },
+  "config": {
+    "spec": {
+      "id": "compare_WMSR_GHRSST_x2_s10",
+      "kind": "comparison",
+      "model": "WMSR",
+      "dataset": "GHRSST",
+      "scale": 2,
+      "epochs": 100,
+      "seed": 10,
+      "l1_weight": 0.1,
+      "ffl_weight": 0.9,
+      "preflight_key": "425d40c9353d4941"
+    },
+    "architecture": {
+      "variant": "pinned public WMSR block/network",
+      "channels": 64,
+      "actual_wam_blocks": 4
+    },
+    "train_count": 800,
+    "test_count": 200,
+    "hr_patch": 96,
+    "lr_patch": 48,
+    "batch_size": 8,
+    "repeat": 1,
+    "seed": 10,
+    "epochs": 100,
+    "expected_steps": 10000,
+    "optimizer": {
+      "type": "Adam",
+      "lr": 0.001,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08
+    },
+    "scheduler": {
+      "type": "StepLR",
+      "step_size": 20,
+      "gamma": 0.5
+    },
+    "loss": {
+      "L1": 0.1,
+      "FFL": 0.9,
+      "alpha": 1
+    },
+    "sources": {
+      "EDSR": {
+        "commit": "8dba5581a7502b92de9641eb431130d6c8ca5d7f",
+        "url": "https://github.com/sanghyun-son/EDSR-PyTorch.git"
+      },
+      "ELAN": {
+        "commit": "97ab3fa00dc5657cf06ae2fbdcd618d22026790f",
+        "url": "https://github.com/xindongzhang/ELAN.git"
+      },
+      "DAT": {
+        "commit": "1645c64fad7c94d94abd090bd1319eec1f26f7cc",
+        "url": "https://github.com/zhengchen1999/DAT.git"
+      },
+      "MambaIR": {
+        "commit": "33d7b3460c4665229334cc8de38c7f4c766ed3be",
+        "url": "https://github.com/csguoh/MambaIR.git"
+      },
+      "CRAN_unofficial": {
+        "commit": "2402b7daf6e7caf26f23d0cec3431a5fb25055cb",
+        "url": "https://github.com/Ast-363/CRAN.git"
+      },
+      "CGC": {
+        "commit": "920557efd10f29172275d3687040124440043fa0",
+        "url": "https://github.com/XudongLinthu/context-gated-convolution.git"
+      },
+      "SAFMN": {
+        "commit": "1a412066e927da640bc7e2a53ea60f9ffc134241",
+        "url": "https://github.com/sunny2109/SAFMN",
+        "retrieval": "pinned raw architecture file; full clone timed out"
+      }
+    },
+    "factory_sha256": "ffebd0e8ed4c23fdac123a7d104f46b30edcb69cebc2421a834b84afde0aecc9",
+    "trainer_sha256": "7126a713d4e0a957a9a2208cc9f32c5261067e88284e5127dbaa3df87384ac9a",
+    "precision": {
+      "dtype": "float32",
+      "cudnn_allow_tf32": true,
+      "matmul_allow_tf32": false
+    },
+    "vendor_manifest_sha256": "3c088147aecc6231a176b2b2307f4b48d614a09bce696bb156099e88ecffc5ca",
+    "data_manifest_sha256": "a9742552ae4103404693e9b58b3b5863a4e3ac95531b2e8e2cdf743aec5ad956",
+    "evaluation": {
+      "checkpoint": "final epoch, no test-based selection",
+      "image": "BT601 Y, range255, scale border, per-image mean",
+      "physical": "unclipped mean of3channels inverse fixed[-2,40]C mapping, same border"
+    },
+    "boundary": "Explicit public-data protocol and source variants, not author-confirmed original paper experiment",
+    "storage": "Keep active last.pt; after final checkpoint and metrics are safely written, retain compact final.pt only"
+  },
+  "epochs": 100,
+  "optimizer_steps": 10000,
+  "test_model": {
+    "count": 200,
+    "rmse_c": 0.010326022200795839,
+    "mae_c": 0.007126270867884159,
+    "psnr_y_db": 73.08206107999439,
+    "ssim_y": 0.9999569034576417
+  },
+  "test_bicubic": {
+    "count": 200,
+    "rmse_c": 0.0031272102487597303,
+    "mae_c": 0.002112064812827157,
+    "psnr_y_db": 85.93324541013189,
+    "ssim_y": 0.9999959927797317
+  },
+  "per_region": {},
+  "delta_psnr_y_db": -12.8511843301375,
+  "parameters": 2037284,
+  "trainable_parameters": 2037260,
+  "completed_at": "2026-11-02T15:50:18.204066+00:00",
+  "elapsed_seconds": 989.7369836959988,
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "torch": "2.7.1+cu128",
+  "cuda_runtime": "12.8",
+  "checkpoint_sha256": "71abb889a37656fd668ddbda3a7421b99651ed7c1acd3cf6a9926de7d94c0bd0"
+}

@@ -1,0 +1,201 @@
+{
+  "status": "complete",
+  "spec": {
+    "id": "compare_CRAN_HYCOM_x3_s10",
+    "kind": "comparison",
+    "model": "CRAN",
+    "dataset": "HYCOM",
+    "scale": 3,
+    "epochs": 100,
+    "seed": 10,
+    "preflight_key": "af0071b679c4f8fa"
+  },
+  "config": {
+    "spec": {
+      "id": "compare_CRAN_HYCOM_x3_s10",
+      "kind": "comparison",
+      "model": "CRAN",
+      "dataset": "HYCOM",
+      "scale": 3,
+      "epochs": 100,
+      "seed": 10,
+      "preflight_key": "af0071b679c4f8fa"
+    },
+    "architecture": {
+      "variant": "paper-guided CRAN reconstruction, not an official released model",
+      "kwargs": {
+        "groups": 10,
+        "plain_residual_blocks_per_group": 19,
+        "context_reasoning_blocks_per_group": 1,
+        "channels": 64
+      },
+      "boundary": "Architecture from CRAN section3.5; contextual convolution adapted from the pinned public third-party/CGC sources. Not the unidentified CRAN variant in WMSR."
+    },
+    "train_count": 800,
+    "test_count": 200,
+    "hr_patch": 96,
+    "lr_patch": 32,
+    "batch_size": 8,
+    "repeat": 1,
+    "seed": 10,
+    "epochs": 100,
+    "expected_steps": 10000,
+    "optimizer": {
+      "type": "Adam",
+      "lr": 0.001,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08
+    },
+    "scheduler": {
+      "type": "StepLR",
+      "step_size": 20,
+      "gamma": 0.5
+    },
+    "loss": {
+      "L1": 1.0,
+      "FFL": 0.0,
+      "alpha": 1
+    },
+    "sources": {
+      "EDSR": {
+        "commit": "8dba5581a7502b92de9641eb431130d6c8ca5d7f",
+        "url": "https://github.com/sanghyun-son/EDSR-PyTorch.git"
+      },
+      "ELAN": {
+        "commit": "97ab3fa00dc5657cf06ae2fbdcd618d22026790f",
+        "url": "https://github.com/xindongzhang/ELAN.git"
+      },
+      "DAT": {
+        "commit": "1645c64fad7c94d94abd090bd1319eec1f26f7cc",
+        "url": "https://github.com/zhengchen1999/DAT.git"
+      },
+      "MambaIR": {
+        "commit": "33d7b3460c4665229334cc8de38c7f4c766ed3be",
+        "url": "https://github.com/csguoh/MambaIR.git"
+      },
+      "CRAN_unofficial": {
+        "commit": "2402b7daf6e7caf26f23d0cec3431a5fb25055cb",
+        "url": "https://github.com/Ast-363/CRAN.git"
+      },
+      "CGC": {
+        "commit": "920557efd10f29172275d3687040124440043fa0",
+        "url": "https://github.com/XudongLinthu/context-gated-convolution.git"
+      },
+      "SAFMN": {
+        "commit": "1a412066e927da640bc7e2a53ea60f9ffc134241",
+        "url": "https://github.com/sunny2109/SAFMN",
+        "retrieval": "pinned raw architecture file; full clone timed out"
+      }
+    },
+    "factory_sha256": "ffebd0e8ed4c23fdac123a7d104f46b30edcb69cebc2421a834b84afde0aecc9",
+    "trainer_sha256": "7126a713d4e0a957a9a2208cc9f32c5261067e88284e5127dbaa3df87384ac9a",
+    "precision": {
+      "dtype": "float32",
+      "cudnn_allow_tf32": true,
+      "matmul_allow_tf32": false
+    },
+    "vendor_manifest_sha256": "3c088147aecc6231a176b2b2307f4b48d614a09bce696bb156099e88ecffc5ca",
+    "data_manifest_sha256": "b147b6566fec80357e2bb819b9b846cd723cd449eb54051d4254b3f53ef5b212",
+    "evaluation": {
+      "checkpoint": "final epoch, no test-based selection",
+      "image": "BT601 Y, range255, scale border, per-image mean",
+      "physical": "unclipped mean of3channels inverse fixed[-2,40]C mapping, same border"
+    },
+    "boundary": "Explicit public-data protocol and source variants, not author-confirmed original paper experiment",
+    "storage": "Keep active last.pt; after final checkpoint and metrics are safely written, retain compact final.pt only"
+  },
+  "epochs": 100,
+  "optimizer_steps": 10000,
+  "test_model": {
+    "count": 200,
+    "rmse_c": 0.21997629206180122,
+    "mae_c": 0.1480287777632475,
+    "psnr_y_db": 48.17205380998255,
+    "ssim_y": 0.9861240956187248
+  },
+  "test_bicubic": {
+    "count": 200,
+    "rmse_c": 0.09861506289590671,
+    "mae_c": 0.05754663774743676,
+    "psnr_y_db": 57.86446103045896,
+    "ssim_y": 0.996474438905716
+  },
+  "per_region": {
+    "NP": {
+      "model": {
+        "count": 50,
+        "rmse_c": 0.2917940243041727,
+        "mae_c": 0.2006079562008381,
+        "psnr_y_db": 45.335433607728945,
+        "ssim_y": 0.9770162737369538
+      },
+      "bicubic": {
+        "count": 50,
+        "rmse_c": 0.12198632101259493,
+        "mae_c": 0.07159742375835776,
+        "psnr_y_db": 56.000145000249184,
+        "ssim_y": 0.9950057744979859
+      }
+    },
+    "AGM": {
+      "model": {
+        "count": 50,
+        "rmse_c": 0.26114967694032487,
+        "mae_c": 0.1853317992389202,
+        "psnr_y_db": 46.11403741448662,
+        "ssim_y": 0.9788881278038025
+      },
+      "bicubic": {
+        "count": 50,
+        "rmse_c": 0.13774770612405574,
+        "mae_c": 0.08879011660814286,
+        "psnr_y_db": 52.57414778462632,
+        "ssim_y": 0.9931062436103821
+      }
+    },
+    "NIO": {
+      "model": {
+        "count": 50,
+        "rmse_c": 0.10830893825498641,
+        "mae_c": 0.08276545226573945,
+        "psnr_y_db": 52.64160030783761,
+        "ssim_y": 0.9960759031772614
+      },
+      "bicubic": {
+        "count": 50,
+        "rmse_c": 0.04612539574451237,
+        "mae_c": 0.03315470546483994,
+        "psnr_y_db": 61.43731769426602,
+        "ssim_y": 0.9990827596187591
+      }
+    },
+    "EWP": {
+      "model": {
+        "count": 50,
+        "rmse_c": 0.16877364659641872,
+        "mae_c": 0.12340990334749222,
+        "psnr_y_db": 48.59714390987701,
+        "ssim_y": 0.9925160777568817
+      },
+      "bicubic": {
+        "count": 50,
+        "rmse_c": 0.05400997436251554,
+        "mae_c": 0.0366443051584065,
+        "psnr_y_db": 61.446233642694104,
+        "ssim_y": 0.9987029778957367
+      }
+    }
+  },
+  "delta_psnr_y_db": -9.692407220476412,
+  "parameters": 15856487,
+  "trainable_parameters": 15856463,
+  "completed_at": "2026-11-02T14:32:30.365862+00:00",
+  "elapsed_seconds": 2208.0520666160155,
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "torch": "2.7.1+cu128",
+  "cuda_runtime": "12.8",
+  "checkpoint_sha256": "a49cfba718c16bf4efc0fab39f05c045ed4ca89d5b313558ea90b566f1695c6d"
+}

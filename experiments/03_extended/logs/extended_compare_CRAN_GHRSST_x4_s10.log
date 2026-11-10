@@ -1,0 +1,8 @@
+EPOCH compare_CRAN_GHRSST_x4_s10 {"epoch": 1, "step": 100, "lr": 0.001, "loss": 2155.224276313782, "l1": 2155.224276313782, "ffl": 256218834.62540528, "epoch_seconds": 23.42108051601099, "elapsed_seconds": 23.42133326397743}
+EPOCH compare_CRAN_GHRSST_x4_s10 {"epoch": 2, "step": 200, "lr": 0.001, "loss": 49.065137672424314, "l1": 49.065137672424314, "ffl": 90475.06458259582, "epoch_seconds": 22.458748026983812, "elapsed_seconds": 46.493890220997855}
+Traceback (most recent call last):
+  File "/root/wmsr-repro/scripts/34_train_experiment.py", line 138, in <module>
+    if __name__=='__main__':main()
+  File "/root/wmsr-repro/scripts/34_train_experiment.py", line 83, in main
+    if not torch.isfinite(loss):raise RuntimeError('Nonfinite loss at '+str(step))
+RuntimeError: Nonfinite loss at 219

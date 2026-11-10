@@ -1,0 +1,7 @@
+EPOCH compare_CRAN_HYCOM_x2_s10 {"epoch": 1, "step": 100, "lr": 0.001, "loss": 29480.078868255616, "l1": 29480.078868255616, "ffl": 35502658659.41221, "epoch_seconds": 23.975758872984443, "elapsed_seconds": 23.975982292031404}
+Traceback (most recent call last):
+  File "/root/wmsr-repro/scripts/34_train_experiment.py", line 138, in <module>
+    if __name__=='__main__':main()
+  File "/root/wmsr-repro/scripts/34_train_experiment.py", line 83, in main
+    if not torch.isfinite(loss):raise RuntimeError('Nonfinite loss at '+str(step))
+RuntimeError: Nonfinite loss at 143
