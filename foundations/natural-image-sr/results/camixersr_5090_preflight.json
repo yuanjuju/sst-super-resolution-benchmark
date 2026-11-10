@@ -1,0 +1,48 @@
+{
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "torch": "2.7.1+cu128",
+  "cuda": "12.8",
+  "basicsr": "1.4.2",
+  "model_type": "CAModel",
+  "dataset_size": 139995,
+  "lq_shape": [
+    16,
+    3,
+    64,
+    64
+  ],
+  "gt_shape": [
+    16,
+    3,
+    256,
+    256
+  ],
+  "step_seconds": [
+    1.1538034579716623,
+    0.24112411006353796,
+    0.2582388708833605
+  ],
+  "losses": [
+    {
+      "l_pix": 0.5553726553916931,
+      "l_ratio": 4.1542512917658314e-05
+    },
+    {
+      "l_pix": 0.3568408489227295,
+      "l_ratio": 0.00011123632430098951
+    },
+    {
+      "l_pix": 0.2723836600780487,
+      "l_ratio": 2.1972544345771894e-05
+    }
+  ],
+  "max_parameter_change": 0.0014985054731369019,
+  "peak_allocated_gib": 10.956573486328125,
+  "ema_output_shape": [
+    16,
+    3,
+    256,
+    256
+  ],
+  "note": "Three diagnostic updates; discarded before the fresh 5000-step run."
+}

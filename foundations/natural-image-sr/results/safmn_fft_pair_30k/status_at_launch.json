@@ -1,0 +1,41 @@
+{
+  "status": "running",
+  "phase": "training",
+  "current_run": "fft",
+  "completed_runs": [],
+  "details": {
+    "latest_iter": 100,
+    "validations": {},
+    "errors": [],
+    "ended": false
+  },
+  "started_at": "2026-10-23T14:36:26.208191+00:00",
+  "finished_at": null,
+  "paths": {
+    "suite": "/root/fsas/sr-repro/safmn_fft_pair_30k",
+    "project": "/root/fsas/sr-repro/SAFMN",
+    "python": "/root/fsas/sr-repro/SAFMN/.venv-5090/bin/python",
+    "runner_log": "/root/fsas/sr-repro/safmn_fft_pair_30k/runner.log",
+    "configs": {
+      "fft": "/root/fsas/sr-repro/safmn_fft_pair_30k/configs/train_fft_30000.yml",
+      "nofft": "/root/fsas/sr-repro/safmn_fft_pair_30k/configs/train_nofft_30000.yml"
+    },
+    "logs": {
+      "fft": "/root/fsas/sr-repro/safmn_fft_pair_30k/fft.stdout.log",
+      "nofft": "/root/fsas/sr-repro/safmn_fft_pair_30k/nofft.stdout.log"
+    },
+    "experiments": {
+      "fft": "/root/fsas/sr-repro/SAFMN/experiments/SAFMN_DF2K_x4_pair_fft_30000",
+      "nofft": "/root/fsas/sr-repro/SAFMN/experiments/SAFMN_DF2K_x4_pair_nofft_30000"
+    }
+  },
+  "updated_at": "2026-10-23T14:38:06.577244+00:00",
+  "child_pid": 218,
+  "inputs": {
+    "common_init_sha256": "d31f76fa74adf41aaa8bde7c3c2c5e8affb5435df346310fe7161852872969d2",
+    "config_sha256": {
+      "fft": "da5e7eaaea5bf19ab94b981c0c7dea74c6db58ed43d4d6b6b9f54230c44dd6a3",
+      "nofft": "7788de807cc29a128a39cf895f0bee7cd09e288b11f98ef0856f2cf792f6a4d7"
+    }
+  }
+}

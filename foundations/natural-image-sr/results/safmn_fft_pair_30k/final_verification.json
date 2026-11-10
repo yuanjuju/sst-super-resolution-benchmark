@@ -1,0 +1,169 @@
+{
+  "status": "passed",
+  "verified_at_utc": "2026-10-24T01:22:43.441019+00:00",
+  "checkpoints": [
+    {
+      "arm": "fft",
+      "iter": 5000,
+      "readable": true,
+      "finite": true,
+      "hash_matches": true,
+      "state_iter": 5000,
+      "keys": [
+        "params",
+        "params_ema"
+      ]
+    },
+    {
+      "arm": "fft",
+      "iter": 10000,
+      "readable": true,
+      "finite": true,
+      "hash_matches": true,
+      "state_iter": 10000,
+      "keys": [
+        "params",
+        "params_ema"
+      ]
+    },
+    {
+      "arm": "fft",
+      "iter": 15000,
+      "readable": true,
+      "finite": true,
+      "hash_matches": true,
+      "state_iter": 15000,
+      "keys": [
+        "params",
+        "params_ema"
+      ]
+    },
+    {
+      "arm": "fft",
+      "iter": 20000,
+      "readable": true,
+      "finite": true,
+      "hash_matches": true,
+      "state_iter": 20000,
+      "keys": [
+        "params",
+        "params_ema"
+      ]
+    },
+    {
+      "arm": "fft",
+      "iter": 25000,
+      "readable": true,
+      "finite": true,
+      "hash_matches": true,
+      "state_iter": 25000,
+      "keys": [
+        "params",
+        "params_ema"
+      ]
+    },
+    {
+      "arm": "fft",
+      "iter": 30000,
+      "readable": true,
+      "finite": true,
+      "hash_matches": true,
+      "state_iter": 30000,
+      "keys": [
+        "params",
+        "params_ema"
+      ]
+    },
+    {
+      "arm": "nofft",
+      "iter": 5000,
+      "readable": true,
+      "finite": true,
+      "hash_matches": true,
+      "state_iter": 5000,
+      "keys": [
+        "params",
+        "params_ema"
+      ]
+    },
+    {
+      "arm": "nofft",
+      "iter": 10000,
+      "readable": true,
+      "finite": true,
+      "hash_matches": true,
+      "state_iter": 10000,
+      "keys": [
+        "params",
+        "params_ema"
+      ]
+    },
+    {
+      "arm": "nofft",
+      "iter": 15000,
+      "readable": true,
+      "finite": true,
+      "hash_matches": true,
+      "state_iter": 15000,
+      "keys": [
+        "params",
+        "params_ema"
+      ]
+    },
+    {
+      "arm": "nofft",
+      "iter": 20000,
+      "readable": true,
+      "finite": true,
+      "hash_matches": true,
+      "state_iter": 20000,
+      "keys": [
+        "params",
+        "params_ema"
+      ]
+    },
+    {
+      "arm": "nofft",
+      "iter": 25000,
+      "readable": true,
+      "finite": true,
+      "hash_matches": true,
+      "state_iter": 25000,
+      "keys": [
+        "params",
+        "params_ema"
+      ]
+    },
+    {
+      "arm": "nofft",
+      "iter": 30000,
+      "readable": true,
+      "finite": true,
+      "hash_matches": true,
+      "state_iter": 30000,
+      "keys": [
+        "params",
+        "params_ema"
+      ]
+    }
+  ],
+  "csv_rows": {
+    "training_metrics.csv": 12,
+    "set5_per_image.csv": 20,
+    "set5_mean.csv": 4
+  },
+  "predictions": 20,
+  "comparisons": 5,
+  "result_hashes_match": true,
+  "process_states": {
+    "168": "EXITED",
+    "201": "EXITED",
+    "216": "EXITED",
+    "218": "EXITED",
+    "655": "EXITED",
+    "660": "EXITED",
+    "797": "EXITED",
+    "802": "EXITED"
+  },
+  "gpu_compute_processes": []
+}

@@ -1,0 +1,4 @@
+run,weight_key,psnr_rgb_db,pillow_bicubic_psnr_rgb_db,crop_border,device,wall_seconds,source
+bird_30k,params,32.20329964896334,28.212975297468038,4,cpu,0.02243433427065611,foundations/natural-image-sr/results/local-inference/bird_30k/result.json
+bird_30k_ema,params_ema,32.33841139594504,28.212975297468038,4,cpu,0.019252624828368425,foundations/natural-image-sr/results/local-inference/bird_30k_ema/result.json
+butterfly_30k,params,26.4593116740539,20.864476343503252,4,cpu,0.020192124880850315,foundations/natural-image-sr/results/local-inference/butterfly_30k/result.json

@@ -1,0 +1,11 @@
+path,sample_id,role,width,height,bytes,sha256
+datasets/Set5/HR/baby.png,baby,HR,512,512,371264,cb85956d68f708a1030c790d143cbcd108f5ac5988d3349180cdcb54dd80597d
+datasets/Set5/HR/bird.png,bird,HR,288,288,120453,5dcf863f7c3802e68fbb0fca2ec351052a1f97a4db613e510dbd105cee9a6a32
+datasets/Set5/HR/butterfly.png,butterfly,HR,256,256,127529,487d841c9dbc46c7ab496c319ec1f13268de7ea7e02f94ae18781ca86a5abd0d
+datasets/Set5/HR/head.png,head,HR,280,280,113787,f524c1ce41641c1cf269a20c4dfbe965e07e471d609abc19dfadfb71037cc873
+datasets/Set5/HR/woman.png,woman,HR,228,344,118848,f276625a222b9ce18d18d86e1ec603fea50427b7c0a2927b3750b1bb86a07b83
+datasets/Set5/LR_bicubic/X4/baby.png,baby,LR_x4,128,128,31202,86f6e1b97fd198336b33474103f43c4cb8963566b4aff34c0421e7ebeac644f3
+datasets/Set5/LR_bicubic/X4/bird.png,bird,LR_x4,72,72,11299,2c17d5eaca516650fc3993af9cd61ea8d3e1c777d1a7fe9b0407c3d928b24286
+datasets/Set5/LR_bicubic/X4/butterfly.png,butterfly,LR_x4,64,64,10508,5f70e1e1e7e9bef23ff8d35e57dab5fa07cc08c8b5bb85fa3a15aa8550bfb2e0
+datasets/Set5/LR_bicubic/X4/head.png,head,LR_x4,70,70,9136,ef22055522c8828298bb3c9e03343394f2fbf9eb916131c5d0e6948fa4cf23a4
+datasets/Set5/LR_bicubic/X4/woman.png,woman,LR_x4,57,86,10804,43b8bf9622734a7201a07f7f8764afeeb9b90e20639043aaa9a89055d7a610c6

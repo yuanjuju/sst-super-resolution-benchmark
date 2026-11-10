@@ -1,0 +1,8 @@
+{
+  "setup_safmn_pair_5090.py": "689cedf27aa6bc1a32e6c77cd48a50f5176c7c4e24424b26f4aec175201d6f79",
+  "preflight_safmn_fft_pair.py": "da7dd939efd0bdb4b1a568111cda2c9dd785428b8ae0b776e7a84e8d370303d9",
+  "run_safmn_fft_pair.py": "b3d76dcd80f9da54567ebc1acda6fa0996cd95ba5e4075f06797a29d3e3db60f",
+  "evaluate_safmn_fft_pair.py": "41b1f705f8f08b1cb5673c0e62450dc34fe1e9297eb0d4f3fda6772dd2d69c86",
+  "configs/train_fft_30000.yml": "da5e7eaaea5bf19ab94b981c0c7dea74c6db58ed43d4d6b6b9f54230c44dd6a3",
+  "configs/train_nofft_30000.yml": "7788de807cc29a128a39cf895f0bee7cd09e288b11f98ef0856f2cf792f6a4d7"
+}

@@ -28,3 +28,7 @@ python 15_verify_full_datasets.py
 ```
 
 脚本沿用原云端工作目录`/root/wmsr-repro`。下载地址、采样规则和生成文件以manifest为准。GitHub归档不包含原始数据、环境或编译缓存。
+
+## 自然图像数据
+
+基础模块提供[Set5五对HR/LR原图](../foundations/natural-image-sr/datasets/Set5/)，以及[尺寸、哈希和DF2K下载流程](../foundations/natural-image-sr/data/README.md)。

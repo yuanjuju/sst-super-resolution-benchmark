@@ -1,0 +1,10 @@
+2026-10-23T14:36:26.231176+00:00 Starting fresh, sequential FFT/no-FFT pair; 30000 steps each
+2026-10-23T14:36:26.250493+00:00 Started preparing; pid=217
+2026-10-23T14:36:26.494781+00:00 Started training; pid=218
+2026-10-23T18:10:42.691695+00:00 Started verifying; pid=655
+2026-10-23T18:11:35.052892+00:00 Verified fft: 30000 steps, EMA RGB PSNR=28.7956
+2026-10-23T18:11:35.163111+00:00 Started training; pid=660
+2026-10-23T21:14:27.399604+00:00 Started verifying; pid=797
+2026-10-23T21:15:17.269637+00:00 Verified nofft: 30000 steps, EMA RGB PSNR=28.705
+2026-10-23T21:15:17.307168+00:00 Started evaluating; pid=802
+2026-10-23T21:15:31.573001+00:00 Both runs and paired evaluation completed; shut down cloud instance separately

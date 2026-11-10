@@ -1,0 +1,22 @@
+{
+  "input": "${WORKSPACE_ROOT}/datasets/Set5/LR_bicubic/X4/bird.png",
+  "gt": "${WORKSPACE_ROOT}/datasets/Set5/HR/bird.png",
+  "weights_sha256": "c8f372864a1479fb555d1f2a4793b31ce5d1e6a55741ca2393b37606dc0370f3",
+  "protocol": "single-image uint8 RGB PSNR; crop_border=4; float64 MSE; peak=255",
+  "params_psnr_db": 32.20329964896334,
+  "ema_psnr_db": 32.33841139594504,
+  "ema_minus_params_db": 0.1351117469816998,
+  "pillow_bicubic_psnr_db": 28.212975297468038,
+  "roi_xyxy": [
+    128,
+    0,
+    280,
+    152
+  ],
+  "figure": "${MODULE_ROOT}/learning/outputs/bird_30k_compare/params_vs_ema.png",
+  "sources": [
+    "${MODULE_ROOT}/learning/outputs/bird_30k/result.json",
+    "${MODULE_ROOT}/learning/outputs/bird_30k_ema/result.json"
+  ],
+  "scope": "Single-image comparison from the same 30k checkpoint; not a dataset-wide conclusion."
+}

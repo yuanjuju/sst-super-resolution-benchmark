@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "checkpoints": [
+    {
+      "iter": 5000,
+      "model": "/root/fsas/sr-repro/SAFMN/experiments/SAFMN_DF2K_x4_pair_nofft_30000/models/net_g_5000.pth",
+      "state": "/root/fsas/sr-repro/SAFMN/experiments/SAFMN_DF2K_x4_pair_nofft_30000/training_states/5000.state",
+      "model_sha256": "ce9d9d4ab646c60623da0806a8ffbbc6fdee8f72120e543dc13ed25531a25c13",
+      "state_sha256": "861242a80638f815823cc76a36958f8b0a409f07c21784513081e359f4bc801e",
+      "params_tensors": 148,
+      "params_ema_tensors": 148
+    },
+    {
+      "iter": 10000,
+      "model": "/root/fsas/sr-repro/SAFMN/experiments/SAFMN_DF2K_x4_pair_nofft_30000/models/net_g_10000.pth",
+      "state": "/root/fsas/sr-repro/SAFMN/experiments/SAFMN_DF2K_x4_pair_nofft_30000/training_states/10000.state",
+      "model_sha256": "48be5764ac7387bd51ff5595bfc183ee0e8b4d951284d457cbc8ed009a9b241c",
+      "state_sha256": "30015374a745290ab9d1af4f27453a0a291a3a3aad19c05486552b413d4a3a76",
+      "params_tensors": 148,
+      "params_ema_tensors": 148
+    },
+    {
+      "iter": 15000,
+      "model": "/root/fsas/sr-repro/SAFMN/experiments/SAFMN_DF2K_x4_pair_nofft_30000/models/net_g_15000.pth",
+      "state": "/root/fsas/sr-repro/SAFMN/experiments/SAFMN_DF2K_x4_pair_nofft_30000/training_states/15000.state",
+      "model_sha256": "405ec43ede7e868229c991799f99badc343e81b32eb98c5e19b29fb2258029ec",
+      "state_sha256": "7c6decfc0ea54cd6400ed88659b8862b2bb56af4a8c0c2e6d3021effdbce4791",
+      "params_tensors": 148,
+      "params_ema_tensors": 148
+    },
+    {
+      "iter": 20000,
+      "model": "/root/fsas/sr-repro/SAFMN/experiments/SAFMN_DF2K_x4_pair_nofft_30000/models/net_g_20000.pth",
+      "state": "/root/fsas/sr-repro/SAFMN/experiments/SAFMN_DF2K_x4_pair_nofft_30000/training_states/20000.state",
+      "model_sha256": "be76511f46e33da101753f3960131d20505a16c58d5c0c06ffc21cf720623b1d",
+      "state_sha256": "bbb0fb00e05faf2b96d12a0000f8eac7f007e5cc51e6cdfd11e06d70e9c7778d",
+      "params_tensors": 148,
+      "params_ema_tensors": 148
+    },
+    {
+      "iter": 25000,
+      "model": "/root/fsas/sr-repro/SAFMN/experiments/SAFMN_DF2K_x4_pair_nofft_30000/models/net_g_25000.pth",
+      "state": "/root/fsas/sr-repro/SAFMN/experiments/SAFMN_DF2K_x4_pair_nofft_30000/training_states/25000.state",
+      "model_sha256": "e7cf94a48a68654e87885ca0e452caf139b222c285ac89f54c657ac31e466158",
+      "state_sha256": "108efdc5e01a9e89ac2feaae0dd651caf49188b67440ee653fc09b14c5fe8f01",
+      "params_tensors": 148,
+      "params_ema_tensors": 148
+    },
+    {
+      "iter": 30000,
+      "model": "/root/fsas/sr-repro/SAFMN/experiments/SAFMN_DF2K_x4_pair_nofft_30000/models/net_g_30000.pth",
+      "state": "/root/fsas/sr-repro/SAFMN/experiments/SAFMN_DF2K_x4_pair_nofft_30000/training_states/30000.state",
+      "model_sha256": "998a544f341cea8ec0b02c262e101c71b515cef887387924587ac363abef2835",
+      "state_sha256": "d0a38e8eb69df1477d349b90e1a8472251662c7de20e0ee744c9a600e7815e67",
+      "params_tensors": 148,
+      "params_ema_tensors": 148
+    }
+  ]
+}

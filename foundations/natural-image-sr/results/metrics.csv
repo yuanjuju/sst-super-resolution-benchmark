@@ -1,0 +1,42 @@
+model,checkpoint,weight_key,dataset,channel,crop_border,psnr_db,ssim,notes
+SAFMN,author_pretrained,params,DIV2K_val100,RGB,4,28.9615,,author weight evaluated locally
+SAFMN,scratch_5000,params_ema,DIV2K_val100,RGB,4,28.1530,,training validation
+SAFMN,scratch_5000_nofft,params_ema,DIV2K_val100,RGB,4,27.7030,,training validation; FFT loss disabled
+SAFMN,scratch_10000,params_ema,DIV2K_val100,RGB,4,28.6253,,training validation
+SAFMN,scratch_15000,params_ema,DIV2K_val100,RGB,4,28.7050,,training validation
+SAFMN,scratch_20000,params_ema,DIV2K_val100,RGB,4,28.7439,,training validation
+SAFMN,scratch_25000,params_ema,DIV2K_val100,RGB,4,28.7723,,training validation
+SAFMN,scratch_30000,params_ema,DIV2K_val100,RGB,4,28.7915,,training validation
+SAFMN,scratch_30000,params_ema,DIV2K_val100,RGB,4,28.7915,,independent direct test
+SAFMN,scratch_10000,params,DIV2K_val100,RGB,4,28.5927,,direct test
+SAFMN,scratch_30000,params,DIV2K_val100,RGB,4,28.6901,,direct test
+SAFMN,author_pretrained,params,Set5,Y,4,32.1836,0.8948,third-party Set5 mirror
+SAFMN,scratch_5000,params,Set5,Y,4,31.4363,0.8828,third-party Set5 mirror
+SAFMN,scratch_30000,params,Set5,Y,4,31.7874,0.8895,third-party Set5 mirror
+CAMixerSR,author_pretrained,params_ema,Set5,Y,4,32.5533,0.8997,third-party Set5 mirror
+CAMixerSR,scratch_1000,params_ema,DIV2K_val100,RGB,4,17.3931,,training validation; batch16; AdamW; L1+routing; seed10; single short run
+CAMixerSR,scratch_2000,params_ema,DIV2K_val100,RGB,4,22.1289,,training validation; batch16; AdamW; L1+routing; seed10; single short run
+CAMixerSR,scratch_3000,params_ema,DIV2K_val100,RGB,4,25.4935,,training validation; batch16; AdamW; L1+routing; seed10; single short run
+CAMixerSR,scratch_4000,params_ema,DIV2K_val100,RGB,4,26.8954,,training validation; batch16; AdamW; L1+routing; seed10; single short run
+CAMixerSR,scratch_5000,params_ema,DIV2K_val100,RGB,4,27.5543,,5000-step checkpoint validation; batch16; AdamW; L1+routing; seed10; single short run; checkpoint and state readable; state iter5000
+CAMixerSR,scratch_5000,params_ema,DIV2K_val100,RGB,4,27.5540,,end-of-training repeated validation; separate from 5000-step checkpoint validation; not averaged
+SAFMN,pair_seed10_fft_5000,params_ema,DIV2K_val100,RGB,4,28.1437,,scheduled validation; RTX5090; batch64; shared initialization; original500k schedule; single seed; paired30k
+SAFMN,pair_seed10_fft_10000,params_ema,DIV2K_val100,RGB,4,28.6212,,scheduled validation; RTX5090; batch64; shared initialization; original500k schedule; single seed; paired30k
+SAFMN,pair_seed10_fft_15000,params_ema,DIV2K_val100,RGB,4,28.7032,,scheduled validation; RTX5090; batch64; shared initialization; original500k schedule; single seed; paired30k
+SAFMN,pair_seed10_fft_20000,params_ema,DIV2K_val100,RGB,4,28.7464,,scheduled validation; RTX5090; batch64; shared initialization; original500k schedule; single seed; paired30k
+SAFMN,pair_seed10_fft_25000,params_ema,DIV2K_val100,RGB,4,28.7772,,scheduled validation; RTX5090; batch64; shared initialization; original500k schedule; single seed; paired30k
+SAFMN,pair_seed10_fft_30000,params_ema,DIV2K_val100,RGB,4,28.7956,,scheduled validation; RTX5090; batch64; shared initialization; original500k schedule; single seed; paired30k
+SAFMN,pair_seed10_nofft_5000,params_ema,DIV2K_val100,RGB,4,27.7348,,scheduled validation; RTX5090; batch64; shared initialization; original500k schedule; single seed; paired30k
+SAFMN,pair_seed10_nofft_10000,params_ema,DIV2K_val100,RGB,4,28.4697,,scheduled validation; RTX5090; batch64; shared initialization; original500k schedule; single seed; paired30k
+SAFMN,pair_seed10_nofft_15000,params_ema,DIV2K_val100,RGB,4,28.592,,scheduled validation; RTX5090; batch64; shared initialization; original500k schedule; single seed; paired30k
+SAFMN,pair_seed10_nofft_20000,params_ema,DIV2K_val100,RGB,4,28.6564,,scheduled validation; RTX5090; batch64; shared initialization; original500k schedule; single seed; paired30k
+SAFMN,pair_seed10_nofft_25000,params_ema,DIV2K_val100,RGB,4,28.6871,,scheduled validation; RTX5090; batch64; shared initialization; original500k schedule; single seed; paired30k
+SAFMN,pair_seed10_nofft_30000,params_ema,DIV2K_val100,RGB,4,28.705,,scheduled validation; RTX5090; batch64; shared initialization; original500k schedule; single seed; paired30k
+SAFMN,pair_seed10_fft_5000,params_ema,Set5,RGB,4,29.144871023564036,0.8435481504611724,five-image arithmetic mean; third-party Set5 mirror; paired30k; single seed
+SAFMN,pair_seed10_fft_5000,params_ema,Set5,Y,4,31.03666736573002,0.8772961700382913,five-image arithmetic mean; third-party Set5 mirror; paired30k; single seed
+SAFMN,pair_seed10_fft_30000,params_ema,Set5,RGB,4,30.05420197311887,0.8610891702337911,five-image arithmetic mean; third-party Set5 mirror; paired30k; single seed
+SAFMN,pair_seed10_fft_30000,params_ema,Set5,Y,4,31.948791591744673,0.8916791966674008,five-image arithmetic mean; third-party Set5 mirror; paired30k; single seed
+SAFMN,pair_seed10_nofft_5000,params_ema,Set5,RGB,4,28.66608428844569,0.8375965047890166,five-image arithmetic mean; third-party Set5 mirror; paired30k; single seed
+SAFMN,pair_seed10_nofft_5000,params_ema,Set5,Y,4,30.576762247006883,0.8732194874138564,five-image arithmetic mean; third-party Set5 mirror; paired30k; single seed
+SAFMN,pair_seed10_nofft_30000,params_ema,Set5,RGB,4,29.95394320801945,0.8588242590210828,five-image arithmetic mean; third-party Set5 mirror; paired30k; single seed
+SAFMN,pair_seed10_nofft_30000,params_ema,Set5,Y,4,31.848929546462568,0.8898259649576687,five-image arithmetic mean; third-party Set5 mirror; paired30k; single seed

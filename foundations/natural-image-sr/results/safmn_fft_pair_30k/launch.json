@@ -1,0 +1,15 @@
+{
+  "started_at": "2026-10-23T22:36:25.848480+08:00",
+  "runner_pid": 216,
+  "command": [
+    "/root/fsas/sr-repro/SAFMN/.venv-5090/bin/python",
+    "-u",
+    "/root/fsas/sr-repro/safmn_fft_pair_30k/run_safmn_fft_pair.py"
+  ],
+  "common_init_sha256": "d31f76fa74adf41aaa8bde7c3c2c5e8affb5435df346310fe7161852872969d2",
+  "config_sha256": {
+    "/root/fsas/sr-repro/safmn_fft_pair_30k/configs/train_fft_30000.yml": "da5e7eaaea5bf19ab94b981c0c7dea74c6db58ed43d4d6b6b9f54230c44dd6a3",
+    "/root/fsas/sr-repro/safmn_fft_pair_30k/configs/train_nofft_30000.yml": "7788de807cc29a128a39cf895f0bee7cd09e288b11f98ef0856f2cf792f6a4d7"
+  },
+  "plan": "Sequential FFT and noFFT, 30000 updates each, common random initializer, single seed."
+}

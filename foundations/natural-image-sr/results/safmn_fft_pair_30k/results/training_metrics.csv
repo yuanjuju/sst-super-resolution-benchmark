@@ -1,0 +1,13 @@
+arm,iter,psnr_rgb_db,dataset,weight_key,crop_border,test_y_channel,source_log,validation_line,metric_line
+fft,5000,28.1437,DIV2K_val100,params_ema,4,False,/root/fsas/sr-repro/safmn_fft_pair_30k/fft.stdout.log,362,363
+fft,10000,28.6212,DIV2K_val100,params_ema,4,False,/root/fsas/sr-repro/safmn_fft_pair_30k/fft.stdout.log,416,417
+fft,15000,28.7032,DIV2K_val100,params_ema,4,False,/root/fsas/sr-repro/safmn_fft_pair_30k/fft.stdout.log,470,471
+fft,20000,28.7464,DIV2K_val100,params_ema,4,False,/root/fsas/sr-repro/safmn_fft_pair_30k/fft.stdout.log,524,525
+fft,25000,28.7772,DIV2K_val100,params_ema,4,False,/root/fsas/sr-repro/safmn_fft_pair_30k/fft.stdout.log,578,579
+fft,30000,28.7956,DIV2K_val100,params_ema,4,False,/root/fsas/sr-repro/safmn_fft_pair_30k/fft.stdout.log,632,633
+nofft,5000,27.7348,DIV2K_val100,params_ema,4,False,/root/fsas/sr-repro/safmn_fft_pair_30k/nofft.stdout.log,357,358
+nofft,10000,28.4697,DIV2K_val100,params_ema,4,False,/root/fsas/sr-repro/safmn_fft_pair_30k/nofft.stdout.log,411,412
+nofft,15000,28.592,DIV2K_val100,params_ema,4,False,/root/fsas/sr-repro/safmn_fft_pair_30k/nofft.stdout.log,465,466
+nofft,20000,28.6564,DIV2K_val100,params_ema,4,False,/root/fsas/sr-repro/safmn_fft_pair_30k/nofft.stdout.log,519,520
+nofft,25000,28.6871,DIV2K_val100,params_ema,4,False,/root/fsas/sr-repro/safmn_fft_pair_30k/nofft.stdout.log,573,574
+nofft,30000,28.705,DIV2K_val100,params_ema,4,False,/root/fsas/sr-repro/safmn_fft_pair_30k/nofft.stdout.log,627,628

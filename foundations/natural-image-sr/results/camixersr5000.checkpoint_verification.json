@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-10-22T20:29:38.712922+08:00",
+  "model_path": "/root/fsas/sr-repro/CAMixerSR/codes/experiments/CAMixerSR_DF2K_x4_cloud_5000/models/net_g_5000.pth",
+  "state_path": "/root/fsas/sr-repro/CAMixerSR/codes/experiments/CAMixerSR_DF2K_x4_cloud_5000/training_states/5000.state",
+  "weight_keys": [
+    "params",
+    "params_ema"
+  ],
+  "state_iter": 5000,
+  "state_epoch": 0,
+  "optimizers": 1,
+  "schedulers": 1,
+  "params": {
+    "tensor_count": 718,
+    "numel": 765322,
+    "all_finite": true
+  },
+  "params_ema": {
+    "tensor_count": 718,
+    "numel": 765322,
+    "all_finite": true
+  },
+  "model_bytes": 6633889,
+  "model_sha256": "3f44eed645ae11c14c4af0b12091a359031d141cef74a129e1d761b3fe4d6f63",
+  "state_bytes": 6642397,
+  "state_sha256": "41489c0e90b4ef9b3eb6de12a38e674fbae7a82728a74c93b175bdc079a4d893"
+}

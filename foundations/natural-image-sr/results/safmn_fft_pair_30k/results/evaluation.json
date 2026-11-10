@@ -1,0 +1,443 @@
+{
+  "completed": true,
+  "experiment": "SAFMN x4 single-seed FFT/no-FFT 30k",
+  "root": "/root/fsas/sr-repro",
+  "protocol": "BasicSR calculate_psnr/calculate_ssim; uint8 BGR; RGB and Y; crop_border=4; params_ema",
+  "artifacts": {
+    "training_metrics.csv": {
+      "path": "/root/fsas/sr-repro/safmn_fft_pair_30k/results/training_metrics.csv",
+      "sha256": "c3d65a35efd2b554f0bbdbc69b4f6ef993dd774faaa3e56d58cc0d15024940a5"
+    },
+    "set5_per_image.csv": {
+      "path": "/root/fsas/sr-repro/safmn_fft_pair_30k/results/set5_per_image.csv",
+      "sha256": "3b64413e6470537267127d3b255628915f3b6b5fbfc77c84c3656fbc31299e93"
+    },
+    "set5_mean.csv": {
+      "path": "/root/fsas/sr-repro/safmn_fft_pair_30k/results/set5_mean.csv",
+      "sha256": "c8a9b4bf69498457afd593900e889912928702fa285b9b257e7f614590f874dd"
+    },
+    "set5_metrics.json": {
+      "path": "/root/fsas/sr-repro/safmn_fft_pair_30k/results/set5_metrics.json",
+      "sha256": "ce342538e67faac0ebab9fd1b01b04a5e77134c0394e258e701e55a16329003a"
+    },
+    "predictions/baby/fft_30000.png": {
+      "path": "/root/fsas/sr-repro/safmn_fft_pair_30k/results/predictions/baby/fft_30000.png",
+      "sha256": "87c094fa7303826301608d2e882e9b063799508aad0508e7d4fff82b493cd161"
+    },
+    "predictions/baby/fft_5000.png": {
+      "path": "/root/fsas/sr-repro/safmn_fft_pair_30k/results/predictions/baby/fft_5000.png",
+      "sha256": "86274e0556f99320b3e0b1e768cdb17d885f986423b161e7a5e32a0ac138d28a"
+    },
+    "predictions/baby/nofft_30000.png": {
+      "path": "/root/fsas/sr-repro/safmn_fft_pair_30k/results/predictions/baby/nofft_30000.png",
+      "sha256": "9c3e1fca5c87cb50e5c25aebd602d27a55dcbff085753171828d5051ac491582"
+    },
+    "predictions/baby/nofft_5000.png": {
+      "path": "/root/fsas/sr-repro/safmn_fft_pair_30k/results/predictions/baby/nofft_5000.png",
+      "sha256": "4df46995bd0cd0dd71f78ed3697fbc04740a03fe2366826e4b47bb9719ec2c3c"
+    },
+    "predictions/bird/fft_30000.png": {
+      "path": "/root/fsas/sr-repro/safmn_fft_pair_30k/results/predictions/bird/fft_30000.png",
+      "sha256": "e5208f10c1626bc4082bbd2b6a36b0fa6d054f7f5f48cf47ca330be08515b059"
+    },
+    "predictions/bird/fft_5000.png": {
+      "path": "/root/fsas/sr-repro/safmn_fft_pair_30k/results/predictions/bird/fft_5000.png",
+      "sha256": "dda906201d3b57b66cea51a99ca3b95713abf7fc827d8709510256b7f64fa574"
+    },
+    "predictions/bird/nofft_30000.png": {
+      "path": "/root/fsas/sr-repro/safmn_fft_pair_30k/results/predictions/bird/nofft_30000.png",
+      "sha256": "c4655e372d66724ccb8209726cab285d8b3369aeff2bac969bf389062cc7fbf1"
+    },
+    "predictions/bird/nofft_5000.png": {
+      "path": "/root/fsas/sr-repro/safmn_fft_pair_30k/results/predictions/bird/nofft_5000.png",
+      "sha256": "467cbd4fac07b0f9738d96411d7f3949b5475da8d1797389fbf22d65d6e5ed4e"
+    },
+    "predictions/butterfly/fft_30000.png": {
+      "path": "/root/fsas/sr-repro/safmn_fft_pair_30k/results/predictions/butterfly/fft_30000.png",
+      "sha256": "02765521aca398b3dd6a3766310e9c14555938e7f80ea5890e1e0a7388b36c20"
+    },
+    "predictions/butterfly/fft_5000.png": {
+      "path": "/root/fsas/sr-repro/safmn_fft_pair_30k/results/predictions/butterfly/fft_5000.png",
+      "sha256": "c8177657a054609a098555dd7d7df9407f2f2e50b463e3bd155d7fa161d427df"
+    },
+    "predictions/butterfly/nofft_30000.png": {
+      "path": "/root/fsas/sr-repro/safmn_fft_pair_30k/results/predictions/butterfly/nofft_30000.png",
+      "sha256": "6f589d6126540a5312a8f5b85c2fc2f53ec2dff8233c325448567e1f23f4ed1e"
+    },
+    "predictions/butterfly/nofft_5000.png": {
+      "path": "/root/fsas/sr-repro/safmn_fft_pair_30k/results/predictions/butterfly/nofft_5000.png",
+      "sha256": "6ee093829c2288651c02227f7eba0f3019ef203a65b28ab5b0476ad23ede706b"
+    },
+    "predictions/head/fft_30000.png": {
+      "path": "/root/fsas/sr-repro/safmn_fft_pair_30k/results/predictions/head/fft_30000.png",
+      "sha256": "2bd93a5f706d457dd4a3f6b4e1d14a12fc77e24adbbcbfb8b0373cf03ca5fead"
+    },
+    "predictions/head/fft_5000.png": {
+      "path": "/root/fsas/sr-repro/safmn_fft_pair_30k/results/predictions/head/fft_5000.png",
+      "sha256": "753bdb4010321a915f641951395badff767044438bd8deebc71fa2884dc3c23c"
+    },
+    "predictions/head/nofft_30000.png": {
+      "path": "/root/fsas/sr-repro/safmn_fft_pair_30k/results/predictions/head/nofft_30000.png",
+      "sha256": "5938aeefab09390299f753738bd918a153d09a25aef9942ae83c8b7135ef260d"
+    },
+    "predictions/head/nofft_5000.png": {
+      "path": "/root/fsas/sr-repro/safmn_fft_pair_30k/results/predictions/head/nofft_5000.png",
+      "sha256": "e4645ff444ee86fbf6b2bd445210ea24f1b3d18ce9674dfec1fe1790fceceb2c"
+    },
+    "predictions/woman/fft_30000.png": {
+      "path": "/root/fsas/sr-repro/safmn_fft_pair_30k/results/predictions/woman/fft_30000.png",
+      "sha256": "863c1fa7a762c4ef71c58e647ab007ca84fbab45900d4318c1476bda7d5a47c0"
+    },
+    "predictions/woman/fft_5000.png": {
+      "path": "/root/fsas/sr-repro/safmn_fft_pair_30k/results/predictions/woman/fft_5000.png",
+      "sha256": "204d7e77c80bafebd9422eef3901566262271b6f77ca55e8a25f4afc54bc6985"
+    },
+    "predictions/woman/nofft_30000.png": {
+      "path": "/root/fsas/sr-repro/safmn_fft_pair_30k/results/predictions/woman/nofft_30000.png",
+      "sha256": "3efaabdb97d89989c59a1a500a79edae8f95a30f9e7ef787afec6e8a44be03ce"
+    },
+    "predictions/woman/nofft_5000.png": {
+      "path": "/root/fsas/sr-repro/safmn_fft_pair_30k/results/predictions/woman/nofft_5000.png",
+      "sha256": "e6b8dd20bcf01edecfd5d9585b1d98344a80b9653498a184d8152b71521dadc1"
+    },
+    "comparisons/baby.png": {
+      "path": "/root/fsas/sr-repro/safmn_fft_pair_30k/results/comparisons/baby.png",
+      "sha256": "2410e8342ffe241f8d6a8bce845936adb59fb78836b31873d22ffa73b28c929d"
+    },
+    "comparisons/bird.png": {
+      "path": "/root/fsas/sr-repro/safmn_fft_pair_30k/results/comparisons/bird.png",
+      "sha256": "bd87335747485270858566be8939b295e01121769f97fad7cbe2990f76099abf"
+    },
+    "comparisons/butterfly.png": {
+      "path": "/root/fsas/sr-repro/safmn_fft_pair_30k/results/comparisons/butterfly.png",
+      "sha256": "a65b504586242f2818078cb21275a17de9c580adc4c1f0679c06640c505aece6"
+    },
+    "comparisons/head.png": {
+      "path": "/root/fsas/sr-repro/safmn_fft_pair_30k/results/comparisons/head.png",
+      "sha256": "dbfc8646dc6ab4143f34d5d3217f14805cde70b8d5953263fd0862a0401ab4d3"
+    },
+    "comparisons/woman.png": {
+      "path": "/root/fsas/sr-repro/safmn_fft_pair_30k/results/comparisons/woman.png",
+      "sha256": "d45c60adf597df156c494a29912f7e8675df43754000cd2521896c79ff0b5984"
+    },
+    "training_curve.png": {
+      "path": "/root/fsas/sr-repro/safmn_fft_pair_30k/results/training_curve.png",
+      "sha256": "b8aeff7926a4cacf36690a4f7d9b66dce04091c16a43da435e13c6494891c5db"
+    }
+  },
+  "warnings": [],
+  "completed_at_utc": "2026-10-23T21:15:30.696767+00:00",
+  "device": "cuda",
+  "torch_version": "2.7.1+cu128",
+  "cuda_runtime": "12.8",
+  "gpu_name": "NVIDIA GeForce RTX 5090",
+  "numpy_version": "1.26.4",
+  "opencv_version": "4.10.0",
+  "basicsr_path": "/root/fsas/sr-repro/SAFMN/basicsr/__init__.py",
+  "network": {
+    "type": "SAFMN",
+    "dim": 36,
+    "n_blocks": 8,
+    "ffn_scale": 2.0,
+    "upscaling_factor": 4
+  },
+  "parameter_count": 239520,
+  "checkpoints": [
+    {
+      "arm": "fft",
+      "iter": 5000,
+      "path": "/root/fsas/sr-repro/SAFMN/experiments/SAFMN_DF2K_x4_pair_fft_30000/models/net_g_5000.pth",
+      "sha256": "1d1d3212feb251fa78d32e0ad85d4147d5b7ac70417ac6c4a77ff303d537f76b",
+      "weight_key": "params_ema",
+      "checkpoint_keys": [
+        "params",
+        "params_ema"
+      ]
+    },
+    {
+      "arm": "fft",
+      "iter": 30000,
+      "path": "/root/fsas/sr-repro/SAFMN/experiments/SAFMN_DF2K_x4_pair_fft_30000/models/net_g_30000.pth",
+      "sha256": "1849d4aa82e87037206e6ce5b322288358993049a4aacdad1623dacf72d7e04b",
+      "weight_key": "params_ema",
+      "checkpoint_keys": [
+        "params",
+        "params_ema"
+      ]
+    },
+    {
+      "arm": "nofft",
+      "iter": 5000,
+      "path": "/root/fsas/sr-repro/SAFMN/experiments/SAFMN_DF2K_x4_pair_nofft_30000/models/net_g_5000.pth",
+      "sha256": "ce9d9d4ab646c60623da0806a8ffbbc6fdee8f72120e543dc13ed25531a25c13",
+      "weight_key": "params_ema",
+      "checkpoint_keys": [
+        "params",
+        "params_ema"
+      ]
+    },
+    {
+      "arm": "nofft",
+      "iter": 30000,
+      "path": "/root/fsas/sr-repro/SAFMN/experiments/SAFMN_DF2K_x4_pair_nofft_30000/models/net_g_30000.pth",
+      "sha256": "998a544f341cea8ec0b02c262e101c71b515cef887387924587ac363abef2835",
+      "weight_key": "params_ema",
+      "checkpoint_keys": [
+        "params",
+        "params_ema"
+      ]
+    }
+  ],
+  "source_sha256": {
+    "/root/fsas/sr-repro/datasets/Set5/LR_bicubic/X4/baby.png": "86f6e1b97fd198336b33474103f43c4cb8963566b4aff34c0421e7ebeac644f3",
+    "/root/fsas/sr-repro/datasets/Set5/HR/baby.png": "cb85956d68f708a1030c790d143cbcd108f5ac5988d3349180cdcb54dd80597d",
+    "/root/fsas/sr-repro/datasets/Set5/LR_bicubic/X4/bird.png": "2c17d5eaca516650fc3993af9cd61ea8d3e1c777d1a7fe9b0407c3d928b24286",
+    "/root/fsas/sr-repro/datasets/Set5/HR/bird.png": "5dcf863f7c3802e68fbb0fca2ec351052a1f97a4db613e510dbd105cee9a6a32",
+    "/root/fsas/sr-repro/datasets/Set5/LR_bicubic/X4/butterfly.png": "5f70e1e1e7e9bef23ff8d35e57dab5fa07cc08c8b5bb85fa3a15aa8550bfb2e0",
+    "/root/fsas/sr-repro/datasets/Set5/HR/butterfly.png": "487d841c9dbc46c7ab496c319ec1f13268de7ea7e02f94ae18781ca86a5abd0d",
+    "/root/fsas/sr-repro/datasets/Set5/LR_bicubic/X4/head.png": "ef22055522c8828298bb3c9e03343394f2fbf9eb916131c5d0e6948fa4cf23a4",
+    "/root/fsas/sr-repro/datasets/Set5/HR/head.png": "f524c1ce41641c1cf269a20c4dfbe965e07e471d609abc19dfadfb71037cc873",
+    "/root/fsas/sr-repro/datasets/Set5/LR_bicubic/X4/woman.png": "43b8bf9622734a7201a07f7f8764afeeb9b90e20639043aaa9a89055d7a610c6",
+    "/root/fsas/sr-repro/datasets/Set5/HR/woman.png": "f276625a222b9ce18d18d86e1ec603fea50427b7c0a2927b3750b1bb86a07b83",
+    "/root/fsas/sr-repro/SAFMN/basicsr/archs/safmn_arch.py": "e1e17078ade763568e3fc54ed54d3c4ec3e5294f400f983931a4dc5bc911d6fc",
+    "/root/fsas/sr-repro/safmn_fft_pair_30k/fft.stdout.log": "ab6e59b77eada85659cbfe95a3901c8d45847e39393f949e54c1d4cd73ec85bf",
+    "/root/fsas/sr-repro/safmn_fft_pair_30k/nofft.stdout.log": "277e008fa70ca197e26daa4178190839b1efe52e5c24da380380d87368fd48b1",
+    "/root/fsas/sr-repro/safmn_fft_pair_30k/configs/train_fft_30000.yml": "da5e7eaaea5bf19ab94b981c0c7dea74c6db58ed43d4d6b6b9f54230c44dd6a3",
+    "/root/fsas/sr-repro/safmn_fft_pair_30k/configs/train_nofft_30000.yml": "7788de807cc29a128a39cf895f0bee7cd09e288b11f98ef0856f2cf792f6a4d7",
+    "/root/fsas/sr-repro/safmn_fft_pair_30k/environment.txt": "b7ebf469024a0c61d65778a9707aed9bbdccd70561afbcf1f3fcae1c904dae4a",
+    "/root/fsas/sr-repro/safmn_fft_pair_30k/common_init.pth": "d31f76fa74adf41aaa8bde7c3c2c5e8affb5435df346310fe7161852872969d2",
+    "/root/fsas/sr-repro/safmn_fft_pair_30k/preflight.json": "d6ad934252c524b8084f274eef40f5b135df304665e9eea9f6acaf3f72a95328",
+    "/root/fsas/sr-repro/safmn_fft_pair_30k/evaluate_safmn_fft_pair.py": "41b1f705f8f08b1cb5673c0e62450dc34fe1e9297eb0d4f3fda6772dd2d69c86"
+  },
+  "training_metrics": [
+    {
+      "arm": "fft",
+      "iter": 5000,
+      "psnr_rgb_db": 28.1437,
+      "dataset": "DIV2K_val100",
+      "weight_key": "params_ema",
+      "crop_border": 4,
+      "test_y_channel": false,
+      "source_log": "/root/fsas/sr-repro/safmn_fft_pair_30k/fft.stdout.log",
+      "validation_line": 362,
+      "metric_line": 363
+    },
+    {
+      "arm": "fft",
+      "iter": 10000,
+      "psnr_rgb_db": 28.6212,
+      "dataset": "DIV2K_val100",
+      "weight_key": "params_ema",
+      "crop_border": 4,
+      "test_y_channel": false,
+      "source_log": "/root/fsas/sr-repro/safmn_fft_pair_30k/fft.stdout.log",
+      "validation_line": 416,
+      "metric_line": 417
+    },
+    {
+      "arm": "fft",
+      "iter": 15000,
+      "psnr_rgb_db": 28.7032,
+      "dataset": "DIV2K_val100",
+      "weight_key": "params_ema",
+      "crop_border": 4,
+      "test_y_channel": false,
+      "source_log": "/root/fsas/sr-repro/safmn_fft_pair_30k/fft.stdout.log",
+      "validation_line": 470,
+      "metric_line": 471
+    },
+    {
+      "arm": "fft",
+      "iter": 20000,
+      "psnr_rgb_db": 28.7464,
+      "dataset": "DIV2K_val100",
+      "weight_key": "params_ema",
+      "crop_border": 4,
+      "test_y_channel": false,
+      "source_log": "/root/fsas/sr-repro/safmn_fft_pair_30k/fft.stdout.log",
+      "validation_line": 524,
+      "metric_line": 525
+    },
+    {
+      "arm": "fft",
+      "iter": 25000,
+      "psnr_rgb_db": 28.7772,
+      "dataset": "DIV2K_val100",
+      "weight_key": "params_ema",
+      "crop_border": 4,
+      "test_y_channel": false,
+      "source_log": "/root/fsas/sr-repro/safmn_fft_pair_30k/fft.stdout.log",
+      "validation_line": 578,
+      "metric_line": 579
+    },
+    {
+      "arm": "fft",
+      "iter": 30000,
+      "psnr_rgb_db": 28.7956,
+      "dataset": "DIV2K_val100",
+      "weight_key": "params_ema",
+      "crop_border": 4,
+      "test_y_channel": false,
+      "source_log": "/root/fsas/sr-repro/safmn_fft_pair_30k/fft.stdout.log",
+      "validation_line": 632,
+      "metric_line": 633
+    },
+    {
+      "arm": "nofft",
+      "iter": 5000,
+      "psnr_rgb_db": 27.7348,
+      "dataset": "DIV2K_val100",
+      "weight_key": "params_ema",
+      "crop_border": 4,
+      "test_y_channel": false,
+      "source_log": "/root/fsas/sr-repro/safmn_fft_pair_30k/nofft.stdout.log",
+      "validation_line": 357,
+      "metric_line": 358
+    },
+    {
+      "arm": "nofft",
+      "iter": 10000,
+      "psnr_rgb_db": 28.4697,
+      "dataset": "DIV2K_val100",
+      "weight_key": "params_ema",
+      "crop_border": 4,
+      "test_y_channel": false,
+      "source_log": "/root/fsas/sr-repro/safmn_fft_pair_30k/nofft.stdout.log",
+      "validation_line": 411,
+      "metric_line": 412
+    },
+    {
+      "arm": "nofft",
+      "iter": 15000,
+      "psnr_rgb_db": 28.592,
+      "dataset": "DIV2K_val100",
+      "weight_key": "params_ema",
+      "crop_border": 4,
+      "test_y_channel": false,
+      "source_log": "/root/fsas/sr-repro/safmn_fft_pair_30k/nofft.stdout.log",
+      "validation_line": 465,
+      "metric_line": 466
+    },
+    {
+      "arm": "nofft",
+      "iter": 20000,
+      "psnr_rgb_db": 28.6564,
+      "dataset": "DIV2K_val100",
+      "weight_key": "params_ema",
+      "crop_border": 4,
+      "test_y_channel": false,
+      "source_log": "/root/fsas/sr-repro/safmn_fft_pair_30k/nofft.stdout.log",
+      "validation_line": 519,
+      "metric_line": 520
+    },
+    {
+      "arm": "nofft",
+      "iter": 25000,
+      "psnr_rgb_db": 28.6871,
+      "dataset": "DIV2K_val100",
+      "weight_key": "params_ema",
+      "crop_border": 4,
+      "test_y_channel": false,
+      "source_log": "/root/fsas/sr-repro/safmn_fft_pair_30k/nofft.stdout.log",
+      "validation_line": 573,
+      "metric_line": 574
+    },
+    {
+      "arm": "nofft",
+      "iter": 30000,
+      "psnr_rgb_db": 28.705,
+      "dataset": "DIV2K_val100",
+      "weight_key": "params_ema",
+      "crop_border": 4,
+      "test_y_channel": false,
+      "source_log": "/root/fsas/sr-repro/safmn_fft_pair_30k/nofft.stdout.log",
+      "validation_line": 627,
+      "metric_line": 628
+    }
+  ],
+  "set5_means": [
+    {
+      "arm": "fft",
+      "iter": 5000,
+      "images": 5,
+      "weight_key": "params_ema",
+      "crop_border": 4,
+      "psnr_rgb_db": 29.144871023564036,
+      "ssim_rgb": 0.8435481504611724,
+      "psnr_y_db": 31.03666736573002,
+      "ssim_y": 0.8772961700382913
+    },
+    {
+      "arm": "fft",
+      "iter": 30000,
+      "images": 5,
+      "weight_key": "params_ema",
+      "crop_border": 4,
+      "psnr_rgb_db": 30.05420197311887,
+      "ssim_rgb": 0.8610891702337911,
+      "psnr_y_db": 31.948791591744673,
+      "ssim_y": 0.8916791966674008
+    },
+    {
+      "arm": "nofft",
+      "iter": 5000,
+      "images": 5,
+      "weight_key": "params_ema",
+      "crop_border": 4,
+      "psnr_rgb_db": 28.66608428844569,
+      "ssim_rgb": 0.8375965047890166,
+      "psnr_y_db": 30.576762247006883,
+      "ssim_y": 0.8732194874138564
+    },
+    {
+      "arm": "nofft",
+      "iter": 30000,
+      "images": 5,
+      "weight_key": "params_ema",
+      "crop_border": 4,
+      "psnr_rgb_db": 29.95394320801945,
+      "ssim_rgb": 0.8588242590210828,
+      "psnr_y_db": 31.848929546462568,
+      "ssim_y": 0.8898259649576687
+    }
+  ],
+  "comparison_center_roi_xyxy": {
+    "baby": [
+      192,
+      192,
+      320,
+      320
+    ],
+    "bird": [
+      108,
+      108,
+      180,
+      180
+    ],
+    "butterfly": [
+      96,
+      96,
+      160,
+      160
+    ],
+    "head": [
+      105,
+      105,
+      175,
+      175
+    ],
+    "woman": [
+      85,
+      129,
+      142,
+      215
+    ]
+  },
+  "curve_renderer": "matplotlib",
+  "notes": [
+    "Single-seed controlled short-training comparison; not multi-seed evidence or full paper reproduction.",
+    "Training curve excludes validation emitted after End of training.",
+    "No inference speed benchmark is performed.",
+    "Pillow bicubic is a visualization baseline, not the official MATLAB degradation generator."
+  ]
+}

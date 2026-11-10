@@ -1,0 +1,321 @@
+/root/fsas/sr-repro/.venv/lib/python3.10/site-packages/torchvision/transforms/functional_tensor.py:5: UserWarning: The torchvision.transforms.functional_tensor module is deprecated in 0.15 and will be **removed in 0.17**. Please don't rely on it. You probably just need to use APIs in torchvision.transforms.functional or in torchvision.transforms.v2.functional.
+  warnings.warn(
+Disable distributed.
+2026-10-15 10:39:23,129 INFO: 
+                ____                _       _____  ____
+               / __ ) ____ _ _____ (_)_____/ ___/ / __ \
+              / __  |/ __ `// ___// // ___/\__ \ / /_/ /
+             / /_/ // /_/ /(__  )/ // /__ ___/ // _, _/
+            /_____/ \__,_//____//_/ \___//____//_/ |_|
+     ______                   __   __                 __      __
+    / ____/____   ____   ____/ /  / /   __  __ _____ / /__   / /
+   / / __ / __ \ / __ \ / __  /  / /   / / / // ___// //_/  / /
+  / /_/ // /_/ // /_/ // /_/ /  / /___/ /_/ // /__ / /<    /_/
+  \____/ \____/ \____/ \____/  /_____/\____/ \___//_/|_|  (_)
+    
+Version Information: 
+	BasicSR: 1.3.4.8
+	PyTorch: 2.1.1+cu121
+	TorchVision: 0.16.1+cu121
+2026-10-15 10:39:23,129 INFO: 
+  name: SAFMN_DF2K_x4_sub_bench100
+  model_type: SRModel
+  scale: 4
+  num_gpu: 1
+  manual_seed: 10
+  datasets:[
+    train:[
+      name: DF2K
+      type: PairedImageDataset
+      dataroot_gt: /root/fsas/sr-repro/datasets/DF2K/HR_sub
+      dataroot_lq: /root/fsas/sr-repro/datasets/DF2K/LR_bicubic/X4_sub
+      meta_info_file: /root/fsas/sr-repro/datasets/DF2K/meta_info_HR_sub.txt
+      filename_tmpl: {}
+      io_backend:[
+        type: disk
+      ]
+      gt_size: 256
+      use_hflip: True
+      use_rot: True
+      use_shuffle: True
+      num_worker_per_gpu: 8
+      batch_size_per_gpu: 64
+      dataset_enlarge_ratio: 10
+      prefetch_mode: None
+      phase: train
+      scale: 4
+    ]
+    val:[
+      name: DIV2K_val100
+      type: PairedImageDataset
+      dataroot_gt: /root/fsas/sr-repro/datasets/DIV2K/DIV2K_valid_HR
+      dataroot_lq: /root/fsas/sr-repro/datasets/DIV2K/DIV2K_valid_LR_bicubic/X4
+      filename_tmpl: {}x4
+      io_backend:[
+        type: disk
+      ]
+      phase: val
+      scale: 4
+    ]
+  ]
+  network_g:[
+    type: SAFMN
+    dim: 36
+    n_blocks: 8
+    ffn_scale: 2.0
+    upscaling_factor: 4
+  ]
+  path:[
+    pretrain_network_g: None
+    strict_load_g: False
+    resume_state: None
+    experiments_root: /root/fsas/sr-repro/SAFMN/experiments/SAFMN_DF2K_x4_sub_bench100
+    models: /root/fsas/sr-repro/SAFMN/experiments/SAFMN_DF2K_x4_sub_bench100/models
+    training_states: /root/fsas/sr-repro/SAFMN/experiments/SAFMN_DF2K_x4_sub_bench100/training_states
+    log: /root/fsas/sr-repro/SAFMN/experiments/SAFMN_DF2K_x4_sub_bench100
+    visualization: /root/fsas/sr-repro/SAFMN/experiments/SAFMN_DF2K_x4_sub_bench100/visualization
+  ]
+  train:[
+    ema_decay: 0.999
+    optim_g:[
+      type: Adam
+      lr: 0.001
+      weight_decay: 0
+      betas: [0.9, 0.99]
+    ]
+    scheduler:[
+      type: CosineAnnealingRestartLR
+      periods: [500000]
+      restart_weights: [1]
+      eta_min: 1e-05
+    ]
+    total_iter: 100
+    warmup_iter: -1
+    pixel_opt:[
+      type: L1Loss
+      loss_weight: 1.0
+      reduction: mean
+    ]
+    fft_opt:[
+      type: FFTLoss
+      loss_weight: 0.05
+      reduction: mean
+    ]
+  ]
+  val:[
+    val_freq: 5000.0
+    save_img: False
+    pbar: False
+    metrics:[
+      psnr:[
+        type: calculate_psnr
+        crop_border: 4
+        test_y_channel: False
+        better: higher
+      ]
+    ]
+  ]
+  logger:[
+    print_freq: 20
+    save_checkpoint_freq: 100.0
+    use_tb_logger: True
+    wandb:[
+      project: None
+      resume_id: None
+    ]
+  ]
+  dist_params:[
+    backend: nccl
+    port: 29500
+  ]
+  dist: False
+  rank: 0
+  world_size: 1
+  auto_resume: False
+  is_train: True
+  root_path: /root/fsas/sr-repro/SAFMN
+
+2026-10-15 10:39:27,160 INFO: Dataset [PairedImageDataset] - DF2K is built.
+/root/fsas/sr-repro/.venv/lib/python3.10/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 7, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+2026-10-15 10:39:27,184 INFO: Training statistics:
+	Number of train images: 139995
+	Dataset enlarge ratio: 10
+	Batch size per gpu: 64
+	World size (gpu number): 1
+	Require iter number per epoch: 21875
+	Total epochs: 1; iters: 100.
+2026-10-15 10:39:27,338 INFO: Dataset [PairedImageDataset] - DIV2K_val100 is built.
+2026-10-15 10:39:27,338 INFO: Number of val images/folders in DIV2K_val100: 100
+2026-10-15 10:39:27,496 INFO: Network [SAFMN] is created.
+2026-10-15 10:39:28,052 INFO: Network: SAFMN, with parameters: 239,520
+2026-10-15 10:39:28,052 INFO: SAFMN(
+  (to_feat): Conv2d(3, 36, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (feats): Sequential(
+    (0): AttBlock(
+      (norm1): LayerNorm()
+      (norm2): LayerNorm()
+      (safm): SAFM(
+        (mfr): ModuleList(
+          (0-3): 4 x Conv2d(9, 9, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=9)
+        )
+        (aggr): Conv2d(36, 36, kernel_size=(1, 1), stride=(1, 1))
+        (act): GELU(approximate='none')
+      )
+      (ccm): CCM(
+        (ccm): Sequential(
+          (0): Conv2d(36, 72, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): GELU(approximate='none')
+          (2): Conv2d(72, 36, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+    )
+    (1): AttBlock(
+      (norm1): LayerNorm()
+      (norm2): LayerNorm()
+      (safm): SAFM(
+        (mfr): ModuleList(
+          (0-3): 4 x Conv2d(9, 9, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=9)
+        )
+        (aggr): Conv2d(36, 36, kernel_size=(1, 1), stride=(1, 1))
+        (act): GELU(approximate='none')
+      )
+      (ccm): CCM(
+        (ccm): Sequential(
+          (0): Conv2d(36, 72, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): GELU(approximate='none')
+          (2): Conv2d(72, 36, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+    )
+    (2): AttBlock(
+      (norm1): LayerNorm()
+      (norm2): LayerNorm()
+      (safm): SAFM(
+        (mfr): ModuleList(
+          (0-3): 4 x Conv2d(9, 9, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=9)
+        )
+        (aggr): Conv2d(36, 36, kernel_size=(1, 1), stride=(1, 1))
+        (act): GELU(approximate='none')
+      )
+      (ccm): CCM(
+        (ccm): Sequential(
+          (0): Conv2d(36, 72, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): GELU(approximate='none')
+          (2): Conv2d(72, 36, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+    )
+    (3): AttBlock(
+      (norm1): LayerNorm()
+      (norm2): LayerNorm()
+      (safm): SAFM(
+        (mfr): ModuleList(
+          (0-3): 4 x Conv2d(9, 9, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=9)
+        )
+        (aggr): Conv2d(36, 36, kernel_size=(1, 1), stride=(1, 1))
+        (act): GELU(approximate='none')
+      )
+      (ccm): CCM(
+        (ccm): Sequential(
+          (0): Conv2d(36, 72, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): GELU(approximate='none')
+          (2): Conv2d(72, 36, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+    )
+    (4): AttBlock(
+      (norm1): LayerNorm()
+      (norm2): LayerNorm()
+      (safm): SAFM(
+        (mfr): ModuleList(
+          (0-3): 4 x Conv2d(9, 9, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=9)
+        )
+        (aggr): Conv2d(36, 36, kernel_size=(1, 1), stride=(1, 1))
+        (act): GELU(approximate='none')
+      )
+      (ccm): CCM(
+        (ccm): Sequential(
+          (0): Conv2d(36, 72, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): GELU(approximate='none')
+          (2): Conv2d(72, 36, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+    )
+    (5): AttBlock(
+      (norm1): LayerNorm()
+      (norm2): LayerNorm()
+      (safm): SAFM(
+        (mfr): ModuleList(
+          (0-3): 4 x Conv2d(9, 9, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=9)
+        )
+        (aggr): Conv2d(36, 36, kernel_size=(1, 1), stride=(1, 1))
+        (act): GELU(approximate='none')
+      )
+      (ccm): CCM(
+        (ccm): Sequential(
+          (0): Conv2d(36, 72, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): GELU(approximate='none')
+          (2): Conv2d(72, 36, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+    )
+    (6): AttBlock(
+      (norm1): LayerNorm()
+      (norm2): LayerNorm()
+      (safm): SAFM(
+        (mfr): ModuleList(
+          (0-3): 4 x Conv2d(9, 9, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=9)
+        )
+        (aggr): Conv2d(36, 36, kernel_size=(1, 1), stride=(1, 1))
+        (act): GELU(approximate='none')
+      )
+      (ccm): CCM(
+        (ccm): Sequential(
+          (0): Conv2d(36, 72, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): GELU(approximate='none')
+          (2): Conv2d(72, 36, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+    )
+    (7): AttBlock(
+      (norm1): LayerNorm()
+      (norm2): LayerNorm()
+      (safm): SAFM(
+        (mfr): ModuleList(
+          (0-3): 4 x Conv2d(9, 9, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=9)
+        )
+        (aggr): Conv2d(36, 36, kernel_size=(1, 1), stride=(1, 1))
+        (act): GELU(approximate='none')
+      )
+      (ccm): CCM(
+        (ccm): Sequential(
+          (0): Conv2d(36, 72, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): GELU(approximate='none')
+          (2): Conv2d(72, 36, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+    )
+  )
+  (to_img): Sequential(
+    (0): Conv2d(36, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): PixelShuffle(upscale_factor=4)
+  )
+)
+2026-10-15 10:39:28,053 INFO: Use Exponential Moving Average with decay: 0.999
+2026-10-15 10:39:28,069 INFO: Network [SAFMN] is created.
+2026-10-15 10:39:28,224 INFO: Loss [L1Loss] is created.
+2026-10-15 10:39:28,224 INFO: Loss [FFTLoss] is created.
+2026-10-15 10:39:28,226 INFO: Model [SRModel] is created.
+2026-10-15 10:39:29,014 INFO: Start training from epoch: 0, iter: 0
+2026-10-15 10:39:43,304 INFO: [SAFMN..][epoch:  0, iter:      20, lr:(1.000e-03,)] [eta: 0:00:13, time (data): 0.714 (0.326)] l_pix: 9.2400e-02 l_freq: 4.0557e-01 
+2026-10-15 10:39:50,446 INFO: [SAFMN..][epoch:  0, iter:      40, lr:(1.000e-03,)] [eta: 0:00:15, time (data): 0.536 (0.303)] l_pix: 6.0653e-02 l_freq: 3.7241e-01 
+2026-10-15 10:39:59,203 INFO: [SAFMN..][epoch:  0, iter:      60, lr:(1.000e-03,)] [eta: 0:00:12, time (data): 0.503 (0.322)] l_pix: 5.1553e-02 l_freq: 3.1722e-01 
+2026-10-15 10:40:05,795 INFO: [SAFMN..][epoch:  0, iter:      80, lr:(1.000e-03,)] [eta: 0:00:06, time (data): 0.460 (0.304)] l_pix: 5.4794e-02 l_freq: 2.9971e-01 
+2026-10-15 10:40:15,032 INFO: [SAFMN..][epoch:  0, iter:     100, lr:(1.000e-03,)] [eta: 0:00:00, time (data): 0.460 (0.320)] l_pix: 3.6900e-02 l_freq: 2.7242e-01 
+2026-10-15 10:40:15,032 INFO: Saving models and training states.
+2026-10-15 10:40:19,171 INFO: End of training. Time consumed: 0:00:50
+2026-10-15 10:40:19,171 INFO: Save the latest model.
+2026-10-15 10:41:34,541 INFO: Validation DIV2K_val100
+	 # psnr: 6.8221	Best: 6.8221 @ 102 iter
+

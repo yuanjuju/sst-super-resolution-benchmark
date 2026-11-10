@@ -1,0 +1,107 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-23T22:34:31.709081+08:00",
+  "torch": "2.7.1+cu128",
+  "basicsr_file": "/root/fsas/sr-repro/SAFMN/basicsr/__init__.py",
+  "basicsr_checkout_version": "1.3.4.8",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "common_init_path": "/root/fsas/sr-repro/safmn_fft_pair_30k/common_init.pth",
+  "common_init_sha256": "d31f76fa74adf41aaa8bde7c3c2c5e8affb5435df346310fe7161852872969d2",
+  "config_sha256": {
+    "/root/fsas/sr-repro/safmn_fft_pair_30k/configs/train_fft_30000.yml": "da5e7eaaea5bf19ab94b981c0c7dea74c6db58ed43d4d6b6b9f54230c44dd6a3",
+    "/root/fsas/sr-repro/safmn_fft_pair_30k/configs/train_nofft_30000.yml": "7788de807cc29a128a39cf895f0bee7cd09e288b11f98ef0856f2cf792f6a4d7"
+  },
+  "initial_parameters": 239520,
+  "runs": [
+    {
+      "run": "fft",
+      "initial_weights_match": true,
+      "losses": [
+        {
+          "l_pix": 1.0152643918991089,
+          "l_freq": 1.3052852153778076
+        },
+        {
+          "l_pix": 0.5916199088096619,
+          "l_freq": 0.9760723114013672
+        },
+        {
+          "l_pix": 0.3854057788848877,
+          "l_freq": 0.8149458765983582
+        }
+      ],
+      "step_compute_seconds": [
+        1.217076012864709,
+        0.07269107876345515,
+        0.06660213368013501
+      ],
+      "max_parameter_change": 0.002998165786266327,
+      "peak_allocated_gib": 5.336149215698242,
+      "lq_shape": [
+        64,
+        3,
+        64,
+        64
+      ],
+      "gt_shape": [
+        64,
+        3,
+        256,
+        256
+      ],
+      "ema_output_shape": [
+        64,
+        3,
+        256,
+        256
+      ],
+      "diagnostic_workers": 0
+    },
+    {
+      "run": "nofft",
+      "initial_weights_match": true,
+      "losses": [
+        {
+          "l_pix": 1.0152643918991089
+        },
+        {
+          "l_pix": 0.5750247836112976
+        },
+        {
+          "l_pix": 0.418790340423584
+        }
+      ],
+      "step_compute_seconds": [
+        0.07075634179636836,
+        0.060888782143592834,
+        0.06509699579328299
+      ],
+      "max_parameter_change": 0.0028969869017601013,
+      "peak_allocated_gib": 4.630914211273193,
+      "lq_shape": [
+        64,
+        3,
+        64,
+        64
+      ],
+      "gt_shape": [
+        64,
+        3,
+        256,
+        256
+      ],
+      "ema_output_shape": [
+        64,
+        3,
+        256,
+        256
+      ],
+      "diagnostic_workers": 0
+    }
+  ],
+  "diagnostic_updates_discarded": true,
+  "notes": [
+    "Both formal runs load the same seeded random initializer, not trained weights.",
+    "The original 500k cosine schedule is retained; this is a 30k single-seed exploration."
+  ]
+}

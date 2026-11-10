@@ -1,0 +1,541 @@
+Disable distributed.
+2026-10-22 19:51:56,152 INFO: 
+                ____                _       _____  ____
+               / __ ) ____ _ _____ (_)_____/ ___/ / __ \
+              / __  |/ __ `// ___// // ___/\__ \ / /_/ /
+             / /_/ // /_/ /(__  )/ // /__ ___/ // _, _/
+            /_____/ \__,_//____//_/ \___//____//_/ |_|
+     ______                   __   __                 __      __
+    / ____/____   ____   ____/ /  / /   __  __ _____ / /__   / /
+   / / __ / __ \ / __ \ / __  /  / /   / / / // ___// //_/  / /
+  / /_/ // /_/ // /_/ // /_/ /  / /___/ /_/ // /__ / /<    /_/
+  \____/ \____/ \____/ \____/  /_____/\____/ \___//_/|_|  (_)
+    
+Version Information: 
+	BasicSR: 1.4.2
+	PyTorch: 2.7.1+cu128
+	TorchVision: 0.22.1+cu128
+2026-10-22 19:51:56,153 INFO: 
+  name: CAMixerSR_DF2K_x4_cloud_5000
+  model_type: CAModel
+  scale: 4
+  num_gpu: 1
+  manual_seed: 10
+  datasets:[
+    train:[
+      name: DF2K
+      type: PairedImageDataset
+      dataroot_gt: /root/fsas/sr-repro/datasets/DF2K/HR_sub
+      dataroot_lq: /root/fsas/sr-repro/datasets/DF2K/LR_bicubic/X4_sub
+      meta_info_file: /root/fsas/sr-repro/datasets/DF2K/meta_info_HR_sub.txt
+      filename_tmpl: {}
+      io_backend:[
+        type: disk
+      ]
+      gt_size: 256
+      use_hflip: True
+      use_rot: True
+      use_shuffle: True
+      num_worker_per_gpu: 4
+      batch_size_per_gpu: 16
+      dataset_enlarge_ratio: 1
+      prefetch_mode: None
+      phase: train
+      scale: 4
+    ]
+    val:[
+      name: DIV2K_val100
+      type: PairedImageDataset
+      dataroot_gt: /root/fsas/sr-repro/datasets/DIV2K/DIV2K_valid_HR
+      dataroot_lq: /root/fsas/sr-repro/datasets/DIV2K/DIV2K_valid_LR_bicubic/X4
+      filename_tmpl: {}x4
+      io_backend:[
+        type: disk
+      ]
+      phase: val
+      scale: 4
+    ]
+  ]
+  network_g:[
+    type: CAMixerSR
+    ratio: 0.5
+    scale: 4
+  ]
+  path:[
+    pretrain_network_g: None
+    strict_load_g: True
+    resume_state: None
+    experiments_root: /root/fsas/sr-repro/CAMixerSR/codes/experiments/CAMixerSR_DF2K_x4_cloud_5000
+    models: /root/fsas/sr-repro/CAMixerSR/codes/experiments/CAMixerSR_DF2K_x4_cloud_5000/models
+    training_states: /root/fsas/sr-repro/CAMixerSR/codes/experiments/CAMixerSR_DF2K_x4_cloud_5000/training_states
+    log: /root/fsas/sr-repro/CAMixerSR/codes/experiments/CAMixerSR_DF2K_x4_cloud_5000
+    visualization: /root/fsas/sr-repro/CAMixerSR/codes/experiments/CAMixerSR_DF2K_x4_cloud_5000/visualization
+  ]
+  train:[
+    ema_decay: 0.999
+    optim_g:[
+      type: AdamW
+      lr: 0.0005
+      weight_decay: 0.0001
+      betas: [0.9, 0.99]
+    ]
+    scheduler:[
+      type: MultiStepLR
+      milestones: [250000, 400000, 450000, 475000]
+      gamma: 0.5
+    ]
+    total_iter: 5000
+    warmup_iter: -1
+    pixel_opt:[
+      type: L1Loss
+      loss_weight: 1.0
+      reduction: mean
+    ]
+  ]
+  val:[
+    val_freq: 1000
+    save_img: False
+    pbar: False
+    metrics:[
+      psnr:[
+        type: calculate_psnr
+        crop_border: 4
+        test_y_channel: False
+        better: higher
+      ]
+    ]
+  ]
+  logger:[
+    print_freq: 20
+    save_checkpoint_freq: 1000
+    use_tb_logger: True
+    wandb:[
+      project: None
+      resume_id: None
+    ]
+  ]
+  dist_params:[
+    backend: nccl
+    port: 29501
+  ]
+  dist: False
+  rank: 0
+  world_size: 1
+  auto_resume: False
+  is_train: True
+  root_path: /root/fsas/sr-repro/CAMixerSR/codes
+
+2026-10-22 19:51:57,293 INFO: Dataset [PairedImageDataset] - DF2K is built.
+2026-10-22 19:51:57,293 INFO: Training statistics:
+	Number of train images: 139995
+	Dataset enlarge ratio: 1
+	Batch size per gpu: 16
+	World size (gpu number): 1
+	Require iter number per epoch: 8750
+	Total epochs: 1; iters: 5000.
+2026-10-22 19:51:57,306 INFO: Dataset [PairedImageDataset] - DIV2K_val100 is built.
+2026-10-22 19:51:57,306 INFO: Number of val images/folders in DIV2K_val100: 100
+2026-10-22 19:51:57,355 INFO: Network [CAMixerSR] is created.
+2026-10-22 19:51:57,768 INFO: Network: CAMixerSR, with parameters: 765,322
+2026-10-22 19:51:57,768 INFO: CAMixerSR(
+  (head): Conv2d(3, 60, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (global_predictor): Sequential(
+    (0): Conv2d(60, 8, kernel_size=(1, 1), stride=(1, 1))
+    (1): LeakyReLU(negative_slope=0.1, inplace=True)
+    (2): Conv2d(8, 2, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (3): LeakyReLU(negative_slope=0.1, inplace=True)
+  )
+  (body): ModuleList(
+    (0-1): 2 x Group(
+      (body): ModuleList(
+        (0-3): 4 x Block(
+          (norm1): LayerNorm()
+          (mixer): CAMixer(
+            (project_v): Conv2d(60, 60, kernel_size=(1, 1), stride=(1, 1))
+            (project_q): Linear(in_features=60, out_features=60, bias=True)
+            (project_k): Linear(in_features=60, out_features=60, bias=True)
+            (conv_sptial): Sequential(
+              (0): Conv2d(60, 60, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=60)
+              (1): Conv2d(60, 60, kernel_size=(3, 3), stride=(1, 1), padding=(2, 2), dilation=(2, 2), groups=60)
+            )
+            (project_out): Conv2d(60, 60, kernel_size=(1, 1), stride=(1, 1))
+            (act): GELU(approximate='none')
+            (route): PredictorLG(
+              (in_conv): Sequential(
+                (0): Conv2d(64, 16, kernel_size=(1, 1), stride=(1, 1))
+                (1): LayerNorm()
+                (2): LeakyReLU(negative_slope=0.1, inplace=True)
+              )
+              (out_offsets): Sequential(
+                (0): Conv2d(16, 8, kernel_size=(1, 1), stride=(1, 1))
+                (1): LeakyReLU(negative_slope=0.1, inplace=True)
+                (2): Conv2d(8, 2, kernel_size=(1, 1), stride=(1, 1))
+              )
+              (out_mask): Sequential(
+                (0): Linear(in_features=256, out_features=16, bias=True)
+                (1): LeakyReLU(negative_slope=0.1, inplace=True)
+                (2): Linear(in_features=16, out_features=2, bias=True)
+                (3): Softmax(dim=-1)
+              )
+              (out_CA): Sequential(
+                (0): AdaptiveAvgPool2d(output_size=1)
+                (1): Conv2d(16, 60, kernel_size=(1, 1), stride=(1, 1))
+                (2): Sigmoid()
+              )
+              (out_SA): Sequential(
+                (0): Conv2d(16, 1, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                (1): Sigmoid()
+              )
+            )
+          )
+          (norm2): LayerNorm()
+          (ffn): GatedFeedForward(
+            (project_in): Conv2d(60, 120, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (dwconv): Conv2d(120, 120, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=120, bias=False)
+            (project_out): Conv2d(60, 60, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          )
+        )
+      )
+      (body_tail): Conv2d(60, 60, kernel_size=(1, 1), stride=(1, 1))
+    )
+    (2-3): 2 x Group(
+      (body): ModuleList(
+        (0-5): 6 x Block(
+          (norm1): LayerNorm()
+          (mixer): CAMixer(
+            (project_v): Conv2d(60, 60, kernel_size=(1, 1), stride=(1, 1))
+            (project_q): Linear(in_features=60, out_features=60, bias=True)
+            (project_k): Linear(in_features=60, out_features=60, bias=True)
+            (conv_sptial): Sequential(
+              (0): Conv2d(60, 60, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=60)
+              (1): Conv2d(60, 60, kernel_size=(3, 3), stride=(1, 1), padding=(2, 2), dilation=(2, 2), groups=60)
+            )
+            (project_out): Conv2d(60, 60, kernel_size=(1, 1), stride=(1, 1))
+            (act): GELU(approximate='none')
+            (route): PredictorLG(
+              (in_conv): Sequential(
+                (0): Conv2d(64, 16, kernel_size=(1, 1), stride=(1, 1))
+                (1): LayerNorm()
+                (2): LeakyReLU(negative_slope=0.1, inplace=True)
+              )
+              (out_offsets): Sequential(
+                (0): Conv2d(16, 8, kernel_size=(1, 1), stride=(1, 1))
+                (1): LeakyReLU(negative_slope=0.1, inplace=True)
+                (2): Conv2d(8, 2, kernel_size=(1, 1), stride=(1, 1))
+              )
+              (out_mask): Sequential(
+                (0): Linear(in_features=256, out_features=16, bias=True)
+                (1): LeakyReLU(negative_slope=0.1, inplace=True)
+                (2): Linear(in_features=16, out_features=2, bias=True)
+                (3): Softmax(dim=-1)
+              )
+              (out_CA): Sequential(
+                (0): AdaptiveAvgPool2d(output_size=1)
+                (1): Conv2d(16, 60, kernel_size=(1, 1), stride=(1, 1))
+                (2): Sigmoid()
+              )
+              (out_SA): Sequential(
+                (0): Conv2d(16, 1, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                (1): Sigmoid()
+              )
+            )
+          )
+          (norm2): LayerNorm()
+          (ffn): GatedFeedForward(
+            (project_in): Conv2d(60, 120, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (dwconv): Conv2d(120, 120, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=120, bias=False)
+            (project_out): Conv2d(60, 60, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          )
+        )
+      )
+      (body_tail): Conv2d(60, 60, kernel_size=(1, 1), stride=(1, 1))
+    )
+  )
+  (body_tail): Conv2d(60, 60, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (tail): Sequential(
+    (0): Conv2d(60, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): PixelShuffle(upscale_factor=4)
+  )
+)
+2026-10-22 19:51:57,770 INFO: Use Exponential Moving Average with decay: 0.999
+2026-10-22 19:51:57,875 INFO: Network [CAMixerSR] is created.
+2026-10-22 19:51:57,922 INFO: Loss [L1Loss] is created.
+2026-10-22 19:51:57,924 INFO: Model [CAModel] is created.
+2026-10-22 19:51:58,197 INFO: Start training from epoch: 0, iter: 0
+/root/fsas/sr-repro/CAMixerSR/.venv-5090/lib/python3.10/site-packages/torch/functional.py:554: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /pytorch/aten/src/ATen/native/TensorShape.cpp:4314.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+2026-10-22 19:52:10,132 INFO: [CAMix..][epoch:  0, iter:      20, lr:(5.000e-04,)] [eta: 0:31:50, time (data): 0.597 (0.266)] l_pix: 1.0364e-01 l_ratio: 6.4469e-06 
+2026-10-22 19:52:20,166 INFO: [CAMix..][epoch:  0, iter:      40, lr:(5.000e-04,)] [eta: 0:36:28, time (data): 0.549 (0.247)] l_pix: 9.2950e-02 l_ratio: 1.8693e-06 
+2026-10-22 19:52:30,115 INFO: [CAMix..][epoch:  0, iter:      60, lr:(5.000e-04,)] [eta: 0:37:50, time (data): 0.532 (0.240)] l_pix: 7.7716e-02 l_ratio: 7.4767e-06 
+2026-10-22 19:52:39,360 INFO: [CAMix..][epoch:  0, iter:      80, lr:(5.000e-04,)] [eta: 0:37:44, time (data): 0.514 (0.228)] l_pix: 6.5602e-02 l_ratio: 3.4332e-05 
+2026-10-22 19:52:48,423 INFO: [CAMix..][epoch:  0, iter:     100, lr:(5.000e-04,)] [eta: 0:37:28, time (data): 0.502 (0.219)] l_pix: 5.5714e-02 l_ratio: 1.1024e-05 
+2026-10-22 19:52:57,180 INFO: [CAMix..][epoch:  0, iter:     120, lr:(5.000e-04,)] [eta: 0:37:02, time (data): 0.491 (0.211)] l_pix: 5.0514e-02 l_ratio: 1.0715e-04 
+2026-10-22 19:53:07,007 INFO: [CAMix..][epoch:  0, iter:     140, lr:(5.000e-04,)] [eta: 0:37:17, time (data): 0.491 (0.212)] l_pix: 4.9474e-02 l_ratio: 1.8692e-06 
+2026-10-22 19:53:15,537 INFO: [CAMix..][epoch:  0, iter:     160, lr:(5.000e-04,)] [eta: 0:36:48, time (data): 0.483 (0.205)] l_pix: 5.1306e-02 l_ratio: 1.6823e-05 
+2026-10-22 19:53:24,271 INFO: [CAMix..][epoch:  0, iter:     180, lr:(5.000e-04,)] [eta: 0:36:28, time (data): 0.478 (0.202)] l_pix: 4.1539e-02 l_ratio: 5.5084e-05 
+2026-10-22 19:53:32,643 INFO: [CAMix..][epoch:  0, iter:     200, lr:(5.000e-04,)] [eta: 0:36:02, time (data): 0.472 (0.195)] l_pix: 3.8566e-02 l_ratio: 2.1973e-05 
+2026-10-22 19:53:40,588 INFO: [CAMix..][epoch:  0, iter:     220, lr:(5.000e-04,)] [eta: 0:35:30, time (data): 0.395 (0.123)] l_pix: 3.7309e-02 l_ratio: 1.5259e-05 
+2026-10-22 19:53:48,875 INFO: [CAMix..][epoch:  0, iter:     240, lr:(5.000e-04,)] [eta: 0:35:09, time (data): 0.405 (0.131)] l_pix: 3.2098e-02 l_ratio: 2.5650e-04 
+2026-10-22 19:53:57,243 INFO: [CAMix..][epoch:  0, iter:     260, lr:(5.000e-04,)] [eta: 0:34:51, time (data): 0.410 (0.135)] l_pix: 4.7116e-02 l_ratio: 2.3842e-05 
+2026-10-22 19:54:05,781 INFO: [CAMix..][epoch:  0, iter:     280, lr:(5.000e-04,)] [eta: 0:34:37, time (data): 0.414 (0.140)] l_pix: 3.7777e-02 l_ratio: 7.4767e-06 
+2026-10-22 19:54:13,877 INFO: [CAMix..][epoch:  0, iter:     300, lr:(5.000e-04,)] [eta: 0:34:17, time (data): 0.412 (0.139)] l_pix: 4.4837e-02 l_ratio: 2.3842e-05 
+2026-10-22 19:54:22,170 INFO: [CAMix..][epoch:  0, iter:     320, lr:(5.000e-04,)] [eta: 0:34:02, time (data): 0.413 (0.139)] l_pix: 3.8546e-02 l_ratio: 7.7248e-05 
+2026-10-22 19:54:30,698 INFO: [CAMix..][epoch:  0, iter:     340, lr:(5.000e-04,)] [eta: 0:33:50, time (data): 0.414 (0.141)] l_pix: 3.5457e-02 l_ratio: 2.7809e-05 
+2026-10-22 19:54:39,013 INFO: [CAMix..][epoch:  0, iter:     360, lr:(5.000e-04,)] [eta: 0:33:36, time (data): 0.415 (0.142)] l_pix: 4.5891e-02 l_ratio: 1.5259e-05 
+2026-10-22 19:54:47,255 INFO: [CAMix..][epoch:  0, iter:     380, lr:(5.000e-04,)] [eta: 0:33:22, time (data): 0.414 (0.142)] l_pix: 4.2414e-02 l_ratio: 3.4332e-05 
+2026-10-22 19:54:55,268 INFO: [CAMix..][epoch:  0, iter:     400, lr:(5.000e-04,)] [eta: 0:33:06, time (data): 0.413 (0.141)] l_pix: 3.0283e-02 l_ratio: 2.5028e-04 
+2026-10-22 19:55:03,550 INFO: [CAMix..][epoch:  0, iter:     420, lr:(5.000e-04,)] [eta: 0:32:53, time (data): 0.394 (0.126)] l_pix: 3.3357e-02 l_ratio: 6.7292e-05 
+2026-10-22 19:55:11,775 INFO: [CAMix..][epoch:  0, iter:     440, lr:(5.000e-04,)] [eta: 0:32:41, time (data): 0.403 (0.132)] l_pix: 3.9136e-02 l_ratio: 2.1973e-05 
+2026-10-22 19:55:19,544 INFO: [CAMix..][epoch:  0, iter:     460, lr:(5.000e-04,)] [eta: 0:32:24, time (data): 0.398 (0.129)] l_pix: 3.9034e-02 l_ratio: 8.4267e-05 
+2026-10-22 19:55:27,299 INFO: [CAMix..][epoch:  0, iter:     480, lr:(5.000e-04,)] [eta: 0:32:08, time (data): 0.395 (0.126)] l_pix: 3.0660e-02 l_ratio: 1.0715e-04 
+2026-10-22 19:55:35,391 INFO: [CAMix..][epoch:  0, iter:     500, lr:(5.000e-04,)] [eta: 0:31:55, time (data): 0.397 (0.127)] l_pix: 3.3819e-02 l_ratio: 4.4098e-05 
+2026-10-22 19:55:42,744 INFO: [CAMix..][epoch:  0, iter:     520, lr:(5.000e-04,)] [eta: 0:31:37, time (data): 0.392 (0.122)] l_pix: 4.1617e-02 l_ratio: 9.9221e-05 
+2026-10-22 19:55:50,469 INFO: [CAMix..][epoch:  0, iter:     540, lr:(5.000e-04,)] [eta: 0:31:22, time (data): 0.391 (0.122)] l_pix: 3.8660e-02 l_ratio: 1.8692e-06 
+2026-10-22 19:55:58,305 INFO: [CAMix..][epoch:  0, iter:     560, lr:(5.000e-04,)] [eta: 0:31:09, time (data): 0.391 (0.122)] l_pix: 3.5926e-02 l_ratio: 7.4767e-06 
+2026-10-22 19:56:06,256 INFO: [CAMix..][epoch:  0, iter:     580, lr:(5.000e-04,)] [eta: 0:30:57, time (data): 0.392 (0.123)] l_pix: 4.7160e-02 l_ratio: 1.6823e-05 
+2026-10-22 19:56:13,761 INFO: [CAMix..][epoch:  0, iter:     600, lr:(5.000e-04,)] [eta: 0:30:42, time (data): 0.390 (0.121)] l_pix: 4.1875e-02 l_ratio: 9.5367e-07 
+2026-10-22 19:56:21,683 INFO: [CAMix..][epoch:  0, iter:     620, lr:(5.000e-04,)] [eta: 0:30:30, time (data): 0.389 (0.119)] l_pix: 2.4445e-02 l_ratio: 1.5259e-05 
+2026-10-22 19:56:29,565 INFO: [CAMix..][epoch:  0, iter:     640, lr:(5.000e-04,)] [eta: 0:30:19, time (data): 0.392 (0.122)] l_pix: 3.7276e-02 l_ratio: 3.8152e-08 
+2026-10-22 19:56:37,125 INFO: [CAMix..][epoch:  0, iter:     660, lr:(5.000e-04,)] [eta: 0:30:05, time (data): 0.387 (0.117)] l_pix: 2.2990e-02 l_ratio: 9.9221e-05 
+2026-10-22 19:56:44,805 INFO: [CAMix..][epoch:  0, iter:     680, lr:(5.000e-04,)] [eta: 0:29:53, time (data): 0.386 (0.116)] l_pix: 2.9906e-02 l_ratio: 8.4267e-05 
+2026-10-22 19:56:52,528 INFO: [CAMix..][epoch:  0, iter:     700, lr:(5.000e-04,)] [eta: 0:29:41, time (data): 0.386 (0.116)] l_pix: 3.1625e-02 l_ratio: 4.9438e-05 
+2026-10-22 19:57:00,530 INFO: [CAMix..][epoch:  0, iter:     720, lr:(5.000e-04,)] [eta: 0:29:31, time (data): 0.388 (0.119)] l_pix: 2.8147e-02 l_ratio: 1.5258e-07 
+2026-10-22 19:57:08,171 INFO: [CAMix..][epoch:  0, iter:     740, lr:(5.000e-04,)] [eta: 0:29:19, time (data): 0.388 (0.117)] l_pix: 3.6656e-02 l_ratio: 2.1973e-05 
+2026-10-22 19:57:16,203 INFO: [CAMix..][epoch:  0, iter:     760, lr:(5.000e-04,)] [eta: 0:29:09, time (data): 0.389 (0.118)] l_pix: 4.3738e-02 l_ratio: 2.9908e-05 
+2026-10-22 19:57:24,240 INFO: [CAMix..][epoch:  0, iter:     780, lr:(5.000e-04,)] [eta: 0:29:00, time (data): 0.391 (0.118)] l_pix: 3.2858e-02 l_ratio: 9.7655e-06 
+2026-10-22 19:57:32,558 INFO: [CAMix..][epoch:  0, iter:     800, lr:(5.000e-04,)] [eta: 0:28:52, time (data): 0.393 (0.119)] l_pix: 3.4357e-02 l_ratio: 1.1124e-04 
+2026-10-22 19:57:40,713 INFO: [CAMix..][epoch:  0, iter:     820, lr:(5.000e-04,)] [eta: 0:28:43, time (data): 0.413 (0.133)] l_pix: 3.4770e-02 l_ratio: 4.9438e-05 
+2026-10-22 19:57:49,179 INFO: [CAMix..][epoch:  0, iter:     840, lr:(5.000e-04,)] [eta: 0:28:36, time (data): 0.419 (0.141)] l_pix: 3.6592e-02 l_ratio: 1.4194e-04 
+2026-10-22 19:57:57,549 INFO: [CAMix..][epoch:  0, iter:     860, lr:(5.000e-04,)] [eta: 0:28:28, time (data): 0.419 (0.145)] l_pix: 2.7634e-02 l_ratio: 1.5259e-05 
+2026-10-22 19:58:05,850 INFO: [CAMix..][epoch:  0, iter:     880, lr:(5.000e-04,)] [eta: 0:28:20, time (data): 0.418 (0.144)] l_pix: 3.1727e-02 l_ratio: 1.5259e-05 
+2026-10-22 19:58:13,650 INFO: [CAMix..][epoch:  0, iter:     900, lr:(5.000e-04,)] [eta: 0:28:10, time (data): 0.412 (0.138)] l_pix: 3.4287e-02 l_ratio: 6.4125e-05 
+2026-10-22 19:58:21,816 INFO: [CAMix..][epoch:  0, iter:     920, lr:(5.000e-04,)] [eta: 0:28:01, time (data): 0.411 (0.138)] l_pix: 3.5367e-02 l_ratio: 4.6730e-05 
+2026-10-22 19:58:30,099 INFO: [CAMix..][epoch:  0, iter:     940, lr:(5.000e-04,)] [eta: 0:27:53, time (data): 0.412 (0.140)] l_pix: 3.2772e-02 l_ratio: 0.0000e+00 
+2026-10-22 19:58:38,485 INFO: [CAMix..][epoch:  0, iter:     960, lr:(5.000e-04,)] [eta: 0:27:46, time (data): 0.413 (0.142)] l_pix: 3.9896e-02 l_ratio: 1.6823e-05 
+2026-10-22 19:58:46,700 INFO: [CAMix..][epoch:  0, iter:     980, lr:(5.000e-04,)] [eta: 0:27:37, time (data): 0.412 (0.142)] l_pix: 3.0562e-02 l_ratio: 4.4098e-05 
+2026-10-22 19:58:54,451 INFO: [CAMix..][epoch:  0, iter:   1,000, lr:(5.000e-04,)] [eta: 0:27:27, time (data): 0.410 (0.140)] l_pix: 2.7804e-02 l_ratio: 1.1963e-04 
+2026-10-22 19:58:54,452 INFO: Saving models and training states.
+2026-10-22 20:00:04,064 INFO: Validation DIV2K_val100
+	 # psnr: 17.3931	Best: 17.3931 @ 1000 iter
+
+2026-10-22 20:00:10,448 INFO: [CAMix..][epoch:  0, iter:   1,020, lr:(5.000e-04,)] [eta: 0:31:43, time (data): 0.317 (0.049)] l_pix: 2.5758e-02 l_ratio: 6.7291e-05 
+2026-10-22 20:00:18,225 INFO: [CAMix..][epoch:  0, iter:   1,040, lr:(5.000e-04,)] [eta: 0:31:26, time (data): 0.358 (0.088)] l_pix: 3.2862e-02 l_ratio: 7.0534e-05 
+2026-10-22 20:00:25,930 INFO: [CAMix..][epoch:  0, iter:   1,060, lr:(5.000e-04,)] [eta: 0:31:10, time (data): 0.368 (0.098)] l_pix: 3.8197e-02 l_ratio: 1.5259e-05 
+2026-10-22 20:00:33,715 INFO: [CAMix..][epoch:  0, iter:   1,080, lr:(5.000e-04,)] [eta: 0:30:54, time (data): 0.374 (0.103)] l_pix: 3.1305e-02 l_ratio: 1.6117e-04 
+2026-10-22 20:00:41,460 INFO: [CAMix..][epoch:  0, iter:   1,100, lr:(5.000e-04,)] [eta: 0:30:39, time (data): 0.376 (0.106)] l_pix: 2.3783e-02 l_ratio: 3.2081e-05 
+2026-10-22 20:00:49,181 INFO: [CAMix..][epoch:  0, iter:   1,120, lr:(5.000e-04,)] [eta: 0:30:23, time (data): 0.378 (0.108)] l_pix: 2.4596e-02 l_ratio: 0.0000e+00 
+2026-10-22 20:00:57,031 INFO: [CAMix..][epoch:  0, iter:   1,140, lr:(5.000e-04,)] [eta: 0:30:09, time (data): 0.380 (0.110)] l_pix: 2.8527e-02 l_ratio: 1.4664e-04 
+2026-10-22 20:01:04,739 INFO: [CAMix..][epoch:  0, iter:   1,160, lr:(5.000e-04,)] [eta: 0:29:54, time (data): 0.381 (0.110)] l_pix: 3.7748e-02 l_ratio: 5.4932e-04 
+2026-10-22 20:01:12,510 INFO: [CAMix..][epoch:  0, iter:   1,180, lr:(5.000e-04,)] [eta: 0:29:39, time (data): 0.382 (0.110)] l_pix: 3.3636e-02 l_ratio: 1.5258e-07 
+2026-10-22 20:01:20,021 INFO: [CAMix..][epoch:  0, iter:   1,200, lr:(5.000e-04,)] [eta: 0:29:24, time (data): 0.381 (0.109)] l_pix: 3.1052e-02 l_ratio: 6.1035e-05 
+2026-10-22 20:01:27,781 INFO: [CAMix..][epoch:  0, iter:   1,220, lr:(5.000e-04,)] [eta: 0:29:10, time (data): 0.395 (0.118)] l_pix: 3.6402e-02 l_ratio: 7.0534e-05 
+2026-10-22 20:01:35,356 INFO: [CAMix..][epoch:  0, iter:   1,240, lr:(5.000e-04,)] [eta: 0:28:56, time (data): 0.386 (0.111)] l_pix: 2.7295e-02 l_ratio: 4.6158e-06 
+2026-10-22 20:01:42,963 INFO: [CAMix..][epoch:  0, iter:   1,260, lr:(5.000e-04,)] [eta: 0:28:42, time (data): 0.384 (0.111)] l_pix: 4.2840e-02 l_ratio: 3.4332e-05 
+2026-10-22 20:01:50,415 INFO: [CAMix..][epoch:  0, iter:   1,280, lr:(5.000e-04,)] [eta: 0:28:28, time (data): 0.381 (0.107)] l_pix: 4.3536e-02 l_ratio: 9.1591e-05 
+2026-10-22 20:01:58,013 INFO: [CAMix..][epoch:  0, iter:   1,300, lr:(5.000e-04,)] [eta: 0:28:14, time (data): 0.380 (0.106)] l_pix: 3.3215e-02 l_ratio: 2.4414e-04 
+2026-10-22 20:02:05,346 INFO: [CAMix..][epoch:  0, iter:   1,320, lr:(5.000e-04,)] [eta: 0:28:00, time (data): 0.378 (0.103)] l_pix: 2.6794e-02 l_ratio: 6.1033e-07 
+2026-10-22 20:02:13,325 INFO: [CAMix..][epoch:  0, iter:   1,340, lr:(5.000e-04,)] [eta: 0:27:47, time (data): 0.381 (0.106)] l_pix: 3.3634e-02 l_ratio: 2.2034e-04 
+2026-10-22 20:02:21,127 INFO: [CAMix..][epoch:  0, iter:   1,360, lr:(5.000e-04,)] [eta: 0:27:35, time (data): 0.382 (0.108)] l_pix: 2.6731e-02 l_ratio: 1.8162e-04 
+2026-10-22 20:02:28,881 INFO: [CAMix..][epoch:  0, iter:   1,380, lr:(5.000e-04,)] [eta: 0:27:22, time (data): 0.383 (0.109)] l_pix: 3.1052e-02 l_ratio: 7.4767e-06 
+2026-10-22 20:02:36,478 INFO: [CAMix..][epoch:  0, iter:   1,400, lr:(5.000e-04,)] [eta: 0:27:09, time (data): 0.383 (0.109)] l_pix: 3.0633e-02 l_ratio: 1.6823e-05 
+2026-10-22 20:02:44,150 INFO: [CAMix..][epoch:  0, iter:   1,420, lr:(5.000e-04,)] [eta: 0:26:57, time (data): 0.377 (0.108)] l_pix: 3.5422e-02 l_ratio: 8.5831e-06 
+2026-10-22 20:02:51,662 INFO: [CAMix..][epoch:  0, iter:   1,440, lr:(5.000e-04,)] [eta: 0:26:44, time (data): 0.376 (0.108)] l_pix: 3.2473e-02 l_ratio: 1.6823e-05 
+2026-10-22 20:02:59,519 INFO: [CAMix..][epoch:  0, iter:   1,460, lr:(5.000e-04,)] [eta: 0:26:32, time (data): 0.382 (0.113)] l_pix: 3.1456e-02 l_ratio: 4.6158e-04 
+2026-10-22 20:03:07,044 INFO: [CAMix..][epoch:  0, iter:   1,480, lr:(5.000e-04,)] [eta: 0:26:20, time (data): 0.381 (0.110)] l_pix: 3.5795e-02 l_ratio: 2.4414e-06 
+2026-10-22 20:03:14,586 INFO: [CAMix..][epoch:  0, iter:   1,500, lr:(5.000e-04,)] [eta: 0:26:07, time (data): 0.380 (0.109)] l_pix: 3.7867e-02 l_ratio: 3.8147e-06 
+2026-10-22 20:03:22,301 INFO: [CAMix..][epoch:  0, iter:   1,520, lr:(5.000e-04,)] [eta: 0:25:55, time (data): 0.381 (0.111)] l_pix: 3.0394e-02 l_ratio: 6.1033e-07 
+2026-10-22 20:03:29,875 INFO: [CAMix..][epoch:  0, iter:   1,540, lr:(5.000e-04,)] [eta: 0:25:43, time (data): 0.381 (0.111)] l_pix: 3.7029e-02 l_ratio: 2.4415e-06 
+2026-10-22 20:03:37,449 INFO: [CAMix..][epoch:  0, iter:   1,560, lr:(5.000e-04,)] [eta: 0:25:31, time (data): 0.380 (0.110)] l_pix: 3.2358e-02 l_ratio: 1.6617e-04 
+2026-10-22 20:03:45,168 INFO: [CAMix..][epoch:  0, iter:   1,580, lr:(5.000e-04,)] [eta: 0:25:20, time (data): 0.381 (0.111)] l_pix: 2.7501e-02 l_ratio: 5.4931e-06 
+2026-10-22 20:03:52,885 INFO: [CAMix..][epoch:  0, iter:   1,600, lr:(5.000e-04,)] [eta: 0:25:09, time (data): 0.381 (0.111)] l_pix: 2.8582e-02 l_ratio: 3.9063e-05 
+2026-10-22 20:04:00,447 INFO: [CAMix..][epoch:  0, iter:   1,620, lr:(5.000e-04,)] [eta: 0:24:57, time (data): 0.393 (0.122)] l_pix: 4.0042e-02 l_ratio: 2.5787e-05 
+2026-10-22 20:04:07,886 INFO: [CAMix..][epoch:  0, iter:   1,640, lr:(5.000e-04,)] [eta: 0:24:45, time (data): 0.380 (0.107)] l_pix: 4.1084e-02 l_ratio: 1.5261e-07 
+2026-10-22 20:04:15,194 INFO: [CAMix..][epoch:  0, iter:   1,660, lr:(5.000e-04,)] [eta: 0:24:33, time (data): 0.374 (0.104)] l_pix: 3.4751e-02 l_ratio: 3.8152e-08 
+2026-10-22 20:04:22,629 INFO: [CAMix..][epoch:  0, iter:   1,680, lr:(5.000e-04,)] [eta: 0:24:22, time (data): 0.374 (0.104)] l_pix: 3.0304e-02 l_ratio: 1.8463e-05 
+2026-10-22 20:04:30,047 INFO: [CAMix..][epoch:  0, iter:   1,700, lr:(5.000e-04,)] [eta: 0:24:10, time (data): 0.373 (0.103)] l_pix: 3.7718e-02 l_ratio: 3.4332e-05 
+2026-10-22 20:04:37,501 INFO: [CAMix..][epoch:  0, iter:   1,720, lr:(5.000e-04,)] [eta: 0:23:59, time (data): 0.373 (0.103)] l_pix: 4.6689e-02 l_ratio: 8.5831e-06 
+2026-10-22 20:04:45,070 INFO: [CAMix..][epoch:  0, iter:   1,740, lr:(5.000e-04,)] [eta: 0:23:48, time (data): 0.374 (0.103)] l_pix: 3.6191e-02 l_ratio: 1.8463e-05 
+2026-10-22 20:04:52,496 INFO: [CAMix..][epoch:  0, iter:   1,760, lr:(5.000e-04,)] [eta: 0:23:37, time (data): 0.373 (0.102)] l_pix: 3.6457e-02 l_ratio: 1.2360e-05 
+2026-10-22 20:04:59,935 INFO: [CAMix..][epoch:  0, iter:   1,780, lr:(5.000e-04,)] [eta: 0:23:25, time (data): 0.373 (0.102)] l_pix: 3.0934e-02 l_ratio: 4.6157e-06 
+2026-10-22 20:05:07,413 INFO: [CAMix..][epoch:  0, iter:   1,800, lr:(5.000e-04,)] [eta: 0:23:14, time (data): 0.373 (0.102)] l_pix: 3.2658e-02 l_ratio: 7.7248e-05 
+2026-10-22 20:05:15,260 INFO: [CAMix..][epoch:  0, iter:   1,820, lr:(5.000e-04,)] [eta: 0:23:04, time (data): 0.402 (0.131)] l_pix: 3.3137e-02 l_ratio: 5.2224e-05 
+2026-10-22 20:05:23,151 INFO: [CAMix..][epoch:  0, iter:   1,840, lr:(5.000e-04,)] [eta: 0:22:54, time (data): 0.397 (0.127)] l_pix: 2.9294e-02 l_ratio: 1.6823e-05 
+2026-10-22 20:05:30,555 INFO: [CAMix..][epoch:  0, iter:   1,860, lr:(5.000e-04,)] [eta: 0:22:43, time (data): 0.387 (0.116)] l_pix: 2.5301e-02 l_ratio: 3.4336e-07 
+2026-10-22 20:05:37,993 INFO: [CAMix..][epoch:  0, iter:   1,880, lr:(5.000e-04,)] [eta: 0:22:32, time (data): 0.382 (0.112)] l_pix: 3.9375e-02 l_ratio: 2.7809e-05 
+2026-10-22 20:05:45,317 INFO: [CAMix..][epoch:  0, iter:   1,900, lr:(5.000e-04,)] [eta: 0:22:22, time (data): 0.379 (0.110)] l_pix: 2.7091e-02 l_ratio: 2.3842e-05 
+2026-10-22 20:05:52,582 INFO: [CAMix..][epoch:  0, iter:   1,920, lr:(5.000e-04,)] [eta: 0:22:11, time (data): 0.376 (0.107)] l_pix: 4.1528e-02 l_ratio: 9.9221e-05 
+2026-10-22 20:06:00,152 INFO: [CAMix..][epoch:  0, iter:   1,940, lr:(5.000e-04,)] [eta: 0:22:00, time (data): 0.376 (0.107)] l_pix: 3.6530e-02 l_ratio: 5.4931e-06 
+2026-10-22 20:06:07,307 INFO: [CAMix..][epoch:  0, iter:   1,960, lr:(5.000e-04,)] [eta: 0:21:49, time (data): 0.374 (0.104)] l_pix: 2.8013e-02 l_ratio: 2.9907e-05 
+2026-10-22 20:06:14,877 INFO: [CAMix..][epoch:  0, iter:   1,980, lr:(5.000e-04,)] [eta: 0:21:39, time (data): 0.374 (0.104)] l_pix: 3.1024e-02 l_ratio: 1.5261e-07 
+2026-10-22 20:06:22,360 INFO: [CAMix..][epoch:  0, iter:   2,000, lr:(5.000e-04,)] [eta: 0:21:29, time (data): 0.374 (0.104)] l_pix: 3.0919e-02 l_ratio: 3.4332e-05 
+2026-10-22 20:06:22,361 INFO: Saving models and training states.
+2026-10-22 20:07:08,086 INFO: Validation DIV2K_val100
+	 # psnr: 22.1289	Best: 22.1289 @ 2000 iter
+
+2026-10-22 20:07:13,618 INFO: [CAMix..][epoch:  0, iter:   2,020, lr:(5.000e-04,)] [eta: 0:22:23, time (data): 0.286 (0.019)] l_pix: 2.8567e-02 l_ratio: 3.0899e-06 
+2026-10-22 20:07:21,023 INFO: [CAMix..][epoch:  0, iter:   2,040, lr:(5.000e-04,)] [eta: 0:22:12, time (data): 0.342 (0.071)] l_pix: 3.4404e-02 l_ratio: 1.5258e-07 
+2026-10-22 20:07:28,394 INFO: [CAMix..][epoch:  0, iter:   2,060, lr:(5.000e-04,)] [eta: 0:22:00, time (data): 0.353 (0.081)] l_pix: 3.3754e-02 l_ratio: 1.5141e-04 
+2026-10-22 20:07:35,810 INFO: [CAMix..][epoch:  0, iter:   2,080, lr:(5.000e-04,)] [eta: 0:21:49, time (data): 0.358 (0.083)] l_pix: 3.4401e-02 l_ratio: 4.6157e-06 
+2026-10-22 20:07:43,361 INFO: [CAMix..][epoch:  0, iter:   2,100, lr:(5.000e-04,)] [eta: 0:21:38, time (data): 0.362 (0.085)] l_pix: 2.1550e-02 l_ratio: 3.6659e-05 
+2026-10-22 20:07:50,638 INFO: [CAMix..][epoch:  0, iter:   2,120, lr:(5.000e-04,)] [eta: 0:21:27, time (data): 0.363 (0.084)] l_pix: 2.5393e-02 l_ratio: 5.4931e-06 
+2026-10-22 20:07:58,322 INFO: [CAMix..][epoch:  0, iter:   2,140, lr:(5.000e-04,)] [eta: 0:21:16, time (data): 0.366 (0.088)] l_pix: 3.0536e-02 l_ratio: 2.7809e-05 
+2026-10-22 20:08:05,714 INFO: [CAMix..][epoch:  0, iter:   2,160, lr:(5.000e-04,)] [eta: 0:21:05, time (data): 0.366 (0.088)] l_pix: 3.4494e-02 l_ratio: 2.1973e-05 
+2026-10-22 20:08:12,982 INFO: [CAMix..][epoch:  0, iter:   2,180, lr:(5.000e-04,)] [eta: 0:20:54, time (data): 0.366 (0.088)] l_pix: 3.3720e-02 l_ratio: 1.1539e-04 
+2026-10-22 20:08:20,427 INFO: [CAMix..][epoch:  0, iter:   2,200, lr:(5.000e-04,)] [eta: 0:20:44, time (data): 0.367 (0.088)] l_pix: 2.9957e-02 l_ratio: 6.1033e-07 
+2026-10-22 20:08:27,566 INFO: [CAMix..][epoch:  0, iter:   2,220, lr:(5.000e-04,)] [eta: 0:20:33, time (data): 0.345 (0.061)] l_pix: 2.1980e-02 l_ratio: 6.1033e-07 
+2026-10-22 20:08:35,083 INFO: [CAMix..][epoch:  0, iter:   2,240, lr:(5.000e-04,)] [eta: 0:20:22, time (data): 0.366 (0.088)] l_pix: 2.6977e-02 l_ratio: 2.3209e-04 
+2026-10-22 20:08:42,511 INFO: [CAMix..][epoch:  0, iter:   2,260, lr:(5.000e-04,)] [eta: 0:20:11, time (data): 0.368 (0.088)] l_pix: 3.2408e-02 l_ratio: 7.0534e-05 
+2026-10-22 20:08:49,661 INFO: [CAMix..][epoch:  0, iter:   2,280, lr:(5.000e-04,)] [eta: 0:20:01, time (data): 0.365 (0.086)] l_pix: 2.0506e-02 l_ratio: 2.5787e-05 
+2026-10-22 20:08:56,863 INFO: [CAMix..][epoch:  0, iter:   2,300, lr:(5.000e-04,)] [eta: 0:19:50, time (data): 0.364 (0.082)] l_pix: 2.7133e-02 l_ratio: 4.6157e-06 
+2026-10-22 20:09:04,199 INFO: [CAMix..][epoch:  0, iter:   2,320, lr:(5.000e-04,)] [eta: 0:19:39, time (data): 0.364 (0.081)] l_pix: 2.7168e-02 l_ratio: 4.1543e-05 
+2026-10-22 20:09:11,419 INFO: [CAMix..][epoch:  0, iter:   2,340, lr:(5.000e-04,)] [eta: 0:19:29, time (data): 0.364 (0.081)] l_pix: 3.9073e-02 l_ratio: 3.4332e-05 
+2026-10-22 20:09:18,463 INFO: [CAMix..][epoch:  0, iter:   2,360, lr:(5.000e-04,)] [eta: 0:19:18, time (data): 0.362 (0.080)] l_pix: 2.0203e-02 l_ratio: 1.0315e-04 
+2026-10-22 20:09:26,149 INFO: [CAMix..][epoch:  0, iter:   2,380, lr:(5.000e-04,)] [eta: 0:19:08, time (data): 0.365 (0.082)] l_pix: 3.7833e-02 l_ratio: 8.0719e-05 
+2026-10-22 20:09:33,865 INFO: [CAMix..][epoch:  0, iter:   2,400, lr:(5.000e-04,)] [eta: 0:18:58, time (data): 0.367 (0.086)] l_pix: 2.4213e-02 l_ratio: 3.4336e-07 
+2026-10-22 20:09:41,139 INFO: [CAMix..][epoch:  0, iter:   2,420, lr:(5.000e-04,)] [eta: 0:18:48, time (data): 0.354 (0.079)] l_pix: 2.6574e-02 l_ratio: 4.6730e-05 
+2026-10-22 20:09:48,539 INFO: [CAMix..][epoch:  0, iter:   2,440, lr:(5.000e-04,)] [eta: 0:18:38, time (data): 0.365 (0.092)] l_pix: 2.0026e-02 l_ratio: 4.4098e-05 
+2026-10-22 20:09:56,007 INFO: [CAMix..][epoch:  0, iter:   2,460, lr:(5.000e-04,)] [eta: 0:18:27, time (data): 0.369 (0.095)] l_pix: 2.7932e-02 l_ratio: 2.3842e-05 
+2026-10-22 20:10:03,417 INFO: [CAMix..][epoch:  0, iter:   2,480, lr:(5.000e-04,)] [eta: 0:18:17, time (data): 0.369 (0.096)] l_pix: 3.5251e-02 l_ratio: 1.5141e-04 
+2026-10-22 20:10:10,539 INFO: [CAMix..][epoch:  0, iter:   2,500, lr:(5.000e-04,)] [eta: 0:18:07, time (data): 0.366 (0.094)] l_pix: 4.1485e-02 l_ratio: 4.6730e-05 
+2026-10-22 20:10:17,943 INFO: [CAMix..][epoch:  0, iter:   2,520, lr:(5.000e-04,)] [eta: 0:17:57, time (data): 0.367 (0.096)] l_pix: 3.3694e-02 l_ratio: 4.6730e-05 
+2026-10-22 20:10:25,264 INFO: [CAMix..][epoch:  0, iter:   2,540, lr:(5.000e-04,)] [eta: 0:17:47, time (data): 0.367 (0.096)] l_pix: 2.2428e-02 l_ratio: 6.4125e-05 
+2026-10-22 20:10:32,632 INFO: [CAMix..][epoch:  0, iter:   2,560, lr:(5.000e-04,)] [eta: 0:17:37, time (data): 0.367 (0.096)] l_pix: 2.7613e-02 l_ratio: 1.0315e-04 
+2026-10-22 20:10:39,793 INFO: [CAMix..][epoch:  0, iter:   2,580, lr:(5.000e-04,)] [eta: 0:17:27, time (data): 0.366 (0.094)] l_pix: 3.2927e-02 l_ratio: 1.2833e-04 
+2026-10-22 20:10:46,932 INFO: [CAMix..][epoch:  0, iter:   2,600, lr:(5.000e-04,)] [eta: 0:17:17, time (data): 0.365 (0.093)] l_pix: 3.5363e-02 l_ratio: 3.4332e-05 
+2026-10-22 20:10:54,407 INFO: [CAMix..][epoch:  0, iter:   2,620, lr:(5.000e-04,)] [eta: 0:17:07, time (data): 0.426 (0.154)] l_pix: 2.8260e-02 l_ratio: 4.1543e-05 
+2026-10-22 20:11:01,757 INFO: [CAMix..][epoch:  0, iter:   2,640, lr:(5.000e-04,)] [eta: 0:16:57, time (data): 0.383 (0.111)] l_pix: 3.5519e-02 l_ratio: 5.4931e-06 
+2026-10-22 20:11:09,063 INFO: [CAMix..][epoch:  0, iter:   2,660, lr:(5.000e-04,)] [eta: 0:16:48, time (data): 0.375 (0.104)] l_pix: 3.4810e-02 l_ratio: 1.8693e-06 
+2026-10-22 20:11:16,338 INFO: [CAMix..][epoch:  0, iter:   2,680, lr:(5.000e-04,)] [eta: 0:16:38, time (data): 0.372 (0.101)] l_pix: 2.8463e-02 l_ratio: 5.8021e-05 
+2026-10-22 20:11:24,174 INFO: [CAMix..][epoch:  0, iter:   2,700, lr:(5.000e-04,)] [eta: 0:16:29, time (data): 0.376 (0.106)] l_pix: 4.0758e-02 l_ratio: 3.8140e-08 
+2026-10-22 20:11:31,507 INFO: [CAMix..][epoch:  0, iter:   2,720, lr:(5.000e-04,)] [eta: 0:16:19, time (data): 0.375 (0.104)] l_pix: 2.5225e-02 l_ratio: 1.5625e-04 
+2026-10-22 20:11:38,407 INFO: [CAMix..][epoch:  0, iter:   2,740, lr:(5.000e-04,)] [eta: 0:16:09, time (data): 0.370 (0.100)] l_pix: 2.4787e-02 l_ratio: 2.7809e-05 
+2026-10-22 20:11:45,462 INFO: [CAMix..][epoch:  0, iter:   2,760, lr:(5.000e-04,)] [eta: 0:15:59, time (data): 0.368 (0.098)] l_pix: 2.7049e-02 l_ratio: 5.5085e-05 
+2026-10-22 20:11:53,062 INFO: [CAMix..][epoch:  0, iter:   2,780, lr:(5.000e-04,)] [eta: 0:15:50, time (data): 0.369 (0.099)] l_pix: 2.7698e-02 l_ratio: 6.7292e-05 
+2026-10-22 20:12:00,339 INFO: [CAMix..][epoch:  0, iter:   2,800, lr:(5.000e-04,)] [eta: 0:15:40, time (data): 0.368 (0.098)] l_pix: 2.4716e-02 l_ratio: 2.8214e-04 
+2026-10-22 20:12:07,598 INFO: [CAMix..][epoch:  0, iter:   2,820, lr:(5.000e-04,)] [eta: 0:15:31, time (data): 0.333 (0.064)] l_pix: 2.8798e-02 l_ratio: 7.4767e-06 
+2026-10-22 20:12:15,062 INFO: [CAMix..][epoch:  0, iter:   2,840, lr:(5.000e-04,)] [eta: 0:15:21, time (data): 0.364 (0.092)] l_pix: 2.1363e-02 l_ratio: 4.6730e-05 
+2026-10-22 20:12:22,357 INFO: [CAMix..][epoch:  0, iter:   2,860, lr:(5.000e-04,)] [eta: 0:15:12, time (data): 0.364 (0.093)] l_pix: 2.9727e-02 l_ratio: 6.1035e-05 
+2026-10-22 20:12:29,925 INFO: [CAMix..][epoch:  0, iter:   2,880, lr:(5.000e-04,)] [eta: 0:15:03, time (data): 0.368 (0.099)] l_pix: 2.7299e-02 l_ratio: 7.7248e-05 
+2026-10-22 20:12:37,490 INFO: [CAMix..][epoch:  0, iter:   2,900, lr:(5.000e-04,)] [eta: 0:14:53, time (data): 0.371 (0.102)] l_pix: 2.4947e-02 l_ratio: 3.4332e-05 
+2026-10-22 20:12:44,844 INFO: [CAMix..][epoch:  0, iter:   2,920, lr:(5.000e-04,)] [eta: 0:14:44, time (data): 0.370 (0.101)] l_pix: 3.5410e-02 l_ratio: 2.1973e-05 
+2026-10-22 20:12:52,101 INFO: [CAMix..][epoch:  0, iter:   2,940, lr:(5.000e-04,)] [eta: 0:14:35, time (data): 0.369 (0.100)] l_pix: 4.4142e-02 l_ratio: 7.4767e-06 
+2026-10-22 20:12:59,455 INFO: [CAMix..][epoch:  0, iter:   2,960, lr:(5.000e-04,)] [eta: 0:14:25, time (data): 0.369 (0.100)] l_pix: 3.4904e-02 l_ratio: 3.9063e-05 
+2026-10-22 20:13:06,492 INFO: [CAMix..][epoch:  0, iter:   2,980, lr:(5.000e-04,)] [eta: 0:14:16, time (data): 0.367 (0.097)] l_pix: 3.2378e-02 l_ratio: 3.6659e-05 
+2026-10-22 20:13:13,675 INFO: [CAMix..][epoch:  0, iter:   3,000, lr:(5.000e-04,)] [eta: 0:14:07, time (data): 0.366 (0.097)] l_pix: 1.9105e-02 l_ratio: 4.6157e-06 
+2026-10-22 20:13:13,676 INFO: Saving models and training states.
+2026-10-22 20:14:27,891 INFO: Validation DIV2K_val100
+	 # psnr: 25.4935	Best: 25.4935 @ 3000 iter
+
+2026-10-22 20:14:33,636 INFO: [CAMix..][epoch:  0, iter:   3,020, lr:(5.000e-04,)] [eta: 0:14:45, time (data): 0.338 (0.066)] l_pix: 3.0455e-02 l_ratio: 1.1024e-05 
+2026-10-22 20:14:40,877 INFO: [CAMix..][epoch:  0, iter:   3,040, lr:(5.000e-04,)] [eta: 0:14:35, time (data): 0.357 (0.085)] l_pix: 3.2853e-02 l_ratio: 2.3842e-05 
+2026-10-22 20:14:48,007 INFO: [CAMix..][epoch:  0, iter:   3,060, lr:(5.000e-04,)] [eta: 0:14:25, time (data): 0.357 (0.085)] l_pix: 2.8108e-02 l_ratio: 4.6730e-05 
+2026-10-22 20:14:55,460 INFO: [CAMix..][epoch:  0, iter:   3,080, lr:(5.000e-04,)] [eta: 0:14:15, time (data): 0.362 (0.091)] l_pix: 3.3477e-02 l_ratio: 0.0000e+00 
+2026-10-22 20:15:02,284 INFO: [CAMix..][epoch:  0, iter:   3,100, lr:(5.000e-04,)] [eta: 0:14:05, time (data): 0.357 (0.087)] l_pix: 2.5156e-02 l_ratio: 7.7248e-05 
+2026-10-22 20:15:09,295 INFO: [CAMix..][epoch:  0, iter:   3,120, lr:(5.000e-04,)] [eta: 0:13:55, time (data): 0.356 (0.085)] l_pix: 3.4839e-02 l_ratio: 9.1591e-05 
+2026-10-22 20:15:16,394 INFO: [CAMix..][epoch:  0, iter:   3,140, lr:(5.000e-04,)] [eta: 0:13:45, time (data): 0.356 (0.085)] l_pix: 1.9669e-02 l_ratio: 7.0534e-05 
+2026-10-22 20:15:23,561 INFO: [CAMix..][epoch:  0, iter:   3,160, lr:(5.000e-04,)] [eta: 0:13:35, time (data): 0.356 (0.085)] l_pix: 2.9425e-02 l_ratio: 6.7292e-05 
+2026-10-22 20:15:30,735 INFO: [CAMix..][epoch:  0, iter:   3,180, lr:(5.000e-04,)] [eta: 0:13:25, time (data): 0.356 (0.085)] l_pix: 3.4825e-02 l_ratio: 2.7809e-05 
+2026-10-22 20:15:37,717 INFO: [CAMix..][epoch:  0, iter:   3,200, lr:(5.000e-04,)] [eta: 0:13:15, time (data): 0.355 (0.084)] l_pix: 2.7785e-02 l_ratio: 2.3842e-05 
+2026-10-22 20:15:44,989 INFO: [CAMix..][epoch:  0, iter:   3,220, lr:(5.000e-04,)] [eta: 0:13:05, time (data): 0.375 (0.089)] l_pix: 3.0973e-02 l_ratio: 2.3842e-05 
+2026-10-22 20:15:51,865 INFO: [CAMix..][epoch:  0, iter:   3,240, lr:(5.000e-04,)] [eta: 0:12:55, time (data): 0.349 (0.077)] l_pix: 3.5035e-02 l_ratio: 1.2360e-05 
+2026-10-22 20:15:59,098 INFO: [CAMix..][epoch:  0, iter:   3,260, lr:(5.000e-04,)] [eta: 0:12:46, time (data): 0.355 (0.084)] l_pix: 3.1073e-02 l_ratio: 9.5367e-07 
+2026-10-22 20:16:06,347 INFO: [CAMix..][epoch:  0, iter:   3,280, lr:(5.000e-04,)] [eta: 0:12:36, time (data): 0.357 (0.086)] l_pix: 4.5210e-02 l_ratio: 1.3771e-05 
+2026-10-22 20:16:13,363 INFO: [CAMix..][epoch:  0, iter:   3,300, lr:(5.000e-04,)] [eta: 0:12:26, time (data): 0.356 (0.088)] l_pix: 3.1382e-02 l_ratio: 3.2081e-05 
+2026-10-22 20:16:20,311 INFO: [CAMix..][epoch:  0, iter:   3,320, lr:(5.000e-04,)] [eta: 0:12:17, time (data): 0.354 (0.086)] l_pix: 2.4031e-02 l_ratio: 3.0899e-06 
+2026-10-22 20:16:27,458 INFO: [CAMix..][epoch:  0, iter:   3,340, lr:(5.000e-04,)] [eta: 0:12:07, time (data): 0.355 (0.086)] l_pix: 2.5393e-02 l_ratio: 1.1024e-05 
+2026-10-22 20:16:34,740 INFO: [CAMix..][epoch:  0, iter:   3,360, lr:(5.000e-04,)] [eta: 0:11:58, time (data): 0.356 (0.088)] l_pix: 2.4341e-02 l_ratio: 5.4933e-06 
+2026-10-22 20:16:42,212 INFO: [CAMix..][epoch:  0, iter:   3,380, lr:(5.000e-04,)] [eta: 0:11:48, time (data): 0.358 (0.090)] l_pix: 3.3333e-02 l_ratio: 3.9063e-05 
+2026-10-22 20:16:49,423 INFO: [CAMix..][epoch:  0, iter:   3,400, lr:(5.000e-04,)] [eta: 0:11:39, time (data): 0.358 (0.089)] l_pix: 3.1261e-02 l_ratio: 2.1973e-05 
+2026-10-22 20:16:56,988 INFO: [CAMix..][epoch:  0, iter:   3,420, lr:(5.000e-04,)] [eta: 0:11:29, time (data): 0.253 (0.004)] l_pix: 2.8521e-02 l_ratio: 2.9907e-05 
+2026-10-22 20:17:04,528 INFO: [CAMix..][epoch:  0, iter:   3,440, lr:(5.000e-04,)] [eta: 0:11:20, time (data): 0.361 (0.094)] l_pix: 3.0674e-02 l_ratio: 7.4767e-06 
+2026-10-22 20:17:11,590 INFO: [CAMix..][epoch:  0, iter:   3,460, lr:(5.000e-04,)] [eta: 0:11:11, time (data): 0.357 (0.090)] l_pix: 2.5523e-02 l_ratio: 4.9439e-05 
+2026-10-22 20:17:18,785 INFO: [CAMix..][epoch:  0, iter:   3,480, lr:(5.000e-04,)] [eta: 0:11:01, time (data): 0.358 (0.092)] l_pix: 2.5617e-02 l_ratio: 3.8147e-06 
+2026-10-22 20:17:25,784 INFO: [CAMix..][epoch:  0, iter:   3,500, lr:(5.000e-04,)] [eta: 0:10:52, time (data): 0.356 (0.089)] l_pix: 3.3228e-02 l_ratio: 6.4125e-05 
+2026-10-22 20:17:33,164 INFO: [CAMix..][epoch:  0, iter:   3,520, lr:(5.000e-04,)] [eta: 0:10:43, time (data): 0.359 (0.091)] l_pix: 2.5296e-02 l_ratio: 1.6823e-05 
+2026-10-22 20:17:40,411 INFO: [CAMix..][epoch:  0, iter:   3,540, lr:(5.000e-04,)] [eta: 0:10:33, time (data): 0.359 (0.090)] l_pix: 4.8517e-02 l_ratio: 8.5831e-06 
+2026-10-22 20:17:47,505 INFO: [CAMix..][epoch:  0, iter:   3,560, lr:(5.000e-04,)] [eta: 0:10:24, time (data): 0.359 (0.089)] l_pix: 2.2111e-02 l_ratio: 2.4414e-06 
+2026-10-22 20:17:54,836 INFO: [CAMix..][epoch:  0, iter:   3,580, lr:(5.000e-04,)] [eta: 0:10:15, time (data): 0.360 (0.090)] l_pix: 2.1545e-02 l_ratio: 1.8693e-06 
+2026-10-22 20:18:02,074 INFO: [CAMix..][epoch:  0, iter:   3,600, lr:(5.000e-04,)] [eta: 0:10:06, time (data): 0.360 (0.090)] l_pix: 2.1025e-02 l_ratio: 3.6659e-05 
+2026-10-22 20:18:09,406 INFO: [CAMix..][epoch:  0, iter:   3,620, lr:(5.000e-04,)] [eta: 0:09:56, time (data): 0.445 (0.177)] l_pix: 2.7911e-02 l_ratio: 1.1539e-04 
+2026-10-22 20:18:16,500 INFO: [CAMix..][epoch:  0, iter:   3,640, lr:(5.000e-04,)] [eta: 0:09:47, time (data): 0.363 (0.090)] l_pix: 3.4568e-02 l_ratio: 8.5831e-06 
+2026-10-22 20:18:23,879 INFO: [CAMix..][epoch:  0, iter:   3,660, lr:(5.000e-04,)] [eta: 0:09:38, time (data): 0.366 (0.093)] l_pix: 3.2277e-02 l_ratio: 9.5367e-07 
+2026-10-22 20:18:30,913 INFO: [CAMix..][epoch:  0, iter:   3,680, lr:(5.000e-04,)] [eta: 0:09:29, time (data): 0.361 (0.089)] l_pix: 2.7831e-02 l_ratio: 8.7891e-05 
+2026-10-22 20:18:38,002 INFO: [CAMix..][epoch:  0, iter:   3,700, lr:(5.000e-04,)] [eta: 0:09:20, time (data): 0.360 (0.087)] l_pix: 3.6440e-02 l_ratio: 1.1539e-04 
+2026-10-22 20:18:45,452 INFO: [CAMix..][epoch:  0, iter:   3,720, lr:(5.000e-04,)] [eta: 0:09:11, time (data): 0.362 (0.091)] l_pix: 2.1394e-02 l_ratio: 7.3852e-05 
+2026-10-22 20:18:52,902 INFO: [CAMix..][epoch:  0, iter:   3,740, lr:(5.000e-04,)] [eta: 0:09:02, time (data): 0.364 (0.092)] l_pix: 2.1391e-02 l_ratio: 6.7291e-05 
+2026-10-22 20:19:00,184 INFO: [CAMix..][epoch:  0, iter:   3,760, lr:(5.000e-04,)] [eta: 0:08:53, time (data): 0.364 (0.093)] l_pix: 3.1603e-02 l_ratio: 2.1458e-04 
+2026-10-22 20:19:07,804 INFO: [CAMix..][epoch:  0, iter:   3,780, lr:(5.000e-04,)] [eta: 0:08:44, time (data): 0.366 (0.095)] l_pix: 2.9009e-02 l_ratio: 4.6157e-06 
+2026-10-22 20:19:15,554 INFO: [CAMix..][epoch:  0, iter:   3,800, lr:(5.000e-04,)] [eta: 0:08:35, time (data): 0.368 (0.097)] l_pix: 2.6014e-02 l_ratio: 1.9230e-04 
+2026-10-22 20:19:22,941 INFO: [CAMix..][epoch:  0, iter:   3,820, lr:(5.000e-04,)] [eta: 0:08:26, time (data): 0.599 (0.309)] l_pix: 3.2484e-02 l_ratio: 5.2223e-05 
+2026-10-22 20:19:30,255 INFO: [CAMix..][epoch:  0, iter:   3,840, lr:(5.000e-04,)] [eta: 0:08:17, time (data): 0.377 (0.104)] l_pix: 3.2321e-02 l_ratio: 6.1033e-07 
+2026-10-22 20:19:37,704 INFO: [CAMix..][epoch:  0, iter:   3,860, lr:(5.000e-04,)] [eta: 0:08:08, time (data): 0.375 (0.104)] l_pix: 2.8587e-02 l_ratio: 1.6823e-05 
+2026-10-22 20:19:45,360 INFO: [CAMix..][epoch:  0, iter:   3,880, lr:(5.000e-04,)] [eta: 0:07:59, time (data): 0.377 (0.107)] l_pix: 2.0680e-02 l_ratio: 4.6157e-06 
+2026-10-22 20:19:52,747 INFO: [CAMix..][epoch:  0, iter:   3,900, lr:(5.000e-04,)] [eta: 0:07:50, time (data): 0.375 (0.105)] l_pix: 2.9466e-02 l_ratio: 1.5258e-07 
+2026-10-22 20:20:00,048 INFO: [CAMix..][epoch:  0, iter:   3,920, lr:(5.000e-04,)] [eta: 0:07:41, time (data): 0.373 (0.104)] l_pix: 2.0471e-02 l_ratio: 3.8152e-08 
+2026-10-22 20:20:07,082 INFO: [CAMix..][epoch:  0, iter:   3,940, lr:(5.000e-04,)] [eta: 0:07:32, time (data): 0.370 (0.100)] l_pix: 3.3200e-02 l_ratio: 1.5141e-04 
+2026-10-22 20:20:14,220 INFO: [CAMix..][epoch:  0, iter:   3,960, lr:(5.000e-04,)] [eta: 0:07:23, time (data): 0.368 (0.098)] l_pix: 4.0316e-02 l_ratio: 7.4767e-06 
+2026-10-22 20:20:22,001 INFO: [CAMix..][epoch:  0, iter:   3,980, lr:(5.000e-04,)] [eta: 0:07:15, time (data): 0.370 (0.101)] l_pix: 3.4374e-02 l_ratio: 1.5261e-07 
+2026-10-22 20:20:28,871 INFO: [CAMix..][epoch:  0, iter:   4,000, lr:(5.000e-04,)] [eta: 0:07:06, time (data): 0.368 (0.099)] l_pix: 2.2154e-02 l_ratio: 1.6117e-04 
+2026-10-22 20:20:28,871 INFO: Saving models and training states.
+2026-10-22 20:21:08,071 INFO: Validation DIV2K_val100
+	 # psnr: 26.8954	Best: 26.8954 @ 4000 iter
+
+2026-10-22 20:21:13,496 INFO: [CAMix..][epoch:  0, iter:   4,020, lr:(5.000e-04,)] [eta: 0:07:06, time (data): 0.358 (0.090)] l_pix: 2.9222e-02 l_ratio: 1.1539e-04 
+2026-10-22 20:21:20,469 INFO: [CAMix..][epoch:  0, iter:   4,040, lr:(5.000e-04,)] [eta: 0:06:57, time (data): 0.349 (0.068)] l_pix: 2.6707e-02 l_ratio: 1.1025e-05 
+2026-10-22 20:21:27,833 INFO: [CAMix..][epoch:  0, iter:   4,060, lr:(5.000e-04,)] [eta: 0:06:48, time (data): 0.358 (0.081)] l_pix: 2.8718e-02 l_ratio: 4.6730e-05 
+2026-10-22 20:21:35,185 INFO: [CAMix..][epoch:  0, iter:   4,080, lr:(5.000e-04,)] [eta: 0:06:39, time (data): 0.361 (0.086)] l_pix: 3.3152e-02 l_ratio: 6.4470e-06 
+2026-10-22 20:21:42,474 INFO: [CAMix..][epoch:  0, iter:   4,100, lr:(5.000e-04,)] [eta: 0:06:30, time (data): 0.362 (0.089)] l_pix: 2.4571e-02 l_ratio: 7.0534e-05 
+2026-10-22 20:21:49,709 INFO: [CAMix..][epoch:  0, iter:   4,120, lr:(5.000e-04,)] [eta: 0:06:21, time (data): 0.362 (0.090)] l_pix: 3.1179e-02 l_ratio: 2.3209e-04 
+2026-10-22 20:21:56,589 INFO: [CAMix..][epoch:  0, iter:   4,140, lr:(5.000e-04,)] [eta: 0:06:12, time (data): 0.359 (0.087)] l_pix: 2.8058e-02 l_ratio: 3.9063e-05 
+2026-10-22 20:22:03,737 INFO: [CAMix..][epoch:  0, iter:   4,160, lr:(5.000e-04,)] [eta: 0:06:03, time (data): 0.359 (0.087)] l_pix: 2.9148e-02 l_ratio: 1.3732e-06 
+2026-10-22 20:22:10,848 INFO: [CAMix..][epoch:  0, iter:   4,180, lr:(5.000e-04,)] [eta: 0:05:54, time (data): 0.358 (0.087)] l_pix: 3.0381e-02 l_ratio: 1.2394e-04 
+2026-10-22 20:22:18,053 INFO: [CAMix..][epoch:  0, iter:   4,200, lr:(5.000e-04,)] [eta: 0:05:45, time (data): 0.359 (0.088)] l_pix: 3.3999e-02 l_ratio: 1.2394e-04 
+2026-10-22 20:22:25,402 INFO: [CAMix..][epoch:  0, iter:   4,220, lr:(5.000e-04,)] [eta: 0:05:36, time (data): 0.359 (0.089)] l_pix: 4.0234e-02 l_ratio: 3.8152e-08 
+2026-10-22 20:22:32,546 INFO: [CAMix..][epoch:  0, iter:   4,240, lr:(5.000e-04,)] [eta: 0:05:27, time (data): 0.362 (0.093)] l_pix: 3.3347e-02 l_ratio: 1.8463e-05 
+2026-10-22 20:22:39,555 INFO: [CAMix..][epoch:  0, iter:   4,260, lr:(5.000e-04,)] [eta: 0:05:18, time (data): 0.356 (0.087)] l_pix: 3.2234e-02 l_ratio: 8.0719e-05 
+2026-10-22 20:22:46,846 INFO: [CAMix..][epoch:  0, iter:   4,280, lr:(5.000e-04,)] [eta: 0:05:09, time (data): 0.359 (0.089)] l_pix: 3.5458e-02 l_ratio: 6.4125e-05 
+2026-10-22 20:22:54,231 INFO: [CAMix..][epoch:  0, iter:   4,300, lr:(5.000e-04,)] [eta: 0:05:01, time (data): 0.361 (0.091)] l_pix: 3.5706e-02 l_ratio: 4.1542e-05 
+2026-10-22 20:23:01,493 INFO: [CAMix..][epoch:  0, iter:   4,320, lr:(5.000e-04,)] [eta: 0:04:52, time (data): 0.362 (0.092)] l_pix: 2.7529e-02 l_ratio: 1.3733e-06 
+2026-10-22 20:23:08,790 INFO: [CAMix..][epoch:  0, iter:   4,340, lr:(5.000e-04,)] [eta: 0:04:43, time (data): 0.362 (0.093)] l_pix: 3.8555e-02 l_ratio: 1.5258e-07 
+2026-10-22 20:23:15,706 INFO: [CAMix..][epoch:  0, iter:   4,360, lr:(5.000e-04,)] [eta: 0:04:34, time (data): 0.360 (0.090)] l_pix: 3.7848e-02 l_ratio: 7.4767e-06 
+2026-10-22 20:23:22,649 INFO: [CAMix..][epoch:  0, iter:   4,380, lr:(5.000e-04,)] [eta: 0:04:25, time (data): 0.358 (0.089)] l_pix: 2.2217e-02 l_ratio: 1.5258e-07 
+2026-10-22 20:23:30,275 INFO: [CAMix..][epoch:  0, iter:   4,400, lr:(5.000e-04,)] [eta: 0:04:16, time (data): 0.361 (0.091)] l_pix: 3.1758e-02 l_ratio: 4.0470e-04 
+2026-10-22 20:23:37,702 INFO: [CAMix..][epoch:  0, iter:   4,420, lr:(5.000e-04,)] [eta: 0:04:08, time (data): 0.362 (0.092)] l_pix: 3.2561e-02 l_ratio: 1.3732e-06 
+2026-10-22 20:23:44,903 INFO: [CAMix..][epoch:  0, iter:   4,440, lr:(5.000e-04,)] [eta: 0:03:59, time (data): 0.370 (0.098)] l_pix: 2.4828e-02 l_ratio: 1.6617e-04 
+2026-10-22 20:23:52,001 INFO: [CAMix..][epoch:  0, iter:   4,460, lr:(5.000e-04,)] [eta: 0:03:50, time (data): 0.362 (0.091)] l_pix: 3.3646e-02 l_ratio: 9.5367e-07 
+2026-10-22 20:23:59,129 INFO: [CAMix..][epoch:  0, iter:   4,480, lr:(5.000e-04,)] [eta: 0:03:42, time (data): 0.360 (0.092)] l_pix: 3.1068e-02 l_ratio: 0.0000e+00 
+2026-10-22 20:24:06,228 INFO: [CAMix..][epoch:  0, iter:   4,500, lr:(5.000e-04,)] [eta: 0:03:33, time (data): 0.359 (0.090)] l_pix: 3.1059e-02 l_ratio: 7.4767e-06 
+2026-10-22 20:24:13,334 INFO: [CAMix..][epoch:  0, iter:   4,520, lr:(5.000e-04,)] [eta: 0:03:24, time (data): 0.358 (0.089)] l_pix: 2.6972e-02 l_ratio: 3.4336e-07 
+2026-10-22 20:24:20,277 INFO: [CAMix..][epoch:  0, iter:   4,540, lr:(5.000e-04,)] [eta: 0:03:15, time (data): 0.356 (0.088)] l_pix: 3.8593e-02 l_ratio: 4.4098e-05 
+2026-10-22 20:24:27,523 INFO: [CAMix..][epoch:  0, iter:   4,560, lr:(5.000e-04,)] [eta: 0:03:07, time (data): 0.357 (0.089)] l_pix: 3.0227e-02 l_ratio: 2.9907e-05 
+2026-10-22 20:24:34,652 INFO: [CAMix..][epoch:  0, iter:   4,580, lr:(5.000e-04,)] [eta: 0:02:58, time (data): 0.357 (0.089)] l_pix: 3.2763e-02 l_ratio: 5.8021e-05 
+2026-10-22 20:24:41,447 INFO: [CAMix..][epoch:  0, iter:   4,600, lr:(5.000e-04,)] [eta: 0:02:49, time (data): 0.355 (0.087)] l_pix: 2.9612e-02 l_ratio: 1.3771e-05 
+2026-10-22 20:24:48,580 INFO: [CAMix..][epoch:  0, iter:   4,620, lr:(5.000e-04,)] [eta: 0:02:41, time (data): 0.355 (0.087)] l_pix: 2.8253e-02 l_ratio: 3.4336e-07 
+2026-10-22 20:24:55,798 INFO: [CAMix..][epoch:  0, iter:   4,640, lr:(5.000e-04,)] [eta: 0:02:32, time (data): 0.374 (0.100)] l_pix: 4.0894e-02 l_ratio: 3.4332e-05 
+2026-10-22 20:25:02,986 INFO: [CAMix..][epoch:  0, iter:   4,660, lr:(5.000e-04,)] [eta: 0:02:24, time (data): 0.366 (0.090)] l_pix: 2.1832e-02 l_ratio: 6.1033e-07 
+2026-10-22 20:25:10,294 INFO: [CAMix..][epoch:  0, iter:   4,680, lr:(5.000e-04,)] [eta: 0:02:15, time (data): 0.366 (0.090)] l_pix: 2.6313e-02 l_ratio: 4.9438e-05 
+2026-10-22 20:25:17,207 INFO: [CAMix..][epoch:  0, iter:   4,700, lr:(5.000e-04,)] [eta: 0:02:06, time (data): 0.361 (0.086)] l_pix: 2.4071e-02 l_ratio: 7.3852e-05 
+2026-10-22 20:25:24,403 INFO: [CAMix..][epoch:  0, iter:   4,720, lr:(5.000e-04,)] [eta: 0:01:58, time (data): 0.360 (0.087)] l_pix: 3.7876e-02 l_ratio: 1.3732e-06 
+2026-10-22 20:25:31,390 INFO: [CAMix..][epoch:  0, iter:   4,740, lr:(5.000e-04,)] [eta: 0:01:49, time (data): 0.358 (0.086)] l_pix: 2.4506e-02 l_ratio: 1.4664e-04 
+2026-10-22 20:25:38,724 INFO: [CAMix..][epoch:  0, iter:   4,760, lr:(5.000e-04,)] [eta: 0:01:41, time (data): 0.360 (0.087)] l_pix: 3.4097e-02 l_ratio: 2.5787e-05 
+2026-10-22 20:25:45,841 INFO: [CAMix..][epoch:  0, iter:   4,780, lr:(5.000e-04,)] [eta: 0:01:32, time (data): 0.359 (0.087)] l_pix: 2.6700e-02 l_ratio: 3.8147e-06 
+2026-10-22 20:25:52,919 INFO: [CAMix..][epoch:  0, iter:   4,800, lr:(5.000e-04,)] [eta: 0:01:24, time (data): 0.359 (0.087)] l_pix: 3.6466e-02 l_ratio: 3.4332e-05 
+2026-10-22 20:26:00,378 INFO: [CAMix..][epoch:  0, iter:   4,820, lr:(5.000e-04,)] [eta: 0:01:15, time (data): 0.360 (0.089)] l_pix: 2.5608e-02 l_ratio: 3.8147e-06 
+2026-10-22 20:26:07,449 INFO: [CAMix..][epoch:  0, iter:   4,840, lr:(5.000e-04,)] [eta: 0:01:07, time (data): 0.359 (0.092)] l_pix: 2.9848e-02 l_ratio: 8.7891e-05 
+2026-10-22 20:26:14,784 INFO: [CAMix..][epoch:  0, iter:   4,860, lr:(5.000e-04,)] [eta: 0:00:58, time (data): 0.363 (0.097)] l_pix: 3.0255e-02 l_ratio: 5.4933e-06 
+2026-10-22 20:26:22,142 INFO: [CAMix..][epoch:  0, iter:   4,880, lr:(5.000e-04,)] [eta: 0:00:50, time (data): 0.365 (0.100)] l_pix: 2.2316e-02 l_ratio: 3.8140e-08 
+2026-10-22 20:26:29,184 INFO: [CAMix..][epoch:  0, iter:   4,900, lr:(5.000e-04,)] [eta: 0:00:41, time (data): 0.362 (0.096)] l_pix: 2.9894e-02 l_ratio: 7.4767e-06 
+2026-10-22 20:26:36,545 INFO: [CAMix..][epoch:  0, iter:   4,920, lr:(5.000e-04,)] [eta: 0:00:33, time (data): 0.363 (0.096)] l_pix: 3.1851e-02 l_ratio: 7.7248e-05 
+2026-10-22 20:26:43,656 INFO: [CAMix..][epoch:  0, iter:   4,940, lr:(5.000e-04,)] [eta: 0:00:24, time (data): 0.362 (0.093)] l_pix: 2.2265e-02 l_ratio: 7.3852e-05 
+2026-10-22 20:26:50,577 INFO: [CAMix..][epoch:  0, iter:   4,960, lr:(5.000e-04,)] [eta: 0:00:16, time (data): 0.359 (0.091)] l_pix: 3.2268e-02 l_ratio: 7.4767e-06 
+2026-10-22 20:26:57,428 INFO: [CAMix..][epoch:  0, iter:   4,980, lr:(5.000e-04,)] [eta: 0:00:07, time (data): 0.357 (0.088)] l_pix: 3.9304e-02 l_ratio: 2.1973e-05 
+2026-10-22 20:27:04,485 INFO: [CAMix..][epoch:  0, iter:   5,000, lr:(5.000e-04,)] [eta: 0:00:00, time (data): 0.357 (0.087)] l_pix: 2.9958e-02 l_ratio: 2.9908e-05 
+2026-10-22 20:27:04,485 INFO: Saving models and training states.
+2026-10-22 20:27:42,738 INFO: Validation DIV2K_val100
+	 # psnr: 27.5543	Best: 27.5543 @ 5000 iter
+
+2026-10-22 20:27:44,387 INFO: End of training. Time consumed: 0:35:46
+2026-10-22 20:27:44,388 INFO: Save the latest model.
+2026-10-22 20:28:39,104 INFO: Validation DIV2K_val100
+	 # psnr: 27.5540	Best: 27.5543 @ 5000 iter
+

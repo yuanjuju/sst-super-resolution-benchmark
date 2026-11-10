@@ -1,0 +1,61 @@
+{
+  "status": "completed",
+  "checked_at": "2026-10-22T20:30:43.866888+08:00",
+  "training_pid": 276,
+  "process_exists": false,
+  "gpu_compute_processes": "",
+  "completed_updates": 5000,
+  "validation": [
+    {
+      "step": 1000,
+      "psnr_db": 17.3931,
+      "validation_log_line": "2026-10-22 20:00:04,064 INFO: Validation DIV2K_val100",
+      "kind": "scheduled"
+    },
+    {
+      "step": 2000,
+      "psnr_db": 22.1289,
+      "validation_log_line": "2026-10-22 20:07:08,086 INFO: Validation DIV2K_val100",
+      "kind": "scheduled"
+    },
+    {
+      "step": 3000,
+      "psnr_db": 25.4935,
+      "validation_log_line": "2026-10-22 20:14:27,891 INFO: Validation DIV2K_val100",
+      "kind": "scheduled"
+    },
+    {
+      "step": 4000,
+      "psnr_db": 26.8954,
+      "validation_log_line": "2026-10-22 20:21:08,071 INFO: Validation DIV2K_val100",
+      "kind": "scheduled"
+    },
+    {
+      "step": 5000,
+      "psnr_db": 27.5543,
+      "validation_log_line": "2026-10-22 20:27:42,738 INFO: Validation DIV2K_val100",
+      "kind": "scheduled"
+    },
+    {
+      "step": 5000,
+      "psnr_db": 27.554,
+      "validation_log_line": "2026-10-22 20:28:39,104 INFO: Validation DIV2K_val100",
+      "kind": "end_of_training_repeat"
+    }
+  ],
+  "primary_5000_psnr_db": 27.5543,
+  "end_of_training_psnr_db": 27.554,
+  "dataset": "DIV2K_val100",
+  "channel": "RGB",
+  "crop_border": 4,
+  "weight_key": "params_ema",
+  "python": "3.10.12",
+  "training_duration_log": [
+    "2026-10-22 20:27:44,387 INFO: End of training. Time consumed: 0:35:46"
+  ],
+  "config_sha256": "32ada9a33c571a0df521c5ca66e4f50eb94d03a019fefe1088ece60a70ba36d4",
+  "notes": [
+    "Single short training run; batch and optimization differ from earlier SAFMN experiments; not a fair architecture ranking.",
+    "train.py validates at step 5000 and repeats validation after training; both logged scores retained without averaging."
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "input": "/Users/jinian/Documents/\u8d85\u5206/datasets/Set5/LR_bicubic/X4/bird.png",
+  "gt": "/Users/jinian/Documents/\u8d85\u5206/datasets/Set5/HR/bird.png",
+  "weights": "/Users/jinian/Documents/\u8d85\u5206/results/net_g_30000.pth",
+  "weights_sha256": "c8f372864a1479fb555d1f2a4793b31ce5d1e6a55741ca2393b37606dc0370f3",
+  "weight_key": "params",
+  "model": {
+    "name": "SAFMN",
+    "label": "SAFMN 30k",
+    "dim": 36,
+    "n_blocks": 8,
+    "ffn_scale": 2.0,
+    "scale": 4,
+    "parameters": 239520,
+    "architecture_path": "/Users/jinian/Documents/\u8d85\u5206/SAFMN/basicsr/archs/safmn_arch.py",
+    "architecture_sha256": "e1e17078ade763568e3fc54ed54d3c4ec3e5294f400f983931a4dc5bc911d6fc"
+  },
+  "input_size_wh": [
+    72,
+    72
+  ],
+  "output_size_wh": [
+    288,
+    288
+  ],
+  "device": "cpu",
+  "torch_threads": 4,
+  "inference_wall_seconds": 0.02243433427065611,
+  "inference_cpu_seconds": 0.07243900000000014,
+  "torch_version": "2.6.0",
+  "numpy_version": "1.26.4",
+  "outputs": {
+    "sr.png": "/Users/jinian/Documents/\u8d85\u5206/sr-training-workbench/learning/outputs/bird_30k/sr.png",
+    "bicubic.png": "/Users/jinian/Documents/\u8d85\u5206/sr-training-workbench/learning/outputs/bird_30k/bicubic.png",
+    "comparison.png": "/Users/jinian/Documents/\u8d85\u5206/sr-training-workbench/learning/outputs/bird_30k/comparison.png",
+    "result.json": "/Users/jinian/Documents/\u8d85\u5206/sr-training-workbench/learning/outputs/bird_30k/result.json"
+  },
+  "comparison_center_roi_xyxy": [
+    108,
+    108,
+    180,
+    180
+  ],
+  "metrics": {
+    "protocol": "single-image uint8 RGB PSNR; crop_border=4; float64 MSE; peak=255",
+    "sr": {
+      "psnr_db": 32.20329964896334,
+      "mse": 39.151679421768705
+    },
+    "pillow_bicubic": {
+      "psnr_db": 28.212975297468038,
+      "mse": 98.12571428571428
+    }
+  },
+  "notes": [
+    "Single-image local practice result; not a dataset-average benchmark or model ranking.",
+    "Pillow bicubic baseline is not the official MATLAB degradation generator.",
+    "Inference timing is one CPU forward pass, without warmup; file I/O is excluded."
+  ]
+}

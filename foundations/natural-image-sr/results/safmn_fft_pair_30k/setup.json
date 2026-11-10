@@ -1,0 +1,10 @@
+{
+  "status": "ready",
+  "checked_at": "2026-10-23T22:32:56.422762+08:00",
+  "source_environment": "/root/fsas/sr-repro/CAMixerSR/.venv-5090",
+  "independent_environment": "/root/fsas/sr-repro/SAFMN/.venv-5090",
+  "packages_copied_offline": true,
+  "probe": "/root/fsas/sr-repro/SAFMN/.venv-5090\n2.7.1+cu128 0.22.1+cu128 10.4.0\nTrue NVIDIA GeForce RTX 5090\n",
+  "compatibility_file": "/root/fsas/sr-repro/SAFMN/basicsr/data/degradations.py",
+  "compatibility_sha256": "37d1def9ea0924b2b54fc2eea78d1fc8dd59bff2867d50d59c41e25a3202f255"
+}

@@ -1,0 +1,5 @@
+Disable distributed.
+{"run": "fft", "initial_weights_match": true, "losses": [{"l_pix": 1.0152643918991089, "l_freq": 1.3052852153778076}, {"l_pix": 0.5916199088096619, "l_freq": 0.9760723114013672}, {"l_pix": 0.3854057788848877, "l_freq": 0.8149458765983582}], "step_compute_seconds": [1.217076012864709, 0.07269107876345515, 0.06660213368013501], "max_parameter_change": 0.002998165786266327, "peak_allocated_gib": 5.336149215698242, "lq_shape": [64, 3, 64, 64], "gt_shape": [64, 3, 256, 256], "ema_output_shape": [64, 3, 256, 256], "diagnostic_workers": 0}
+Disable distributed.
+{"run": "nofft", "initial_weights_match": true, "losses": [{"l_pix": 1.0152643918991089}, {"l_pix": 0.5750247836112976}, {"l_pix": 0.418790340423584}], "step_compute_seconds": [0.07075634179636836, 0.060888782143592834, 0.06509699579328299], "max_parameter_change": 0.0028969869017601013, "peak_allocated_gib": 4.630914211273193, "lq_shape": [64, 3, 64, 64], "gt_shape": [64, 3, 256, 256], "ema_output_shape": [64, 3, 256, 256], "diagnostic_workers": 0}
+PREFLIGHT_PASSED

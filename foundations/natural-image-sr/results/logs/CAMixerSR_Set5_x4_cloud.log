@@ -1,0 +1,202 @@
+2026-10-14 19:39:40,245 INFO: 
+                ____                _       _____  ____
+               / __ ) ____ _ _____ (_)_____/ ___/ / __ \
+              / __  |/ __ `// ___// // ___/\__ \ / /_/ /
+             / /_/ // /_/ /(__  )/ // /__ ___/ // _, _/
+            /_____/ \__,_//____//_/ \___//____//_/ |_|
+     ______                   __   __                 __      __
+    / ____/____   ____   ____/ /  / /   __  __ _____ / /__   / /
+   / / __ / __ \ / __ \ / __  /  / /   / / / // ___// //_/  / /
+  / /_/ // /_/ // /_/ // /_/ /  / /___/ /_/ // /__ / /<    /_/
+  \____/ \____/ \____/ \____/  /_____/\____/ \___//_/|_|  (_)
+    
+Version Information: 
+	BasicSR: 1.4.2
+	PyTorch: 2.1.1+cu121
+	TorchVision: 0.16.1+cu121
+2026-10-14 19:39:40,246 INFO: 
+  name: CAMixerSR_Set5_x4_cloud
+  model_type: SRModel
+  scale: 4
+  num_gpu: 1
+  manual_seed: 0
+  datasets:[
+    test_1:[
+      name: Set5
+      type: PairedImageDataset
+      dataroot_gt: /root/fsas/sr-repro/datasets/Set5/HR
+      dataroot_lq: /root/fsas/sr-repro/datasets/Set5/LR_bicubic/X4
+      filename_tmpl: {}
+      io_backend:[
+        type: disk
+      ]
+      phase: test
+      scale: 4
+    ]
+  ]
+  network_g:[
+    type: CAMixerSR
+    ratio: 0.5
+    scale: 4
+  ]
+  path:[
+    pretrain_network_g: /root/fsas/sr-repro/CAMixerSR/pretrained_models/LightSR/CAMixerSRx4_DF.pth
+    strict_load_g: True
+    param_key_g: params_ema
+    results_root: /root/fsas/sr-repro/CAMixerSR/codes/results/CAMixerSR_Set5_x4_cloud
+    log: /root/fsas/sr-repro/CAMixerSR/codes/results/CAMixerSR_Set5_x4_cloud
+    visualization: /root/fsas/sr-repro/CAMixerSR/codes/results/CAMixerSR_Set5_x4_cloud/visualization
+  ]
+  val:[
+    save_img: True
+    suffix: None
+    metrics:[
+      psnr:[
+        type: calculate_psnr
+        crop_border: 4
+        test_y_channel: True
+      ]
+      ssim:[
+        type: calculate_ssim
+        crop_border: 4
+        test_y_channel: True
+      ]
+    ]
+  ]
+  dist: False
+  rank: 0
+  world_size: 1
+  auto_resume: False
+  is_train: False
+
+2026-10-14 19:39:40,246 INFO: Dataset [PairedImageDataset] - Set5 is built.
+2026-10-14 19:39:40,247 INFO: Number of test images in Set5: 5
+2026-10-14 19:39:40,285 INFO: Network [CAMixerSR] is created.
+2026-10-14 19:39:40,636 INFO: Network: CAMixerSR, with parameters: 765,322
+2026-10-14 19:39:40,636 INFO: CAMixerSR(
+  (head): Conv2d(3, 60, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (global_predictor): Sequential(
+    (0): Conv2d(60, 8, kernel_size=(1, 1), stride=(1, 1))
+    (1): LeakyReLU(negative_slope=0.1, inplace=True)
+    (2): Conv2d(8, 2, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (3): LeakyReLU(negative_slope=0.1, inplace=True)
+  )
+  (body): ModuleList(
+    (0-1): 2 x Group(
+      (body): ModuleList(
+        (0-3): 4 x Block(
+          (norm1): LayerNorm()
+          (mixer): CAMixer(
+            (project_v): Conv2d(60, 60, kernel_size=(1, 1), stride=(1, 1))
+            (project_q): Linear(in_features=60, out_features=60, bias=True)
+            (project_k): Linear(in_features=60, out_features=60, bias=True)
+            (conv_sptial): Sequential(
+              (0): Conv2d(60, 60, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=60)
+              (1): Conv2d(60, 60, kernel_size=(3, 3), stride=(1, 1), padding=(2, 2), dilation=(2, 2), groups=60)
+            )
+            (project_out): Conv2d(60, 60, kernel_size=(1, 1), stride=(1, 1))
+            (act): GELU(approximate='none')
+            (route): PredictorLG(
+              (in_conv): Sequential(
+                (0): Conv2d(64, 16, kernel_size=(1, 1), stride=(1, 1))
+                (1): LayerNorm()
+                (2): LeakyReLU(negative_slope=0.1, inplace=True)
+              )
+              (out_offsets): Sequential(
+                (0): Conv2d(16, 8, kernel_size=(1, 1), stride=(1, 1))
+                (1): LeakyReLU(negative_slope=0.1, inplace=True)
+                (2): Conv2d(8, 2, kernel_size=(1, 1), stride=(1, 1))
+              )
+              (out_mask): Sequential(
+                (0): Linear(in_features=256, out_features=16, bias=True)
+                (1): LeakyReLU(negative_slope=0.1, inplace=True)
+                (2): Linear(in_features=16, out_features=2, bias=True)
+                (3): Softmax(dim=-1)
+              )
+              (out_CA): Sequential(
+                (0): AdaptiveAvgPool2d(output_size=1)
+                (1): Conv2d(16, 60, kernel_size=(1, 1), stride=(1, 1))
+                (2): Sigmoid()
+              )
+              (out_SA): Sequential(
+                (0): Conv2d(16, 1, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                (1): Sigmoid()
+              )
+            )
+          )
+          (norm2): LayerNorm()
+          (ffn): GatedFeedForward(
+            (project_in): Conv2d(60, 120, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (dwconv): Conv2d(120, 120, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=120, bias=False)
+            (project_out): Conv2d(60, 60, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          )
+        )
+      )
+      (body_tail): Conv2d(60, 60, kernel_size=(1, 1), stride=(1, 1))
+    )
+    (2-3): 2 x Group(
+      (body): ModuleList(
+        (0-5): 6 x Block(
+          (norm1): LayerNorm()
+          (mixer): CAMixer(
+            (project_v): Conv2d(60, 60, kernel_size=(1, 1), stride=(1, 1))
+            (project_q): Linear(in_features=60, out_features=60, bias=True)
+            (project_k): Linear(in_features=60, out_features=60, bias=True)
+            (conv_sptial): Sequential(
+              (0): Conv2d(60, 60, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=60)
+              (1): Conv2d(60, 60, kernel_size=(3, 3), stride=(1, 1), padding=(2, 2), dilation=(2, 2), groups=60)
+            )
+            (project_out): Conv2d(60, 60, kernel_size=(1, 1), stride=(1, 1))
+            (act): GELU(approximate='none')
+            (route): PredictorLG(
+              (in_conv): Sequential(
+                (0): Conv2d(64, 16, kernel_size=(1, 1), stride=(1, 1))
+                (1): LayerNorm()
+                (2): LeakyReLU(negative_slope=0.1, inplace=True)
+              )
+              (out_offsets): Sequential(
+                (0): Conv2d(16, 8, kernel_size=(1, 1), stride=(1, 1))
+                (1): LeakyReLU(negative_slope=0.1, inplace=True)
+                (2): Conv2d(8, 2, kernel_size=(1, 1), stride=(1, 1))
+              )
+              (out_mask): Sequential(
+                (0): Linear(in_features=256, out_features=16, bias=True)
+                (1): LeakyReLU(negative_slope=0.1, inplace=True)
+                (2): Linear(in_features=16, out_features=2, bias=True)
+                (3): Softmax(dim=-1)
+              )
+              (out_CA): Sequential(
+                (0): AdaptiveAvgPool2d(output_size=1)
+                (1): Conv2d(16, 60, kernel_size=(1, 1), stride=(1, 1))
+                (2): Sigmoid()
+              )
+              (out_SA): Sequential(
+                (0): Conv2d(16, 1, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                (1): Sigmoid()
+              )
+            )
+          )
+          (norm2): LayerNorm()
+          (ffn): GatedFeedForward(
+            (project_in): Conv2d(60, 120, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (dwconv): Conv2d(120, 120, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=120, bias=False)
+            (project_out): Conv2d(60, 60, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          )
+        )
+      )
+      (body_tail): Conv2d(60, 60, kernel_size=(1, 1), stride=(1, 1))
+    )
+  )
+  (body_tail): Conv2d(60, 60, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (tail): Sequential(
+    (0): Conv2d(60, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): PixelShuffle(upscale_factor=4)
+  )
+)
+2026-10-14 19:39:40,674 INFO: Loading CAMixerSR model from /root/fsas/sr-repro/CAMixerSR/pretrained_models/LightSR/CAMixerSRx4_DF.pth, with param key: [params_ema].
+2026-10-14 19:39:40,744 INFO: Model [SRModel] is created.
+2026-10-14 19:39:40,744 INFO: Testing Set5...
+2026-10-14 19:39:42,041 INFO: Validation Set5
+	 # psnr: 32.5533	Best: 32.5533 @ CAMixerSR_Set5_x4_cloud iter
+	 # ssim: 0.8997	Best: 0.8997 @ CAMixerSR_Set5_x4_cloud iter
+

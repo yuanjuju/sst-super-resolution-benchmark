@@ -1,0 +1,92 @@
+[
+  {
+    "path": "datasets/Set5/HR/baby.png",
+    "sample_id": "baby",
+    "role": "HR",
+    "width": 512,
+    "height": 512,
+    "bytes": 371264,
+    "sha256": "cb85956d68f708a1030c790d143cbcd108f5ac5988d3349180cdcb54dd80597d"
+  },
+  {
+    "path": "datasets/Set5/HR/bird.png",
+    "sample_id": "bird",
+    "role": "HR",
+    "width": 288,
+    "height": 288,
+    "bytes": 120453,
+    "sha256": "5dcf863f7c3802e68fbb0fca2ec351052a1f97a4db613e510dbd105cee9a6a32"
+  },
+  {
+    "path": "datasets/Set5/HR/butterfly.png",
+    "sample_id": "butterfly",
+    "role": "HR",
+    "width": 256,
+    "height": 256,
+    "bytes": 127529,
+    "sha256": "487d841c9dbc46c7ab496c319ec1f13268de7ea7e02f94ae18781ca86a5abd0d"
+  },
+  {
+    "path": "datasets/Set5/HR/head.png",
+    "sample_id": "head",
+    "role": "HR",
+    "width": 280,
+    "height": 280,
+    "bytes": 113787,
+    "sha256": "f524c1ce41641c1cf269a20c4dfbe965e07e471d609abc19dfadfb71037cc873"
+  },
+  {
+    "path": "datasets/Set5/HR/woman.png",
+    "sample_id": "woman",
+    "role": "HR",
+    "width": 228,
+    "height": 344,
+    "bytes": 118848,
+    "sha256": "f276625a222b9ce18d18d86e1ec603fea50427b7c0a2927b3750b1bb86a07b83"
+  },
+  {
+    "path": "datasets/Set5/LR_bicubic/X4/baby.png",
+    "sample_id": "baby",
+    "role": "LR_x4",
+    "width": 128,
+    "height": 128,
+    "bytes": 31202,
+    "sha256": "86f6e1b97fd198336b33474103f43c4cb8963566b4aff34c0421e7ebeac644f3"
+  },
+  {
+    "path": "datasets/Set5/LR_bicubic/X4/bird.png",
+    "sample_id": "bird",
+    "role": "LR_x4",
+    "width": 72,
+    "height": 72,
+    "bytes": 11299,
+    "sha256": "2c17d5eaca516650fc3993af9cd61ea8d3e1c777d1a7fe9b0407c3d928b24286"
+  },
+  {
+    "path": "datasets/Set5/LR_bicubic/X4/butterfly.png",
+    "sample_id": "butterfly",
+    "role": "LR_x4",
+    "width": 64,
+    "height": 64,
+    "bytes": 10508,
+    "sha256": "5f70e1e1e7e9bef23ff8d35e57dab5fa07cc08c8b5bb85fa3a15aa8550bfb2e0"
+  },
+  {
+    "path": "datasets/Set5/LR_bicubic/X4/head.png",
+    "sample_id": "head",
+    "role": "LR_x4",
+    "width": 70,
+    "height": 70,
+    "bytes": 9136,
+    "sha256": "ef22055522c8828298bb3c9e03343394f2fbf9eb916131c5d0e6948fa4cf23a4"
+  },
+  {
+    "path": "datasets/Set5/LR_bicubic/X4/woman.png",
+    "sample_id": "woman",
+    "role": "LR_x4",
+    "width": 57,
+    "height": 86,
+    "bytes": 10804,
+    "sha256": "43b8bf9622734a7201a07f7f8764afeeb9b90e20639043aaa9a89055d7a610c6"
+  }
+]

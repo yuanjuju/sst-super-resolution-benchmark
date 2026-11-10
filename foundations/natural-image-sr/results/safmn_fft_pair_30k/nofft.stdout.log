@@ -1,0 +1,634 @@
+Disable distributed.
+2026-10-24 02:11:40,924 INFO: 
+                ____                _       _____  ____
+               / __ ) ____ _ _____ (_)_____/ ___/ / __ \
+              / __  |/ __ `// ___// // ___/\__ \ / /_/ /
+             / /_/ // /_/ /(__  )/ // /__ ___/ // _, _/
+            /_____/ \__,_//____//_/ \___//____//_/ |_|
+     ______                   __   __                 __      __
+    / ____/____   ____   ____/ /  / /   __  __ _____ / /__   / /
+   / / __ / __ \ / __ \ / __  /  / /   / / / // ___// //_/  / /
+  / /_/ // /_/ // /_/ // /_/ /  / /___/ /_/ // /__ / /<    /_/
+  \____/ \____/ \____/ \____/  /_____/\____/ \___//_/|_|  (_)
+    
+Version Information: 
+	BasicSR: 1.3.4.8
+	PyTorch: 2.7.1+cu128
+	TorchVision: 0.22.1+cu128
+2026-10-24 02:11:40,924 INFO: 
+  name: SAFMN_DF2K_x4_pair_nofft_30000
+  model_type: SRModel
+  scale: 4
+  num_gpu: 1
+  manual_seed: 10
+  datasets:[
+    train:[
+      name: DF2K
+      type: PairedImageDataset
+      dataroot_gt: /root/fsas/sr-repro/datasets/DF2K/HR_sub
+      dataroot_lq: /root/fsas/sr-repro/datasets/DF2K/LR_bicubic/X4_sub
+      meta_info_file: /root/fsas/sr-repro/datasets/DF2K/meta_info_HR_sub.txt
+      filename_tmpl: {}
+      io_backend:[
+        type: disk
+      ]
+      gt_size: 256
+      use_hflip: True
+      use_rot: True
+      use_shuffle: True
+      num_worker_per_gpu: 8
+      batch_size_per_gpu: 64
+      dataset_enlarge_ratio: 10
+      prefetch_mode: None
+      phase: train
+      scale: 4
+    ]
+    val:[
+      name: DIV2K_val100
+      type: PairedImageDataset
+      dataroot_gt: /root/fsas/sr-repro/datasets/DIV2K/DIV2K_valid_HR
+      dataroot_lq: /root/fsas/sr-repro/datasets/DIV2K/DIV2K_valid_LR_bicubic/X4
+      filename_tmpl: {}x4
+      io_backend:[
+        type: disk
+      ]
+      phase: val
+      scale: 4
+    ]
+  ]
+  network_g:[
+    type: SAFMN
+    dim: 36
+    n_blocks: 8
+    ffn_scale: 2.0
+    upscaling_factor: 4
+  ]
+  path:[
+    pretrain_network_g: /root/fsas/sr-repro/safmn_fft_pair_30k/common_init.pth
+    strict_load_g: True
+    resume_state: None
+    experiments_root: /root/fsas/sr-repro/SAFMN/experiments/SAFMN_DF2K_x4_pair_nofft_30000
+    models: /root/fsas/sr-repro/SAFMN/experiments/SAFMN_DF2K_x4_pair_nofft_30000/models
+    training_states: /root/fsas/sr-repro/SAFMN/experiments/SAFMN_DF2K_x4_pair_nofft_30000/training_states
+    log: /root/fsas/sr-repro/SAFMN/experiments/SAFMN_DF2K_x4_pair_nofft_30000
+    visualization: /root/fsas/sr-repro/SAFMN/experiments/SAFMN_DF2K_x4_pair_nofft_30000/visualization
+  ]
+  train:[
+    ema_decay: 0.999
+    optim_g:[
+      type: Adam
+      lr: 0.001
+      weight_decay: 0
+      betas: [0.9, 0.99]
+    ]
+    scheduler:[
+      type: CosineAnnealingRestartLR
+      periods: [500000]
+      restart_weights: [1]
+      eta_min: 1e-05
+    ]
+    total_iter: 30000
+    warmup_iter: -1
+    pixel_opt:[
+      type: L1Loss
+      loss_weight: 1.0
+      reduction: mean
+    ]
+    fft_opt: None
+  ]
+  val:[
+    val_freq: 5000.0
+    save_img: False
+    pbar: False
+    metrics:[
+      psnr:[
+        type: calculate_psnr
+        crop_border: 4
+        test_y_channel: False
+        better: higher
+      ]
+    ]
+  ]
+  logger:[
+    print_freq: 100
+    save_checkpoint_freq: 5000.0
+    use_tb_logger: True
+    wandb:[
+      project: None
+      resume_id: None
+    ]
+  ]
+  dist_params:[
+    backend: nccl
+    port: 29500
+  ]
+  dist: False
+  rank: 0
+  world_size: 1
+  auto_resume: False
+  is_train: True
+  root_path: /root/fsas/sr-repro/SAFMN
+
+2026-10-24 02:11:43,302 INFO: Dataset [PairedImageDataset] - DF2K is built.
+/root/fsas/sr-repro/SAFMN/.venv-5090/lib/python3.10/site-packages/torch/utils/data/dataloader.py:626: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 7, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+2026-10-24 02:11:43,321 INFO: Training statistics:
+	Number of train images: 139995
+	Dataset enlarge ratio: 10
+	Batch size per gpu: 64
+	World size (gpu number): 1
+	Require iter number per epoch: 21875
+	Total epochs: 2; iters: 30000.
+2026-10-24 02:11:43,459 INFO: Dataset [PairedImageDataset] - DIV2K_val100 is built.
+2026-10-24 02:11:43,459 INFO: Number of val images/folders in DIV2K_val100: 100
+2026-10-24 02:11:43,484 INFO: Network [SAFMN] is created.
+2026-10-24 02:11:44,052 INFO: Network: SAFMN, with parameters: 239,520
+2026-10-24 02:11:44,052 INFO: SAFMN(
+  (to_feat): Conv2d(3, 36, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (feats): Sequential(
+    (0): AttBlock(
+      (norm1): LayerNorm()
+      (norm2): LayerNorm()
+      (safm): SAFM(
+        (mfr): ModuleList(
+          (0-3): 4 x Conv2d(9, 9, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=9)
+        )
+        (aggr): Conv2d(36, 36, kernel_size=(1, 1), stride=(1, 1))
+        (act): GELU(approximate='none')
+      )
+      (ccm): CCM(
+        (ccm): Sequential(
+          (0): Conv2d(36, 72, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): GELU(approximate='none')
+          (2): Conv2d(72, 36, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+    )
+    (1): AttBlock(
+      (norm1): LayerNorm()
+      (norm2): LayerNorm()
+      (safm): SAFM(
+        (mfr): ModuleList(
+          (0-3): 4 x Conv2d(9, 9, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=9)
+        )
+        (aggr): Conv2d(36, 36, kernel_size=(1, 1), stride=(1, 1))
+        (act): GELU(approximate='none')
+      )
+      (ccm): CCM(
+        (ccm): Sequential(
+          (0): Conv2d(36, 72, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): GELU(approximate='none')
+          (2): Conv2d(72, 36, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+    )
+    (2): AttBlock(
+      (norm1): LayerNorm()
+      (norm2): LayerNorm()
+      (safm): SAFM(
+        (mfr): ModuleList(
+          (0-3): 4 x Conv2d(9, 9, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=9)
+        )
+        (aggr): Conv2d(36, 36, kernel_size=(1, 1), stride=(1, 1))
+        (act): GELU(approximate='none')
+      )
+      (ccm): CCM(
+        (ccm): Sequential(
+          (0): Conv2d(36, 72, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): GELU(approximate='none')
+          (2): Conv2d(72, 36, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+    )
+    (3): AttBlock(
+      (norm1): LayerNorm()
+      (norm2): LayerNorm()
+      (safm): SAFM(
+        (mfr): ModuleList(
+          (0-3): 4 x Conv2d(9, 9, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=9)
+        )
+        (aggr): Conv2d(36, 36, kernel_size=(1, 1), stride=(1, 1))
+        (act): GELU(approximate='none')
+      )
+      (ccm): CCM(
+        (ccm): Sequential(
+          (0): Conv2d(36, 72, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): GELU(approximate='none')
+          (2): Conv2d(72, 36, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+    )
+    (4): AttBlock(
+      (norm1): LayerNorm()
+      (norm2): LayerNorm()
+      (safm): SAFM(
+        (mfr): ModuleList(
+          (0-3): 4 x Conv2d(9, 9, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=9)
+        )
+        (aggr): Conv2d(36, 36, kernel_size=(1, 1), stride=(1, 1))
+        (act): GELU(approximate='none')
+      )
+      (ccm): CCM(
+        (ccm): Sequential(
+          (0): Conv2d(36, 72, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): GELU(approximate='none')
+          (2): Conv2d(72, 36, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+    )
+    (5): AttBlock(
+      (norm1): LayerNorm()
+      (norm2): LayerNorm()
+      (safm): SAFM(
+        (mfr): ModuleList(
+          (0-3): 4 x Conv2d(9, 9, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=9)
+        )
+        (aggr): Conv2d(36, 36, kernel_size=(1, 1), stride=(1, 1))
+        (act): GELU(approximate='none')
+      )
+      (ccm): CCM(
+        (ccm): Sequential(
+          (0): Conv2d(36, 72, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): GELU(approximate='none')
+          (2): Conv2d(72, 36, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+    )
+    (6): AttBlock(
+      (norm1): LayerNorm()
+      (norm2): LayerNorm()
+      (safm): SAFM(
+        (mfr): ModuleList(
+          (0-3): 4 x Conv2d(9, 9, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=9)
+        )
+        (aggr): Conv2d(36, 36, kernel_size=(1, 1), stride=(1, 1))
+        (act): GELU(approximate='none')
+      )
+      (ccm): CCM(
+        (ccm): Sequential(
+          (0): Conv2d(36, 72, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): GELU(approximate='none')
+          (2): Conv2d(72, 36, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+    )
+    (7): AttBlock(
+      (norm1): LayerNorm()
+      (norm2): LayerNorm()
+      (safm): SAFM(
+        (mfr): ModuleList(
+          (0-3): 4 x Conv2d(9, 9, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=9)
+        )
+        (aggr): Conv2d(36, 36, kernel_size=(1, 1), stride=(1, 1))
+        (act): GELU(approximate='none')
+      )
+      (ccm): CCM(
+        (ccm): Sequential(
+          (0): Conv2d(36, 72, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): GELU(approximate='none')
+          (2): Conv2d(72, 36, kernel_size=(1, 1), stride=(1, 1))
+        )
+      )
+    )
+  )
+  (to_img): Sequential(
+    (0): Conv2d(36, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): PixelShuffle(upscale_factor=4)
+  )
+)
+2026-10-24 02:11:44,120 INFO: Loading SAFMN model from /root/fsas/sr-repro/safmn_fft_pair_30k/common_init.pth, with param key: [params].
+2026-10-24 02:11:44,135 INFO: Use Exponential Moving Average with decay: 0.999
+2026-10-24 02:11:44,146 INFO: Network [SAFMN] is created.
+2026-10-24 02:11:44,188 INFO: Loading SAFMN model from /root/fsas/sr-repro/safmn_fft_pair_30k/common_init.pth, with param key: [params_ema].
+2026-10-24 02:11:44,199 INFO: Loss [L1Loss] is created.
+2026-10-24 02:11:44,200 INFO: Model [SRModel] is created.
+2026-10-24 02:11:44,451 INFO: Start training from epoch: 0, iter: 0
+2026-10-24 02:12:30,006 INFO: [SAFMN..][epoch:  0, iter:     100, lr:(1.000e-03,)] [eta: 3:02:35, time (data): 0.456 (0.344)] l_pix: 4.6805e-02 
+2026-10-24 02:13:10,134 INFO: [SAFMN..][epoch:  0, iter:     200, lr:(1.000e-03,)] [eta: 3:10:35, time (data): 0.428 (0.341)] l_pix: 4.1648e-02 
+2026-10-24 02:13:50,666 INFO: [SAFMN..][epoch:  0, iter:     300, lr:(1.000e-03,)] [eta: 3:13:30, time (data): 0.409 (0.344)] l_pix: 3.9747e-02 
+2026-10-24 02:14:29,319 INFO: [SAFMN..][epoch:  0, iter:     400, lr:(1.000e-03,)] [eta: 3:12:18, time (data): 0.397 (0.332)] l_pix: 3.5139e-02 
+2026-10-24 02:15:06,355 INFO: [SAFMN..][epoch:  0, iter:     500, lr:(1.000e-03,)] [eta: 3:09:44, time (data): 0.374 (0.309)] l_pix: 3.9110e-02 
+2026-10-24 02:15:43,380 INFO: [SAFMN..][epoch:  0, iter:     600, lr:(1.000e-03,)] [eta: 3:07:49, time (data): 0.372 (0.307)] l_pix: 3.6070e-02 
+2026-10-24 02:16:19,154 INFO: [SAFMN..][epoch:  0, iter:     700, lr:(1.000e-03,)] [eta: 3:05:24, time (data): 0.363 (0.298)] l_pix: 3.1685e-02 
+2026-10-24 02:16:55,058 INFO: [SAFMN..][epoch:  0, iter:     800, lr:(1.000e-03,)] [eta: 3:03:31, time (data): 0.361 (0.296)] l_pix: 3.3771e-02 
+2026-10-24 02:17:29,629 INFO: [SAFMN..][epoch:  0, iter:     900, lr:(1.000e-03,)] [eta: 3:01:11, time (data): 0.354 (0.290)] l_pix: 3.2243e-02 
+2026-10-24 02:18:06,628 INFO: [SAFMN..][epoch:  0, iter:   1,000, lr:(1.000e-03,)] [eta: 3:00:24, time (data): 0.362 (0.297)] l_pix: 3.3871e-02 
+2026-10-24 02:18:43,743 INFO: [SAFMN..][epoch:  0, iter:   1,100, lr:(1.000e-03,)] [eta: 2:59:41, time (data): 0.384 (0.318)] l_pix: 2.8800e-02 
+2026-10-24 02:19:20,905 INFO: [SAFMN..][epoch:  0, iter:   1,200, lr:(1.000e-03,)] [eta: 2:59:00, time (data): 0.378 (0.311)] l_pix: 2.7215e-02 
+2026-10-24 02:19:58,034 INFO: [SAFMN..][epoch:  0, iter:   1,300, lr:(1.000e-03,)] [eta: 2:58:19, time (data): 0.374 (0.309)] l_pix: 3.0698e-02 
+2026-10-24 02:20:35,081 INFO: [SAFMN..][epoch:  0, iter:   1,400, lr:(1.000e-03,)] [eta: 2:57:37, time (data): 0.372 (0.307)] l_pix: 3.7910e-02 
+2026-10-24 02:21:14,558 INFO: [SAFMN..][epoch:  0, iter:   1,500, lr:(1.000e-03,)] [eta: 2:57:42, time (data): 0.395 (0.330)] l_pix: 3.1421e-02 
+2026-10-24 02:21:53,270 INFO: [SAFMN..][epoch:  0, iter:   1,600, lr:(1.000e-03,)] [eta: 2:57:27, time (data): 0.391 (0.326)] l_pix: 3.1053e-02 
+2026-10-24 02:22:33,398 INFO: [SAFMN..][epoch:  0, iter:   1,700, lr:(1.000e-03,)] [eta: 2:57:34, time (data): 0.399 (0.333)] l_pix: 2.8226e-02 
+2026-10-24 02:23:12,966 INFO: [SAFMN..][epoch:  0, iter:   1,800, lr:(1.000e-03,)] [eta: 2:57:26, time (data): 0.397 (0.332)] l_pix: 2.7631e-02 
+2026-10-24 02:23:34,919 INFO: [SAFMN..][epoch:  0, iter:   1,900, lr:(1.000e-03,)] [eta: 2:52:55, time (data): 0.210 (0.156)] l_pix: 3.3201e-02 
+2026-10-24 02:23:56,012 INFO: [SAFMN..][epoch:  0, iter:   2,000, lr:(1.000e-03,)] [eta: 2:48:36, time (data): 0.210 (0.155)] l_pix: 3.1586e-02 
+2026-10-24 02:24:19,275 INFO: [SAFMN..][epoch:  0, iter:   2,100, lr:(1.000e-03,)] [eta: 2:45:09, time (data): 0.240 (0.181)] l_pix: 3.6928e-02 
+2026-10-24 02:24:47,424 INFO: [SAFMN..][epoch:  0, iter:   2,200, lr:(1.000e-03,)] [eta: 2:43:01, time (data): 0.262 (0.201)] l_pix: 2.7193e-02 
+2026-10-24 02:25:13,760 INFO: [SAFMN..][epoch:  0, iter:   2,300, lr:(9.999e-04,)] [eta: 2:40:39, time (data): 0.265 (0.206)] l_pix: 3.0057e-02 
+2026-10-24 02:25:41,017 INFO: [SAFMN..][epoch:  0, iter:   2,400, lr:(9.999e-04,)] [eta: 2:38:37, time (data): 0.269 (0.211)] l_pix: 2.9131e-02 
+2026-10-24 02:26:06,008 INFO: [SAFMN..][epoch:  0, iter:   2,500, lr:(9.999e-04,)] [eta: 2:36:19, time (data): 0.257 (0.199)] l_pix: 2.8455e-02 
+2026-10-24 02:26:31,241 INFO: [SAFMN..][epoch:  0, iter:   2,600, lr:(9.999e-04,)] [eta: 2:34:11, time (data): 0.254 (0.196)] l_pix: 2.6708e-02 
+2026-10-24 02:26:58,928 INFO: [SAFMN..][epoch:  0, iter:   2,700, lr:(9.999e-04,)] [eta: 2:32:36, time (data): 0.279 (0.217)] l_pix: 2.7893e-02 
+2026-10-24 02:27:31,647 INFO: [SAFMN..][epoch:  0, iter:   2,800, lr:(9.999e-04,)] [eta: 2:31:54, time (data): 0.305 (0.241)] l_pix: 2.5555e-02 
+2026-10-24 02:28:07,990 INFO: [SAFMN..][epoch:  0, iter:   2,900, lr:(9.999e-04,)] [eta: 2:31:47, time (data): 0.361 (0.295)] l_pix: 2.7131e-02 
+2026-10-24 02:28:43,430 INFO: [SAFMN..][epoch:  0, iter:   3,000, lr:(9.999e-04,)] [eta: 2:31:30, time (data): 0.357 (0.292)] l_pix: 2.8386e-02 
+2026-10-24 02:29:21,609 INFO: [SAFMN..][epoch:  0, iter:   3,100, lr:(9.999e-04,)] [eta: 2:31:35, time (data): 0.382 (0.317)] l_pix: 3.0165e-02 
+2026-10-24 02:29:55,844 INFO: [SAFMN..][epoch:  0, iter:   3,200, lr:(9.999e-04,)] [eta: 2:31:05, time (data): 0.360 (0.297)] l_pix: 2.7347e-02 
+2026-10-24 02:30:30,159 INFO: [SAFMN..][epoch:  0, iter:   3,300, lr:(9.999e-04,)] [eta: 2:30:35, time (data): 0.347 (0.283)] l_pix: 3.2407e-02 
+2026-10-24 02:31:04,063 INFO: [SAFMN..][epoch:  0, iter:   3,400, lr:(9.999e-04,)] [eta: 2:30:02, time (data): 0.343 (0.279)] l_pix: 3.4688e-02 
+2026-10-24 02:31:37,881 INFO: [SAFMN..][epoch:  0, iter:   3,500, lr:(9.999e-04,)] [eta: 2:29:28, time (data): 0.345 (0.282)] l_pix: 2.7982e-02 
+2026-10-24 02:32:10,430 INFO: [SAFMN..][epoch:  0, iter:   3,600, lr:(9.999e-04,)] [eta: 2:28:45, time (data): 0.334 (0.271)] l_pix: 2.7739e-02 
+2026-10-24 02:32:43,475 INFO: [SAFMN..][epoch:  0, iter:   3,700, lr:(9.999e-04,)] [eta: 2:28:05, time (data): 0.337 (0.272)] l_pix: 3.4722e-02 
+2026-10-24 02:33:18,418 INFO: [SAFMN..][epoch:  0, iter:   3,800, lr:(9.999e-04,)] [eta: 2:27:39, time (data): 0.344 (0.279)] l_pix: 2.7558e-02 
+2026-10-24 02:33:51,807 INFO: [SAFMN..][epoch:  0, iter:   3,900, lr:(9.999e-04,)] [eta: 2:27:03, time (data): 0.346 (0.280)] l_pix: 3.3607e-02 
+2026-10-24 02:34:25,880 INFO: [SAFMN..][epoch:  0, iter:   4,000, lr:(9.998e-04,)] [eta: 2:26:31, time (data): 0.343 (0.278)] l_pix: 2.6173e-02 
+2026-10-24 02:34:58,240 INFO: [SAFMN..][epoch:  0, iter:   4,100, lr:(9.998e-04,)] [eta: 2:25:48, time (data): 0.339 (0.276)] l_pix: 3.0954e-02 
+2026-10-24 02:35:33,233 INFO: [SAFMN..][epoch:  0, iter:   4,200, lr:(9.998e-04,)] [eta: 2:25:21, time (data): 0.345 (0.282)] l_pix: 3.4108e-02 
+2026-10-24 02:36:06,069 INFO: [SAFMN..][epoch:  0, iter:   4,300, lr:(9.998e-04,)] [eta: 2:24:42, time (data): 0.312 (0.248)] l_pix: 2.5563e-02 
+2026-10-24 02:36:41,965 INFO: [SAFMN..][epoch:  0, iter:   4,400, lr:(9.998e-04,)] [eta: 2:24:20, time (data): 0.338 (0.274)] l_pix: 2.8700e-02 
+2026-10-24 02:37:14,795 INFO: [SAFMN..][epoch:  0, iter:   4,500, lr:(9.998e-04,)] [eta: 2:23:41, time (data): 0.319 (0.254)] l_pix: 2.7261e-02 
+2026-10-24 02:37:53,470 INFO: [SAFMN..][epoch:  0, iter:   4,600, lr:(9.998e-04,)] [eta: 2:23:34, time (data): 0.357 (0.293)] l_pix: 3.4925e-02 
+2026-10-24 02:38:31,940 INFO: [SAFMN..][epoch:  0, iter:   4,700, lr:(9.998e-04,)] [eta: 2:23:24, time (data): 0.380 (0.318)] l_pix: 2.6427e-02 
+2026-10-24 02:39:10,055 INFO: [SAFMN..][epoch:  0, iter:   4,800, lr:(9.998e-04,)] [eta: 2:23:12, time (data): 0.380 (0.318)] l_pix: 2.6627e-02 
+2026-10-24 02:39:48,463 INFO: [SAFMN..][epoch:  0, iter:   4,900, lr:(9.998e-04,)] [eta: 2:23:00, time (data): 0.381 (0.319)] l_pix: 3.0637e-02 
+2026-10-24 02:40:26,751 INFO: [SAFMN..][epoch:  0, iter:   5,000, lr:(9.998e-04,)] [eta: 2:22:46, time (data): 0.382 (0.319)] l_pix: 3.1150e-02 
+2026-10-24 02:40:26,752 INFO: Saving models and training states.
+2026-10-24 02:41:34,794 INFO: Validation DIV2K_val100
+	 # psnr: 27.7348	Best: 27.7348 @ 5000 iter
+
+2026-10-24 02:42:14,329 INFO: [SAFMN..][epoch:  0, iter:   5,100, lr:(9.997e-04,)] [eta: 2:28:10, time (data): 0.429 (0.367)] l_pix: 2.3315e-02 
+2026-10-24 02:42:55,086 INFO: [SAFMN..][epoch:  0, iter:   5,200, lr:(9.997e-04,)] [eta: 2:27:58, time (data): 0.417 (0.354)] l_pix: 2.6031e-02 
+2026-10-24 02:43:38,681 INFO: [SAFMN..][epoch:  0, iter:   5,300, lr:(9.997e-04,)] [eta: 2:27:59, time (data): 0.432 (0.367)] l_pix: 2.6463e-02 
+2026-10-24 02:44:18,638 INFO: [SAFMN..][epoch:  0, iter:   5,400, lr:(9.997e-04,)] [eta: 2:27:41, time (data): 0.413 (0.348)] l_pix: 2.9174e-02 
+2026-10-24 02:44:59,009 INFO: [SAFMN..][epoch:  0, iter:   5,500, lr:(9.997e-04,)] [eta: 2:27:24, time (data): 0.395 (0.330)] l_pix: 2.8110e-02 
+2026-10-24 02:45:36,359 INFO: [SAFMN..][epoch:  0, iter:   5,600, lr:(9.997e-04,)] [eta: 2:26:54, time (data): 0.383 (0.317)] l_pix: 3.0088e-02 
+2026-10-24 02:46:15,783 INFO: [SAFMN..][epoch:  0, iter:   5,700, lr:(9.997e-04,)] [eta: 2:26:32, time (data): 0.389 (0.326)] l_pix: 3.1256e-02 
+2026-10-24 02:46:53,157 INFO: [SAFMN..][epoch:  0, iter:   5,800, lr:(9.997e-04,)] [eta: 2:26:00, time (data): 0.380 (0.317)] l_pix: 2.5943e-02 
+2026-10-24 02:47:28,517 INFO: [SAFMN..][epoch:  0, iter:   5,900, lr:(9.997e-04,)] [eta: 2:25:21, time (data): 0.338 (0.276)] l_pix: 2.4575e-02 
+2026-10-24 02:48:04,809 INFO: [SAFMN..][epoch:  0, iter:   6,000, lr:(9.996e-04,)] [eta: 2:24:45, time (data): 0.352 (0.290)] l_pix: 3.2317e-02 
+2026-10-24 02:48:39,653 INFO: [SAFMN..][epoch:  0, iter:   6,100, lr:(9.996e-04,)] [eta: 2:24:03, time (data): 0.338 (0.278)] l_pix: 2.4039e-02 
+2026-10-24 02:49:13,459 INFO: [SAFMN..][epoch:  0, iter:   6,200, lr:(9.996e-04,)] [eta: 2:23:18, time (data): 0.338 (0.277)] l_pix: 2.2323e-02 
+2026-10-24 02:49:47,066 INFO: [SAFMN..][epoch:  0, iter:   6,300, lr:(9.996e-04,)] [eta: 2:22:33, time (data): 0.327 (0.263)] l_pix: 2.6830e-02 
+2026-10-24 02:50:20,969 INFO: [SAFMN..][epoch:  0, iter:   6,400, lr:(9.996e-04,)] [eta: 2:21:48, time (data): 0.334 (0.270)] l_pix: 3.0794e-02 
+2026-10-24 02:50:54,514 INFO: [SAFMN..][epoch:  0, iter:   6,500, lr:(9.996e-04,)] [eta: 2:21:03, time (data): 0.348 (0.283)] l_pix: 2.3928e-02 
+2026-10-24 02:51:26,073 INFO: [SAFMN..][epoch:  0, iter:   6,600, lr:(9.996e-04,)] [eta: 2:20:11, time (data): 0.329 (0.265)] l_pix: 2.9540e-02 
+2026-10-24 02:51:59,841 INFO: [SAFMN..][epoch:  0, iter:   6,700, lr:(9.996e-04,)] [eta: 2:19:28, time (data): 0.350 (0.286)] l_pix: 2.9826e-02 
+2026-10-24 02:52:31,383 INFO: [SAFMN..][epoch:  0, iter:   6,800, lr:(9.995e-04,)] [eta: 2:18:37, time (data): 0.329 (0.267)] l_pix: 3.0178e-02 
+2026-10-24 02:53:03,913 INFO: [SAFMN..][epoch:  0, iter:   6,900, lr:(9.995e-04,)] [eta: 2:17:50, time (data): 0.312 (0.249)] l_pix: 2.9487e-02 
+2026-10-24 02:53:32,220 INFO: [SAFMN..][epoch:  0, iter:   7,000, lr:(9.995e-04,)] [eta: 2:16:50, time (data): 0.295 (0.232)] l_pix: 3.0302e-02 
+2026-10-24 02:54:04,212 INFO: [SAFMN..][epoch:  0, iter:   7,100, lr:(9.995e-04,)] [eta: 2:16:02, time (data): 0.305 (0.242)] l_pix: 2.7154e-02 
+2026-10-24 02:54:35,735 INFO: [SAFMN..][epoch:  0, iter:   7,200, lr:(9.995e-04,)] [eta: 2:15:13, time (data): 0.311 (0.248)] l_pix: 2.4396e-02 
+2026-10-24 02:55:07,870 INFO: [SAFMN..][epoch:  0, iter:   7,300, lr:(9.995e-04,)] [eta: 2:14:27, time (data): 0.320 (0.257)] l_pix: 3.1787e-02 
+2026-10-24 02:55:39,733 INFO: [SAFMN..][epoch:  0, iter:   7,400, lr:(9.995e-04,)] [eta: 2:13:40, time (data): 0.319 (0.257)] l_pix: 2.8962e-02 
+2026-10-24 02:56:14,632 INFO: [SAFMN..][epoch:  0, iter:   7,500, lr:(9.995e-04,)] [eta: 2:13:03, time (data): 0.349 (0.289)] l_pix: 2.8478e-02 
+2026-10-24 02:56:46,406 INFO: [SAFMN..][epoch:  0, iter:   7,600, lr:(9.994e-04,)] [eta: 2:12:17, time (data): 0.330 (0.269)] l_pix: 2.5053e-02 
+2026-10-24 02:57:19,816 INFO: [SAFMN..][epoch:  0, iter:   7,700, lr:(9.994e-04,)] [eta: 2:11:35, time (data): 0.329 (0.265)] l_pix: 3.3746e-02 
+2026-10-24 02:57:52,677 INFO: [SAFMN..][epoch:  0, iter:   7,800, lr:(9.994e-04,)] [eta: 2:10:53, time (data): 0.329 (0.264)] l_pix: 2.9493e-02 
+2026-10-24 02:58:26,453 INFO: [SAFMN..][epoch:  0, iter:   7,900, lr:(9.994e-04,)] [eta: 2:10:13, time (data): 0.343 (0.279)] l_pix: 2.8854e-02 
+2026-10-24 02:59:00,648 INFO: [SAFMN..][epoch:  0, iter:   8,000, lr:(9.994e-04,)] [eta: 2:09:34, time (data): 0.342 (0.279)] l_pix: 2.3068e-02 
+2026-10-24 02:59:38,426 INFO: [SAFMN..][epoch:  0, iter:   8,100, lr:(9.994e-04,)] [eta: 2:09:05, time (data): 0.389 (0.324)] l_pix: 2.3516e-02 
+2026-10-24 03:00:10,191 INFO: [SAFMN..][epoch:  0, iter:   8,200, lr:(9.993e-04,)] [eta: 2:08:21, time (data): 0.344 (0.280)] l_pix: 3.2022e-02 
+2026-10-24 03:00:46,577 INFO: [SAFMN..][epoch:  0, iter:   8,300, lr:(9.993e-04,)] [eta: 2:07:48, time (data): 0.371 (0.307)] l_pix: 2.5101e-02 
+2026-10-24 03:01:21,737 INFO: [SAFMN..][epoch:  0, iter:   8,400, lr:(9.993e-04,)] [eta: 2:07:12, time (data): 0.359 (0.293)] l_pix: 2.8127e-02 
+2026-10-24 03:01:58,271 INFO: [SAFMN..][epoch:  0, iter:   8,500, lr:(9.993e-04,)] [eta: 2:06:40, time (data): 0.372 (0.306)] l_pix: 3.1159e-02 
+2026-10-24 03:02:32,334 INFO: [SAFMN..][epoch:  0, iter:   8,600, lr:(9.993e-04,)] [eta: 2:06:01, time (data): 0.352 (0.286)] l_pix: 2.8768e-02 
+2026-10-24 03:03:07,573 INFO: [SAFMN..][epoch:  0, iter:   8,700, lr:(9.993e-04,)] [eta: 2:05:26, time (data): 0.352 (0.287)] l_pix: 2.7441e-02 
+2026-10-24 03:03:41,435 INFO: [SAFMN..][epoch:  0, iter:   8,800, lr:(9.992e-04,)] [eta: 2:04:47, time (data): 0.343 (0.279)] l_pix: 2.8407e-02 
+2026-10-24 03:04:17,113 INFO: [SAFMN..][epoch:  0, iter:   8,900, lr:(9.992e-04,)] [eta: 2:04:12, time (data): 0.344 (0.282)] l_pix: 2.8112e-02 
+2026-10-24 03:04:50,240 INFO: [SAFMN..][epoch:  0, iter:   9,000, lr:(9.992e-04,)] [eta: 2:03:32, time (data): 0.336 (0.274)] l_pix: 2.7340e-02 
+2026-10-24 03:05:26,997 INFO: [SAFMN..][epoch:  0, iter:   9,100, lr:(9.992e-04,)] [eta: 2:03:00, time (data): 0.377 (0.316)] l_pix: 2.6676e-02 
+2026-10-24 03:06:00,085 INFO: [SAFMN..][epoch:  0, iter:   9,200, lr:(9.992e-04,)] [eta: 2:02:20, time (data): 0.347 (0.286)] l_pix: 3.1742e-02 
+2026-10-24 03:06:35,572 INFO: [SAFMN..][epoch:  0, iter:   9,300, lr:(9.992e-04,)] [eta: 2:01:45, time (data): 0.353 (0.292)] l_pix: 2.8391e-02 
+2026-10-24 03:07:08,623 INFO: [SAFMN..][epoch:  0, iter:   9,400, lr:(9.991e-04,)] [eta: 2:01:05, time (data): 0.338 (0.277)] l_pix: 2.7602e-02 
+2026-10-24 03:07:48,142 INFO: [SAFMN..][epoch:  0, iter:   9,500, lr:(9.991e-04,)] [eta: 2:00:38, time (data): 0.401 (0.337)] l_pix: 2.9551e-02 
+2026-10-24 03:08:23,732 INFO: [SAFMN..][epoch:  0, iter:   9,600, lr:(9.991e-04,)] [eta: 2:00:04, time (data): 0.371 (0.308)] l_pix: 3.0548e-02 
+2026-10-24 03:09:00,991 INFO: [SAFMN..][epoch:  0, iter:   9,700, lr:(9.991e-04,)] [eta: 1:59:32, time (data): 0.372 (0.309)] l_pix: 2.9425e-02 
+2026-10-24 03:09:34,507 INFO: [SAFMN..][epoch:  0, iter:   9,800, lr:(9.991e-04,)] [eta: 1:58:53, time (data): 0.348 (0.284)] l_pix: 2.9185e-02 
+2026-10-24 03:10:10,711 INFO: [SAFMN..][epoch:  0, iter:   9,900, lr:(9.990e-04,)] [eta: 1:58:20, time (data): 0.364 (0.300)] l_pix: 2.9225e-02 
+2026-10-24 03:10:45,129 INFO: [SAFMN..][epoch:  0, iter:  10,000, lr:(9.990e-04,)] [eta: 1:57:43, time (data): 0.351 (0.287)] l_pix: 2.4555e-02 
+2026-10-24 03:10:45,130 INFO: Saving models and training states.
+2026-10-24 03:12:12,212 INFO: Validation DIV2K_val100
+	 # psnr: 28.4697	Best: 28.4697 @ 10000 iter
+
+2026-10-24 03:12:51,128 INFO: [SAFMN..][epoch:  0, iter:  10,100, lr:(9.990e-04,)] [eta: 2:00:06, time (data): 0.403 (0.339)] l_pix: 2.7638e-02 
+2026-10-24 03:13:33,231 INFO: [SAFMN..][epoch:  0, iter:  10,200, lr:(9.990e-04,)] [eta: 1:59:41, time (data): 0.415 (0.351)] l_pix: 2.7177e-02 
+2026-10-24 03:14:18,112 INFO: [SAFMN..][epoch:  0, iter:  10,300, lr:(9.990e-04,)] [eta: 1:59:21, time (data): 0.440 (0.372)] l_pix: 2.4130e-02 
+2026-10-24 03:14:59,313 INFO: [SAFMN..][epoch:  0, iter:  10,400, lr:(9.989e-04,)] [eta: 1:58:54, time (data): 0.421 (0.354)] l_pix: 2.7244e-02 
+2026-10-24 03:15:39,995 INFO: [SAFMN..][epoch:  0, iter:  10,500, lr:(9.989e-04,)] [eta: 1:58:26, time (data): 0.383 (0.317)] l_pix: 2.3847e-02 
+2026-10-24 03:16:18,891 INFO: [SAFMN..][epoch:  0, iter:  10,600, lr:(9.989e-04,)] [eta: 1:57:54, time (data): 0.387 (0.321)] l_pix: 2.8081e-02 
+2026-10-24 03:16:56,813 INFO: [SAFMN..][epoch:  0, iter:  10,700, lr:(9.989e-04,)] [eta: 1:57:20, time (data): 0.373 (0.310)] l_pix: 3.3434e-02 
+2026-10-24 03:17:32,232 INFO: [SAFMN..][epoch:  0, iter:  10,800, lr:(9.989e-04,)] [eta: 1:56:42, time (data): 0.360 (0.295)] l_pix: 2.0588e-02 
+2026-10-24 03:18:12,092 INFO: [SAFMN..][epoch:  0, iter:  10,900, lr:(9.988e-04,)] [eta: 1:56:11, time (data): 0.390 (0.324)] l_pix: 2.2952e-02 
+2026-10-24 03:18:47,134 INFO: [SAFMN..][epoch:  0, iter:  11,000, lr:(9.988e-04,)] [eta: 1:55:32, time (data): 0.363 (0.299)] l_pix: 2.7011e-02 
+2026-10-24 03:19:22,620 INFO: [SAFMN..][epoch:  0, iter:  11,100, lr:(9.988e-04,)] [eta: 1:54:54, time (data): 0.344 (0.281)] l_pix: 2.9191e-02 
+2026-10-24 03:19:55,691 INFO: [SAFMN..][epoch:  0, iter:  11,200, lr:(9.988e-04,)] [eta: 1:54:12, time (data): 0.335 (0.271)] l_pix: 2.8888e-02 
+2026-10-24 03:20:29,886 INFO: [SAFMN..][epoch:  0, iter:  11,300, lr:(9.988e-04,)] [eta: 1:53:31, time (data): 0.343 (0.282)] l_pix: 2.5727e-02 
+2026-10-24 03:21:01,483 INFO: [SAFMN..][epoch:  0, iter:  11,400, lr:(9.987e-04,)] [eta: 1:52:47, time (data): 0.324 (0.261)] l_pix: 3.2049e-02 
+2026-10-24 03:21:36,442 INFO: [SAFMN..][epoch:  0, iter:  11,500, lr:(9.987e-04,)] [eta: 1:52:08, time (data): 0.344 (0.281)] l_pix: 3.1726e-02 
+2026-10-24 03:22:07,364 INFO: [SAFMN..][epoch:  0, iter:  11,600, lr:(9.987e-04,)] [eta: 1:51:23, time (data): 0.320 (0.256)] l_pix: 2.6156e-02 
+2026-10-24 03:22:38,516 INFO: [SAFMN..][epoch:  0, iter:  11,700, lr:(9.987e-04,)] [eta: 1:50:39, time (data): 0.324 (0.263)] l_pix: 3.0525e-02 
+2026-10-24 03:23:09,616 INFO: [SAFMN..][epoch:  0, iter:  11,800, lr:(9.986e-04,)] [eta: 1:49:55, time (data): 0.315 (0.254)] l_pix: 2.6180e-02 
+2026-10-24 03:23:41,183 INFO: [SAFMN..][epoch:  0, iter:  11,900, lr:(9.986e-04,)] [eta: 1:49:11, time (data): 0.319 (0.259)] l_pix: 2.6230e-02 
+2026-10-24 03:24:13,601 INFO: [SAFMN..][epoch:  0, iter:  12,000, lr:(9.986e-04,)] [eta: 1:48:30, time (data): 0.323 (0.262)] l_pix: 2.8766e-02 
+2026-10-24 03:24:50,494 INFO: [SAFMN..][epoch:  0, iter:  12,100, lr:(9.986e-04,)] [eta: 1:47:54, time (data): 0.371 (0.304)] l_pix: 2.9320e-02 
+2026-10-24 03:25:26,859 INFO: [SAFMN..][epoch:  0, iter:  12,200, lr:(9.985e-04,)] [eta: 1:47:19, time (data): 0.366 (0.301)] l_pix: 2.5778e-02 
+2026-10-24 03:26:03,604 INFO: [SAFMN..][epoch:  0, iter:  12,300, lr:(9.985e-04,)] [eta: 1:46:43, time (data): 0.352 (0.289)] l_pix: 2.7016e-02 
+2026-10-24 03:26:37,487 INFO: [SAFMN..][epoch:  0, iter:  12,400, lr:(9.985e-04,)] [eta: 1:46:04, time (data): 0.343 (0.278)] l_pix: 2.8486e-02 
+2026-10-24 03:27:14,419 INFO: [SAFMN..][epoch:  0, iter:  12,500, lr:(9.985e-04,)] [eta: 1:45:29, time (data): 0.375 (0.309)] l_pix: 2.8269e-02 
+2026-10-24 03:27:47,398 INFO: [SAFMN..][epoch:  0, iter:  12,600, lr:(9.984e-04,)] [eta: 1:44:48, time (data): 0.342 (0.278)] l_pix: 2.9052e-02 
+2026-10-24 03:28:22,027 INFO: [SAFMN..][epoch:  0, iter:  12,700, lr:(9.984e-04,)] [eta: 1:44:10, time (data): 0.366 (0.303)] l_pix: 2.2713e-02 
+2026-10-24 03:28:54,784 INFO: [SAFMN..][epoch:  0, iter:  12,800, lr:(9.984e-04,)] [eta: 1:43:29, time (data): 0.338 (0.275)] l_pix: 3.2459e-02 
+2026-10-24 03:29:29,962 INFO: [SAFMN..][epoch:  0, iter:  12,900, lr:(9.984e-04,)] [eta: 1:42:52, time (data): 0.382 (0.318)] l_pix: 3.1869e-02 
+2026-10-24 03:30:02,632 INFO: [SAFMN..][epoch:  0, iter:  13,000, lr:(9.983e-04,)] [eta: 1:42:11, time (data): 0.341 (0.278)] l_pix: 2.7327e-02 
+2026-10-24 03:30:37,984 INFO: [SAFMN..][epoch:  0, iter:  13,100, lr:(9.983e-04,)] [eta: 1:41:34, time (data): 0.339 (0.277)] l_pix: 2.4957e-02 
+2026-10-24 03:31:14,096 INFO: [SAFMN..][epoch:  0, iter:  13,200, lr:(9.983e-04,)] [eta: 1:40:58, time (data): 0.355 (0.291)] l_pix: 2.6671e-02 
+2026-10-24 03:31:50,004 INFO: [SAFMN..][epoch:  0, iter:  13,300, lr:(9.983e-04,)] [eta: 1:40:22, time (data): 0.321 (0.256)] l_pix: 2.6772e-02 
+2026-10-24 03:32:21,217 INFO: [SAFMN..][epoch:  0, iter:  13,400, lr:(9.982e-04,)] [eta: 1:39:40, time (data): 0.314 (0.251)] l_pix: 2.3529e-02 
+2026-10-24 03:32:55,948 INFO: [SAFMN..][epoch:  0, iter:  13,500, lr:(9.982e-04,)] [eta: 1:39:02, time (data): 0.342 (0.277)] l_pix: 2.4667e-02 
+2026-10-24 03:33:28,600 INFO: [SAFMN..][epoch:  0, iter:  13,600, lr:(9.982e-04,)] [eta: 1:38:22, time (data): 0.330 (0.267)] l_pix: 2.5735e-02 
+2026-10-24 03:34:02,799 INFO: [SAFMN..][epoch:  0, iter:  13,700, lr:(9.982e-04,)] [eta: 1:37:44, time (data): 0.335 (0.271)] l_pix: 2.7763e-02 
+2026-10-24 03:34:33,697 INFO: [SAFMN..][epoch:  0, iter:  13,800, lr:(9.981e-04,)] [eta: 1:37:02, time (data): 0.315 (0.251)] l_pix: 2.4724e-02 
+2026-10-24 03:35:09,350 INFO: [SAFMN..][epoch:  0, iter:  13,900, lr:(9.981e-04,)] [eta: 1:36:26, time (data): 0.364 (0.302)] l_pix: 2.8696e-02 
+2026-10-24 03:35:41,835 INFO: [SAFMN..][epoch:  0, iter:  14,000, lr:(9.981e-04,)] [eta: 1:35:46, time (data): 0.334 (0.273)] l_pix: 2.2944e-02 
+2026-10-24 03:36:12,882 INFO: [SAFMN..][epoch:  0, iter:  14,100, lr:(9.981e-04,)] [eta: 1:35:05, time (data): 0.327 (0.266)] l_pix: 2.5025e-02 
+2026-10-24 03:36:43,784 INFO: [SAFMN..][epoch:  0, iter:  14,200, lr:(9.980e-04,)] [eta: 1:34:23, time (data): 0.313 (0.253)] l_pix: 2.7921e-02 
+2026-10-24 03:37:16,618 INFO: [SAFMN..][epoch:  0, iter:  14,300, lr:(9.980e-04,)] [eta: 1:33:44, time (data): 0.350 (0.290)] l_pix: 2.3253e-02 
+2026-10-24 03:37:50,149 INFO: [SAFMN..][epoch:  0, iter:  14,400, lr:(9.980e-04,)] [eta: 1:33:06, time (data): 0.339 (0.276)] l_pix: 3.3075e-02 
+2026-10-24 03:38:28,605 INFO: [SAFMN..][epoch:  0, iter:  14,500, lr:(9.979e-04,)] [eta: 1:32:33, time (data): 0.414 (0.349)] l_pix: 2.8290e-02 
+2026-10-24 03:39:05,444 INFO: [SAFMN..][epoch:  0, iter:  14,600, lr:(9.979e-04,)] [eta: 1:31:58, time (data): 0.378 (0.314)] l_pix: 2.4369e-02 
+2026-10-24 03:39:43,439 INFO: [SAFMN..][epoch:  0, iter:  14,700, lr:(9.979e-04,)] [eta: 1:31:24, time (data): 0.417 (0.356)] l_pix: 2.8310e-02 
+2026-10-24 03:40:18,204 INFO: [SAFMN..][epoch:  0, iter:  14,800, lr:(9.979e-04,)] [eta: 1:30:47, time (data): 0.362 (0.299)] l_pix: 2.9469e-02 
+2026-10-24 03:40:56,159 INFO: [SAFMN..][epoch:  0, iter:  14,900, lr:(9.978e-04,)] [eta: 1:30:14, time (data): 0.441 (0.376)] l_pix: 2.3294e-02 
+2026-10-24 03:41:30,357 INFO: [SAFMN..][epoch:  0, iter:  15,000, lr:(9.978e-04,)] [eta: 1:29:36, time (data): 0.362 (0.297)] l_pix: 2.4932e-02 
+2026-10-24 03:41:30,357 INFO: Saving models and training states.
+2026-10-24 03:42:36,549 INFO: Validation DIV2K_val100
+	 # psnr: 28.5920	Best: 28.5920 @ 15000 iter
+
+2026-10-24 03:43:15,275 INFO: [SAFMN..][epoch:  0, iter:  15,100, lr:(9.978e-04,)] [eta: 1:30:08, time (data): 0.424 (0.358)] l_pix: 2.7869e-02 
+2026-10-24 03:43:56,153 INFO: [SAFMN..][epoch:  0, iter:  15,200, lr:(9.977e-04,)] [eta: 1:29:37, time (data): 0.412 (0.345)] l_pix: 2.5745e-02 
+2026-10-24 03:44:38,001 INFO: [SAFMN..][epoch:  0, iter:  15,300, lr:(9.977e-04,)] [eta: 1:29:06, time (data): 0.372 (0.309)] l_pix: 3.2880e-02 
+2026-10-24 03:45:17,264 INFO: [SAFMN..][epoch:  0, iter:  15,400, lr:(9.977e-04,)] [eta: 1:28:32, time (data): 0.389 (0.322)] l_pix: 2.5208e-02 
+2026-10-24 03:45:55,882 INFO: [SAFMN..][epoch:  0, iter:  15,500, lr:(9.977e-04,)] [eta: 1:27:58, time (data): 0.367 (0.303)] l_pix: 2.2929e-02 
+2026-10-24 03:46:32,874 INFO: [SAFMN..][epoch:  0, iter:  15,600, lr:(9.976e-04,)] [eta: 1:27:22, time (data): 0.369 (0.303)] l_pix: 2.3869e-02 
+2026-10-24 03:47:09,185 INFO: [SAFMN..][epoch:  0, iter:  15,700, lr:(9.976e-04,)] [eta: 1:26:45, time (data): 0.347 (0.285)] l_pix: 3.0518e-02 
+2026-10-24 03:47:46,971 INFO: [SAFMN..][epoch:  0, iter:  15,800, lr:(9.976e-04,)] [eta: 1:26:10, time (data): 0.372 (0.306)] l_pix: 2.6667e-02 
+2026-10-24 03:48:22,320 INFO: [SAFMN..][epoch:  0, iter:  15,900, lr:(9.975e-04,)] [eta: 1:25:33, time (data): 0.317 (0.253)] l_pix: 2.0811e-02 
+2026-10-24 03:48:57,455 INFO: [SAFMN..][epoch:  0, iter:  16,000, lr:(9.975e-04,)] [eta: 1:24:55, time (data): 0.345 (0.281)] l_pix: 2.3639e-02 
+2026-10-24 03:49:31,127 INFO: [SAFMN..][epoch:  0, iter:  16,100, lr:(9.975e-04,)] [eta: 1:24:16, time (data): 0.359 (0.298)] l_pix: 2.2161e-02 
+2026-10-24 03:50:03,721 INFO: [SAFMN..][epoch:  0, iter:  16,200, lr:(9.974e-04,)] [eta: 1:23:37, time (data): 0.331 (0.267)] l_pix: 2.6243e-02 
+2026-10-24 03:50:34,055 INFO: [SAFMN..][epoch:  0, iter:  16,300, lr:(9.974e-04,)] [eta: 1:22:55, time (data): 0.268 (0.209)] l_pix: 2.5659e-02 
+2026-10-24 03:51:06,403 INFO: [SAFMN..][epoch:  0, iter:  16,400, lr:(9.974e-04,)] [eta: 1:22:16, time (data): 0.315 (0.252)] l_pix: 2.9392e-02 
+2026-10-24 03:51:37,332 INFO: [SAFMN..][epoch:  0, iter:  16,500, lr:(9.973e-04,)] [eta: 1:21:35, time (data): 0.271 (0.207)] l_pix: 2.7792e-02 
+2026-10-24 03:52:07,742 INFO: [SAFMN..][epoch:  0, iter:  16,600, lr:(9.973e-04,)] [eta: 1:20:54, time (data): 0.299 (0.236)] l_pix: 2.4339e-02 
+2026-10-24 03:52:40,727 INFO: [SAFMN..][epoch:  0, iter:  16,700, lr:(9.973e-04,)] [eta: 1:20:15, time (data): 0.277 (0.214)] l_pix: 2.8515e-02 
+2026-10-24 03:53:11,581 INFO: [SAFMN..][epoch:  0, iter:  16,800, lr:(9.972e-04,)] [eta: 1:19:35, time (data): 0.304 (0.242)] l_pix: 2.5902e-02 
+2026-10-24 03:53:43,471 INFO: [SAFMN..][epoch:  0, iter:  16,900, lr:(9.972e-04,)] [eta: 1:18:55, time (data): 0.296 (0.233)] l_pix: 2.5612e-02 
+2026-10-24 03:54:13,808 INFO: [SAFMN..][epoch:  0, iter:  17,000, lr:(9.972e-04,)] [eta: 1:18:15, time (data): 0.302 (0.241)] l_pix: 2.0427e-02 
+2026-10-24 03:54:45,331 INFO: [SAFMN..][epoch:  0, iter:  17,100, lr:(9.971e-04,)] [eta: 1:17:35, time (data): 0.323 (0.260)] l_pix: 2.8171e-02 
+2026-10-24 03:55:17,029 INFO: [SAFMN..][epoch:  0, iter:  17,200, lr:(9.971e-04,)] [eta: 1:16:56, time (data): 0.318 (0.254)] l_pix: 2.4497e-02 
+2026-10-24 03:55:47,945 INFO: [SAFMN..][epoch:  0, iter:  17,300, lr:(9.971e-04,)] [eta: 1:16:16, time (data): 0.275 (0.214)] l_pix: 2.6644e-02 
+2026-10-24 03:56:19,060 INFO: [SAFMN..][epoch:  0, iter:  17,400, lr:(9.970e-04,)] [eta: 1:15:36, time (data): 0.307 (0.245)] l_pix: 2.4060e-02 
+2026-10-24 03:56:50,350 INFO: [SAFMN..][epoch:  0, iter:  17,500, lr:(9.970e-04,)] [eta: 1:14:57, time (data): 0.238 (0.178)] l_pix: 2.4604e-02 
+2026-10-24 03:57:23,171 INFO: [SAFMN..][epoch:  0, iter:  17,600, lr:(9.970e-04,)] [eta: 1:14:19, time (data): 0.318 (0.256)] l_pix: 2.8065e-02 
+2026-10-24 03:57:55,920 INFO: [SAFMN..][epoch:  0, iter:  17,700, lr:(9.969e-04,)] [eta: 1:13:41, time (data): 0.331 (0.269)] l_pix: 2.8851e-02 
+2026-10-24 03:58:29,924 INFO: [SAFMN..][epoch:  0, iter:  17,800, lr:(9.969e-04,)] [eta: 1:13:03, time (data): 0.339 (0.277)] l_pix: 2.5983e-02 
+2026-10-24 03:59:06,930 INFO: [SAFMN..][epoch:  0, iter:  17,900, lr:(9.969e-04,)] [eta: 1:12:28, time (data): 0.291 (0.224)] l_pix: 2.6521e-02 
+2026-10-24 03:59:45,803 INFO: [SAFMN..][epoch:  0, iter:  18,000, lr:(9.968e-04,)] [eta: 1:11:54, time (data): 0.379 (0.313)] l_pix: 2.2418e-02 
+2026-10-24 04:00:28,476 INFO: [SAFMN..][epoch:  0, iter:  18,100, lr:(9.968e-04,)] [eta: 1:11:23, time (data): 0.293 (0.226)] l_pix: 3.0375e-02 
+2026-10-24 04:01:07,342 INFO: [SAFMN..][epoch:  0, iter:  18,200, lr:(9.968e-04,)] [eta: 1:10:48, time (data): 0.380 (0.313)] l_pix: 3.3222e-02 
+2026-10-24 04:01:48,181 INFO: [SAFMN..][epoch:  0, iter:  18,300, lr:(9.967e-04,)] [eta: 1:10:16, time (data): 0.344 (0.283)] l_pix: 3.1667e-02 
+2026-10-24 04:02:25,328 INFO: [SAFMN..][epoch:  0, iter:  18,400, lr:(9.967e-04,)] [eta: 1:09:40, time (data): 0.369 (0.305)] l_pix: 2.6670e-02 
+2026-10-24 04:03:04,348 INFO: [SAFMN..][epoch:  0, iter:  18,500, lr:(9.967e-04,)] [eta: 1:09:06, time (data): 0.367 (0.298)] l_pix: 2.4094e-02 
+2026-10-24 04:03:40,652 INFO: [SAFMN..][epoch:  0, iter:  18,600, lr:(9.966e-04,)] [eta: 1:08:30, time (data): 0.363 (0.300)] l_pix: 2.5923e-02 
+2026-10-24 04:04:17,966 INFO: [SAFMN..][epoch:  0, iter:  18,700, lr:(9.966e-04,)] [eta: 1:07:55, time (data): 0.391 (0.325)] l_pix: 2.6729e-02 
+2026-10-24 04:04:52,255 INFO: [SAFMN..][epoch:  0, iter:  18,800, lr:(9.966e-04,)] [eta: 1:07:18, time (data): 0.346 (0.282)] l_pix: 2.6966e-02 
+2026-10-24 04:05:30,805 INFO: [SAFMN..][epoch:  0, iter:  18,900, lr:(9.965e-04,)] [eta: 1:06:43, time (data): 0.498 (0.431)] l_pix: 2.4052e-02 
+2026-10-24 04:06:03,081 INFO: [SAFMN..][epoch:  0, iter:  19,000, lr:(9.965e-04,)] [eta: 1:06:05, time (data): 0.333 (0.268)] l_pix: 2.8335e-02 
+2026-10-24 04:06:36,269 INFO: [SAFMN..][epoch:  0, iter:  19,100, lr:(9.964e-04,)] [eta: 1:05:27, time (data): 0.474 (0.411)] l_pix: 3.0451e-02 
+2026-10-24 04:07:07,498 INFO: [SAFMN..][epoch:  0, iter:  19,200, lr:(9.964e-04,)] [eta: 1:04:48, time (data): 0.320 (0.257)] l_pix: 2.8185e-02 
+2026-10-24 04:07:40,476 INFO: [SAFMN..][epoch:  0, iter:  19,300, lr:(9.964e-04,)] [eta: 1:04:11, time (data): 0.610 (0.543)] l_pix: 2.9001e-02 
+2026-10-24 04:08:11,628 INFO: [SAFMN..][epoch:  0, iter:  19,400, lr:(9.963e-04,)] [eta: 1:03:32, time (data): 0.323 (0.260)] l_pix: 2.2981e-02 
+2026-10-24 04:08:44,086 INFO: [SAFMN..][epoch:  0, iter:  19,500, lr:(9.963e-04,)] [eta: 1:02:54, time (data): 0.155 (0.095)] l_pix: 3.1258e-02 
+2026-10-24 04:09:15,781 INFO: [SAFMN..][epoch:  0, iter:  19,600, lr:(9.963e-04,)] [eta: 1:02:16, time (data): 0.312 (0.251)] l_pix: 2.5494e-02 
+2026-10-24 04:09:49,751 INFO: [SAFMN..][epoch:  0, iter:  19,700, lr:(9.962e-04,)] [eta: 1:01:39, time (data): 1.026 (0.965)] l_pix: 2.7115e-02 
+2026-10-24 04:10:19,728 INFO: [SAFMN..][epoch:  0, iter:  19,800, lr:(9.962e-04,)] [eta: 1:01:00, time (data): 0.314 (0.254)] l_pix: 2.6967e-02 
+2026-10-24 04:10:53,228 INFO: [SAFMN..][epoch:  0, iter:  19,900, lr:(9.961e-04,)] [eta: 1:00:23, time (data): 0.740 (0.682)] l_pix: 2.5210e-02 
+2026-10-24 04:11:25,795 INFO: [SAFMN..][epoch:  0, iter:  20,000, lr:(9.961e-04,)] [eta: 0:59:45, time (data): 0.330 (0.267)] l_pix: 2.6983e-02 
+2026-10-24 04:11:25,795 INFO: Saving models and training states.
+2026-10-24 04:12:47,590 INFO: Validation DIV2K_val100
+	 # psnr: 28.6564	Best: 28.6564 @ 20000 iter
+
+2026-10-24 04:13:19,019 INFO: [SAFMN..][epoch:  0, iter:  20,100, lr:(9.961e-04,)] [eta: 0:59:48, time (data): 0.322 (0.258)] l_pix: 2.6441e-02 
+2026-10-24 04:13:52,848 INFO: [SAFMN..][epoch:  0, iter:  20,200, lr:(9.960e-04,)] [eta: 0:59:10, time (data): 0.338 (0.274)] l_pix: 2.8416e-02 
+2026-10-24 04:14:27,778 INFO: [SAFMN..][epoch:  0, iter:  20,300, lr:(9.960e-04,)] [eta: 0:58:33, time (data): 0.344 (0.280)] l_pix: 2.5240e-02 
+2026-10-24 04:14:58,977 INFO: [SAFMN..][epoch:  0, iter:  20,400, lr:(9.959e-04,)] [eta: 0:57:55, time (data): 0.314 (0.253)] l_pix: 2.5712e-02 
+2026-10-24 04:15:30,468 INFO: [SAFMN..][epoch:  0, iter:  20,500, lr:(9.959e-04,)] [eta: 0:57:16, time (data): 0.315 (0.254)] l_pix: 2.9540e-02 
+2026-10-24 04:16:01,723 INFO: [SAFMN..][epoch:  0, iter:  20,600, lr:(9.959e-04,)] [eta: 0:56:38, time (data): 0.317 (0.253)] l_pix: 3.0620e-02 
+2026-10-24 04:16:34,227 INFO: [SAFMN..][epoch:  0, iter:  20,700, lr:(9.958e-04,)] [eta: 0:56:00, time (data): 0.321 (0.259)] l_pix: 2.9955e-02 
+2026-10-24 04:17:06,613 INFO: [SAFMN..][epoch:  0, iter:  20,800, lr:(9.958e-04,)] [eta: 0:55:22, time (data): 0.331 (0.269)] l_pix: 2.9550e-02 
+2026-10-24 04:17:44,595 INFO: [SAFMN..][epoch:  0, iter:  20,900, lr:(9.957e-04,)] [eta: 0:54:47, time (data): 0.356 (0.292)] l_pix: 3.0079e-02 
+2026-10-24 04:18:22,357 INFO: [SAFMN..][epoch:  0, iter:  21,000, lr:(9.957e-04,)] [eta: 0:54:12, time (data): 0.375 (0.310)] l_pix: 2.3191e-02 
+2026-10-24 04:19:00,703 INFO: [SAFMN..][epoch:  0, iter:  21,100, lr:(9.957e-04,)] [eta: 0:53:36, time (data): 0.379 (0.314)] l_pix: 2.7992e-02 
+2026-10-24 04:19:36,401 INFO: [SAFMN..][epoch:  0, iter:  21,200, lr:(9.956e-04,)] [eta: 0:53:00, time (data): 0.347 (0.283)] l_pix: 2.8094e-02 
+2026-10-24 04:20:10,344 INFO: [SAFMN..][epoch:  0, iter:  21,300, lr:(9.956e-04,)] [eta: 0:52:23, time (data): 0.343 (0.279)] l_pix: 2.5439e-02 
+2026-10-24 04:20:45,610 INFO: [SAFMN..][epoch:  0, iter:  21,400, lr:(9.955e-04,)] [eta: 0:51:46, time (data): 0.348 (0.283)] l_pix: 2.8165e-02 
+2026-10-24 04:21:19,247 INFO: [SAFMN..][epoch:  0, iter:  21,500, lr:(9.955e-04,)] [eta: 0:51:09, time (data): 0.342 (0.278)] l_pix: 2.6328e-02 
+2026-10-24 04:21:53,648 INFO: [SAFMN..][epoch:  0, iter:  21,600, lr:(9.954e-04,)] [eta: 0:50:33, time (data): 0.347 (0.281)] l_pix: 2.6067e-02 
+2026-10-24 04:22:27,543 INFO: [SAFMN..][epoch:  0, iter:  21,700, lr:(9.954e-04,)] [eta: 0:49:56, time (data): 0.343 (0.278)] l_pix: 2.2258e-02 
+2026-10-24 04:23:03,414 INFO: [SAFMN..][epoch:  0, iter:  21,800, lr:(9.954e-04,)] [eta: 0:49:19, time (data): 0.363 (0.300)] l_pix: 2.8104e-02 
+2026-10-24 04:23:40,752 INFO: [SAFMN..][epoch:  1, iter:  21,900, lr:(9.953e-04,)] [eta: 0:48:44, time (data): 0.368 (0.305)] l_pix: 3.0715e-02 
+2026-10-24 04:24:11,159 INFO: [SAFMN..][epoch:  1, iter:  22,000, lr:(9.953e-04,)] [eta: 0:48:06, time (data): 0.305 (0.242)] l_pix: 2.7841e-02 
+2026-10-24 04:24:43,653 INFO: [SAFMN..][epoch:  1, iter:  22,100, lr:(9.952e-04,)] [eta: 0:47:28, time (data): 0.315 (0.252)] l_pix: 2.8387e-02 
+2026-10-24 04:25:16,760 INFO: [SAFMN..][epoch:  1, iter:  22,200, lr:(9.952e-04,)] [eta: 0:46:51, time (data): 0.326 (0.264)] l_pix: 2.6906e-02 
+2026-10-24 04:25:48,948 INFO: [SAFMN..][epoch:  1, iter:  22,300, lr:(9.951e-04,)] [eta: 0:46:14, time (data): 0.324 (0.261)] l_pix: 2.6252e-02 
+2026-10-24 04:26:20,216 INFO: [SAFMN..][epoch:  1, iter:  22,400, lr:(9.951e-04,)] [eta: 0:45:36, time (data): 0.318 (0.256)] l_pix: 2.5160e-02 
+2026-10-24 04:26:53,912 INFO: [SAFMN..][epoch:  1, iter:  22,500, lr:(9.951e-04,)] [eta: 0:44:59, time (data): 0.328 (0.266)] l_pix: 2.7917e-02 
+2026-10-24 04:27:26,696 INFO: [SAFMN..][epoch:  1, iter:  22,600, lr:(9.950e-04,)] [eta: 0:44:22, time (data): 0.339 (0.278)] l_pix: 2.6625e-02 
+2026-10-24 04:27:59,568 INFO: [SAFMN..][epoch:  1, iter:  22,700, lr:(9.950e-04,)] [eta: 0:43:45, time (data): 0.333 (0.273)] l_pix: 2.9453e-02 
+2026-10-24 04:28:31,774 INFO: [SAFMN..][epoch:  1, iter:  22,800, lr:(9.949e-04,)] [eta: 0:43:08, time (data): 0.338 (0.275)] l_pix: 2.6395e-02 
+2026-10-24 04:29:06,648 INFO: [SAFMN..][epoch:  1, iter:  22,900, lr:(9.949e-04,)] [eta: 0:42:32, time (data): 0.344 (0.279)] l_pix: 2.4879e-02 
+2026-10-24 04:29:40,181 INFO: [SAFMN..][epoch:  1, iter:  23,000, lr:(9.948e-04,)] [eta: 0:41:55, time (data): 0.333 (0.268)] l_pix: 2.7426e-02 
+2026-10-24 04:30:12,616 INFO: [SAFMN..][epoch:  1, iter:  23,100, lr:(9.948e-04,)] [eta: 0:41:18, time (data): 0.328 (0.264)] l_pix: 2.4800e-02 
+2026-10-24 04:30:45,567 INFO: [SAFMN..][epoch:  1, iter:  23,200, lr:(9.948e-04,)] [eta: 0:40:41, time (data): 0.328 (0.266)] l_pix: 3.1480e-02 
+2026-10-24 04:31:19,269 INFO: [SAFMN..][epoch:  1, iter:  23,300, lr:(9.947e-04,)] [eta: 0:40:05, time (data): 0.333 (0.271)] l_pix: 2.4374e-02 
+2026-10-24 04:31:50,153 INFO: [SAFMN..][epoch:  1, iter:  23,400, lr:(9.947e-04,)] [eta: 0:39:27, time (data): 0.308 (0.243)] l_pix: 2.9725e-02 
+2026-10-24 04:32:23,779 INFO: [SAFMN..][epoch:  1, iter:  23,500, lr:(9.946e-04,)] [eta: 0:38:51, time (data): 0.323 (0.260)] l_pix: 2.5015e-02 
+2026-10-24 04:32:54,766 INFO: [SAFMN..][epoch:  1, iter:  23,600, lr:(9.946e-04,)] [eta: 0:38:14, time (data): 0.306 (0.242)] l_pix: 2.9242e-02 
+2026-10-24 04:33:28,779 INFO: [SAFMN..][epoch:  1, iter:  23,700, lr:(9.945e-04,)] [eta: 0:37:37, time (data): 0.325 (0.260)] l_pix: 2.7841e-02 
+2026-10-24 04:34:01,173 INFO: [SAFMN..][epoch:  1, iter:  23,800, lr:(9.945e-04,)] [eta: 0:37:01, time (data): 0.328 (0.265)] l_pix: 3.0296e-02 
+2026-10-24 04:34:35,768 INFO: [SAFMN..][epoch:  1, iter:  23,900, lr:(9.944e-04,)] [eta: 0:36:25, time (data): 0.338 (0.274)] l_pix: 2.6352e-02 
+2026-10-24 04:35:09,112 INFO: [SAFMN..][epoch:  1, iter:  24,000, lr:(9.944e-04,)] [eta: 0:35:48, time (data): 0.338 (0.275)] l_pix: 2.5087e-02 
+2026-10-24 04:35:44,170 INFO: [SAFMN..][epoch:  1, iter:  24,100, lr:(9.943e-04,)] [eta: 0:35:12, time (data): 0.345 (0.282)] l_pix: 2.4175e-02 
+2026-10-24 04:36:16,322 INFO: [SAFMN..][epoch:  1, iter:  24,200, lr:(9.943e-04,)] [eta: 0:34:35, time (data): 0.331 (0.267)] l_pix: 2.6899e-02 
+2026-10-24 04:36:52,224 INFO: [SAFMN..][epoch:  1, iter:  24,300, lr:(9.942e-04,)] [eta: 0:34:00, time (data): 0.346 (0.282)] l_pix: 2.9998e-02 
+2026-10-24 04:37:24,011 INFO: [SAFMN..][epoch:  1, iter:  24,400, lr:(9.942e-04,)] [eta: 0:33:23, time (data): 0.328 (0.265)] l_pix: 3.0197e-02 
+2026-10-24 04:37:59,040 INFO: [SAFMN..][epoch:  1, iter:  24,500, lr:(9.941e-04,)] [eta: 0:32:47, time (data): 0.340 (0.277)] l_pix: 2.5659e-02 
+2026-10-24 04:38:31,823 INFO: [SAFMN..][epoch:  1, iter:  24,600, lr:(9.941e-04,)] [eta: 0:32:11, time (data): 0.320 (0.257)] l_pix: 2.4166e-02 
+2026-10-24 04:39:07,041 INFO: [SAFMN..][epoch:  1, iter:  24,700, lr:(9.941e-04,)] [eta: 0:31:35, time (data): 0.338 (0.275)] l_pix: 2.2283e-02 
+2026-10-24 04:39:42,268 INFO: [SAFMN..][epoch:  1, iter:  24,800, lr:(9.940e-04,)] [eta: 0:30:59, time (data): 0.348 (0.284)] l_pix: 2.5262e-02 
+2026-10-24 04:40:13,810 INFO: [SAFMN..][epoch:  1, iter:  24,900, lr:(9.940e-04,)] [eta: 0:30:22, time (data): 0.330 (0.266)] l_pix: 2.9072e-02 
+2026-10-24 04:40:48,804 INFO: [SAFMN..][epoch:  1, iter:  25,000, lr:(9.939e-04,)] [eta: 0:29:46, time (data): 0.359 (0.298)] l_pix: 2.6407e-02 
+2026-10-24 04:40:48,805 INFO: Saving models and training states.
+2026-10-24 04:42:25,494 INFO: Validation DIV2K_val100
+	 # psnr: 28.6871	Best: 28.6871 @ 25000 iter
+
+2026-10-24 04:43:08,262 INFO: [SAFMN..][epoch:  1, iter:  25,100, lr:(9.939e-04,)] [eta: 0:29:31, time (data): 0.398 (0.334)] l_pix: 2.4537e-02 
+2026-10-24 04:43:51,599 INFO: [SAFMN..][epoch:  1, iter:  25,200, lr:(9.938e-04,)] [eta: 0:28:56, time (data): 0.429 (0.362)] l_pix: 2.5918e-02 
+2026-10-24 04:44:36,726 INFO: [SAFMN..][epoch:  1, iter:  25,300, lr:(9.938e-04,)] [eta: 0:28:21, time (data): 0.442 (0.375)] l_pix: 2.6641e-02 
+2026-10-24 04:45:20,345 INFO: [SAFMN..][epoch:  1, iter:  25,400, lr:(9.937e-04,)] [eta: 0:27:47, time (data): 0.416 (0.347)] l_pix: 2.7724e-02 
+2026-10-24 04:46:03,310 INFO: [SAFMN..][epoch:  1, iter:  25,500, lr:(9.937e-04,)] [eta: 0:27:11, time (data): 0.424 (0.356)] l_pix: 2.4999e-02 
+2026-10-24 04:46:44,876 INFO: [SAFMN..][epoch:  1, iter:  25,600, lr:(9.936e-04,)] [eta: 0:26:36, time (data): 0.423 (0.357)] l_pix: 2.4045e-02 
+2026-10-24 04:47:27,066 INFO: [SAFMN..][epoch:  1, iter:  25,700, lr:(9.936e-04,)] [eta: 0:26:01, time (data): 0.423 (0.356)] l_pix: 2.6902e-02 
+2026-10-24 04:48:07,264 INFO: [SAFMN..][epoch:  1, iter:  25,800, lr:(9.935e-04,)] [eta: 0:25:25, time (data): 0.410 (0.344)] l_pix: 2.9048e-02 
+2026-10-24 04:48:46,155 INFO: [SAFMN..][epoch:  1, iter:  25,900, lr:(9.935e-04,)] [eta: 0:24:49, time (data): 0.398 (0.332)] l_pix: 2.2491e-02 
+2026-10-24 04:49:24,009 INFO: [SAFMN..][epoch:  1, iter:  26,000, lr:(9.934e-04,)] [eta: 0:24:13, time (data): 0.372 (0.306)] l_pix: 3.3234e-02 
+2026-10-24 04:50:03,938 INFO: [SAFMN..][epoch:  1, iter:  26,100, lr:(9.934e-04,)] [eta: 0:23:37, time (data): 0.388 (0.322)] l_pix: 2.7320e-02 
+2026-10-24 04:50:37,922 INFO: [SAFMN..][epoch:  1, iter:  26,200, lr:(9.933e-04,)] [eta: 0:23:01, time (data): 0.333 (0.266)] l_pix: 2.6748e-02 
+2026-10-24 04:51:15,382 INFO: [SAFMN..][epoch:  1, iter:  26,300, lr:(9.933e-04,)] [eta: 0:22:24, time (data): 0.358 (0.292)] l_pix: 2.5540e-02 
+2026-10-24 04:51:49,073 INFO: [SAFMN..][epoch:  1, iter:  26,400, lr:(9.932e-04,)] [eta: 0:21:48, time (data): 0.317 (0.252)] l_pix: 2.8976e-02 
+2026-10-24 04:52:23,111 INFO: [SAFMN..][epoch:  1, iter:  26,500, lr:(9.932e-04,)] [eta: 0:21:11, time (data): 0.331 (0.266)] l_pix: 2.8734e-02 
+2026-10-24 04:52:54,220 INFO: [SAFMN..][epoch:  1, iter:  26,600, lr:(9.931e-04,)] [eta: 0:20:34, time (data): 0.299 (0.236)] l_pix: 2.4497e-02 
+2026-10-24 04:53:28,537 INFO: [SAFMN..][epoch:  1, iter:  26,700, lr:(9.931e-04,)] [eta: 0:19:57, time (data): 0.325 (0.262)] l_pix: 2.3879e-02 
+2026-10-24 04:53:58,807 INFO: [SAFMN..][epoch:  1, iter:  26,800, lr:(9.930e-04,)] [eta: 0:19:20, time (data): 0.296 (0.232)] l_pix: 2.7347e-02 
+2026-10-24 04:54:31,890 INFO: [SAFMN..][epoch:  1, iter:  26,900, lr:(9.929e-04,)] [eta: 0:18:44, time (data): 0.317 (0.253)] l_pix: 2.2920e-02 
+2026-10-24 04:55:02,762 INFO: [SAFMN..][epoch:  1, iter:  27,000, lr:(9.929e-04,)] [eta: 0:18:07, time (data): 0.311 (0.246)] l_pix: 2.6229e-02 
+2026-10-24 04:55:34,892 INFO: [SAFMN..][epoch:  1, iter:  27,100, lr:(9.928e-04,)] [eta: 0:17:30, time (data): 0.317 (0.253)] l_pix: 2.1264e-02 
+2026-10-24 04:56:05,158 INFO: [SAFMN..][epoch:  1, iter:  27,200, lr:(9.928e-04,)] [eta: 0:16:53, time (data): 0.299 (0.238)] l_pix: 3.0415e-02 
+2026-10-24 04:56:38,217 INFO: [SAFMN..][epoch:  1, iter:  27,300, lr:(9.927e-04,)] [eta: 0:16:17, time (data): 0.318 (0.257)] l_pix: 2.7421e-02 
+2026-10-24 04:57:08,675 INFO: [SAFMN..][epoch:  1, iter:  27,400, lr:(9.927e-04,)] [eta: 0:15:40, time (data): 0.321 (0.259)] l_pix: 2.0795e-02 
+2026-10-24 04:57:42,204 INFO: [SAFMN..][epoch:  1, iter:  27,500, lr:(9.926e-04,)] [eta: 0:15:04, time (data): 0.330 (0.267)] l_pix: 2.3383e-02 
+2026-10-24 04:58:14,649 INFO: [SAFMN..][epoch:  1, iter:  27,600, lr:(9.926e-04,)] [eta: 0:14:27, time (data): 0.341 (0.278)] l_pix: 2.0769e-02 
+2026-10-24 04:58:48,406 INFO: [SAFMN..][epoch:  1, iter:  27,700, lr:(9.925e-04,)] [eta: 0:13:51, time (data): 0.339 (0.277)] l_pix: 2.9432e-02 
+2026-10-24 04:59:22,543 INFO: [SAFMN..][epoch:  1, iter:  27,800, lr:(9.925e-04,)] [eta: 0:13:14, time (data): 0.333 (0.270)] l_pix: 2.9230e-02 
+2026-10-24 04:59:55,708 INFO: [SAFMN..][epoch:  1, iter:  27,900, lr:(9.924e-04,)] [eta: 0:12:38, time (data): 0.332 (0.269)] l_pix: 2.7133e-02 
+2026-10-24 05:00:29,527 INFO: [SAFMN..][epoch:  1, iter:  28,000, lr:(9.924e-04,)] [eta: 0:12:02, time (data): 0.349 (0.286)] l_pix: 2.6532e-02 
+2026-10-24 05:01:03,524 INFO: [SAFMN..][epoch:  1, iter:  28,100, lr:(9.923e-04,)] [eta: 0:11:25, time (data): 0.343 (0.278)] l_pix: 2.2288e-02 
+2026-10-24 05:01:39,383 INFO: [SAFMN..][epoch:  1, iter:  28,200, lr:(9.923e-04,)] [eta: 0:10:49, time (data): 0.363 (0.300)] l_pix: 2.8244e-02 
+2026-10-24 05:02:12,985 INFO: [SAFMN..][epoch:  1, iter:  28,300, lr:(9.922e-04,)] [eta: 0:10:13, time (data): 0.346 (0.283)] l_pix: 2.4049e-02 
+2026-10-24 05:02:50,436 INFO: [SAFMN..][epoch:  1, iter:  28,400, lr:(9.921e-04,)] [eta: 0:09:37, time (data): 0.386 (0.320)] l_pix: 2.9243e-02 
+2026-10-24 05:03:23,456 INFO: [SAFMN..][epoch:  1, iter:  28,500, lr:(9.921e-04,)] [eta: 0:09:01, time (data): 0.351 (0.286)] l_pix: 2.5808e-02 
+2026-10-24 05:04:00,495 INFO: [SAFMN..][epoch:  1, iter:  28,600, lr:(9.920e-04,)] [eta: 0:08:25, time (data): 0.354 (0.290)] l_pix: 2.4571e-02 
+2026-10-24 05:04:33,039 INFO: [SAFMN..][epoch:  1, iter:  28,700, lr:(9.920e-04,)] [eta: 0:07:48, time (data): 0.336 (0.272)] l_pix: 2.7245e-02 
+2026-10-24 05:05:07,145 INFO: [SAFMN..][epoch:  1, iter:  28,800, lr:(9.919e-04,)] [eta: 0:07:12, time (data): 0.326 (0.264)] l_pix: 2.2738e-02 
+2026-10-24 05:05:39,144 INFO: [SAFMN..][epoch:  1, iter:  28,900, lr:(9.919e-04,)] [eta: 0:06:36, time (data): 0.322 (0.259)] l_pix: 2.3859e-02 
+2026-10-24 05:06:12,251 INFO: [SAFMN..][epoch:  1, iter:  29,000, lr:(9.918e-04,)] [eta: 0:06:00, time (data): 0.326 (0.261)] l_pix: 2.7130e-02 
+2026-10-24 05:06:46,267 INFO: [SAFMN..][epoch:  1, iter:  29,100, lr:(9.917e-04,)] [eta: 0:05:24, time (data): 0.335 (0.270)] l_pix: 2.6615e-02 
+2026-10-24 05:07:19,468 INFO: [SAFMN..][epoch:  1, iter:  29,200, lr:(9.917e-04,)] [eta: 0:04:48, time (data): 0.326 (0.262)] l_pix: 2.6635e-02 
+2026-10-24 05:07:52,171 INFO: [SAFMN..][epoch:  1, iter:  29,300, lr:(9.916e-04,)] [eta: 0:04:11, time (data): 0.327 (0.264)] l_pix: 2.4094e-02 
+2026-10-24 05:08:30,387 INFO: [SAFMN..][epoch:  1, iter:  29,400, lr:(9.916e-04,)] [eta: 0:03:35, time (data): 0.374 (0.308)] l_pix: 2.7501e-02 
+2026-10-24 05:09:06,270 INFO: [SAFMN..][epoch:  1, iter:  29,500, lr:(9.915e-04,)] [eta: 0:02:59, time (data): 0.364 (0.300)] l_pix: 2.8002e-02 
+2026-10-24 05:09:41,888 INFO: [SAFMN..][epoch:  1, iter:  29,600, lr:(9.915e-04,)] [eta: 0:02:23, time (data): 0.374 (0.309)] l_pix: 2.4577e-02 
+2026-10-24 05:10:15,610 INFO: [SAFMN..][epoch:  1, iter:  29,700, lr:(9.914e-04,)] [eta: 0:01:47, time (data): 0.350 (0.285)] l_pix: 2.5930e-02 
+2026-10-24 05:10:50,058 INFO: [SAFMN..][epoch:  1, iter:  29,800, lr:(9.913e-04,)] [eta: 0:01:11, time (data): 0.353 (0.287)] l_pix: 2.7972e-02 
+2026-10-24 05:11:21,877 INFO: [SAFMN..][epoch:  1, iter:  29,900, lr:(9.913e-04,)] [eta: 0:00:35, time (data): 0.330 (0.266)] l_pix: 2.8341e-02 
+2026-10-24 05:11:54,761 INFO: [SAFMN..][epoch:  1, iter:  30,000, lr:(9.912e-04,)] [eta: 0:00:00, time (data): 0.341 (0.277)] l_pix: 2.8089e-02 
+2026-10-24 05:11:54,762 INFO: Saving models and training states.
+2026-10-24 05:13:32,860 INFO: Validation DIV2K_val100
+	 # psnr: 28.7050	Best: 28.7050 @ 30000 iter
+
+2026-10-24 05:13:37,549 INFO: End of training. Time consumed: 3:01:53
+2026-10-24 05:13:37,549 INFO: Save the latest model.
+2026-10-24 05:14:09,339 INFO: Validation DIV2K_val100
+	 # psnr: 28.7050	Best: 28.7050 @ 30002 iter
+
