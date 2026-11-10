@@ -1,0 +1,63 @@
+{
+  "input": "${WORKSPACE_ROOT}/datasets/Set5/LR_bicubic/X4/butterfly.png",
+  "gt": "${WORKSPACE_ROOT}/datasets/Set5/HR/butterfly.png",
+  "weights": "${WORKSPACE_ROOT}/results/net_g_30000.pth",
+  "weights_sha256": "c8f372864a1479fb555d1f2a4793b31ce5d1e6a55741ca2393b37606dc0370f3",
+  "weight_key": "params",
+  "model": {
+    "name": "SAFMN",
+    "label": "SAFMN 30k",
+    "dim": 36,
+    "n_blocks": 8,
+    "ffn_scale": 2.0,
+    "scale": 4,
+    "parameters": 239520,
+    "architecture_path": "${WORKSPACE_ROOT}/SAFMN/basicsr/archs/safmn_arch.py",
+    "architecture_sha256": "e1e17078ade763568e3fc54ed54d3c4ec3e5294f400f983931a4dc5bc911d6fc"
+  },
+  "input_size_wh": [
+    64,
+    64
+  ],
+  "output_size_wh": [
+    256,
+    256
+  ],
+  "device": "cpu",
+  "torch_threads": 4,
+  "inference_wall_seconds": 0.020192124880850315,
+  "inference_cpu_seconds": 0.06551399999999985,
+  "torch_version": "2.6.0",
+  "numpy_version": "1.26.4",
+  "outputs": {
+    "sr.png": "${REPOSITORY_ROOT}/learning/outputs/butterfly_30k/sr.png",
+    "bicubic.png": "${REPOSITORY_ROOT}/learning/outputs/butterfly_30k/bicubic.png",
+    "comparison.png": "${REPOSITORY_ROOT}/learning/outputs/butterfly_30k/comparison.png",
+    "result.json": "${REPOSITORY_ROOT}/learning/outputs/butterfly_30k/result.json"
+  },
+  "comparison_center_roi_xyxy": [
+    96,
+    96,
+    160,
+    160
+  ],
+  "metrics": {
+    "protocol": "single-image uint8 RGB PSNR; crop_border=4; float64 MSE; peak=255",
+    "sr": {
+      "psnr_db": 26.4593116740539,
+      "mse": 146.9430985518557
+    },
+    "pillow_bicubic": {
+      "psnr_db": 20.864476343503252,
+      "mse": 532.88405632154
+    }
+  },
+  "notes": [
+    "Single-image local practice result; not a dataset-average benchmark or model ranking.",
+    "Pillow bicubic baseline is not the official MATLAB degradation generator.",
+    "Inference timing is one CPU forward pass, without warmup; file I/O is excluded."
+  ],
+  "source_record_sha256": "b724d429310829d1f4319542405a0e7181eaabea4774d8f00969a9b7afe4c19c",
+  "published_comparison": "comparison.png",
+  "publication_note": "Paths normalized for publication; measured values unchanged. Raw generated outputs are local; only the curated comparison is included."
+}

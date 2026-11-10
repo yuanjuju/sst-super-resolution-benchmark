@@ -73,3 +73,9 @@
 - [ema/01_metrics_and_curves.png](07_esc_wmsr_5000/ema/01_metrics_and_curves.png)
 - [ema/02_temperature_reconstructions.png](07_esc_wmsr_5000/ema/02_temperature_reconstructions.png)
 - [ema/03_signed_temperature_errors.png](07_esc_wmsr_5000/ema/03_signed_temperature_errors.png)
+
+## 自然图像基础超分
+
+[SAFMN与CAMixerSR图表](../foundations/natural-image-sr/figures/README.md)：FFT训练曲线、Set5五图四组预测、早期预训练/短训效果以及bird普通参数与EMA比较。
+
+[Excel结果表与可编辑曲线](../tables/natural_image_sr/experiments.xlsx)
