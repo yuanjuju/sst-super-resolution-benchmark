@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "source_files": 172,
+  "metrics": 41,
+  "validation_records": 25,
+  "set5_source_images": 10,
+  "set5_predictions": 20,
+  "set5_means": 4,
+  "local_inference": 3,
+  "rgb_psnr_recomputed": 23,
+  "workbook_sheets": 5,
+  "workbook_charts": 2
+}

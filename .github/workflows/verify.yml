@@ -12,3 +12,4 @@ jobs:
         with:
           python-version: '3.11'
       - run: python tools/verify_archive.py
+      - run: python tools/verify_natural_sr.py

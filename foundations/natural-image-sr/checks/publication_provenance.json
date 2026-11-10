@@ -1,0 +1,1550 @@
+[
+  {
+    "source": "sr-training-workbench/THIRD_PARTY.md",
+    "path": "foundations/natural-image-sr/THIRD_PARTY.md",
+    "source_sha256": "3d80523e6e93a1a39a68ba9b8746e535d4ef52553ec2b2211988b1f3ffa37d07",
+    "published_sha256": "eb07e34c73d7faa521b26240d34c5b5fbe67d63f2f29943c9b6204fd67a1ea0e",
+    "bytes": 986,
+    "path_normalized": false,
+    "modified_for_module": true
+  },
+  {
+    "source": "sr-training-workbench/configs/README.md",
+    "path": "foundations/natural-image-sr/configs/README.md",
+    "source_sha256": "14353112b39232d27fce8eeb0cb49d77da87e7580a0a5ebbd24871d2a61e5e7f",
+    "published_sha256": "14353112b39232d27fce8eeb0cb49d77da87e7580a0a5ebbd24871d2a61e5e7f",
+    "bytes": 4765,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/configs/camixersr/test/CAMixerSR_Set5_x4_cloud.yml",
+    "path": "foundations/natural-image-sr/configs/camixersr/test/CAMixerSR_Set5_x4_cloud.yml",
+    "source_sha256": "abba977322044a32f47e211ed69f47bbec8f5a2e5ccec6389ea94a49a496b6e7",
+    "published_sha256": "abba977322044a32f47e211ed69f47bbec8f5a2e5ccec6389ea94a49a496b6e7",
+    "bytes": 748,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/configs/camixersr/train/CAMixerSR_train_DF2K_x4_cloud_1000.yml",
+    "path": "foundations/natural-image-sr/configs/camixersr/train/CAMixerSR_train_DF2K_x4_cloud_1000.yml",
+    "source_sha256": "3bff8860ae42f064f51bc05a5bf0857f4a9cbcfcd459af1697e94dc73d2284a1",
+    "published_sha256": "3bff8860ae42f064f51bc05a5bf0857f4a9cbcfcd459af1697e94dc73d2284a1",
+    "bytes": 1954,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/configs/camixersr/train/CAMixerSR_train_DF2K_x4_cloud_5000.yml",
+    "path": "foundations/natural-image-sr/configs/camixersr/train/CAMixerSR_train_DF2K_x4_cloud_5000.yml",
+    "source_sha256": "32ada9a33c571a0df521c5ca66e4f50eb94d03a019fefe1088ece60a70ba36d4",
+    "published_sha256": "32ada9a33c571a0df521c5ca66e4f50eb94d03a019fefe1088ece60a70ba36d4",
+    "bytes": 1955,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/configs/safmn/test/SAFMN_DIV2K_val100_30000.yml",
+    "path": "foundations/natural-image-sr/configs/safmn/test/SAFMN_DIV2K_val100_30000.yml",
+    "source_sha256": "2f4796cbcd2f035350bd58efe49b8ce481e5febb729dad192afc32c48bb2b6c9",
+    "published_sha256": "2f4796cbcd2f035350bd58efe49b8ce481e5febb729dad192afc32c48bb2b6c9",
+    "bytes": 726,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/configs/safmn/test/SAFMN_DIV2K_val100_30000_ema.yml",
+    "path": "foundations/natural-image-sr/configs/safmn/test/SAFMN_DIV2K_val100_30000_ema.yml",
+    "source_sha256": "124b4b0823d88f1370f8ac7f22917f5bf3e624c821c7087b20b03614f6fc79ab",
+    "published_sha256": "124b4b0823d88f1370f8ac7f22917f5bf3e624c821c7087b20b03614f6fc79ab",
+    "bytes": 756,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/configs/safmn/test/SAFMN_DIV2K_val100_pretrained.yml",
+    "path": "foundations/natural-image-sr/configs/safmn/test/SAFMN_DIV2K_val100_pretrained.yml",
+    "source_sha256": "42d1c08fc502ab1edaf260d7c4448f9e94fc5bd4411b2f519bccb8d23e90875d",
+    "published_sha256": "42d1c08fc502ab1edaf260d7c4448f9e94fc5bd4411b2f519bccb8d23e90875d",
+    "bytes": 714,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/configs/safmn/test/SAFMN_Set5_x4_30000.yml",
+    "path": "foundations/natural-image-sr/configs/safmn/test/SAFMN_Set5_x4_30000.yml",
+    "source_sha256": "7f7e2351a69410ea5053d6ff21b459688e47806c77e9e59c9e0f7b3bc2f1f9ed",
+    "published_sha256": "7f7e2351a69410ea5053d6ff21b459688e47806c77e9e59c9e0f7b3bc2f1f9ed",
+    "bytes": 768,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/configs/safmn/test/SAFMN_Set5_x4_5000.yml",
+    "path": "foundations/natural-image-sr/configs/safmn/test/SAFMN_Set5_x4_5000.yml",
+    "source_sha256": "a0784e5f49c0aa4279f813d9fa2677eba76c4ff23e9310d012607ce4b03ea90c",
+    "published_sha256": "a0784e5f49c0aa4279f813d9fa2677eba76c4ff23e9310d012607ce4b03ea90c",
+    "bytes": 766,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/configs/safmn/test/SAFMN_Set5_x4_cloud.yml",
+    "path": "foundations/natural-image-sr/configs/safmn/test/SAFMN_Set5_x4_cloud.yml",
+    "source_sha256": "f9f7cf74a5fe1a744ab0778e3a1513521fd18969b0db87881c301c43c48b445a",
+    "published_sha256": "f9f7cf74a5fe1a744ab0778e3a1513521fd18969b0db87881c301c43c48b445a",
+    "bytes": 751,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/configs/safmn/train/SAFMN_train_DF2K_x4_pair_fft_30000.yml",
+    "path": "foundations/natural-image-sr/configs/safmn/train/SAFMN_train_DF2K_x4_pair_fft_30000.yml",
+    "source_sha256": "da5e7eaaea5bf19ab94b981c0c7dea74c6db58ed43d4d6b6b9f54230c44dd6a3",
+    "published_sha256": "da5e7eaaea5bf19ab94b981c0c7dea74c6db58ed43d4d6b6b9f54230c44dd6a3",
+    "bytes": 2802,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/configs/safmn/train/SAFMN_train_DF2K_x4_pair_nofft_30000.yml",
+    "path": "foundations/natural-image-sr/configs/safmn/train/SAFMN_train_DF2K_x4_pair_nofft_30000.yml",
+    "source_sha256": "7788de807cc29a128a39cf895f0bee7cd09e288b11f98ef0856f2cf792f6a4d7",
+    "published_sha256": "7788de807cc29a128a39cf895f0bee7cd09e288b11f98ef0856f2cf792f6a4d7",
+    "bytes": 2746,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/configs/safmn/train/SAFMN_train_DF2K_x4_sub_cloud.yml",
+    "path": "foundations/natural-image-sr/configs/safmn/train/SAFMN_train_DF2K_x4_sub_cloud.yml",
+    "source_sha256": "bcf627ade047c0e194a214786cd8879eb4d47e3e76061b4d6d655ad477b55daa",
+    "published_sha256": "bcf627ade047c0e194a214786cd8879eb4d47e3e76061b4d6d655ad477b55daa",
+    "bytes": 2656,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/configs/safmn/train/SAFMN_train_DF2K_x4_sub_first5000.yml",
+    "path": "foundations/natural-image-sr/configs/safmn/train/SAFMN_train_DF2K_x4_sub_first5000.yml",
+    "source_sha256": "c53f9cd1090fea7cbb7d9cfded8cfb0c73e635cb461dc307dc7dc35399de7ef7",
+    "published_sha256": "c53f9cd1090fea7cbb7d9cfded8cfb0c73e635cb461dc307dc7dc35399de7ef7",
+    "bytes": 2801,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/configs/safmn/train/SAFMN_train_DF2K_x4_sub_nofft_5000.yml",
+    "path": "foundations/natural-image-sr/configs/safmn/train/SAFMN_train_DF2K_x4_sub_nofft_5000.yml",
+    "source_sha256": "8a7c29e379345e38055f42f9f59adb60a8c8a4925e14c002e250962c40856b2d",
+    "published_sha256": "8a7c29e379345e38055f42f9f59adb60a8c8a4925e14c002e250962c40856b2d",
+    "bytes": 2686,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/docs/CAMixerSR-short-training-plan.md",
+    "path": "foundations/natural-image-sr/docs/CAMixerSR-short-training-plan.md",
+    "source_sha256": "c592e8f8ee2c17f7093a712763cbc102804bfdc636620b5265d154ced3d53de7",
+    "published_sha256": "c592e8f8ee2c17f7093a712763cbc102804bfdc636620b5265d154ced3d53de7",
+    "bytes": 6840,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/docs/README.md",
+    "path": "foundations/natural-image-sr/docs/README.md",
+    "source_sha256": "a366376c113e5d7cc4e2f9cb3dbd998830eb992fd7ea140dfb15949d162c400a",
+    "published_sha256": "a366376c113e5d7cc4e2f9cb3dbd998830eb992fd7ea140dfb15949d162c400a",
+    "bytes": 1778,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/docs/SAFMN-FFT-paired-30k.md",
+    "path": "foundations/natural-image-sr/docs/SAFMN-FFT-paired-30k.md",
+    "source_sha256": "b29f9cc85568eaa706dc097d873732e50228e0d2ce91a1957755a064a73e8ac8",
+    "published_sha256": "b29f9cc85568eaa706dc097d873732e50228e0d2ce91a1957755a064a73e8ac8",
+    "bytes": 9083,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/docs/experiment-notes.md",
+    "path": "foundations/natural-image-sr/docs/experiment-notes.md",
+    "source_sha256": "41b2f93ba63d40ddb9a67c6773e8ca7b6554bb440e87ff16ed5fc1a27156e37e",
+    "published_sha256": "41b2f93ba63d40ddb9a67c6773e8ca7b6554bb440e87ff16ed5fc1a27156e37e",
+    "bytes": 10047,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/docs/repository-structure.md",
+    "path": "foundations/natural-image-sr/docs/repository-structure.md",
+    "source_sha256": "5ff2587bd8c1810d9f8b17a7b8f15411e252d10fd70c65d200bc9236225bb4ad",
+    "published_sha256": "5ff2587bd8c1810d9f8b17a7b8f15411e252d10fd70c65d200bc9236225bb4ad",
+    "bytes": 2359,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/learning/01_forward_and_update.py",
+    "path": "foundations/natural-image-sr/learning/01_forward_and_update.py",
+    "source_sha256": "6510e1dc0075789668e228728ed0a9b3716049bcb753c1d21bc9e7694f4862bf",
+    "published_sha256": "08f7cbfef3cc921657df51059f3b9bae27278dfb99a793aa1e3c247bfc70724a",
+    "bytes": 6160,
+    "path_normalized": false,
+    "modified_for_module": true
+  },
+  {
+    "source": "sr-training-workbench/learning/02_infer_image.py",
+    "path": "foundations/natural-image-sr/learning/02_infer_image.py",
+    "source_sha256": "86c220d9f83311bbb7a62349c320868019b4bf3db15037c768522245ffe59f03",
+    "published_sha256": "fb6f397d3614b02a85db86f63cf4c06d1e06ce8ae77ccf8eb1ce578cb7c49215",
+    "bytes": 11144,
+    "path_normalized": false,
+    "modified_for_module": true
+  },
+  {
+    "source": "sr-training-workbench/learning/README.md",
+    "path": "foundations/natural-image-sr/learning/README.md",
+    "source_sha256": "8fb9fcc3db370288d86e4c64fddbf77c52a4039dd67f45d9f77b79b11b989a03",
+    "published_sha256": "af75ca127c6d81952a2788eb65c798d1061db755326cfc732f238ce71c3314dc",
+    "bytes": 1302,
+    "path_normalized": false,
+    "modified_for_module": true
+  },
+  {
+    "source": "sr-training-workbench/learning/_safmn_source.py",
+    "path": "foundations/natural-image-sr/learning/_safmn_source.py",
+    "source_sha256": "41a7e0d1db6cd73af8aadb0a5fe54c2c262e3b361a5b76b6047a374d17df11b1",
+    "published_sha256": "41a7e0d1db6cd73af8aadb0a5fe54c2c262e3b361a5b76b6047a374d17df11b1",
+    "bytes": 1560,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/learning/examples/README.md",
+    "path": "foundations/natural-image-sr/learning/examples/README.md",
+    "source_sha256": "9ceaf3ab7be7bf553eb01c74933df60d104a23011263f79ec53532fd037739bc",
+    "published_sha256": "9ceaf3ab7be7bf553eb01c74933df60d104a23011263f79ec53532fd037739bc",
+    "bytes": 1765,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/learning/examples/bird_params_vs_ema/comparison.png",
+    "path": "foundations/natural-image-sr/learning/examples/bird_params_vs_ema/comparison.png",
+    "source_sha256": "6046897b268d00cf94ac62422f37bfcabde6a9e11962c0387e98c3121fa05336",
+    "published_sha256": "6046897b268d00cf94ac62422f37bfcabde6a9e11962c0387e98c3121fa05336",
+    "bytes": 709108,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/learning/examples/bird_params_vs_ema/result.json",
+    "path": "foundations/natural-image-sr/learning/examples/bird_params_vs_ema/result.json",
+    "source_sha256": "1979b8c962079267b199d9dac35742059245f671622c0b0ff8d94c926986b49f",
+    "published_sha256": "1979b8c962079267b199d9dac35742059245f671622c0b0ff8d94c926986b49f",
+    "bytes": 5489,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/learning/examples/butterfly_30k/comparison.png",
+    "path": "foundations/natural-image-sr/learning/examples/butterfly_30k/comparison.png",
+    "source_sha256": "24d3b021468b0289a4a6079c9b9a0901871c0a9391300ebfe508804736a197f5",
+    "published_sha256": "24d3b021468b0289a4a6079c9b9a0901871c0a9391300ebfe508804736a197f5",
+    "bytes": 450289,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/learning/examples/butterfly_30k/result.json",
+    "path": "foundations/natural-image-sr/learning/examples/butterfly_30k/result.json",
+    "source_sha256": "e4c3ec3cf30e8a3ac6a0db49df0b8460d3327c52d9485b7c1b6e2715a2a1fe44",
+    "published_sha256": "e4c3ec3cf30e8a3ac6a0db49df0b8460d3327c52d9485b7c1b6e2715a2a1fe44",
+    "bytes": 2212,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/learning/requirements.lock.txt",
+    "path": "foundations/natural-image-sr/learning/requirements.lock.txt",
+    "source_sha256": "04291048152df9006679de3329919c5b914af0c0b7f1c06018ca226965c86e73",
+    "published_sha256": "04291048152df9006679de3329919c5b914af0c0b7f1c06018ca226965c86e73",
+    "bytes": 194,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/learning/requirements.txt",
+    "path": "foundations/natural-image-sr/learning/requirements.txt",
+    "source_sha256": "26bc5a065e2b0fd20a169514a556357e21aaf61b0e47db0e48fc8d9b1ddfccba",
+    "published_sha256": "26bc5a065e2b0fd20a169514a556357e21aaf61b0e47db0e48fc8d9b1ddfccba",
+    "bytes": 166,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/patches/CAMixerSR_training_entry.patch",
+    "path": "foundations/natural-image-sr/patches/CAMixerSR_training_entry.patch",
+    "source_sha256": "88b0c06a9833ecde6562c1760420d6fccae8bce23a89fe0ec578ef78c0a8697a",
+    "published_sha256": "88b0c06a9833ecde6562c1760420d6fccae8bce23a89fe0ec578ef78c0a8697a",
+    "bytes": 871,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/patches/SAFMN_torchvision_grayscale.patch",
+    "path": "foundations/natural-image-sr/patches/SAFMN_torchvision_grayscale.patch",
+    "source_sha256": "285e3eeae4e0ac25150aba497b0f5148e284a27685e5925e5c1a2828b4e6fb9f",
+    "published_sha256": "285e3eeae4e0ac25150aba497b0f5148e284a27685e5925e5c1a2828b4e6fb9f",
+    "bytes": 574,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/requirements-camixersr-5090.txt",
+    "path": "foundations/natural-image-sr/requirements-camixersr-5090.txt",
+    "source_sha256": "6ee929df72cffb6c1887a967711da51faa6010558fcb014168c81f3702c81ebb",
+    "published_sha256": "6ee929df72cffb6c1887a967711da51faa6010558fcb014168c81f3702c81ebb",
+    "bytes": 380,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/README.md",
+    "path": "foundations/natural-image-sr/results/README.md",
+    "source_sha256": "284aaf72b5703915cabb94575dbea6e7995c7f9950c95448f118a3bbdc62d543",
+    "published_sha256": "284aaf72b5703915cabb94575dbea6e7995c7f9950c95448f118a3bbdc62d543",
+    "bytes": 2369,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/camixersr5000.checkpoint_verification.json",
+    "path": "foundations/natural-image-sr/results/camixersr5000.checkpoint_verification.json",
+    "source_sha256": "5dc70d41fa3ef989ac4fd43420e12780e5482180ea4650c9365b980afb2962db",
+    "published_sha256": "5dc70d41fa3ef989ac4fd43420e12780e5482180ea4650c9365b980afb2962db",
+    "bytes": 835,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/camixersr5000.launch.json",
+    "path": "foundations/natural-image-sr/results/camixersr5000.launch.json",
+    "source_sha256": "a3806063013c479a5f178d42c75d140dbfb53a90c9ff8d44b85f89739857ca12",
+    "published_sha256": "a3806063013c479a5f178d42c75d140dbfb53a90c9ff8d44b85f89739857ca12",
+    "bytes": 1356,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/camixersr5000.result.json",
+    "path": "foundations/natural-image-sr/results/camixersr5000.result.json",
+    "source_sha256": "d77253ef3e7df6b28d99b17cb306950678b957440c66e16b694254b504d7d557",
+    "published_sha256": "d77253ef3e7df6b28d99b17cb306950678b957440c66e16b694254b504d7d557",
+    "bytes": 1912,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/camixersr_5090_environment.txt",
+    "path": "foundations/natural-image-sr/results/camixersr_5090_environment.txt",
+    "source_sha256": "b7ebf469024a0c61d65778a9707aed9bbdccd70561afbcf1f3fcae1c904dae4a",
+    "published_sha256": "b7ebf469024a0c61d65778a9707aed9bbdccd70561afbcf1f3fcae1c904dae4a",
+    "bytes": 1344,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/camixersr_5090_preflight.json",
+    "path": "foundations/natural-image-sr/results/camixersr_5090_preflight.json",
+    "source_sha256": "2e638a1cdacbacbc3655ea5409fabdd4b5db39ee2ba707645ee2eceddbef5009",
+    "published_sha256": "2e638a1cdacbacbc3655ea5409fabdd4b5db39ee2ba707645ee2eceddbef5009",
+    "bytes": 876,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/dataset_sha256.txt",
+    "path": "foundations/natural-image-sr/results/dataset_sha256.txt",
+    "source_sha256": "da559a9d6d1afe4f6a3f093fbce7994e7956f53a711cac02f5809a76171832dd",
+    "published_sha256": "da559a9d6d1afe4f6a3f093fbce7994e7956f53a711cac02f5809a76171832dd",
+    "bytes": 441,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/logs/CAMixerSR_Set5_x4_cloud.log",
+    "path": "foundations/natural-image-sr/results/logs/CAMixerSR_Set5_x4_cloud.log",
+    "source_sha256": "0a631779efec0ae74f01fe152693c112a39d17f126e537170c8d1b1e70736498",
+    "published_sha256": "0a631779efec0ae74f01fe152693c112a39d17f126e537170c8d1b1e70736498",
+    "bytes": 8214,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/logs/SAFMN_DIV2K_val100_30000.stdout.log",
+    "path": "foundations/natural-image-sr/results/logs/SAFMN_DIV2K_val100_30000.stdout.log",
+    "source_sha256": "9747068fe864cb86591d63e89f64d3ade3bd1f09cfc8d6838c3e112c5a4998e1",
+    "published_sha256": "9747068fe864cb86591d63e89f64d3ade3bd1f09cfc8d6838c3e112c5a4998e1",
+    "bytes": 8072,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/logs/SAFMN_DIV2K_val100_30000_ema.stdout.log",
+    "path": "foundations/natural-image-sr/results/logs/SAFMN_DIV2K_val100_30000_ema.stdout.log",
+    "source_sha256": "564426e99e2ce6472e90deae40a68a6e4afaed3fcfc2f300ce81f5dd69ebc362",
+    "published_sha256": "564426e99e2ce6472e90deae40a68a6e4afaed3fcfc2f300ce81f5dd69ebc362",
+    "bytes": 8246,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/logs/SAFMN_Set5_x4_30000.stdout.log",
+    "path": "foundations/natural-image-sr/results/logs/SAFMN_Set5_x4_30000.stdout.log",
+    "source_sha256": "b3d4af6790d8d0e9c2a1d137cd6203cb584a7fa337e5051caf9a77bcb6574304",
+    "published_sha256": "b3d4af6790d8d0e9c2a1d137cd6203cb584a7fa337e5051caf9a77bcb6574304",
+    "bytes": 8134,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/logs/SAFMN_Set5_x4_cloud.log",
+    "path": "foundations/natural-image-sr/results/logs/SAFMN_Set5_x4_cloud.log",
+    "source_sha256": "ff8a61d04023be36d9d99e8a896d3e2214185fda7612d5595ed22e6e1573a31a",
+    "published_sha256": "ff8a61d04023be36d9d99e8a896d3e2214185fda7612d5595ed22e6e1573a31a",
+    "bytes": 7699,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/logs/camixersr5000.stdout.log",
+    "path": "foundations/natural-image-sr/results/logs/camixersr5000.stdout.log",
+    "source_sha256": "212964d04ef6a12b4099bff6d267605aaaf5fe57c4ecf687dc3d76555214e0ae",
+    "published_sha256": "212964d04ef6a12b4099bff6d267605aaaf5fe57c4ecf687dc3d76555214e0ae",
+    "bytes": 52444,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/logs/first5000.stdout.log",
+    "path": "foundations/natural-image-sr/results/logs/first5000.stdout.log",
+    "source_sha256": "b58e70f17eef2b01b64bb938f37a26d75d8110abd3f0001f147065acfbf67233",
+    "published_sha256": "b58e70f17eef2b01b64bb938f37a26d75d8110abd3f0001f147065acfbf67233",
+    "bytes": 18937,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/logs/full500k_resume.stdout.log",
+    "path": "foundations/natural-image-sr/results/logs/full500k_resume.stdout.log",
+    "source_sha256": "9b5a339cc059eac46707f2e7b77966c2633b5af32597d526a2acbf76593ce9b5",
+    "published_sha256": "9b5a339cc059eac46707f2e7b77966c2633b5af32597d526a2acbf76593ce9b5",
+    "bytes": 55010,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/logs/nofft5000.stdout.log",
+    "path": "foundations/natural-image-sr/results/logs/nofft5000.stdout.log",
+    "source_sha256": "4006072b1636b57c047ac36c30dc4f1c6c5028dfd2ee8869711a1fcbd0f4a064",
+    "published_sha256": "4006072b1636b57c047ac36c30dc4f1c6c5028dfd2ee8869711a1fcbd0f4a064",
+    "bytes": 17898,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/metrics.csv",
+    "path": "foundations/natural-image-sr/results/metrics.csv",
+    "source_sha256": "10990c90d025ff0a320099faf9749c75a4170ab3f025854b4ec10dcf79e21367",
+    "published_sha256": "10990c90d025ff0a320099faf9749c75a4170ab3f025854b4ec10dcf79e21367",
+    "bytes": 5596,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/config_check.stdout.log",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/config_check.stdout.log",
+    "source_sha256": "ce0e6dcfda6e822e00a2ed400bfed4ced9f22ce513a0197cd96364d57c109212",
+    "published_sha256": "ce0e6dcfda6e822e00a2ed400bfed4ced9f22ce513a0197cd96364d57c109212",
+    "bytes": 20,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/configs/train_fft_30000.yml",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/configs/train_fft_30000.yml",
+    "source_sha256": "da5e7eaaea5bf19ab94b981c0c7dea74c6db58ed43d4d6b6b9f54230c44dd6a3",
+    "published_sha256": "da5e7eaaea5bf19ab94b981c0c7dea74c6db58ed43d4d6b6b9f54230c44dd6a3",
+    "bytes": 2802,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/configs/train_nofft_30000.yml",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/configs/train_nofft_30000.yml",
+    "source_sha256": "7788de807cc29a128a39cf895f0bee7cd09e288b11f98ef0856f2cf792f6a4d7",
+    "published_sha256": "7788de807cc29a128a39cf895f0bee7cd09e288b11f98ef0856f2cf792f6a4d7",
+    "bytes": 2746,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/environment.txt",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/environment.txt",
+    "source_sha256": "b7ebf469024a0c61d65778a9707aed9bbdccd70561afbcf1f3fcae1c904dae4a",
+    "published_sha256": "b7ebf469024a0c61d65778a9707aed9bbdccd70561afbcf1f3fcae1c904dae4a",
+    "bytes": 1344,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/evaluate_safmn_fft_pair.py",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/evaluate_safmn_fft_pair.py",
+    "source_sha256": "41b1f705f8f08b1cb5673c0e62450dc34fe1e9297eb0d4f3fda6772dd2d69c86",
+    "published_sha256": "41b1f705f8f08b1cb5673c0e62450dc34fe1e9297eb0d4f3fda6772dd2d69c86",
+    "bytes": 21352,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/evaluation.stdout.log",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/evaluation.stdout.log",
+    "source_sha256": "cc1bc5e4921db40586f5962124f906e38437e5758be51b230997b1b32703babe",
+    "published_sha256": "cc1bc5e4921db40586f5962124f906e38437e5758be51b230997b1b32703babe",
+    "bytes": 1108,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/fft.checkpoint_verification.json",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/fft.checkpoint_verification.json",
+    "source_sha256": "c4ec5b64dc84a75f03eb6af13703a52cc1e464f0981bf6abecf982858a30a0d5",
+    "published_sha256": "c4ec5b64dc84a75f03eb6af13703a52cc1e464f0981bf6abecf982858a30a0d5",
+    "bytes": 3021,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/fft.stdout.log",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/fft.stdout.log",
+    "source_sha256": "ab6e59b77eada85659cbfe95a3901c8d45847e39393f949e54c1d4cd73ec85bf",
+    "published_sha256": "ab6e59b77eada85659cbfe95a3901c8d45847e39393f949e54c1d4cd73ec85bf",
+    "bytes": 60703,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/fft.verification.stdout.log",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/fft.verification.stdout.log",
+    "source_sha256": "6d029fc98193301f948ea1c695ed68ae45351e9dba2d7e8918c885a4fa1f02d0",
+    "published_sha256": "6d029fc98193301f948ea1c695ed68ae45351e9dba2d7e8918c885a4fa1f02d0",
+    "bytes": 24,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/final_verification.json",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/final_verification.json",
+    "source_sha256": "a75590e3935e723aac2c48d2f5f8af8dcb58d985b5a9ab67cd24f324d96d8e31",
+    "published_sha256": "a75590e3935e723aac2c48d2f5f8af8dcb58d985b5a9ab67cd24f324d96d8e31",
+    "bytes": 3132,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/launch.json",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/launch.json",
+    "source_sha256": "4501cfbccf8a8b8b2631b110506d27adb073366626bcfbb885794e4b491d9c8e",
+    "published_sha256": "4501cfbccf8a8b8b2631b110506d27adb073366626bcfbb885794e4b491d9c8e",
+    "bytes": 730,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/manager.stdout.log",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/manager.stdout.log",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/manifest.json",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/manifest.json",
+    "source_sha256": "ea2f8bf0ebfe556ebec234c827c0f074d9b1cc8ba9737d8d6d8093d7308d5aed",
+    "published_sha256": "ea2f8bf0ebfe556ebec234c827c0f074d9b1cc8ba9737d8d6d8093d7308d5aed",
+    "bytes": 601,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/nofft.checkpoint_verification.json",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/nofft.checkpoint_verification.json",
+    "source_sha256": "707192c8c2e390ae79543ac01ea20c1d80995613ca6ce6a591f1cd78643b7f3b",
+    "published_sha256": "707192c8c2e390ae79543ac01ea20c1d80995613ca6ce6a591f1cd78643b7f3b",
+    "bytes": 3045,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/nofft.stdout.log",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/nofft.stdout.log",
+    "source_sha256": "277e008fa70ca197e26daa4178190839b1efe52e5c24da380380d87368fd48b1",
+    "published_sha256": "277e008fa70ca197e26daa4178190839b1efe52e5c24da380380d87368fd48b1",
+    "bytes": 54890,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/nofft.verification.stdout.log",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/nofft.verification.stdout.log",
+    "source_sha256": "6d029fc98193301f948ea1c695ed68ae45351e9dba2d7e8918c885a4fa1f02d0",
+    "published_sha256": "6d029fc98193301f948ea1c695ed68ae45351e9dba2d7e8918c885a4fa1f02d0",
+    "bytes": 24,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/preflight.json",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/preflight.json",
+    "source_sha256": "d6ad934252c524b8084f274eef40f5b135df304665e9eea9f6acaf3f72a95328",
+    "published_sha256": "d6ad934252c524b8084f274eef40f5b135df304665e9eea9f6acaf3f72a95328",
+    "bytes": 2667,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/preflight.stdout.log",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/preflight.stdout.log",
+    "source_sha256": "45662563eaba310d89927737be5c941d1194c0155c67446e76efc780c227ee64",
+    "published_sha256": "45662563eaba310d89927737be5c941d1194c0155c67446e76efc780c227ee64",
+    "bytes": 1052,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/preflight_safmn_fft_pair.py",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/preflight_safmn_fft_pair.py",
+    "source_sha256": "da7dd939efd0bdb4b1a568111cda2c9dd785428b8ae0b776e7a84e8d370303d9",
+    "published_sha256": "da7dd939efd0bdb4b1a568111cda2c9dd785428b8ae0b776e7a84e8d370303d9",
+    "bytes": 5118,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/results/comparisons/baby.png",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/results/comparisons/baby.png",
+    "source_sha256": "2410e8342ffe241f8d6a8bce845936adb59fb78836b31873d22ffa73b28c929d",
+    "published_sha256": "2410e8342ffe241f8d6a8bce845936adb59fb78836b31873d22ffa73b28c929d",
+    "bytes": 776217,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/results/comparisons/bird.png",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/results/comparisons/bird.png",
+    "source_sha256": "bd87335747485270858566be8939b295e01121769f97fad7cbe2990f76099abf",
+    "published_sha256": "bd87335747485270858566be8939b295e01121769f97fad7cbe2990f76099abf",
+    "bytes": 657207,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/results/comparisons/butterfly.png",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/results/comparisons/butterfly.png",
+    "source_sha256": "a65b504586242f2818078cb21275a17de9c580adc4c1f0679c06640c505aece6",
+    "published_sha256": "a65b504586242f2818078cb21275a17de9c580adc4c1f0679c06640c505aece6",
+    "bytes": 790978,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/results/comparisons/head.png",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/results/comparisons/head.png",
+    "source_sha256": "dbfc8646dc6ab4143f34d5d3217f14805cde70b8d5953263fd0862a0401ab4d3",
+    "published_sha256": "dbfc8646dc6ab4143f34d5d3217f14805cde70b8d5953263fd0862a0401ab4d3",
+    "bytes": 603153,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/results/comparisons/woman.png",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/results/comparisons/woman.png",
+    "source_sha256": "d45c60adf597df156c494a29912f7e8675df43754000cd2521896c79ff0b5984",
+    "published_sha256": "d45c60adf597df156c494a29912f7e8675df43754000cd2521896c79ff0b5984",
+    "bytes": 494168,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/results/evaluation.json",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/results/evaluation.json",
+    "source_sha256": "0026a0dd1bd313e4b44c7a83bf5438a649e4ce688e1b08e51c6f4d33906594a7",
+    "published_sha256": "0026a0dd1bd313e4b44c7a83bf5438a649e4ce688e1b08e51c6f4d33906594a7",
+    "bytes": 17262,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/results/predictions/baby/fft_30000.png",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/results/predictions/baby/fft_30000.png",
+    "source_sha256": "87c094fa7303826301608d2e882e9b063799508aad0508e7d4fff82b493cd161",
+    "published_sha256": "87c094fa7303826301608d2e882e9b063799508aad0508e7d4fff82b493cd161",
+    "bytes": 370639,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/results/predictions/baby/fft_5000.png",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/results/predictions/baby/fft_5000.png",
+    "source_sha256": "86274e0556f99320b3e0b1e768cdb17d885f986423b161e7a5e32a0ac138d28a",
+    "published_sha256": "86274e0556f99320b3e0b1e768cdb17d885f986423b161e7a5e32a0ac138d28a",
+    "bytes": 391517,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/results/predictions/baby/nofft_30000.png",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/results/predictions/baby/nofft_30000.png",
+    "source_sha256": "9c3e1fca5c87cb50e5c25aebd602d27a55dcbff085753171828d5051ac491582",
+    "published_sha256": "9c3e1fca5c87cb50e5c25aebd602d27a55dcbff085753171828d5051ac491582",
+    "bytes": 369785,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/results/predictions/baby/nofft_5000.png",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/results/predictions/baby/nofft_5000.png",
+    "source_sha256": "4df46995bd0cd0dd71f78ed3697fbc04740a03fe2366826e4b47bb9719ec2c3c",
+    "published_sha256": "4df46995bd0cd0dd71f78ed3697fbc04740a03fe2366826e4b47bb9719ec2c3c",
+    "bytes": 393248,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/results/predictions/bird/fft_30000.png",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/results/predictions/bird/fft_30000.png",
+    "source_sha256": "e5208f10c1626bc4082bbd2b6a36b0fa6d054f7f5f48cf47ca330be08515b059",
+    "published_sha256": "e5208f10c1626bc4082bbd2b6a36b0fa6d054f7f5f48cf47ca330be08515b059",
+    "bytes": 141368,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/results/predictions/bird/fft_5000.png",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/results/predictions/bird/fft_5000.png",
+    "source_sha256": "dda906201d3b57b66cea51a99ca3b95713abf7fc827d8709510256b7f64fa574",
+    "published_sha256": "dda906201d3b57b66cea51a99ca3b95713abf7fc827d8709510256b7f64fa574",
+    "bytes": 145397,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/results/predictions/bird/nofft_30000.png",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/results/predictions/bird/nofft_30000.png",
+    "source_sha256": "c4655e372d66724ccb8209726cab285d8b3369aeff2bac969bf389062cc7fbf1",
+    "published_sha256": "c4655e372d66724ccb8209726cab285d8b3369aeff2bac969bf389062cc7fbf1",
+    "bytes": 140659,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/results/predictions/bird/nofft_5000.png",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/results/predictions/bird/nofft_5000.png",
+    "source_sha256": "467cbd4fac07b0f9738d96411d7f3949b5475da8d1797389fbf22d65d6e5ed4e",
+    "published_sha256": "467cbd4fac07b0f9738d96411d7f3949b5475da8d1797389fbf22d65d6e5ed4e",
+    "bytes": 144564,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/results/predictions/butterfly/fft_30000.png",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/results/predictions/butterfly/fft_30000.png",
+    "source_sha256": "02765521aca398b3dd6a3766310e9c14555938e7f80ea5890e1e0a7388b36c20",
+    "published_sha256": "02765521aca398b3dd6a3766310e9c14555938e7f80ea5890e1e0a7388b36c20",
+    "bytes": 124753,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/results/predictions/butterfly/fft_5000.png",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/results/predictions/butterfly/fft_5000.png",
+    "source_sha256": "c8177657a054609a098555dd7d7df9407f2f2e50b463e3bd155d7fa161d427df",
+    "published_sha256": "c8177657a054609a098555dd7d7df9407f2f2e50b463e3bd155d7fa161d427df",
+    "bytes": 128185,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/results/predictions/butterfly/nofft_30000.png",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/results/predictions/butterfly/nofft_30000.png",
+    "source_sha256": "6f589d6126540a5312a8f5b85c2fc2f53ec2dff8233c325448567e1f23f4ed1e",
+    "published_sha256": "6f589d6126540a5312a8f5b85c2fc2f53ec2dff8233c325448567e1f23f4ed1e",
+    "bytes": 124725,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/results/predictions/butterfly/nofft_5000.png",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/results/predictions/butterfly/nofft_5000.png",
+    "source_sha256": "6ee093829c2288651c02227f7eba0f3019ef203a65b28ab5b0476ad23ede706b",
+    "published_sha256": "6ee093829c2288651c02227f7eba0f3019ef203a65b28ab5b0476ad23ede706b",
+    "bytes": 130025,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/results/predictions/head/fft_30000.png",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/results/predictions/head/fft_30000.png",
+    "source_sha256": "2bd93a5f706d457dd4a3f6b4e1d14a12fc77e24adbbcbfb8b0373cf03ca5fead",
+    "published_sha256": "2bd93a5f706d457dd4a3f6b4e1d14a12fc77e24adbbcbfb8b0373cf03ca5fead",
+    "bytes": 105438,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/results/predictions/head/fft_5000.png",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/results/predictions/head/fft_5000.png",
+    "source_sha256": "753bdb4010321a915f641951395badff767044438bd8deebc71fa2884dc3c23c",
+    "published_sha256": "753bdb4010321a915f641951395badff767044438bd8deebc71fa2884dc3c23c",
+    "bytes": 110264,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/results/predictions/head/nofft_30000.png",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/results/predictions/head/nofft_30000.png",
+    "source_sha256": "5938aeefab09390299f753738bd918a153d09a25aef9942ae83c8b7135ef260d",
+    "published_sha256": "5938aeefab09390299f753738bd918a153d09a25aef9942ae83c8b7135ef260d",
+    "bytes": 104762,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/results/predictions/head/nofft_5000.png",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/results/predictions/head/nofft_5000.png",
+    "source_sha256": "e4645ff444ee86fbf6b2bd445210ea24f1b3d18ce9674dfec1fe1790fceceb2c",
+    "published_sha256": "e4645ff444ee86fbf6b2bd445210ea24f1b3d18ce9674dfec1fe1790fceceb2c",
+    "bytes": 109682,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/results/predictions/woman/fft_30000.png",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/results/predictions/woman/fft_30000.png",
+    "source_sha256": "863c1fa7a762c4ef71c58e647ab007ca84fbab45900d4318c1476bda7d5a47c0",
+    "published_sha256": "863c1fa7a762c4ef71c58e647ab007ca84fbab45900d4318c1476bda7d5a47c0",
+    "bytes": 131697,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/results/predictions/woman/fft_5000.png",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/results/predictions/woman/fft_5000.png",
+    "source_sha256": "204d7e77c80bafebd9422eef3901566262271b6f77ca55e8a25f4afc54bc6985",
+    "published_sha256": "204d7e77c80bafebd9422eef3901566262271b6f77ca55e8a25f4afc54bc6985",
+    "bytes": 136096,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/results/predictions/woman/nofft_30000.png",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/results/predictions/woman/nofft_30000.png",
+    "source_sha256": "3efaabdb97d89989c59a1a500a79edae8f95a30f9e7ef787afec6e8a44be03ce",
+    "published_sha256": "3efaabdb97d89989c59a1a500a79edae8f95a30f9e7ef787afec6e8a44be03ce",
+    "bytes": 131069,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/results/predictions/woman/nofft_5000.png",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/results/predictions/woman/nofft_5000.png",
+    "source_sha256": "e6b8dd20bcf01edecfd5d9585b1d98344a80b9653498a184d8152b71521dadc1",
+    "published_sha256": "e6b8dd20bcf01edecfd5d9585b1d98344a80b9653498a184d8152b71521dadc1",
+    "bytes": 136759,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/results/set5_mean.csv",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/results/set5_mean.csv",
+    "source_sha256": "c8a9b4bf69498457afd593900e889912928702fa285b9b257e7f614590f874dd",
+    "published_sha256": "c8a9b4bf69498457afd593900e889912928702fa285b9b257e7f614590f874dd",
+    "bytes": 484,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/results/set5_metrics.json",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/results/set5_metrics.json",
+    "source_sha256": "ce342538e67faac0ebab9fd1b01b04a5e77134c0394e258e701e55a16329003a",
+    "published_sha256": "ce342538e67faac0ebab9fd1b01b04a5e77134c0394e258e701e55a16329003a",
+    "bytes": 11417,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/results/set5_per_image.csv",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/results/set5_per_image.csv",
+    "source_sha256": "3b64413e6470537267127d3b255628915f3b6b5fbfc77c84c3656fbc31299e93",
+    "published_sha256": "3b64413e6470537267127d3b255628915f3b6b5fbfc77c84c3656fbc31299e93",
+    "bytes": 4135,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/results/training_curve.png",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/results/training_curve.png",
+    "source_sha256": "b8aeff7926a4cacf36690a4f7d9b66dce04091c16a43da435e13c6494891c5db",
+    "published_sha256": "b8aeff7926a4cacf36690a4f7d9b66dce04091c16a43da435e13c6494891c5db",
+    "bytes": 87315,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/results/training_metrics.csv",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/results/training_metrics.csv",
+    "source_sha256": "c3d65a35efd2b554f0bbdbc69b4f6ef993dd774faaa3e56d58cc0d15024940a5",
+    "published_sha256": "c3d65a35efd2b554f0bbdbc69b4f6ef993dd774faaa3e56d58cc0d15024940a5",
+    "bytes": 1483,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/run_safmn_fft_pair.py",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/run_safmn_fft_pair.py",
+    "source_sha256": "b3d76dcd80f9da54567ebc1acda6fa0996cd95ba5e4075f06797a29d3e3db60f",
+    "published_sha256": "b3d76dcd80f9da54567ebc1acda6fa0996cd95ba5e4075f06797a29d3e3db60f",
+    "bytes": 17774,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/runner.log",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/runner.log",
+    "source_sha256": "39785b577cf221daf0f87a9f17989365d294dab9bf2afea1cb5ed474e3806f25",
+    "published_sha256": "39785b577cf221daf0f87a9f17989365d294dab9bf2afea1cb5ed474e3806f25",
+    "bytes": 728,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/setup.json",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/setup.json",
+    "source_sha256": "576637bc29fd2a123f0ba59114175240b75c349b5f23a5382072af7b37f99eb1",
+    "published_sha256": "576637bc29fd2a123f0ba59114175240b75c349b5f23a5382072af7b37f99eb1",
+    "bytes": 540,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/setup.stdout.log",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/setup.stdout.log",
+    "source_sha256": "0abdbfe8a1701d10adc45c705de089eab2f58f99dfc66d38177ce7052f54274f",
+    "published_sha256": "0abdbfe8a1701d10adc45c705de089eab2f58f99dfc66d38177ce7052f54274f",
+    "bytes": 269,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/setup_safmn_pair_5090.py",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/setup_safmn_pair_5090.py",
+    "source_sha256": "689cedf27aa6bc1a32e6c77cd48a50f5176c7c4e24424b26f4aec175201d6f79",
+    "published_sha256": "689cedf27aa6bc1a32e6c77cd48a50f5176c7c4e24424b26f4aec175201d6f79",
+    "bytes": 2585,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/source_revision.txt",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/source_revision.txt",
+    "source_sha256": "88b732a19e480c1d9f9a9f91b55cdf4a98a89451be899da5daab4ea466b93b41",
+    "published_sha256": "88b732a19e480c1d9f9a9f91b55cdf4a98a89451be899da5daab4ea466b93b41",
+    "bytes": 167,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/status.json",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/status.json",
+    "source_sha256": "c33479bd17b4f2d77b58165a71853e2abeada6684018f5a99b6b984f78437a7c",
+    "published_sha256": "c33479bd17b4f2d77b58165a71853e2abeada6684018f5a99b6b984f78437a7c",
+    "bytes": 2228,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/results/safmn_fft_pair_30k/status_at_launch.json",
+    "path": "foundations/natural-image-sr/results/safmn_fft_pair_30k/status_at_launch.json",
+    "source_sha256": "febafb3757513dce9ccf5fb6558a08dc655b7007a1e55973fa531f336dbad250",
+    "published_sha256": "febafb3757513dce9ccf5fb6558a08dc655b7007a1e55973fa531f336dbad250",
+    "bytes": 1459,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/scripts/README.md",
+    "path": "foundations/natural-image-sr/scripts/README.md",
+    "source_sha256": "6b7932a83fea7a7ccf70adb4531abff30fb1781834ae15cb718dda8f15493ecd",
+    "published_sha256": "6b7932a83fea7a7ccf70adb4531abff30fb1781834ae15cb718dda8f15493ecd",
+    "bytes": 5654,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/scripts/data/build_meta_info.py",
+    "path": "foundations/natural-image-sr/scripts/data/build_meta_info.py",
+    "source_sha256": "f839eac31a6d79948cdf566a1391d1bc511e2b88c7f1091a7afbbaa7ce73ab0b",
+    "published_sha256": "f839eac31a6d79948cdf566a1391d1bc511e2b88c7f1091a7afbbaa7ce73ab0b",
+    "bytes": 1870,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/scripts/data/download_training_data.py",
+    "path": "foundations/natural-image-sr/scripts/data/download_training_data.py",
+    "source_sha256": "627761da940bfc1902b76b2953e838cacb5880867bbad3bd2653764003e903d1",
+    "published_sha256": "627761da940bfc1902b76b2953e838cacb5880867bbad3bd2653764003e903d1",
+    "bytes": 4637,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/scripts/data/extract_training_data.py",
+    "path": "foundations/natural-image-sr/scripts/data/extract_training_data.py",
+    "source_sha256": "bf037dd091ca8fbf8beb84b2760d1d6e1c0a7f6ec0df531541232898bac686d0",
+    "published_sha256": "bf037dd091ca8fbf8beb84b2760d1d6e1c0a7f6ec0df531541232898bac686d0",
+    "bytes": 3327,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/scripts/data/prepare_df2k_pairs.py",
+    "path": "foundations/natural-image-sr/scripts/data/prepare_df2k_pairs.py",
+    "source_sha256": "162785372336abcab4822fd554f9b982299d247335670cf9dee238765f75f730",
+    "published_sha256": "162785372336abcab4822fd554f9b982299d247335670cf9dee238765f75f730",
+    "bytes": 2737,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/scripts/data/prepare_safmn_subimages.py",
+    "path": "foundations/natural-image-sr/scripts/data/prepare_safmn_subimages.py",
+    "source_sha256": "3f73a0c18d538a642fc4e6c122932279db84a14dac08af98f734768688b490f1",
+    "published_sha256": "3f73a0c18d538a642fc4e6c122932279db84a14dac08af98f734768688b490f1",
+    "bytes": 3716,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/scripts/environment/setup_camixersr_5090.sh",
+    "path": "foundations/natural-image-sr/scripts/environment/setup_camixersr_5090.sh",
+    "source_sha256": "7277add8d06c3a0024086039555856557da7f93aacf54ef46a24f2437899dcdb",
+    "published_sha256": "7277add8d06c3a0024086039555856557da7f93aacf54ef46a24f2437899dcdb",
+    "bytes": 2711,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/scripts/environment/setup_safmn_pair_5090.py",
+    "path": "foundations/natural-image-sr/scripts/environment/setup_safmn_pair_5090.py",
+    "source_sha256": "689cedf27aa6bc1a32e6c77cd48a50f5176c7c4e24424b26f4aec175201d6f79",
+    "published_sha256": "689cedf27aa6bc1a32e6c77cd48a50f5176c7c4e24424b26f4aec175201d6f79",
+    "bytes": 2585,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/scripts/evaluation/evaluate_safmn_fft_pair.py",
+    "path": "foundations/natural-image-sr/scripts/evaluation/evaluate_safmn_fft_pair.py",
+    "source_sha256": "7f7b7fea46168d6734d03b980c9d798c2413b17d361c25b6fa3085226a5850b8",
+    "published_sha256": "7f7b7fea46168d6734d03b980c9d798c2413b17d361c25b6fa3085226a5850b8",
+    "bytes": 21557,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/scripts/preflight/preflight_camixersr_5090.py",
+    "path": "foundations/natural-image-sr/scripts/preflight/preflight_camixersr_5090.py",
+    "source_sha256": "aa7e95807c6da9519a62b0b8f38657d9277722694dc519de2d50ecc57874f894",
+    "published_sha256": "aa7e95807c6da9519a62b0b8f38657d9277722694dc519de2d50ecc57874f894",
+    "bytes": 3352,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/scripts/preflight/preflight_safmn_fft_pair.py",
+    "path": "foundations/natural-image-sr/scripts/preflight/preflight_safmn_fft_pair.py",
+    "source_sha256": "da7dd939efd0bdb4b1a568111cda2c9dd785428b8ae0b776e7a84e8d370303d9",
+    "published_sha256": "da7dd939efd0bdb4b1a568111cda2c9dd785428b8ae0b776e7a84e8d370303d9",
+    "bytes": 5118,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/scripts/training/run_safmn_fft_pair.py",
+    "path": "foundations/natural-image-sr/scripts/training/run_safmn_fft_pair.py",
+    "source_sha256": "e5189be998732a0209ffa2da9ab1d45028370521838141892af107713a11a80a",
+    "published_sha256": "e5189be998732a0209ffa2da9ab1d45028370521838141892af107713a11a80a",
+    "bytes": 17856,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/scripts/training/stop_safmn_at_50000.py",
+    "path": "foundations/natural-image-sr/scripts/training/stop_safmn_at_50000.py",
+    "source_sha256": "ccb0095ff275f9a1042197eb67c34cf0702ca17269710fa2cbf51a84895f29b9",
+    "published_sha256": "ccb0095ff275f9a1042197eb67c34cf0702ca17269710fa2cbf51a84895f29b9",
+    "bytes": 3389,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/studies/README.md",
+    "path": "foundations/natural-image-sr/studies/README.md",
+    "source_sha256": "1104eea633cefc2433397568fcdc1f38a209603b994ebbf2173790dd871a9bff",
+    "published_sha256": "1104eea633cefc2433397568fcdc1f38a209603b994ebbf2173790dd871a9bff",
+    "bytes": 2872,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/studies/camixersr-training-5090/README.md",
+    "path": "foundations/natural-image-sr/studies/camixersr-training-5090/README.md",
+    "source_sha256": "b5d0f11345f40782ab51a242caa8bd1d47397360d15185944dc0147a327e19ca",
+    "published_sha256": "8450d9ff9867ddc0f49dca0db5547b8829933a8dbe9e59535503e91f47711ab1",
+    "bytes": 2446,
+    "path_normalized": false,
+    "modified_for_module": true
+  },
+  {
+    "source": "sr-training-workbench/studies/pretrained-inference/README.md",
+    "path": "foundations/natural-image-sr/studies/pretrained-inference/README.md",
+    "source_sha256": "afefbab8814a4bacb9f8735e5ba5fec91f00f2383acfed03a5602c4f177db174",
+    "published_sha256": "afefbab8814a4bacb9f8735e5ba5fec91f00f2383acfed03a5602c4f177db174",
+    "bytes": 2388,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/studies/safmn-fft-paired-30k/README.md",
+    "path": "foundations/natural-image-sr/studies/safmn-fft-paired-30k/README.md",
+    "source_sha256": "abf903806230821d9cae93bf7df75bb1968997a2041972b8f6c023753dfd9322",
+    "published_sha256": "3f4f433c8dc1487f80ef9728b68f174a9ae0cafa82fa2d1cdafc47f181bbf8d4",
+    "bytes": 3162,
+    "path_normalized": false,
+    "modified_for_module": true
+  },
+  {
+    "source": "sr-training-workbench/studies/safmn-training-4090/README.md",
+    "path": "foundations/natural-image-sr/studies/safmn-training-4090/README.md",
+    "source_sha256": "2e2ee9ecebf364ecaabd563ae3286fabe7cf50b7db06a45f8c0c5acd7a66a665",
+    "published_sha256": "28add6d59dd01a12964f7e619809463e3ea74b456baf4867b877280d9d6d3063",
+    "bytes": 2809,
+    "path_normalized": false,
+    "modified_for_module": true
+  },
+  {
+    "source": "sr-training-workbench/third_party/Apache-2.0.txt",
+    "path": "foundations/natural-image-sr/third_party/Apache-2.0.txt",
+    "source_sha256": "19c7f4446a07c522fbbd1f8e190971e0349dff82da02b8c3a930a1cf3be95668",
+    "published_sha256": "19c7f4446a07c522fbbd1f8e190971e0349dff82da02b8c3a930a1cf3be95668",
+    "bytes": 11350,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "results/SAFMN_Set5_x4_5000.stdout.log",
+    "path": "foundations/natural-image-sr/results/logs/SAFMN_Set5_x4_5000.stdout.log",
+    "source_sha256": "e200e0e865a5559197eb7f3ae29ddc7e1c043cecadf54a9107477969e5ef18c4",
+    "published_sha256": "e200e0e865a5559197eb7f3ae29ddc7e1c043cecadf54a9107477969e5ef18c4",
+    "bytes": 8126,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "results/cache_bench100.stdout.log",
+    "path": "foundations/natural-image-sr/results/logs/cache_bench100.stdout.log",
+    "source_sha256": "c77e16a68c1b16ca8a90d6f06badaec8fc0326b7423367d2c793e3726fa39997",
+    "published_sha256": "c77e16a68c1b16ca8a90d6f06badaec8fc0326b7423367d2c793e3726fa39997",
+    "bytes": 11368,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "results/smoke30.stdout.log",
+    "path": "foundations/natural-image-sr/results/logs/smoke30.stdout.log",
+    "source_sha256": "2ad5b3a4d7e7cf170041e520a9aa57b889d628a68c50be64656ebad8cb96b1e9",
+    "published_sha256": "2ad5b3a4d7e7cf170041e520a9aa57b889d628a68c50be64656ebad8cb96b1e9",
+    "bytes": 11274,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "results/smoke30_div2k_params.stdout.log",
+    "path": "foundations/natural-image-sr/results/logs/smoke30_div2k_params.stdout.log",
+    "source_sha256": "31b77c57643e049804b4ad4c2649fba104673f2d28b73f1315ba75e0ad658006",
+    "published_sha256": "31b77c57643e049804b4ad4c2649fba104673f2d28b73f1315ba75e0ad658006",
+    "bytes": 8133,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "results/sub_bench100.stdout.log",
+    "path": "foundations/natural-image-sr/results/logs/sub_bench100.stdout.log",
+    "source_sha256": "ae32971f2d99557bb1355e8d265ebd73f03565d6c9c12822846e2a7f1fd97fa7",
+    "published_sha256": "ae32971f2d99557bb1355e8d265ebd73f03565d6c9c12822846e2a7f1fd97fa7",
+    "bytes": 11439,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "results/butterfly_CAMixerSR_x4.png",
+    "path": "foundations/natural-image-sr/results/legacy-set5-predictions/butterfly_CAMixerSR_x4.png",
+    "source_sha256": "2dfcf139c162799212bb09a649c4bd3d1c70ed558e126f970a42d3e990b19b2f",
+    "published_sha256": "2dfcf139c162799212bb09a649c4bd3d1c70ed558e126f970a42d3e990b19b2f",
+    "bytes": 118959,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "results/butterfly_SAFMN_30000_x4.png",
+    "path": "foundations/natural-image-sr/results/legacy-set5-predictions/butterfly_SAFMN_30000_x4.png",
+    "source_sha256": "9afb5675a03817262fe5b2974d5638a7ad039d3e31551b51421844251691c7d3",
+    "published_sha256": "9afb5675a03817262fe5b2974d5638a7ad039d3e31551b51421844251691c7d3",
+    "bytes": 126192,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "results/butterfly_SAFMN_5000_x4.png",
+    "path": "foundations/natural-image-sr/results/legacy-set5-predictions/butterfly_SAFMN_5000_x4.png",
+    "source_sha256": "6b3183fe4becc33902ab509276e05cc5c6a069e5b9706ab660fc69cc34aafa9b",
+    "published_sha256": "6b3183fe4becc33902ab509276e05cc5c6a069e5b9706ab660fc69cc34aafa9b",
+    "bytes": 130105,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "results/butterfly_SAFMN_x4.png",
+    "path": "foundations/natural-image-sr/results/legacy-set5-predictions/butterfly_SAFMN_x4.png",
+    "source_sha256": "24094923f316fdc0aa59224ce6a65dc22fd86eb777819613a77b2d5a58eec25f",
+    "published_sha256": "24094923f316fdc0aa59224ce6a65dc22fd86eb777819613a77b2d5a58eec25f",
+    "bytes": 122323,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "SAFMN_DIV2K_val100_10000.yml",
+    "path": "foundations/natural-image-sr/configs/archive/SAFMN_DIV2K_val100_10000.yml",
+    "source_sha256": "ad93a7b230e9a08af340dddc4d05d38d3e35caec837d9ec4d8aa1ae98ad0ade9",
+    "published_sha256": "ad93a7b230e9a08af340dddc4d05d38d3e35caec837d9ec4d8aa1ae98ad0ade9",
+    "bytes": 726,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "SAFMN_train_DF2K_x4_cache_bench100.yml",
+    "path": "foundations/natural-image-sr/configs/archive/SAFMN_train_DF2K_x4_cache_bench100.yml",
+    "source_sha256": "3c34bac3ca8ac774c457e5641411733d01ab8521ceabdb23dbee280bd7be6f55",
+    "published_sha256": "3c34bac3ca8ac774c457e5641411733d01ab8521ceabdb23dbee280bd7be6f55",
+    "bytes": 2762,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "SAFMN_train_DF2K_x4_cloud.yml",
+    "path": "foundations/natural-image-sr/configs/archive/SAFMN_train_DF2K_x4_cloud.yml",
+    "source_sha256": "9d59d2181f215bda4f774fed2d80efd84ecad0d0ad051349410b7d5f699085df",
+    "published_sha256": "9d59d2181f215bda4f774fed2d80efd84ecad0d0ad051349410b7d5f699085df",
+    "bytes": 2668,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "SAFMN_train_DF2K_x4_smoke.yml",
+    "path": "foundations/natural-image-sr/configs/archive/SAFMN_train_DF2K_x4_smoke.yml",
+    "source_sha256": "3871ece7c82a95c81701f999bce90fa3fae5b392c6f9533e09ed4fda73ed0270",
+    "published_sha256": "3871ece7c82a95c81701f999bce90fa3fae5b392c6f9533e09ed4fda73ed0270",
+    "bytes": 2728,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "SAFMN_train_DF2K_x4_sub_bench100.yml",
+    "path": "foundations/natural-image-sr/configs/archive/SAFMN_train_DF2K_x4_sub_bench100.yml",
+    "source_sha256": "7016b6702c3251351c9d47026a4ac28569c47bb956b6e679d845d289c9e7035c",
+    "published_sha256": "7016b6702c3251351c9d47026a4ac28569c47bb956b6e679d845d289c9e7035c",
+    "bytes": 2740,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "requirements-safmn-inference.txt",
+    "path": "foundations/natural-image-sr/environment/requirements-safmn-inference.txt",
+    "source_sha256": "a5a6d2bd48a542de7b25380544e2ebcd0d793e2501733a804c12dba06bac979d",
+    "published_sha256": "a5a6d2bd48a542de7b25380544e2ebcd0d793e2501733a804c12dba06bac979d",
+    "bytes": 436,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "datasets/Set5/HR/baby.png",
+    "path": "foundations/natural-image-sr/datasets/Set5/HR/baby.png",
+    "source_sha256": "cb85956d68f708a1030c790d143cbcd108f5ac5988d3349180cdcb54dd80597d",
+    "published_sha256": "cb85956d68f708a1030c790d143cbcd108f5ac5988d3349180cdcb54dd80597d",
+    "bytes": 371264,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "datasets/Set5/HR/bird.png",
+    "path": "foundations/natural-image-sr/datasets/Set5/HR/bird.png",
+    "source_sha256": "5dcf863f7c3802e68fbb0fca2ec351052a1f97a4db613e510dbd105cee9a6a32",
+    "published_sha256": "5dcf863f7c3802e68fbb0fca2ec351052a1f97a4db613e510dbd105cee9a6a32",
+    "bytes": 120453,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "datasets/Set5/HR/butterfly.png",
+    "path": "foundations/natural-image-sr/datasets/Set5/HR/butterfly.png",
+    "source_sha256": "487d841c9dbc46c7ab496c319ec1f13268de7ea7e02f94ae18781ca86a5abd0d",
+    "published_sha256": "487d841c9dbc46c7ab496c319ec1f13268de7ea7e02f94ae18781ca86a5abd0d",
+    "bytes": 127529,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "datasets/Set5/HR/head.png",
+    "path": "foundations/natural-image-sr/datasets/Set5/HR/head.png",
+    "source_sha256": "f524c1ce41641c1cf269a20c4dfbe965e07e471d609abc19dfadfb71037cc873",
+    "published_sha256": "f524c1ce41641c1cf269a20c4dfbe965e07e471d609abc19dfadfb71037cc873",
+    "bytes": 113787,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "datasets/Set5/HR/woman.png",
+    "path": "foundations/natural-image-sr/datasets/Set5/HR/woman.png",
+    "source_sha256": "f276625a222b9ce18d18d86e1ec603fea50427b7c0a2927b3750b1bb86a07b83",
+    "published_sha256": "f276625a222b9ce18d18d86e1ec603fea50427b7c0a2927b3750b1bb86a07b83",
+    "bytes": 118848,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "datasets/Set5/LR_bicubic/X4/baby.png",
+    "path": "foundations/natural-image-sr/datasets/Set5/LR_bicubic/X4/baby.png",
+    "source_sha256": "86f6e1b97fd198336b33474103f43c4cb8963566b4aff34c0421e7ebeac644f3",
+    "published_sha256": "86f6e1b97fd198336b33474103f43c4cb8963566b4aff34c0421e7ebeac644f3",
+    "bytes": 31202,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "datasets/Set5/LR_bicubic/X4/bird.png",
+    "path": "foundations/natural-image-sr/datasets/Set5/LR_bicubic/X4/bird.png",
+    "source_sha256": "2c17d5eaca516650fc3993af9cd61ea8d3e1c777d1a7fe9b0407c3d928b24286",
+    "published_sha256": "2c17d5eaca516650fc3993af9cd61ea8d3e1c777d1a7fe9b0407c3d928b24286",
+    "bytes": 11299,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "datasets/Set5/LR_bicubic/X4/butterfly.png",
+    "path": "foundations/natural-image-sr/datasets/Set5/LR_bicubic/X4/butterfly.png",
+    "source_sha256": "5f70e1e1e7e9bef23ff8d35e57dab5fa07cc08c8b5bb85fa3a15aa8550bfb2e0",
+    "published_sha256": "5f70e1e1e7e9bef23ff8d35e57dab5fa07cc08c8b5bb85fa3a15aa8550bfb2e0",
+    "bytes": 10508,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "datasets/Set5/LR_bicubic/X4/head.png",
+    "path": "foundations/natural-image-sr/datasets/Set5/LR_bicubic/X4/head.png",
+    "source_sha256": "ef22055522c8828298bb3c9e03343394f2fbf9eb916131c5d0e6948fa4cf23a4",
+    "published_sha256": "ef22055522c8828298bb3c9e03343394f2fbf9eb916131c5d0e6948fa4cf23a4",
+    "bytes": 9136,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "datasets/Set5/LR_bicubic/X4/woman.png",
+    "path": "foundations/natural-image-sr/datasets/Set5/LR_bicubic/X4/woman.png",
+    "source_sha256": "43b8bf9622734a7201a07f7f8764afeeb9b90e20639043aaa9a89055d7a610c6",
+    "published_sha256": "43b8bf9622734a7201a07f7f8764afeeb9b90e20639043aaa9a89055d7a610c6",
+    "bytes": 10804,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/learning/outputs/bird_30k/bicubic.png",
+    "path": "foundations/natural-image-sr/results/local-inference/bird_30k/bicubic.png",
+    "source_sha256": "ec168bd9990d7efcda581d2e2d0e8ddad2a9594d15c29483b54930e2670a33be",
+    "published_sha256": "ec168bd9990d7efcda581d2e2d0e8ddad2a9594d15c29483b54930e2670a33be",
+    "bytes": 104209,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/learning/outputs/bird_30k/comparison.png",
+    "path": "foundations/natural-image-sr/results/local-inference/bird_30k/comparison.png",
+    "source_sha256": "978c5467290c099a52e28c5e4e8759dc98947cba47717162864370c0f737eb9d",
+    "published_sha256": "978c5467290c099a52e28c5e4e8759dc98947cba47717162864370c0f737eb9d",
+    "bytes": 446083,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/learning/outputs/bird_30k/result.json",
+    "path": "foundations/natural-image-sr/results/local-inference/bird_30k/result.json",
+    "source_sha256": "d3293e85d7661e8ccd3b4398f192fdb972f2b7b96f884df5c152fd0c8277dbfa",
+    "published_sha256": "d3293e85d7661e8ccd3b4398f192fdb972f2b7b96f884df5c152fd0c8277dbfa",
+    "bytes": 2125,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/learning/outputs/bird_30k/sr.png",
+    "path": "foundations/natural-image-sr/results/local-inference/bird_30k/sr.png",
+    "source_sha256": "ffc1ddbdc89506d6a5cfdeea8bce18681a8c3a8dacf97b2982a6a75775a85bcb",
+    "published_sha256": "ffc1ddbdc89506d6a5cfdeea8bce18681a8c3a8dacf97b2982a6a75775a85bcb",
+    "bytes": 122597,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/learning/outputs/bird_30k_compare/params_vs_ema.png",
+    "path": "foundations/natural-image-sr/results/local-inference/bird_30k_compare/params_vs_ema.png",
+    "source_sha256": "6046897b268d00cf94ac62422f37bfcabde6a9e11962c0387e98c3121fa05336",
+    "published_sha256": "6046897b268d00cf94ac62422f37bfcabde6a9e11962c0387e98c3121fa05336",
+    "bytes": 709108,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/learning/outputs/bird_30k_compare/summary.json",
+    "path": "foundations/natural-image-sr/results/local-inference/bird_30k_compare/summary.json",
+    "source_sha256": "32c3a64856123e2c23053971a288467be1b0921f314c15067c358515838a5ed5",
+    "published_sha256": "656f68a91293a6a0e76677bb954cb417f5f1e09d2f5f4fe6819f6f646b677d70",
+    "bytes": 844,
+    "path_normalized": true,
+    "modified_for_module": true
+  },
+  {
+    "source": "sr-training-workbench/learning/outputs/bird_30k_ema/bicubic.png",
+    "path": "foundations/natural-image-sr/results/local-inference/bird_30k_ema/bicubic.png",
+    "source_sha256": "ec168bd9990d7efcda581d2e2d0e8ddad2a9594d15c29483b54930e2670a33be",
+    "published_sha256": "ec168bd9990d7efcda581d2e2d0e8ddad2a9594d15c29483b54930e2670a33be",
+    "bytes": 104209,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/learning/outputs/bird_30k_ema/comparison.png",
+    "path": "foundations/natural-image-sr/results/local-inference/bird_30k_ema/comparison.png",
+    "source_sha256": "3606db3b0bd72761d81e05bcd314eb9128ed1f71f7a03a5ced3e18352431dcaa",
+    "published_sha256": "3606db3b0bd72761d81e05bcd314eb9128ed1f71f7a03a5ced3e18352431dcaa",
+    "bytes": 439335,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/learning/outputs/bird_30k_ema/result.json",
+    "path": "foundations/natural-image-sr/results/local-inference/bird_30k_ema/result.json",
+    "source_sha256": "f820a490a231b9a58f376c35d2c349e975168802c3a16761c0a1d22d815d86e6",
+    "published_sha256": "f820a490a231b9a58f376c35d2c349e975168802c3a16761c0a1d22d815d86e6",
+    "bytes": 2146,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/learning/outputs/bird_30k_ema/sr.png",
+    "path": "foundations/natural-image-sr/results/local-inference/bird_30k_ema/sr.png",
+    "source_sha256": "c557d3d0cd4584c32c9167449e583bcefd7ea3365d0ccab3f1bf4d83f8d33a81",
+    "published_sha256": "c557d3d0cd4584c32c9167449e583bcefd7ea3365d0ccab3f1bf4d83f8d33a81",
+    "bytes": 117769,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/learning/outputs/butterfly_30k/bicubic.png",
+    "path": "foundations/natural-image-sr/results/local-inference/butterfly_30k/bicubic.png",
+    "source_sha256": "bb23ac01b50980331e228daf51244cf4d063ceba9d34b8f320c4086fcb76e9a7",
+    "published_sha256": "bb23ac01b50980331e228daf51244cf4d063ceba9d34b8f320c4086fcb76e9a7",
+    "bytes": 97594,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/learning/outputs/butterfly_30k/comparison.png",
+    "path": "foundations/natural-image-sr/results/local-inference/butterfly_30k/comparison.png",
+    "source_sha256": "24d3b021468b0289a4a6079c9b9a0901871c0a9391300ebfe508804736a197f5",
+    "published_sha256": "24d3b021468b0289a4a6079c9b9a0901871c0a9391300ebfe508804736a197f5",
+    "bytes": 450289,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/learning/outputs/butterfly_30k/result.json",
+    "path": "foundations/natural-image-sr/results/local-inference/butterfly_30k/result.json",
+    "source_sha256": "b724d429310829d1f4319542405a0e7181eaabea4774d8f00969a9b7afe4c19c",
+    "published_sha256": "b724d429310829d1f4319542405a0e7181eaabea4774d8f00969a9b7afe4c19c",
+    "bytes": 2150,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "sr-training-workbench/learning/outputs/butterfly_30k/sr.png",
+    "path": "foundations/natural-image-sr/results/local-inference/butterfly_30k/sr.png",
+    "source_sha256": "b5574f16fecbf8e412c6229689ce6b6a5351642a52c81cb7d847e6e5066ae528",
+    "published_sha256": "b5574f16fecbf8e412c6229689ce6b6a5351642a52c81cb7d847e6e5066ae528",
+    "bytes": 117061,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "SAFMN/basicsr/archs/safmn_arch.py",
+    "path": "foundations/natural-image-sr/sources/SAFMN/basicsr/archs/safmn_arch.py",
+    "source_sha256": "e1e17078ade763568e3fc54ed54d3c4ec3e5294f400f983931a4dc5bc911d6fc",
+    "published_sha256": "e1e17078ade763568e3fc54ed54d3c4ec3e5294f400f983931a4dc5bc911d6fc",
+    "bytes": 5662,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "SAFMN/basicsr/utils/registry.py",
+    "path": "foundations/natural-image-sr/sources/SAFMN/basicsr/utils/registry.py",
+    "source_sha256": "21c23bd3bf727eb2decd99035120fc47316db92486d73116cca18e9fa8b6c854",
+    "published_sha256": "21c23bd3bf727eb2decd99035120fc47316db92486d73116cca18e9fa8b6c854",
+    "bytes": 2185,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "CAMixerSR/codes/basicsr/archs/CAMixerSR_arch.py",
+    "path": "foundations/natural-image-sr/sources/CAMixerSR/basicsr/archs/CAMixerSR_arch.py",
+    "source_sha256": "1232c30f9341b24321e64cfddcd5d54841910796ad7e25d9b5a01fd101888edc",
+    "published_sha256": "1232c30f9341b24321e64cfddcd5d54841910796ad7e25d9b5a01fd101888edc",
+    "bytes": 17534,
+    "path_normalized": false,
+    "modified_for_module": false
+  },
+  {
+    "source": "CAMixerSR/codes/basicsr/models/CAMixerSR_model.py",
+    "path": "foundations/natural-image-sr/sources/CAMixerSR/basicsr/models/CAMixerSR_model.py",
+    "source_sha256": "c2e4cc3e0a1787698f537a23510d273dde4c6b00842856f247b1981bc2bff053",
+    "published_sha256": "c2e4cc3e0a1787698f537a23510d273dde4c6b00842856f247b1981bc2bff053",
+    "bytes": 2188,
+    "path_normalized": false,
+    "modified_for_module": false
+  }
+]

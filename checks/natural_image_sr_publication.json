@@ -1,0 +1,23 @@
+{
+  "status": "pass",
+  "date": "2026-11-10",
+  "sst_baseline_commit": "bba8e4cb6b2d487da4f02e1fb501a8b654dd872a",
+  "module_files": 185,
+  "module_bytes": 13073391,
+  "png_files": 52,
+  "source_files": 172,
+  "metric_records": 41,
+  "validation_records": 25,
+  "log_files": 24,
+  "set5_source_images": 10,
+  "rgb_psnr_recomputed": 23,
+  "markdown_links_checked": 404,
+  "broken_links": 0,
+  "secret_pattern_hits": 0,
+  "workbook_sheets": 5,
+  "workbook_charts": 2,
+  "migrated_inference_psnr_rgb_db": 32.33841139594504,
+  "sst_archive_verification": "pass",
+  "sst_task_records": 118,
+  "release_assets_verified": 2
+}

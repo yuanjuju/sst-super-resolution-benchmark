@@ -48,3 +48,7 @@
 ## 失败记录
 
 8项CRAN任务在非有限损失后退出。保留配置、训练片段和错误日志，汇总分数留空。详见[failures.json](../experiments/03_extended/failures.json)。CUDA、前后向、梯度、恢复和回收等检查在[checks](../checks/)中。
+
+## 自然图像基础实验
+
+[SAFMN、CAMixerSR与BasicSR](../foundations/natural-image-sr/README.md)收录作者权重测试、早期4090训练、5090 FFT配对30k、CAMixerSR 5k和本地CPU推理。查看[41条指标与工作簿](../tables/natural_image_sr/README.md)、[全部效果图](../foundations/natural-image-sr/figures/README.md)。

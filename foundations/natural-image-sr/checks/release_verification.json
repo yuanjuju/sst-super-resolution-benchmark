@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "release": "https://github.com/yuanjuju/sst-super-resolution-benchmark/releases/tag/natural-image-sr-v2026.11.10",
+  "files": [
+    {
+      "file": "net_g_30000.pth",
+      "bytes": 2011922,
+      "server_digest": "sha256:c8f372864a1479fb555d1f2a4793b31ce5d1e6a55741ca2393b37606dc0370f3",
+      "download_url": "https://github.com/yuanjuju/sst-super-resolution-benchmark/releases/download/natural-image-sr-v2026.11.10/net_g_30000.pth"
+    },
+    {
+      "file": "30000.state",
+      "bytes": 2032762,
+      "server_digest": "sha256:d35fabbd2c8108ce62b3c0c68a4835294e1027a0121cff469c0c050f5014ebbe",
+      "download_url": "https://github.com/yuanjuju/sst-super-resolution-benchmark/releases/download/natural-image-sr-v2026.11.10/30000.state"
+    }
+  ]
+}

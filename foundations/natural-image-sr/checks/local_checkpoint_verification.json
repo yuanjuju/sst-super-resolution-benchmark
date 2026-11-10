@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "iter": 30000,
+  "weight_keys": [
+    "params",
+    "params_ema"
+  ],
+  "state_keys": [
+    "epoch",
+    "iter",
+    "optimizers",
+    "schedulers"
+  ],
+  "tensor_counts": {
+    "params": 148,
+    "params_ema": 148
+  }
+}

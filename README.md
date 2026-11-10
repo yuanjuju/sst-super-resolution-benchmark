@@ -1,13 +1,14 @@
 # SST Super-Resolution Experiments
 
-WMSR海表温度超分辨率复现与模型对照。包含HYCOM、OISST、GHRSST的数据清单、训练配置、逐图指标、实验代码、结果表和可视化。
+海表温度超分辨率实验与模型对照。包含HYCOM、OISST、GHRSST的数据清单、训练配置、逐图指标、实验代码、结果表和可视化；另设SAFMN、CAMixerSR与BasicSR的基础超分模块。
 
-截至2026-11-10，归档 **118项任务记录：110项完成、8项失败**。最终权重及续训断点按阶段提供在[Releases](https://github.com/yuanjuju/sst-super-resolution-benchmark/releases/tag/v2026.11.10)。
+截至2026-11-10，SST部分归档 **118项任务记录：110项完成、8项失败**。基础超分模块收录 **41条指标、25条验证记录、24份日志与Set5原图**。权重及续训断点按阶段提供在[Releases](https://github.com/yuanjuju/sst-super-resolution-benchmark/releases)。
 
 ## 从这里看
 
 | 内容 | 入口 |
 |---|---|
+| SAFMN / CAMixerSR / BasicSR | [基础超分模块](foundations/natural-image-sr/README.md) · [基础实验工作簿](tables/natural_image_sr/experiments.xlsx) |
 | 全部实验与结果 | [实验总览](docs/experiments.md) · [任务清单](tables/runs.csv) · [汇总工作簿](tables/sst_experiments.xlsx) |
 | 200图测试结果 | [完整指标表](tables/test200_results.csv) · [方法比较与消融](tables/extended/) |
 | 80图训练内验证 | [PFT、ESC与WMSR](tables/development80_results.csv) |
@@ -33,6 +34,14 @@ ESC的raw在末段出现波动，EMA更平稳。全部中间记录和固定5000�
 ![5000步指标与学习曲线](figures/07_esc_wmsr_5000/04_raw_ema_comparison.png)
 
 测试实验使用固定800/200划分；PFT和ESC预实验使用训练集内720/80划分。论文参考值、两类实测结果分别列出。WMSR的24 WAM结构实现与公开4 WAM实现分别归档，具体结构和配方见各组config。
+
+## 基础超分实验
+
+[基础模块](foundations/natural-image-sr/README.md)按配置、数据、训练、测试、图表组织，提供Set5五对HR/LR、20张配对实验预测、5张固定样本对照、CPU推理结果和早期SAFMN 30k模型。
+
+SAFMN两组各30k的FFT对照中，DIV2K EMA RGB PSNR为 **28.7956 / 28.7050 dB**，差值 **+0.0906 dB**。CAMixerSR单次5k验证为 **27.5543 dB**。配置和评测口径随记录列出。
+
+[指标CSV](tables/natural_image_sr/) · [全部图表](foundations/natural-image-sr/figures/README.md) · [模型下载](foundations/natural-image-sr/weights/README.md)
 
 ## 原论文与模型
 
