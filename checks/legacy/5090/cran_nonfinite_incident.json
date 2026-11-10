@@ -1,0 +1,47 @@
+{
+  "checked_at": "2026-11-02T14:31:50.759071+00:00",
+  "failures": [
+    {
+      "id": "compare_CRAN_HYCOM_x4_s10",
+      "log": "/root/wmsr-repro/logs/extended_compare_CRAN_HYCOM_x4_s10.log",
+      "reason": "Nonfinite training loss; original settings retained; not automatically retried"
+    },
+    {
+      "id": "compare_CRAN_OISST_x4_s10",
+      "log": "/root/wmsr-repro/logs/extended_compare_CRAN_OISST_x4_s10.log",
+      "reason": "Nonfinite training loss; original settings retained; not automatically retried"
+    },
+    {
+      "id": "compare_CRAN_GHRSST_x4_s10",
+      "log": "/root/wmsr-repro/logs/extended_compare_CRAN_GHRSST_x4_s10.log",
+      "reason": "Nonfinite training loss; original settings retained; not automatically retried"
+    },
+    {
+      "id": "compare_CRAN_OISST_x3_s10",
+      "log": "/root/wmsr-repro/logs/extended_compare_CRAN_OISST_x3_s10.log",
+      "reason": "Nonfinite training loss; original settings retained; not automatically retried"
+    },
+    {
+      "id": "compare_CRAN_GHRSST_x3_s10",
+      "log": "/root/wmsr-repro/logs/extended_compare_CRAN_GHRSST_x3_s10.log",
+      "reason": "Nonfinite training loss; original settings retained; not automatically retried"
+    },
+    {
+      "id": "compare_CRAN_HYCOM_x2_s10",
+      "log": "/root/wmsr-repro/logs/extended_compare_CRAN_HYCOM_x2_s10.log",
+      "reason": "Nonfinite training loss; original settings retained; not automatically retried"
+    },
+    {
+      "id": "compare_CRAN_OISST_x2_s10",
+      "log": "/root/wmsr-repro/logs/extended_compare_CRAN_OISST_x2_s10.log",
+      "reason": "Nonfinite training loss; original settings retained; not automatically retried"
+    },
+    {
+      "id": "compare_CRAN_GHRSST_x2_s10",
+      "log": "/root/wmsr-repro/logs/extended_compare_CRAN_GHRSST_x2_s10.log",
+      "reason": "Nonfinite training loss; original settings retained; not automatically retried"
+    }
+  ],
+  "other_jobs_continue": true,
+  "protocol_changed": false
+}

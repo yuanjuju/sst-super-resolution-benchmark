@@ -1,0 +1,34 @@
+{
+  "status": "pass",
+  "archive_and_all_files_verified": true,
+  "file_count": 179,
+  "weights": [
+    {
+      "model": "ESC",
+      "file": "pilot_final.pt",
+      "sha256": "b06cee7a072fa9813ab92af78e5694dc8b4b0e5814662cf27b67843f163e5e91",
+      "bytes": 8043103
+    },
+    {
+      "model": "ESC",
+      "file": "last.pt",
+      "sha256": "eca1564b59ba1cbd183fc62abdb2148f63cc8dd5ce022b4b28fa55d418eff2b0",
+      "bytes": 16144122
+    },
+    {
+      "model": "WMSR",
+      "file": "pilot_final.pt",
+      "sha256": "ae77d04d995f8c775dee8cabb0c1b18553ea7bc4dfb1893f33958f6d7296e3b8",
+      "bytes": 16590359
+    },
+    {
+      "model": "WMSR",
+      "file": "last.pt",
+      "sha256": "1b855a0933d45993709a45814717e10c10c349a5aa515b43fb02fccb1b9eae2b",
+      "bytes": 29638457
+    }
+  ],
+  "figure_manifests_verified": true,
+  "no_raw_dataset_retrieved": true,
+  "final_test200_evaluated": false
+}

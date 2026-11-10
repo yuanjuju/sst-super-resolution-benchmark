@@ -1,0 +1,108 @@
+{
+  "at": "2026-11-10T07:03:51.282588+00:00",
+  "status": "pass",
+  "models": {
+    "ESC": {
+      "step": 5000,
+      "validation_rounds": 25,
+      "new_validation_rounds": 20,
+      "each_count": 80,
+      "optimizer_steps": [
+        5000.0
+      ],
+      "compact_sha256": "b06cee7a072fa9813ab92af78e5694dc8b4b0e5814662cf27b67843f163e5e91",
+      "full_resume_sha256": "eca1564b59ba1cbd183fc62abdb2148f63cc8dd5ce022b4b28fa55d418eff2b0",
+      "final_raw": {
+        "count": 80,
+        "rmse_c": 0.24353542045183052,
+        "mae_c": 0.18963908310979605,
+        "psnr_y_db": 45.99471228186148,
+        "ssim_y": 0.9773046776652337
+      },
+      "final_ema": {
+        "count": 80,
+        "rmse_c": 0.11702983101628653,
+        "mae_c": 0.07807641085237264,
+        "psnr_y_db": 53.52249771912498,
+        "ssim_y": 0.9958002097904682
+      },
+      "source1000": {
+        "step": 1000,
+        "split": "training_only_development80",
+        "final_test_images_evaluated": 0,
+        "raw": {
+          "count": 80,
+          "rmse_c": 0.1805807326138379,
+          "mae_c": 0.12552081756293773,
+          "psnr_y_db": 49.242164131985945,
+          "ssim_y": 0.9900617673993111
+        },
+        "ema": {
+          "count": 80,
+          "rmse_c": 1.5117227108235676,
+          "mae_c": 1.1612312711775303,
+          "psnr_y_db": 30.378120404680963,
+          "ssim_y": 0.5277046084403991
+        }
+      },
+      "all_validation_ids_verified": true,
+      "all_model_and_ema_tensors_finite": true
+    },
+    "WMSR": {
+      "step": 5000,
+      "validation_rounds": 25,
+      "new_validation_rounds": 20,
+      "each_count": 80,
+      "optimizer_steps": [
+        5000.0
+      ],
+      "compact_sha256": "ae77d04d995f8c775dee8cabb0c1b18553ea7bc4dfb1893f33958f6d7296e3b8",
+      "full_resume_sha256": "1b855a0933d45993709a45814717e10c10c349a5aa515b43fb02fccb1b9eae2b",
+      "final_raw": {
+        "count": 80,
+        "rmse_c": 0.11589030535130487,
+        "mae_c": 0.07488728202879429,
+        "psnr_y_db": 54.00291044795857,
+        "ssim_y": 0.9960807725787163
+      },
+      "final_ema": {
+        "count": 80,
+        "rmse_c": 0.13926150611239826,
+        "mae_c": 0.1047379250638187,
+        "psnr_y_db": 51.64662604168414,
+        "ssim_y": 0.9960265561938286
+      },
+      "source1000": {
+        "step": 1000,
+        "split": "training_only_development80",
+        "final_test_images_evaluated": 0,
+        "raw": {
+          "count": 80,
+          "rmse_c": 0.14024658100195575,
+          "mae_c": 0.09472241988405586,
+          "psnr_y_db": 51.928443984229226,
+          "ssim_y": 0.9941033028066159
+        },
+        "ema": {
+          "count": 80,
+          "rmse_c": 3.683726047231533,
+          "mae_c": 3.2445333525538445,
+          "psnr_y_db": 23.69767540818143,
+          "ssim_y": 0.8653643220663071
+        }
+      },
+      "all_validation_ids_verified": true,
+      "all_model_and_ema_tensors_finite": true
+    }
+  },
+  "same_final_sampler_and_augmentation": true,
+  "sampling_position": 400,
+  "test200_evaluated": false,
+  "equal_common_protocol": true,
+  "raw_delta_ESC_minus_WMSR": {
+    "psnr_y_db": -8.008198166097088,
+    "rmse_c": 0.12764511510052565,
+    "mae_c": 0.11475180108100176,
+    "ssim_y": -0.018776094913482644
+  }
+}

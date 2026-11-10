@@ -1,0 +1,53 @@
+{
+  "started_at": "2026-11-09T12:08:24.823348+00:00",
+  "status": "fail",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "test_images_evaluated": 0,
+  "formal_training_started": false,
+  "batches": [
+    {
+      "model": "PFT",
+      "scale": 2,
+      "batch_size": 8,
+      "micro_batch": 2,
+      "gradient_accumulation": 4,
+      "direct_batch_vs_accumulation_check": null,
+      "parameters": 19623527,
+      "seconds_per_update": [
+        1.0319324359297752,
+        1.0404649786651134,
+        1.0541905909776688,
+        1.0607072338461876,
+        1.0407620333135128
+      ],
+      "median_seconds_per_update": 1.0407620333135128,
+      "peak_allocated_mib_with_optimizer_and_ema": 10296.83349609375,
+      "peak_reserved_mib": 11258.0,
+      "finite_last_l1": 0.0617695115506649
+    },
+    {
+      "model": "PFT",
+      "scale": 3,
+      "batch_size": 8,
+      "micro_batch": 2,
+      "gradient_accumulation": 4,
+      "direct_batch_vs_accumulation_check": null,
+      "parameters": 19808167,
+      "seconds_per_update": [
+        0.7401134427636862,
+        0.7084801439195871,
+        0.7404337022453547,
+        0.7436889782547951,
+        0.7396979369223118
+      ],
+      "median_seconds_per_update": 0.7401134427636862,
+      "peak_allocated_mib_with_optimizer_and_ema": 3341.14404296875,
+      "peak_reserved_mib": 3650.0,
+      "finite_last_l1": 0.09733447432518005
+    }
+  ],
+  "boundary": "3 warmup + 5 measured AdamW/L1/EMA updates per model/scale; all states discarded. Does not establish convergence or predictive quality.",
+  "base_factory_sha256": "ffebd0e8ed4c23fdac123a7d104f46b30edcb69cebc2421a834b84afde0aecc9",
+  "error": "Traceback (most recent call last):\n  File \"/root/wmsr-repro/strong_models/pft_20261109/cloud_profile_models.py\", line 75, in main\n    torch.testing.assert_close(direct_output, accumulated_output, atol=1e-5, rtol=1e-4)\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/torch/testing/_comparison.py\", line 1519, in assert_close\n    raise error_metas[0].to_error(msg)\nAssertionError: Tensor-likes are not close!\n\nMismatched elements: 6559 / 221184 (3.0%)\nGreatest absolute difference: 0.00011071562767028809 at index (2, 0, 82, 95) (up to 1e-05 allowed)\nGreatest relative difference: 0.0002565141476225108 at index (7, 0, 24, 79) (up to 0.0001 allowed)\n",
+  "finished_at": "2026-11-09T12:08:48.754163+00:00"
+}

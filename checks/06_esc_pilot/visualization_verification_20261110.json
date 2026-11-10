@@ -1,0 +1,10 @@
+{
+  "verified_at": "2026-11-10T05:35:17.268091+00:00",
+  "all_cloud_local_file_hashes_match": true,
+  "file_count": 5,
+  "samples": "first4 frozen validation IDs",
+  "canonical_per_image_physical_metrics_recomputed_and_matched": true,
+  "image_QA": "Chinese glyphs, axes, legends, colorbars and values inspected; no clipped labels or overlapping content observed",
+  "final_test200_evaluated": false,
+  "new_training_updates": 0
+}

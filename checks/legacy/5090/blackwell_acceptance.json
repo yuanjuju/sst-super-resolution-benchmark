@@ -1,0 +1,15 @@
+{
+  "pass": true,
+  "selective_scan_max_abs_difference": 4.291534423828125e-06,
+  "finite_gradients": true,
+  "replay_count": 200,
+  "saved4090_psnr_y_db": 54.069495607610634,
+  "replayed5090_psnr_y_db": 54.06993004353124,
+  "replayed_rmse_c": 0.10991016853159813,
+  "delta_psnr_db": 0.0004344359206029935,
+  "acceptance_tolerance_db": 0.02,
+  "torch": "2.7.1+cu128",
+  "cuda": "12.8",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "meaning": "Checks kernel and checkpoint replay, not a new training or paper reproduction."
+}

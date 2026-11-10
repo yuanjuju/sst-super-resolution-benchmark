@@ -1,0 +1,99 @@
+{
+  "status": "pass",
+  "architecture_notes": {
+    "groups": 6,
+    "blocks_per_group": 4,
+    "channels": 64,
+    "group_choice": "Fig.1 and TableII agree on6x4; one text sentence swaps6and4",
+    "internal_projection": "64 outer channels, 32-channel wavelet bottleneck; 1x1 entry and group refinement. Inferred missing dimensions, not author-confirmed",
+    "parameter_constraint": "Bottleneck interpretation approximately0.964M atx4, near reported0.977M; closeness is a consistency check, not proof of original implementation",
+    "ss2d": "Author SS2D, d_state16, expand2; expansion not stated in paper",
+    "hfem": "Fig3 order: linear+DWConv low and high branches, sigmoid high gate, then PDC; Eq14 places PDC differently",
+    "pdc": "Shared across three high-frequency subbands; depthwise branches follow four differential branches of author code",
+    "subband_fusion": "Concatenate LL/HL/LH/HH for valid IDWT dimensions; grouped1x1 refinement preserves four subbands",
+    "normalization": "Post-IDWT LayerNorm retained from public WAM to reconcile omitted detail",
+    "parameter_count": "Measured independently; paper977K cannot be guaranteed from incomplete dimensions"
+  },
+  "model_source_sha256": "e0b0ff61f0cce0d9b4e01bdd789e81b1c451982c8802d24b7bac82812fb6a0cc",
+  "tests": [
+    {
+      "scale": 4,
+      "groups": 6,
+      "wam_blocks": 24,
+      "parameters": 963848,
+      "input_shape": [
+        8,
+        3,
+        24,
+        24
+      ],
+      "output_shape": [
+        8,
+        3,
+        96,
+        96
+      ],
+      "losses": [
+        5806193.5,
+        6135463.5,
+        4902146.5
+      ],
+      "step_seconds": 0.34127666568383574,
+      "peak_allocated_mib": 485.9072265625,
+      "parameters_without_gradient": []
+    },
+    {
+      "scale": 3,
+      "groups": 6,
+      "wam_blocks": 24,
+      "parameters": 951731,
+      "input_shape": [
+        8,
+        3,
+        32,
+        32
+      ],
+      "output_shape": [
+        8,
+        3,
+        96,
+        96
+      ],
+      "losses": [
+        4353592.5,
+        4967645.5,
+        2781542.5
+      ],
+      "step_seconds": 0.4656895939260721,
+      "peak_allocated_mib": 746.9423828125,
+      "parameters_without_gradient": []
+    },
+    {
+      "scale": 2,
+      "groups": 6,
+      "wam_blocks": 24,
+      "parameters": 943076,
+      "input_shape": [
+        8,
+        3,
+        48,
+        48
+      ],
+      "output_shape": [
+        8,
+        3,
+        96,
+        96
+      ],
+      "losses": [
+        3663738.5,
+        2504623.75,
+        2463191.75
+      ],
+      "step_seconds": 0.30798113625496626,
+      "peak_allocated_mib": 1463.8603515625,
+      "parameters_without_gradient": []
+    }
+  ],
+  "limits": "Inferred bottleneck topology; approximate paper reconstruction, not author-confirmed private implementation."
+}

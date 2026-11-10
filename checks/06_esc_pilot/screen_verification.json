@@ -1,0 +1,57 @@
+{
+  "at": "2026-11-10T05:25:46.719969+00:00",
+  "status": "pass",
+  "updates": 1000,
+  "validation_rounds": 5,
+  "validation_count_each": 80,
+  "final_test200_evaluated": false,
+  "weight_sha256": "207bd9523b6f265e419c0d83f63d3f75702c3957e590e9d1402574a01332cfb2",
+  "all_validation_ids_match": true,
+  "equal_common_control_fields": [
+    "dataset",
+    "scale",
+    "seed",
+    "updates",
+    "development_manifest_sha256",
+    "batch_size",
+    "micro_batch",
+    "accumulation_steps",
+    "optimizer",
+    "loss",
+    "warmup_updates",
+    "scheduler",
+    "ema_decay",
+    "validation_every",
+    "augmentations",
+    "precision",
+    "initialization"
+  ],
+  "baseline_checkpoint_sha256": "0188d7c899f9d7d00dd1ed6d265b915b54a75a0f5bce1f7234a364133a73c88b",
+  "baseline_batch1_recheck_abs_differences": {
+    "count": 0,
+    "rmse_c": 3.7353420356822653e-10,
+    "mae_c": 2.3283064365386963e-09,
+    "psnr_y_db": 5.567193284150562e-08,
+    "ssim_y": 2.7567148230822625e-08
+  },
+  "new_long_training_started": false,
+  "resume_and_data_exposure_checks": {
+    "checked_at": "2026-11-10T05:25:48.065395+00:00",
+    "step": 1000,
+    "checkpoint_sha256": "207bd9523b6f265e419c0d83f63d3f75702c3957e590e9d1402574a01332cfb2",
+    "checkpoint_content_and_config_verified": true,
+    "all_model_and_ema_tensors_finite": true,
+    "optimizer_updates": 1000,
+    "WMSR_reference_same_training_order_and_augmentation": {
+      "sampler_rng": true,
+      "sample_order": true,
+      "sample_position": true,
+      "augmentation_rng": true
+    },
+    "resumed_from_step": 832,
+    "new_updates_after_resume": 168,
+    "CSV_boundary_note": "First post-resume mean_l1_last_window is the68 updates833..900; partial pre-pause loss totals were not checkpointed. Model/optimizer/EMA/sampler/augmentation states and update count were preserved.",
+    "test200_evaluated": false,
+    "long_training_started": false
+  }
+}

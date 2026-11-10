@@ -1,0 +1,765 @@
+{
+  "at": "2026-11-09T12:07:21.774379+00:00",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "torch": "2.7.1+cu128",
+  "test_images_evaluated": 0,
+  "training_started": false,
+  "upstream": [
+    [
+      {
+        "operator": "QmK",
+        "case": "topk_unique",
+        "size": 32,
+        "topk": 8,
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 9.5367431640625e-07,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 0.0,
+            "pass": true
+          }
+        ]
+      },
+      {
+        "operator": "AmV",
+        "case": "topk_unique",
+        "size": 32,
+        "topk": 8,
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 9.5367431640625e-07,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 3.2712860107421875,
+            "pass": false
+          }
+        ]
+      },
+      {
+        "operator": "QmK",
+        "case": "with_duplicates",
+        "size": 32,
+        "topk": 8,
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 9.5367431640625e-07,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 7.662604808807373,
+            "pass": false
+          }
+        ]
+      },
+      {
+        "operator": "AmV",
+        "case": "with_duplicates",
+        "size": 32,
+        "topk": 8,
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 1.9073486328125e-06,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 7.812532901763916,
+            "pass": false
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "operator": "QmK",
+        "case": "topk_unique",
+        "size": 32,
+        "topk": 8,
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 9.5367431640625e-07,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 0.0,
+            "pass": true
+          }
+        ]
+      },
+      {
+        "operator": "AmV",
+        "case": "topk_unique",
+        "size": 32,
+        "topk": 8,
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 9.5367431640625e-07,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 4.160835266113281,
+            "pass": false
+          }
+        ]
+      },
+      {
+        "operator": "QmK",
+        "case": "with_duplicates",
+        "size": 32,
+        "topk": 8,
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 9.5367431640625e-07,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 7.662604808807373,
+            "pass": false
+          }
+        ]
+      },
+      {
+        "operator": "AmV",
+        "case": "with_duplicates",
+        "size": 32,
+        "topk": 8,
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 1.9073486328125e-06,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 7.812532901763916,
+            "pass": false
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "operator": "QmK",
+        "case": "topk_unique",
+        "size": 32,
+        "topk": 8,
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 9.5367431640625e-07,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 0.0,
+            "pass": true
+          }
+        ]
+      },
+      {
+        "operator": "AmV",
+        "case": "topk_unique",
+        "size": 32,
+        "topk": 8,
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 9.5367431640625e-07,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 3.2712860107421875,
+            "pass": false
+          }
+        ]
+      },
+      {
+        "operator": "QmK",
+        "case": "with_duplicates",
+        "size": 32,
+        "topk": 8,
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 9.5367431640625e-07,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 7.662604808807373,
+            "pass": false
+          }
+        ]
+      },
+      {
+        "operator": "AmV",
+        "case": "with_duplicates",
+        "size": 32,
+        "topk": 8,
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 1.9073486328125e-06,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 7.812532901763916,
+            "pass": false
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "operator": "QmK",
+        "case": "topk_unique",
+        "size": 1024,
+        "topk": 256,
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 4.76837158203125e-05,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 66.89203643798828,
+            "pass": false
+          }
+        ]
+      },
+      {
+        "operator": "AmV",
+        "case": "topk_unique",
+        "size": 1024,
+        "topk": 256,
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 4.57763671875e-05,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 61.4185905456543,
+            "pass": false
+          }
+        ]
+      },
+      {
+        "operator": "QmK",
+        "case": "with_duplicates",
+        "size": 1024,
+        "topk": 256,
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 4.9591064453125e-05,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 74.61756896972656,
+            "pass": false
+          }
+        ]
+      },
+      {
+        "operator": "AmV",
+        "case": "with_duplicates",
+        "size": 1024,
+        "topk": 256,
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 5.340576171875e-05,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 62.20756912231445,
+            "pass": false
+          }
+        ]
+      }
+    ]
+  ],
+  "upstream_all_pass": false,
+  "corrected": [
+    [
+      {
+        "operator": "QmK",
+        "case": "topk_unique",
+        "size": 32,
+        "topk": 8,
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 9.5367431640625e-07,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 1.430511474609375e-06,
+            "pass": true
+          }
+        ]
+      },
+      {
+        "operator": "AmV",
+        "case": "topk_unique",
+        "size": 32,
+        "topk": 8,
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 9.5367431640625e-07,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 1.9073486328125e-06,
+            "pass": true
+          }
+        ]
+      },
+      {
+        "operator": "QmK",
+        "case": "with_duplicates",
+        "size": 32,
+        "topk": 8,
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 9.5367431640625e-07,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 9.5367431640625e-07,
+            "pass": true
+          }
+        ]
+      },
+      {
+        "operator": "AmV",
+        "case": "with_duplicates",
+        "size": 32,
+        "topk": 8,
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 1.9073486328125e-06,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 1.9073486328125e-06,
+            "pass": true
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "operator": "QmK",
+        "case": "topk_unique",
+        "size": 32,
+        "topk": 8,
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 9.5367431640625e-07,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 1.430511474609375e-06,
+            "pass": true
+          }
+        ]
+      },
+      {
+        "operator": "AmV",
+        "case": "topk_unique",
+        "size": 32,
+        "topk": 8,
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 9.5367431640625e-07,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 1.9073486328125e-06,
+            "pass": true
+          }
+        ]
+      },
+      {
+        "operator": "QmK",
+        "case": "with_duplicates",
+        "size": 32,
+        "topk": 8,
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 9.5367431640625e-07,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 9.5367431640625e-07,
+            "pass": true
+          }
+        ]
+      },
+      {
+        "operator": "AmV",
+        "case": "with_duplicates",
+        "size": 32,
+        "topk": 8,
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 1.9073486328125e-06,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 1.9073486328125e-06,
+            "pass": true
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "operator": "QmK",
+        "case": "topk_unique",
+        "size": 32,
+        "topk": 8,
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 9.5367431640625e-07,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 1.430511474609375e-06,
+            "pass": true
+          }
+        ]
+      },
+      {
+        "operator": "AmV",
+        "case": "topk_unique",
+        "size": 32,
+        "topk": 8,
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 9.5367431640625e-07,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 1.9073486328125e-06,
+            "pass": true
+          }
+        ]
+      },
+      {
+        "operator": "QmK",
+        "case": "with_duplicates",
+        "size": 32,
+        "topk": 8,
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 9.5367431640625e-07,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 9.5367431640625e-07,
+            "pass": true
+          }
+        ]
+      },
+      {
+        "operator": "AmV",
+        "case": "with_duplicates",
+        "size": 32,
+        "topk": 8,
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 1.9073486328125e-06,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 1.9073486328125e-06,
+            "pass": true
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "operator": "QmK",
+        "case": "topk_unique",
+        "size": 1024,
+        "topk": 256,
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 4.76837158203125e-05,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 2.6702880859375e-05,
+            "pass": true
+          }
+        ]
+      },
+      {
+        "operator": "AmV",
+        "case": "topk_unique",
+        "size": 1024,
+        "topk": 256,
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 4.57763671875e-05,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 3.24249267578125e-05,
+            "pass": true
+          }
+        ]
+      },
+      {
+        "operator": "QmK",
+        "case": "with_duplicates",
+        "size": 1024,
+        "topk": 256,
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 4.9591064453125e-05,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 3.4332275390625e-05,
+            "pass": true
+          }
+        ]
+      },
+      {
+        "operator": "AmV",
+        "case": "with_duplicates",
+        "size": 1024,
+        "topk": 256,
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 5.340576171875e-05,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 5.340576171875e-05,
+            "pass": true
+          }
+        ]
+      }
+    ]
+  ],
+  "corrected_all_pass": true
+}

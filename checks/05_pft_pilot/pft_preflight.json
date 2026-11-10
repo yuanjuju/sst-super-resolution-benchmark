@@ -1,0 +1,194 @@
+{
+  "started_at": "2026-11-09T12:09:40.533801+00:00",
+  "status": "pass",
+  "training_started": false,
+  "test_images_evaluated": 0,
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "compute_capability": [
+    12,
+    0
+  ],
+  "torch": "2.7.1+cu128",
+  "cuda": "12.8",
+  "source_commit": "3f832e6e150ba927a7741d893d3aa4a7114e9b01",
+  "precision": {
+    "dtype": "float32",
+    "matmul_tf32": false,
+    "cudnn_tf32": false
+  },
+  "implementation_note": "Pinned PFT network with separately recorded two-line atomic gradient accumulation correction",
+  "kernel_checks": [
+    {
+      "operator": "QmK",
+      "case": "topk_unique",
+      "size": 32,
+      "topk": 8,
+      "checks": [
+        {
+          "quantity": "forward",
+          "max_abs_difference": 0.0,
+          "pass": true
+        },
+        {
+          "quantity": "grad_A",
+          "max_abs_difference": 9.5367431640625e-07,
+          "pass": true
+        },
+        {
+          "quantity": "grad_B",
+          "max_abs_difference": 1.430511474609375e-06,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "operator": "AmV",
+      "case": "topk_unique",
+      "size": 32,
+      "topk": 8,
+      "checks": [
+        {
+          "quantity": "forward",
+          "max_abs_difference": 9.5367431640625e-07,
+          "pass": true
+        },
+        {
+          "quantity": "grad_A",
+          "max_abs_difference": 0.0,
+          "pass": true
+        },
+        {
+          "quantity": "grad_B",
+          "max_abs_difference": 1.9073486328125e-06,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "operator": "QmK",
+      "case": "with_duplicates",
+      "size": 32,
+      "topk": 8,
+      "checks": [
+        {
+          "quantity": "forward",
+          "max_abs_difference": 0.0,
+          "pass": true
+        },
+        {
+          "quantity": "grad_A",
+          "max_abs_difference": 9.5367431640625e-07,
+          "pass": true
+        },
+        {
+          "quantity": "grad_B",
+          "max_abs_difference": 9.5367431640625e-07,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "operator": "AmV",
+      "case": "with_duplicates",
+      "size": 32,
+      "topk": 8,
+      "checks": [
+        {
+          "quantity": "forward",
+          "max_abs_difference": 1.9073486328125e-06,
+          "pass": true
+        },
+        {
+          "quantity": "grad_A",
+          "max_abs_difference": 0.0,
+          "pass": true
+        },
+        {
+          "quantity": "grad_B",
+          "max_abs_difference": 1.9073486328125e-06,
+          "pass": true
+        }
+      ]
+    }
+  ],
+  "data": {
+    "OISST": "Existing1000 HR /800 train /200 test manifests and NPZ hashes match",
+    "HYCOM": "Existing1000 HR /800 train /200 test manifests and NPZ hashes match",
+    "GHRSST": "Existing1000 HR /800 train /200 test manifests and NPZ hashes match"
+  },
+  "batches": [
+    {
+      "scale": 2,
+      "batch": 8,
+      "LR": [
+        8,
+        3,
+        48,
+        48
+      ],
+      "HR": [
+        8,
+        3,
+        96,
+        96
+      ],
+      "parameters": 19623527,
+      "micro_batch": 2,
+      "gradient_accumulation": 4,
+      "finite_training_loss": 0.20602530241012573,
+      "finite_gradients": true,
+      "first_forward_backward_seconds": 1.7100070156157017,
+      "peak_allocated_mib": 10060.12109375,
+      "timing_boundary": "First batch only, not a converged-model runtime benchmark or full optimizer-memory profile"
+    },
+    {
+      "scale": 3,
+      "batch": 8,
+      "LR": [
+        8,
+        3,
+        32,
+        32
+      ],
+      "HR": [
+        8,
+        3,
+        96,
+        96
+      ],
+      "parameters": 19808167,
+      "micro_batch": 2,
+      "gradient_accumulation": 4,
+      "finite_training_loss": 0.20229900255799294,
+      "finite_gradients": true,
+      "first_forward_backward_seconds": 0.8417227882891893,
+      "peak_allocated_mib": 3097.96728515625,
+      "timing_boundary": "First batch only, not a converged-model runtime benchmark or full optimizer-memory profile"
+    },
+    {
+      "scale": 4,
+      "batch": 8,
+      "LR": [
+        8,
+        3,
+        24,
+        24
+      ],
+      "HR": [
+        8,
+        3,
+        96,
+        96
+      ],
+      "parameters": 19771239,
+      "micro_batch": 2,
+      "gradient_accumulation": 4,
+      "finite_training_loss": 0.18400897830724716,
+      "finite_gradients": true,
+      "first_forward_backward_seconds": 0.8148253988474607,
+      "peak_allocated_mib": 3099.75146484375,
+      "timing_boundary": "First batch only, not a converged-model runtime benchmark or full optimizer-memory profile"
+    }
+  ],
+  "finished_at": "2026-11-09T12:09:48.487153+00:00"
+}

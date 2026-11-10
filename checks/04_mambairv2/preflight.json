@@ -1,0 +1,60 @@
+{
+  "started_at_unix": 1793788818.5473323,
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "torch": "2.7.1+cu128",
+  "cuda": "12.8",
+  "data": {
+    "OISST": "1000 HR;800/200; both NPZ SHA256 matched",
+    "HYCOM": "1000 HR;800/200; both NPZ SHA256 matched",
+    "GHRSST": "1000 HR;800/200; both NPZ SHA256 matched"
+  },
+  "shapes": [
+    {
+      "scale": 4,
+      "batch": 8,
+      "output_shape": [
+        8,
+        3,
+        96,
+        96
+      ],
+      "parameters": 789680,
+      "finite_loss": 6878.0712890625,
+      "finite_gradients": true,
+      "seeded_eval_max_abs_difference": 0.0,
+      "peak_allocated_mib": 1848.4443359375
+    },
+    {
+      "scale": 3,
+      "batch": 8,
+      "output_shape": [
+        8,
+        3,
+        96,
+        96
+      ],
+      "parameters": 780587,
+      "finite_loss": 6434.01953125,
+      "finite_gradients": true,
+      "seeded_eval_max_abs_difference": 0.0,
+      "peak_allocated_mib": 1832.37890625
+    },
+    {
+      "scale": 2,
+      "batch": 8,
+      "output_shape": [
+        8,
+        3,
+        96,
+        96
+      ],
+      "parameters": 774092,
+      "finite_loss": 6414.40283203125,
+      "finite_gradients": true,
+      "seeded_eval_max_abs_difference": 0.0,
+      "peak_allocated_mib": 4032.14794921875
+    }
+  ],
+  "status": "pass",
+  "boundary": "Integrity and CUDA checks only, no SST test scores or training completion claimed."
+}

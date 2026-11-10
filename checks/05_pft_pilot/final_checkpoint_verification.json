@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-11-09T12:33:57.874821+00:00",
+  "models": {
+    "PFT": {
+      "step": 1000,
+      "protocol_matches": true,
+      "model_and_ema_keys_and_shapes_match": true,
+      "sha256": "e7b698236ce2f064e3378d8b6db5a5515b9466eb42fc137a65ce44c6b2a9988a"
+    },
+    "WMSR": {
+      "step": 1000,
+      "protocol_matches": true,
+      "model_and_ema_keys_and_shapes_match": true,
+      "sha256": "0188d7c899f9d7d00dd1ed6d265b915b54a75a0f5bce1f7234a364133a73c88b"
+    }
+  }
+}

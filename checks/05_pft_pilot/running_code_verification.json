@@ -1,0 +1,11 @@
+{
+  "at": "2026-11-09T12:17:23.475468+00:00",
+  "local_cloud_match": true,
+  "sha256": {
+    "train_pilot.py": "4f210930889f11877f4f20c2e544090e4c05d01879862ac02f84802881b933f8",
+    "cloud_preflight_pft.py": "ebbed0c8b2c5637d7afaabf22e040e2abd04777417fe6022ab487b370b5f866f",
+    "cloud_profile_models.py": "26e5acc93e605f69eb89ccd33ff580674d152699853c8a728b3a07d6af654383",
+    "pilot_protocol.json": "2387f8db221963de0b79d7511cd404dea5dfa220d14f9a482eecf7596e4d4c39",
+    "run_pilot_queue.py": "7ee5ff708f2cbcd14d5d4361d963cb76acd215056a3c76fa4b2667aff1536759"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-11-09T12:35:14.013386+00:00",
+  "status": "pass",
+  "tasks_complete": 2,
+  "updates_per_task": 1000,
+  "validation_rounds_per_task": 5,
+  "samples_per_validation_round": 80,
+  "validation_ids_match_frozen_manifest": true,
+  "final_test_images_evaluated": 0,
+  "common_config_fields_equal": true,
+  "config_differences": [
+    "model"
+  ],
+  "recovered_weights_sha256_match": {
+    "PFT": "e7b698236ce2f064e3378d8b6db5a5515b9466eb42fc137a65ce44c6b2a9988a",
+    "WMSR": "0188d7c899f9d7d00dd1ed6d265b915b54a75a0f5bce1f7234a364133a73c88b"
+  },
+  "long_training_started": false,
+  "local_package_archive_sha256": "bd5b40aa356088e49b35dfbe4a872ddbdeb4107cb9f23ea27448f8102313acaf",
+  "gpu_at_last_live_check": "NVIDIA GeForce RTX 5090, 1 MiB, 32607 MiB, 0 %",
+  "final_live_check_at": "2026-11-09T12:33:10.056068+00:00"
+}

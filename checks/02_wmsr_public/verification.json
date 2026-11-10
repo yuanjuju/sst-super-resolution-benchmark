@@ -1,0 +1,56 @@
+{
+  "checked_at": "2026-11-01T00:08:26.685717+08:00",
+  "jobs": 9,
+  "all_epochs100": true,
+  "all_optimizer_steps10000": true,
+  "all_train800_test200": true,
+  "all_final_checkpoints_present": true,
+  "checkpoints": [
+    {
+      "dataset": "HYCOM",
+      "scale": 2,
+      "sha256": "0ba7e483e1c08798257974e358b33c5208143ec68a1884c964d8bcb0dc0f2656"
+    },
+    {
+      "dataset": "HYCOM",
+      "scale": 3,
+      "sha256": "8d0417d6903c864f6522ab2797cff8fcc68fd90867c6ca31df0d3610bc55cb3c"
+    },
+    {
+      "dataset": "HYCOM",
+      "scale": 4,
+      "sha256": "37be8ddcb25fadabb1abf86c7abac266f22e655cccbee8f84ec1fbebe29578f6"
+    },
+    {
+      "dataset": "OISST",
+      "scale": 2,
+      "sha256": "7ae0e40b32f66bbfb79d7d9ba52a7058281a766f48134e2257dd1becec2fce37"
+    },
+    {
+      "dataset": "OISST",
+      "scale": 3,
+      "sha256": "70a3d54c8fe1ba7345921cd07a9dcff140ada6dcfd7e3322f36d0855a5f7c646"
+    },
+    {
+      "dataset": "OISST",
+      "scale": 4,
+      "sha256": "c14c5bb73fa9d639be60dd1a30f777eda10f4cb716db1438501cd72154966051"
+    },
+    {
+      "dataset": "GHRSST",
+      "scale": 2,
+      "sha256": "5c146754c8abbd98a4d632b73e93ccd5e3024c4f974c60b8b842df658bafd153"
+    },
+    {
+      "dataset": "GHRSST",
+      "scale": 3,
+      "sha256": "53229b392c5bb41b6397cdb755a87794c8041acdf7f7510b6737eef025cb71c2"
+    },
+    {
+      "dataset": "GHRSST",
+      "scale": 4,
+      "sha256": "af8980edf90748134576d123ecca159553b2ca3ea1c5feb1e91bc16664a3c252"
+    }
+  ],
+  "reproduction_boundary": "Unmodified published network, reconstructed SST data and explicit training interpretation"
+}

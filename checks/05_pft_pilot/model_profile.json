@@ -1,0 +1,155 @@
+{
+  "started_at": "2026-11-09T12:09:51.436441+00:00",
+  "status": "pass",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "test_images_evaluated": 0,
+  "formal_training_started": false,
+  "batches": [
+    {
+      "model": "PFT",
+      "scale": 2,
+      "batch_size": 8,
+      "micro_batch": 2,
+      "gradient_accumulation": 4,
+      "direct_batch_vs_accumulation_check": null,
+      "parameters": 19623527,
+      "seconds_per_update": [
+        1.0403409618884325,
+        1.0437530595809221,
+        1.0350440815091133,
+        1.0342547949403524,
+        1.04150727763772
+      ],
+      "median_seconds_per_update": 1.0403409618884325,
+      "peak_allocated_mib_with_optimizer_and_ema": 10296.83349609375,
+      "peak_reserved_mib": 11318.0,
+      "finite_last_l1": 0.06213246937841177
+    },
+    {
+      "model": "PFT",
+      "scale": 3,
+      "batch_size": 8,
+      "micro_batch": 2,
+      "gradient_accumulation": 4,
+      "direct_batch_vs_accumulation_check": null,
+      "parameters": 19808167,
+      "seconds_per_update": [
+        0.7490864899009466,
+        0.7338824532926083,
+        0.651273874565959,
+        0.6920471899211407,
+        0.743498245254159
+      ],
+      "median_seconds_per_update": 0.7338824532926083,
+      "peak_allocated_mib_with_optimizer_and_ema": 3340.10888671875,
+      "peak_reserved_mib": 3560.0,
+      "finite_last_l1": 0.0974238496273756
+    },
+    {
+      "model": "PFT",
+      "scale": 4,
+      "batch_size": 8,
+      "micro_batch": 2,
+      "gradient_accumulation": 4,
+      "direct_batch_vs_accumulation_check": {
+        "scale": 4,
+        "direct_batch": 8,
+        "micro_batch": 2,
+        "forward_loss_and_parameter_gradients": "pass",
+        "loss_abs_difference": 7.450580596923828e-09,
+        "output_max_abs_difference": 1.7881393432617188e-07,
+        "max_parameter_gradient_abs_difference": 2.9802322387695312e-08,
+        "boundary": "Numerical execution check on training samples, no predictive test. Floating-point summation order differs."
+      },
+      "parameters": 19771239,
+      "seconds_per_update": [
+        0.7472343500703573,
+        0.7511103879660368,
+        0.7488259319216013,
+        0.6971090417355299,
+        0.7482866514474154
+      ],
+      "median_seconds_per_update": 0.7482866514474154,
+      "peak_allocated_mib_with_optimizer_and_ema": 3370.2890625,
+      "peak_reserved_mib": 12786.0,
+      "finite_last_l1": 0.06122285965830088
+    },
+    {
+      "model": "WMSR",
+      "scale": 2,
+      "batch_size": 8,
+      "micro_batch": 2,
+      "gradient_accumulation": 4,
+      "direct_batch_vs_accumulation_check": null,
+      "parameters": 2037284,
+      "seconds_per_update": [
+        0.34411446377635,
+        0.34284770488739014,
+        0.344395050778985,
+        0.34405089914798737,
+        0.34226514399051666
+      ],
+      "median_seconds_per_update": 0.34405089914798737,
+      "peak_allocated_mib_with_optimizer_and_ema": 149.53173828125,
+      "peak_reserved_mib": 158.0,
+      "finite_last_l1": 0.1078578419983387
+    },
+    {
+      "model": "WMSR",
+      "scale": 3,
+      "batch_size": 8,
+      "micro_batch": 2,
+      "gradient_accumulation": 4,
+      "direct_batch_vs_accumulation_check": null,
+      "parameters": 2045939,
+      "seconds_per_update": [
+        0.3443692568689585,
+        0.34082624316215515,
+        0.33963012881577015,
+        0.2774688806384802,
+        0.34146452136337757
+      ],
+      "median_seconds_per_update": 0.34082624316215515,
+      "peak_allocated_mib_with_optimizer_and_ema": 104.09033203125,
+      "peak_reserved_mib": 142.0,
+      "finite_last_l1": 0.12229841202497482
+    },
+    {
+      "model": "WMSR",
+      "scale": 4,
+      "batch_size": 8,
+      "micro_batch": 2,
+      "gradient_accumulation": 4,
+      "direct_batch_vs_accumulation_check": {
+        "scale": 4,
+        "direct_batch": 8,
+        "micro_batch": 2,
+        "forward_loss_and_parameter_gradients": "pass",
+        "loss_abs_difference": 5.587935447692871e-09,
+        "output_max_abs_difference": 6.556510925292969e-07,
+        "max_parameter_gradient_abs_difference": 2.561137080192566e-09,
+        "boundary": "Numerical execution check on training samples, no predictive test. Floating-point summation order differs."
+      },
+      "parameters": 2058056,
+      "seconds_per_update": [
+        0.3409186787903309,
+        0.341812077909708,
+        0.3397365566343069,
+        0.33972153440117836,
+        0.3108694311231375
+      ],
+      "median_seconds_per_update": 0.3397365566343069,
+      "peak_allocated_mib_with_optimizer_and_ema": 89.38818359375,
+      "peak_reserved_mib": 188.0,
+      "finite_last_l1": 0.12471188232302666
+    }
+  ],
+  "precision": {
+    "dtype": "float32",
+    "matmul_tf32": false,
+    "cudnn_tf32": false
+  },
+  "boundary": "3 warmup + 5 measured AdamW/L1/EMA updates per model/scale; all states discarded. Does not establish convergence or predictive quality.",
+  "base_factory_sha256": "ffebd0e8ed4c23fdac123a7d104f46b30edcb69cebc2421a834b84afde0aecc9",
+  "finished_at": "2026-11-09T12:10:33.238697+00:00"
+}

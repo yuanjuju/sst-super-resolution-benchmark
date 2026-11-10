@@ -1,0 +1,96 @@
+{
+  "status": "pass",
+  "architecture_notes": {
+    "groups": 6,
+    "blocks_per_group": 4,
+    "channels": 64,
+    "group_choice": "Fig.1 and TableII agree on6x4; one text sentence swaps6and4",
+    "ss2d": "Author SS2D, d_state16, expand2; expansion not stated in paper",
+    "hfem": "Fig3 order: linear+DWConv low and high branches, sigmoid high gate, then PDC; Eq14 places PDC differently",
+    "pdc": "Shared across three high-frequency subbands; depthwise branches follow four differential branches of author code",
+    "subband_fusion": "Concatenate LL/HL/LH/HH for valid IDWT dimensions; grouped1x1 refinement preserves four subbands",
+    "normalization": "Post-IDWT LayerNorm retained from public WAM to reconcile omitted detail",
+    "parameter_count": "Measured independently; paper977K cannot be guaranteed from incomplete dimensions"
+  },
+  "tests": [
+    {
+      "scale": 4,
+      "groups": 6,
+      "wam_blocks": 24,
+      "parameters": 3277064,
+      "input_shape": [
+        8,
+        3,
+        24,
+        24
+      ],
+      "output_shape": [
+        8,
+        3,
+        96,
+        96
+      ],
+      "losses": [
+        4500721.5,
+        4653777.5,
+        2388492.75
+      ],
+      "step_seconds": 0.3103775540366769,
+      "peak_allocated_mib": 754.447265625,
+      "parameters_without_gradient": []
+    },
+    {
+      "scale": 3,
+      "groups": 6,
+      "wam_blocks": 24,
+      "parameters": 3264947,
+      "input_shape": [
+        8,
+        3,
+        32,
+        32
+      ],
+      "output_shape": [
+        8,
+        3,
+        96,
+        96
+      ],
+      "losses": [
+        4450316.0,
+        2781921.75,
+        1984753.875
+      ],
+      "step_seconds": 0.3055079896003008,
+      "peak_allocated_mib": 1231.9072265625,
+      "parameters_without_gradient": []
+    },
+    {
+      "scale": 2,
+      "groups": 6,
+      "wam_blocks": 24,
+      "parameters": 3256292,
+      "input_shape": [
+        8,
+        3,
+        48,
+        48
+      ],
+      "output_shape": [
+        8,
+        3,
+        96,
+        96
+      ],
+      "losses": [
+        4147837.25,
+        6141992.0,
+        2636195.5
+      ],
+      "step_seconds": 0.3103390191681683,
+      "peak_allocated_mib": 2428.92138671875,
+      "parameters_without_gradient": []
+    }
+  ],
+  "limits": "Topology reconstruction, not author-confirmed missing implementation details; parameter mismatch retained openly."
+}

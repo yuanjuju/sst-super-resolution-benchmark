@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-11-10T05:25:48.065395+00:00",
+  "step": 1000,
+  "checkpoint_sha256": "207bd9523b6f265e419c0d83f63d3f75702c3957e590e9d1402574a01332cfb2",
+  "checkpoint_content_and_config_verified": true,
+  "all_model_and_ema_tensors_finite": true,
+  "optimizer_updates": 1000,
+  "WMSR_reference_same_training_order_and_augmentation": {
+    "sampler_rng": true,
+    "sample_order": true,
+    "sample_position": true,
+    "augmentation_rng": true
+  },
+  "resumed_from_step": 832,
+  "new_updates_after_resume": 168,
+  "CSV_boundary_note": "First post-resume mean_l1_last_window is the68 updates833..900; partial pre-pause loss totals were not checkpointed. Model/optimizer/EMA/sampler/augmentation states and update count were preserved.",
+  "test200_evaluated": false,
+  "long_training_started": false
+}

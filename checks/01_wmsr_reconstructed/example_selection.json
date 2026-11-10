@@ -1,0 +1,48 @@
+{
+  "rule": "Fixed test indices [0,66,133] for every dataset and scale; no metric-based selection",
+  "display": "Mean of three predicted channels, inverse fixed -2..40C mapping; full uncropped patch. Error colors share scale within a row.",
+  "samples": {
+    "HYCOM": [
+      {
+        "test_index": 0,
+        "sample_id": "HYCOM_EWP_20161208T2100_155_136"
+      },
+      {
+        "test_index": 66,
+        "sample_id": "HYCOM_NP_20161201T0000_209_362"
+      },
+      {
+        "test_index": 133,
+        "sample_id": "HYCOM_AGM_20161230T0600_226_357"
+      }
+    ],
+    "OISST": [
+      {
+        "test_index": 0,
+        "sample_id": "OISST_20161207_257_740"
+      },
+      {
+        "test_index": 66,
+        "sample_id": "OISST_20161124_230_949"
+      },
+      {
+        "test_index": 133,
+        "sample_id": "OISST_20161125_244_277"
+      }
+    ],
+    "GHRSST": [
+      {
+        "test_index": 0,
+        "sample_id": "GHRSST_20160812_2651_5652"
+      },
+      {
+        "test_index": 66,
+        "sample_id": "GHRSST_20160812_10751_3952"
+      },
+      {
+        "test_index": 133,
+        "sample_id": "GHRSST_20160812_3251_10352"
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "file": "weights-01_wmsr_reconstructed.tar.gz",
+    "bytes": 32542252,
+    "sha256": "d648cace6d9d0536e21d801107ceeb9ed24fb4628352e62a08bf3b902b20808f",
+    "weight_files": 9
+  },
+  {
+    "file": "weights-02_wmsr_public.tar.gz",
+    "bytes": 68521999,
+    "sha256": "83255f4ff5e05b2d31111e23b616b60ee31827cc3b62ce43d665d6feac6538d4",
+    "weight_files": 9
+  },
+  {
+    "file": "weights-03_extended.tar.gz",
+    "bytes": 834590479,
+    "sha256": "7039b957e0ebab0e6c185a0d2566834d3821139a58ec5fbb15b9e733db55a76f",
+    "weight_files": 78
+  },
+  {
+    "file": "weights-04_mambairv2.tar.gz",
+    "bytes": 27459249,
+    "sha256": "56b8ffcb8bdba13ed56d7c96d608e163f731c5c2977592833a1e64190573d991",
+    "weight_files": 9
+  },
+  {
+    "file": "weights-05_pft_pilot.tar.gz",
+    "bytes": 162601580,
+    "sha256": "cc118cd8ce31c8e749a0b81cc7006519aa63b0ca95c18a0f9fc3846842edea62",
+    "weight_files": 2
+  },
+  {
+    "file": "weights-06_esc_pilot.tar.gz",
+    "bytes": 7256070,
+    "sha256": "131d03ac88989b4f11a160406ea9ecc21ccba19def9d45b5f0a7c975d7416337",
+    "weight_files": 1
+  },
+  {
+    "file": "weights-07_esc_wmsr_5000.tar.gz",
+    "bytes": 22502864,
+    "sha256": "a878b9a264618f58fe6488d16af907bc16616e80aa743a546ee9a590fda7caad",
+    "weight_files": 2
+  },
+  {
+    "file": "weights-resume.tar.gz",
+    "bytes": 83200791,
+    "sha256": "ceee3e4fd3cf75b4265baa4872e5b1f0c4939ea663f5a4f486dca89c79130f3d",
+    "weight_files": 4
+  }
+]

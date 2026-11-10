@@ -1,0 +1,98 @@
+{
+  "started_at": "2026-11-09T12:47:37.961421+00:00",
+  "status": "pass",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "torch": "2.7.1+cu128",
+  "optimizer_updates": 0,
+  "final_test_images_evaluated": 0,
+  "attention_backend": "official Naive, unchanged full relative-position bias",
+  "precision": {
+    "dtype": "float32",
+    "matmul_tf32": false,
+    "cudnn_tf32": false
+  },
+  "batches": [
+    {
+      "scale": 2,
+      "parameters": 946728,
+      "effective_batch": 8,
+      "micro_batch": 2,
+      "accumulations": 4,
+      "LR": [
+        8,
+        3,
+        48,
+        48
+      ],
+      "HR": [
+        8,
+        3,
+        96,
+        96
+      ],
+      "loss_is_finite": true,
+      "parameter_gradients_are_finite": true,
+      "sum_normalized_l1": 0.33194512873888016,
+      "eval_batch": 1,
+      "train_eval_output_max_abs_difference": 1.6689300537109375e-06,
+      "peak_allocated_mib": 1378.435546875,
+      "construction_and_first_batch_seconds": 18.419937005266547,
+      "timing_boundary": "Includes CPU bias-index construction and first CUDA execution, not steady optimizer throughput."
+    },
+    {
+      "scale": 3,
+      "parameters": 955383,
+      "effective_batch": 8,
+      "micro_batch": 2,
+      "accumulations": 4,
+      "LR": [
+        8,
+        3,
+        32,
+        32
+      ],
+      "HR": [
+        8,
+        3,
+        96,
+        96
+      ],
+      "loss_is_finite": true,
+      "parameter_gradients_are_finite": true,
+      "sum_normalized_l1": 0.33742310106754303,
+      "eval_batch": 1,
+      "train_eval_output_max_abs_difference": 1.6987323760986328e-06,
+      "peak_allocated_mib": 492.91015625,
+      "construction_and_first_batch_seconds": 13.174655485898256,
+      "timing_boundary": "Includes CPU bias-index construction and first CUDA execution, not steady optimizer throughput."
+    },
+    {
+      "scale": 4,
+      "parameters": 967500,
+      "effective_batch": 8,
+      "micro_batch": 2,
+      "accumulations": 4,
+      "LR": [
+        8,
+        3,
+        24,
+        24
+      ],
+      "HR": [
+        8,
+        3,
+        96,
+        96
+      ],
+      "loss_is_finite": true,
+      "parameter_gradients_are_finite": true,
+      "sum_normalized_l1": 0.3429480493068695,
+      "eval_batch": 1,
+      "train_eval_output_max_abs_difference": 2.1457672119140625e-06,
+      "peak_allocated_mib": 441.240234375,
+      "construction_and_first_batch_seconds": 13.219556011259556,
+      "timing_boundary": "Includes CPU bias-index construction and first CUDA execution, not steady optimizer throughput."
+    }
+  ],
+  "finished_at": "2026-11-09T12:48:23.101721+00:00"
+}

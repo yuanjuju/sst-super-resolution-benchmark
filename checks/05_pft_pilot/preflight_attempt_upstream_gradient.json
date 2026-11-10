@@ -1,0 +1,8 @@
+{
+  "started_at": "2026-11-09T11:58:31.517411+00:00",
+  "status": "fail",
+  "training_started": false,
+  "test_images_evaluated": 0,
+  "error": "Traceback (most recent call last):\n  File \"/root/wmsr-repro/strong_models/pft_20261109/cloud_preflight_pft.py\", line 108, in main\n    kernel_checks=kernel_checks(torch, namespace), data={}, batches=[])\n  File \"/root/wmsr-repro/strong_models/pft_20261109/cloud_preflight_pft.py\", line 67, in kernel_checks\n    torch.testing.assert_close(one, two, rtol=5e-4, atol=1e-4)\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/torch/testing/_comparison.py\", line 1519, in assert_close\n    raise error_metas[0].to_error(msg)\nAssertionError: Tensor-likes are not close!\n\nMismatched elements: 1432 / 2560 (55.9%)\nGreatest absolute difference: 5.755851745605469 at index (1, 12, 31) (up to 0.0001 allowed)\nGreatest relative difference: 377.6817626953125 at index (0, 18, 7) (up to 0.0005 allowed)\n",
+  "finished_at": "2026-11-09T11:59:23.350119+00:00"
+}

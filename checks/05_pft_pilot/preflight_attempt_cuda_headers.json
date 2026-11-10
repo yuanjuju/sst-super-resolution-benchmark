@@ -1,0 +1,8 @@
+{
+  "started_at": "2026-11-09T11:57:07.238888+00:00",
+  "status": "fail",
+  "training_started": false,
+  "test_images_evaluated": 0,
+  "error": "Traceback (most recent call last):\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/torch/utils/cpp_extension.py\", line 2506, in _run_ninja_build\n    subprocess.run(\n  File \"/root/wmsr-repro/.toolchains/python/cpython-3.10.12-linux-x86_64-gnu/lib/python3.10/subprocess.py\", line 526, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['ninja', '-v', '-j', '2']' returned non-zero exit status 1.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/root/wmsr-repro/strong_models/pft_20261109/cloud_preflight_pft.py\", line 100, in main\n    extension = load(name='smm_cuda', sources=[str(f) for f in sorted(sources.glob('*')) if f.suffix in {'.cu', '.cpp'}],\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/torch/utils/cpp_extension.py\", line 1623, in load\n    return _jit_compile(\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/torch/utils/cpp_extension.py\", line 2076, in _jit_compile\n    _write_ninja_file_and_build_library(\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/torch/utils/cpp_extension.py\", line 2222, in _write_ninja_file_and_build_library\n    _run_ninja_build(\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/torch/utils/cpp_extension.py\", line 2522, in _run_ninja_build\n    raise RuntimeError(message) from e\nRuntimeError: Error building extension 'smm_cuda'\n",
+  "finished_at": "2026-11-09T11:57:12.318283+00:00"
+}

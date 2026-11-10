@@ -1,0 +1,53 @@
+{
+  "at": "2026-11-10T06:07:53.675507+00:00",
+  "status": "pass",
+  "models": {
+    "ESC": {
+      "source_checkpoint": "/root/wmsr-repro/strong_models/candidate_screen_20261109/pilot/results/ESC_OISST_x4_s10/checkpoints/last.pt",
+      "source_sha256": "1f041b4527f9b57f4f8dabd97cab537376212af2692ebfec4ee109295f1d4ae6",
+      "copied_input_sha256": "1f041b4527f9b57f4f8dabd97cab537376212af2692ebfec4ee109295f1d4ae6",
+      "source_config_sha256": "ef469012a5576d24cd17c7e76485a62abb48e216da6f939d27411a41fbd63469",
+      "optimizer_steps": [
+        1000.0
+      ],
+      "step": 1000,
+      "sampling_position": 80,
+      "all_raw_and_ema_tensors_finite": true
+    },
+    "WMSR": {
+      "source_checkpoint": "/root/wmsr-repro/strong_models/pft_20261109/pilot/results/WMSR_OISST_x4_s10/checkpoints/last.pt",
+      "source_sha256": "85b1f52d767380077142c82cb14f23c1825398007327929f210f0b7cc9236539",
+      "copied_input_sha256": "85b1f52d767380077142c82cb14f23c1825398007327929f210f0b7cc9236539",
+      "source_config_sha256": "de1d86ee21d0959186b71dc68210a71b8580d2053e0ccf9388566cffa3caebd8",
+      "optimizer_steps": [
+        1000.0
+      ],
+      "step": 1000,
+      "sampling_position": 80,
+      "all_raw_and_ema_tensors_finite": true
+    }
+  },
+  "equal_common_fields": [
+    "dataset",
+    "scale",
+    "seed",
+    "development_manifest_sha256",
+    "batch_size",
+    "micro_batch",
+    "accumulation_steps",
+    "optimizer",
+    "loss",
+    "warmup_updates",
+    "ema_decay",
+    "validation_every",
+    "save_every",
+    "augmentations",
+    "precision",
+    "initialization"
+  ],
+  "same_sampler_and_augmentation_state": true,
+  "source_updates": 1000,
+  "authorized_total_updates": 5000,
+  "test200_evaluated": false,
+  "historical_validation_note": "WMSR historical validation used batch2; independent1000-step batch1 recheck differs by5.6e-8dB. New validations use batch1 for both."
+}

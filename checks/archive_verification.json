@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "tasks": 118,
+  "complete": 110,
+  "failed": 8,
+  "formal_test_runs": 105,
+  "per_image_records_checked": 31400,
+  "development_validation_rounds": 65,
+  "published_source_files_checked": 1025,
+  "indexed_weight_files": 114
+}

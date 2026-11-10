@@ -1,0 +1,56 @@
+{
+  "checked_at": "2026-10-31T23:34:12.123865+08:00",
+  "jobs": 9,
+  "all_epochs100": true,
+  "all_optimizer_steps10000": true,
+  "all_train800_test200": true,
+  "all_final_checkpoints_present": true,
+  "checkpoints": [
+    {
+      "dataset": "HYCOM",
+      "scale": 2,
+      "sha256": "bc54fbfbe6c6ff607a752bb921d20188bc1dd6202f9961100a13b877c1769225"
+    },
+    {
+      "dataset": "HYCOM",
+      "scale": 3,
+      "sha256": "33993b4e78ecb16ece09ff6d3094ce5663aed9957d793925a0654dc0cd0b161c"
+    },
+    {
+      "dataset": "HYCOM",
+      "scale": 4,
+      "sha256": "bb256f0a731a2604b85910fd6225117075e3a00266fd7d1a610ccf8c042af3cf"
+    },
+    {
+      "dataset": "OISST",
+      "scale": 2,
+      "sha256": "66f0fef217a80e0137cff597b2368c1ee6507645392dfdba650f437fe8250c8b"
+    },
+    {
+      "dataset": "OISST",
+      "scale": 3,
+      "sha256": "2b1f9c1cb204f3eb1270da4408c6202dd87d3b7bd7f94dbfab955388a9b1a9ed"
+    },
+    {
+      "dataset": "OISST",
+      "scale": 4,
+      "sha256": "bfbc95b265b3c63e198fbff6edadf36e279e7f4f2f0e67feaab5a68c1e192c49"
+    },
+    {
+      "dataset": "GHRSST",
+      "scale": 2,
+      "sha256": "c26b03a2e9452a507d7aeaa112a106d9de54ca734b9de7eb8683df4cf362a1bd"
+    },
+    {
+      "dataset": "GHRSST",
+      "scale": 3,
+      "sha256": "a776bda2b0555a705a1610b3d7b61ce6bd97dee18b1e3a2608ab6276ece7a1f8"
+    },
+    {
+      "dataset": "GHRSST",
+      "scale": 4,
+      "sha256": "b1f97ecd69a5d94a7e53f4b28be2542393b18eb02ad2f6d9aa3ea424cc1264c4"
+    }
+  ],
+  "reproduction_boundary": "Explicit approximate reconstruction; private author protocol unavailable"
+}

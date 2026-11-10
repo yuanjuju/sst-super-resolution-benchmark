@@ -1,0 +1,8 @@
+{
+  "started_at": "2026-11-09T11:56:00.344090+00:00",
+  "status": "fail",
+  "training_started": false,
+  "test_images_evaluated": 0,
+  "error": "Traceback (most recent call last):\n  File \"/root/wmsr-repro/strong_models/pft_20261109/cloud_preflight_pft.py\", line 100, in main\n    extension = load(name='smm_cuda', sources=[str(f) for f in sorted(sources.glob('*')) if f.suffix in {'.cu', '.cpp'}],\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/torch/utils/cpp_extension.py\", line 1623, in load\n    return _jit_compile(\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/torch/utils/cpp_extension.py\", line 2076, in _jit_compile\n    _write_ninja_file_and_build_library(\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/torch/utils/cpp_extension.py\", line 2180, in _write_ninja_file_and_build_library\n    verify_ninja_availability()\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/torch/utils/cpp_extension.py\", line 2241, in verify_ninja_availability\n    raise RuntimeError(\"Ninja is required to load C++ extensions\")\nRuntimeError: Ninja is required to load C++ extensions\n",
+  "finished_at": "2026-11-09T11:56:02.401392+00:00"
+}

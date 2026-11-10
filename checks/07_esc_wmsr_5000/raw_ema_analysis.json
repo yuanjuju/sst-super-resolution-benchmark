@@ -1,0 +1,70 @@
+{
+  "at": "2026-11-10T07:08:46.069941+00:00",
+  "population": "training-only development80; not original200test",
+  "fixed_updates": 5000,
+  "endpoint_selection": "prescribed5000 for both raw and EMA; no replacement with best intermediate checkpoint",
+  "ESC_minus_WMSR": {
+    "raw": {
+      "psnr_y_db": -8.008198166097088,
+      "rmse_c": 0.12764511510052565,
+      "mae_c": 0.11475180108100176,
+      "ssim_y": -0.018776094913482644
+    },
+    "ema": {
+      "psnr_y_db": 1.8758716774408413,
+      "rmse_c": -0.022231675096111736,
+      "mae_c": -0.026661514211446052,
+      "ssim_y": -0.00022634640336038903
+    }
+  },
+  "raw_ESC_last_two": [
+    {
+      "step": 4800,
+      "split": "training_only_development80",
+      "final_test_images_evaluated": 0,
+      "raw": {
+        "count": 80,
+        "rmse_c": 0.11423361256561625,
+        "mae_c": 0.07488855104893447,
+        "psnr_y_db": 53.98107651388004,
+        "ssim_y": 0.9960939429700375
+      },
+      "ema": {
+        "count": 80,
+        "rmse_c": 0.1176785378583368,
+        "mae_c": 0.07867461196146905,
+        "psnr_y_db": 53.440361137028766,
+        "ssim_y": 0.9957542426884174
+      }
+    },
+    {
+      "step": 5000,
+      "split": "training_only_development80",
+      "final_test_images_evaluated": 0,
+      "raw": {
+        "count": 80,
+        "rmse_c": 0.24353542045183052,
+        "mae_c": 0.18963908310979605,
+        "psnr_y_db": 45.99471228186148,
+        "ssim_y": 0.9773046776652337
+      },
+      "ema": {
+        "count": 80,
+        "rmse_c": 0.11702983101628653,
+        "mae_c": 0.07807641085237264,
+        "psnr_y_db": 53.52249771912498,
+        "ssim_y": 0.9958002097904682
+      }
+    }
+  ],
+  "no_new_optimizer_updates": true,
+  "same_four_visual_ids_raw_and_ema": true,
+  "raw_error_color_range": [
+    -1.1719894409179688,
+    1.1719894409179688
+  ],
+  "ema_error_color_range": [
+    -1.1719894409179688,
+    1.1719894409179688
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "started_at": "2026-11-09T12:05:14.706819+00:00",
+  "status": "fail",
+  "training_started": false,
+  "test_images_evaluated": 0,
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "compute_capability": [
+    12,
+    0
+  ],
+  "torch": "2.7.1+cu128",
+  "cuda": "12.8",
+  "source_commit": "3f832e6e150ba927a7741d893d3aa4a7114e9b01",
+  "implementation_note": "Pinned PFT network with separately recorded two-line atomic gradient accumulation correction",
+  "kernel_checks": [
+    {
+      "operator": "QmK",
+      "case": "topk_unique",
+      "checks": [
+        {
+          "quantity": "forward",
+          "max_abs_difference": 0.0,
+          "pass": true
+        },
+        {
+          "quantity": "grad_A",
+          "max_abs_difference": 9.5367431640625e-07,
+          "pass": true
+        },
+        {
+          "quantity": "grad_B",
+          "max_abs_difference": 1.430511474609375e-06,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "operator": "AmV",
+      "case": "topk_unique",
+      "checks": [
+        {
+          "quantity": "forward",
+          "max_abs_difference": 9.5367431640625e-07,
+          "pass": true
+        },
+        {
+          "quantity": "grad_A",
+          "max_abs_difference": 0.0,
+          "pass": true
+        },
+        {
+          "quantity": "grad_B",
+          "max_abs_difference": 1.9073486328125e-06,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "operator": "QmK",
+      "case": "with_duplicates",
+      "checks": [
+        {
+          "quantity": "forward",
+          "max_abs_difference": 0.0,
+          "pass": true
+        },
+        {
+          "quantity": "grad_A",
+          "max_abs_difference": 9.5367431640625e-07,
+          "pass": true
+        },
+        {
+          "quantity": "grad_B",
+          "max_abs_difference": 9.5367431640625e-07,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "operator": "AmV",
+      "case": "with_duplicates",
+      "checks": [
+        {
+          "quantity": "forward",
+          "max_abs_difference": 1.9073486328125e-06,
+          "pass": true
+        },
+        {
+          "quantity": "grad_A",
+          "max_abs_difference": 0.0,
+          "pass": true
+        },
+        {
+          "quantity": "grad_B",
+          "max_abs_difference": 1.9073486328125e-06,
+          "pass": true
+        }
+      ]
+    }
+  ],
+  "data": {
+    "OISST": "Existing1000 HR /800 train /200 test manifests and NPZ hashes match",
+    "HYCOM": "Existing1000 HR /800 train /200 test manifests and NPZ hashes match",
+    "GHRSST": "Existing1000 HR /800 train /200 test manifests and NPZ hashes match"
+  },
+  "batches": [],
+  "error": "Traceback (most recent call last):\n  File \"/root/wmsr-repro/strong_models/pft_20261109/cloud_preflight_pft.py\", line 169, in main\n    output = model(low)\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1751, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1762, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/root/wmsr-repro/strong_models/pft_20261109/sources/PFT/basicsr/archs/pft_arch.py\", line 1120, in forward\n    x = self.conv_after_body(self.forward_features(x, params)) + x\n  File \"/root/wmsr-repro/strong_models/pft_20261109/sources/PFT/basicsr/archs/pft_arch.py\", line 1060, in forward_features\n    x, pfa_list = layer(x, pfa_list, x_size, params)\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1751, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1762, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/root/wmsr-repro/strong_models/pft_20261109/sources/PFT/basicsr/archs/pft_arch.py\", line 714, in forward\n    x_Basicblock, pfa_list = self.residual_group(x, pfa_list, x_size, params)\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1751, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1762, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/root/wmsr-repro/strong_models/pft_20261109/sources/PFT/basicsr/archs/pft_arch.py\", line 621, in forward\n    x, pfa_list = layer(x, pfa_list, x_size, params)\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1751, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1762, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/root/wmsr-repro/strong_models/pft_20261109/sources/PFT/basicsr/archs/pft_arch.py\", line 478, in forward\n    x = x + self.convffn(self.norm2(x), x_size)\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1751, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1762, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/root/wmsr-repro/strong_models/pft_20261109/sources/PFT/basicsr/archs/pft_arch.py\", line 167, in forward\n    x = self.act(x)\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1751, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1762, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/torch/nn/modules/activation.py\", line 734, in forward\n    return F.gelu(input, approximate=self.approximate)\ntorch.OutOfMemoryError: CUDA out of memory. Tried to allocate 60.00 MiB. GPU 0 has a total capacity of 31.36 GiB of which 24.31 MiB is free. Including non-PyTorch memory, this process has 31.33 GiB memory in use. Of the allocated memory 30.25 GiB is allocated by PyTorch, and 478.28 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)\n",
+  "finished_at": "2026-11-09T12:06:00.671317+00:00"
+}

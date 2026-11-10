@@ -1,0 +1,488 @@
+{
+  "verification": {
+    "checked_at": "2026-11-09T12:35:14.013386+00:00",
+    "status": "pass",
+    "tasks_complete": 2,
+    "updates_per_task": 1000,
+    "validation_rounds_per_task": 5,
+    "samples_per_validation_round": 80,
+    "validation_ids_match_frozen_manifest": true,
+    "final_test_images_evaluated": 0,
+    "common_config_fields_equal": true,
+    "config_differences": [
+      "model"
+    ],
+    "recovered_weights_sha256_match": {
+      "PFT": "e7b698236ce2f064e3378d8b6db5a5515b9466eb42fc137a65ce44c6b2a9988a",
+      "WMSR": "0188d7c899f9d7d00dd1ed6d265b915b54a75a0f5bce1f7234a364133a73c88b"
+    },
+    "long_training_started": false,
+    "local_package_archive_sha256": "bd5b40aa356088e49b35dfbe4a872ddbdeb4107cb9f23ea27448f8102313acaf",
+    "gpu_at_last_live_check": "NVIDIA GeForce RTX 5090, 1 MiB, 32607 MiB, 0 %",
+    "final_live_check_at": "2026-11-09T12:33:10.056068+00:00"
+  },
+  "runs": {
+    "PFT": {
+      "result": {
+        "status": "complete",
+        "model": "PFT",
+        "updates": 1000,
+        "elapsed_seconds": 808.7013467084616,
+        "last_validation": {
+          "step": 1000,
+          "split": "training_only_development80",
+          "final_test_images_evaluated": 0,
+          "raw": {
+            "count": 80,
+            "rmse_c": 0.8802605625698154,
+            "mae_c": 0.8295595973730088,
+            "psnr_y_db": 35.06253666750136,
+            "ssim_y": 0.98461037799716
+          },
+          "ema": {
+            "count": 80,
+            "rmse_c": 4.094184724824822,
+            "mae_c": 3.3987606681883333,
+            "psnr_y_db": 22.987992523264978,
+            "ssim_y": 0.8259096961468458
+          }
+        },
+        "checkpoint_sha256": "e7b698236ce2f064e3378d8b6db5a5515b9466eb42fc137a65ce44c6b2a9988a",
+        "completed_at": "2026-11-09T12:25:58.263545+00:00",
+        "boundary": "1000-update development pilot only. No final200 test evaluation, no convergence or superiority claim."
+      },
+      "history": [
+        {
+          "step": 200,
+          "split": "training_only_development80",
+          "final_test_images_evaluated": 0,
+          "raw": {
+            "count": 80,
+            "rmse_c": 0.7989154054485307,
+            "mae_c": 0.5916440628468991,
+            "psnr_y_db": 36.900755456375876,
+            "ssim_y": 0.9295011050999165
+          },
+          "ema": {
+            "count": 80,
+            "rmse_c": 6.941681058184882,
+            "mae_c": 5.928442285954953,
+            "psnr_y_db": 17.975672270402065,
+            "ssim_y": 0.5110035425052046
+          }
+        },
+        {
+          "step": 400,
+          "split": "training_only_development80",
+          "final_test_images_evaluated": 0,
+          "raw": {
+            "count": 80,
+            "rmse_c": 0.666944366768229,
+            "mae_c": 0.4651996411383152,
+            "psnr_y_db": 39.195446722882984,
+            "ssim_y": 0.9526568926870823
+          },
+          "ema": {
+            "count": 80,
+            "rmse_c": 5.735974971354768,
+            "mae_c": 4.791568368673325,
+            "psnr_y_db": 19.727932541341904,
+            "ssim_y": 0.5588889744132757
+          }
+        },
+        {
+          "step": 600,
+          "split": "training_only_development80",
+          "final_test_images_evaluated": 0,
+          "raw": {
+            "count": 80,
+            "rmse_c": 1.245461029895741,
+            "mae_c": 1.1158667281270027,
+            "psnr_y_db": 32.45247978470326,
+            "ssim_y": 0.9753482855856419
+          },
+          "ema": {
+            "count": 80,
+            "rmse_c": 4.991268732478574,
+            "mae_c": 4.141144341230392,
+            "psnr_y_db": 21.075714346221893,
+            "ssim_y": 0.6622521091252566
+          }
+        },
+        {
+          "step": 800,
+          "split": "training_only_development80",
+          "final_test_images_evaluated": 0,
+          "raw": {
+            "count": 80,
+            "rmse_c": 0.5885757983471168,
+            "mae_c": 0.49890502728521824,
+            "psnr_y_db": 38.50897279066191,
+            "ssim_y": 0.9742950104176998
+          },
+          "ema": {
+            "count": 80,
+            "rmse_c": 4.468721234289032,
+            "mae_c": 3.702611307054758,
+            "psnr_y_db": 22.158935030047065,
+            "ssim_y": 0.7576308902353048
+          }
+        },
+        {
+          "step": 1000,
+          "split": "training_only_development80",
+          "final_test_images_evaluated": 0,
+          "raw": {
+            "count": 80,
+            "rmse_c": 0.8802605625698154,
+            "mae_c": 0.8295595973730088,
+            "psnr_y_db": 35.06253666750136,
+            "ssim_y": 0.98461037799716
+          },
+          "ema": {
+            "count": 80,
+            "rmse_c": 4.094184724824822,
+            "mae_c": 3.3987606681883333,
+            "psnr_y_db": 22.987992523264978,
+            "ssim_y": 0.8259096961468458
+          }
+        }
+      ],
+      "training": [
+        {
+          "step": "100",
+          "lr": "0.0002",
+          "mean_l1_last_window": "0.05976073927246034",
+          "elapsed_seconds": "75.1157589033246"
+        },
+        {
+          "step": "200",
+          "lr": "0.0002",
+          "mean_l1_last_window": "0.03451034092344343",
+          "elapsed_seconds": "149.32166310213506"
+        },
+        {
+          "step": "300",
+          "lr": "0.0002",
+          "mean_l1_last_window": "0.01942803683457896",
+          "elapsed_seconds": "233.41144123114645"
+        },
+        {
+          "step": "400",
+          "lr": "0.0002",
+          "mean_l1_last_window": "0.01915648811380379",
+          "elapsed_seconds": "312.28614970855415"
+        },
+        {
+          "step": "500",
+          "lr": "0.0002",
+          "mean_l1_last_window": "0.018950654733926056",
+          "elapsed_seconds": "396.22411918640137"
+        },
+        {
+          "step": "600",
+          "lr": "0.0002",
+          "mean_l1_last_window": "0.01634729886893183",
+          "elapsed_seconds": "475.24399463646114"
+        },
+        {
+          "step": "700",
+          "lr": "0.0002",
+          "mean_l1_last_window": "0.01337591232964769",
+          "elapsed_seconds": "559.8538936562836"
+        },
+        {
+          "step": "800",
+          "lr": "0.0002",
+          "mean_l1_last_window": "0.013672763032373041",
+          "elapsed_seconds": "639.4052245095372"
+        },
+        {
+          "step": "900",
+          "lr": "0.0002",
+          "mean_l1_last_window": "0.012781762521481142",
+          "elapsed_seconds": "723.9405749570578"
+        },
+        {
+          "step": "1000",
+          "lr": "0.0002",
+          "mean_l1_last_window": "0.01136418933980167",
+          "elapsed_seconds": "802.821192080155"
+        }
+      ],
+      "local_checkpoint": "ARCHIVE_ROOT/下一阶段/强模型选型_20261109/cloud_recovered/pilot/results/PFT_OISST_x4_s10/checkpoints/pilot_final.pt",
+      "best_recorded_raw_psnr": {
+        "step": 400,
+        "split": "training_only_development80",
+        "final_test_images_evaluated": 0,
+        "raw": {
+          "count": 80,
+          "rmse_c": 0.666944366768229,
+          "mae_c": 0.4651996411383152,
+          "psnr_y_db": 39.195446722882984,
+          "ssim_y": 0.9526568926870823
+        },
+        "ema": {
+          "count": 80,
+          "rmse_c": 5.735974971354768,
+          "mae_c": 4.791568368673325,
+          "psnr_y_db": 19.727932541341904,
+          "ssim_y": 0.5588889744132757
+        }
+      },
+      "minimum_recorded_raw_rmse": {
+        "step": 800,
+        "split": "training_only_development80",
+        "final_test_images_evaluated": 0,
+        "raw": {
+          "count": 80,
+          "rmse_c": 0.5885757983471168,
+          "mae_c": 0.49890502728521824,
+          "psnr_y_db": 38.50897279066191,
+          "ssim_y": 0.9742950104176998
+        },
+        "ema": {
+          "count": 80,
+          "rmse_c": 4.468721234289032,
+          "mae_c": 3.702611307054758,
+          "psnr_y_db": 22.158935030047065,
+          "ssim_y": 0.7576308902353048
+        }
+      }
+    },
+    "WMSR": {
+      "result": {
+        "status": "complete",
+        "model": "WMSR",
+        "updates": 1000,
+        "elapsed_seconds": 325.2102924901992,
+        "last_validation": {
+          "step": 1000,
+          "split": "training_only_development80",
+          "final_test_images_evaluated": 0,
+          "raw": {
+            "count": 80,
+            "rmse_c": 0.14024658100195575,
+            "mae_c": 0.09472241988405586,
+            "psnr_y_db": 51.928443984229226,
+            "ssim_y": 0.9941033028066159
+          },
+          "ema": {
+            "count": 80,
+            "rmse_c": 3.683726047231533,
+            "mae_c": 3.2445333525538445,
+            "psnr_y_db": 23.69767540818143,
+            "ssim_y": 0.8653643220663071
+          }
+        },
+        "checkpoint_sha256": "0188d7c899f9d7d00dd1ed6d265b915b54a75a0f5bce1f7234a364133a73c88b",
+        "completed_at": "2026-11-09T12:31:28.642896+00:00",
+        "boundary": "1000-update development pilot only. No final200 test evaluation, no convergence or superiority claim."
+      },
+      "history": [
+        {
+          "step": 200,
+          "split": "training_only_development80",
+          "final_test_images_evaluated": 0,
+          "raw": {
+            "count": 80,
+            "rmse_c": 0.28201048178830496,
+            "mae_c": 0.19332365365698934,
+            "psnr_y_db": 46.097871362017926,
+            "ssim_y": 0.9854413829743862
+          },
+          "ema": {
+            "count": 80,
+            "rmse_c": 7.709758226992483,
+            "mae_c": 6.791716498136521,
+            "psnr_y_db": 17.358531973606304,
+            "ssim_y": 0.6164553059265018
+          }
+        },
+        {
+          "step": 400,
+          "split": "training_only_development80",
+          "final_test_images_evaluated": 0,
+          "raw": {
+            "count": 80,
+            "rmse_c": 0.19323521233098798,
+            "mae_c": 0.13107679169625044,
+            "psnr_y_db": 49.16928207335486,
+            "ssim_y": 0.9906443893909455
+          },
+          "ema": {
+            "count": 80,
+            "rmse_c": 6.362260250659494,
+            "mae_c": 5.601286455988884,
+            "psnr_y_db": 19.013019841753128,
+            "ssim_y": 0.6917639128863812
+          }
+        },
+        {
+          "step": 600,
+          "split": "training_only_development80",
+          "final_test_images_evaluated": 0,
+          "raw": {
+            "count": 80,
+            "rmse_c": 0.1714974302894999,
+            "mae_c": 0.11978692328557372,
+            "psnr_y_db": 50.13298003038865,
+            "ssim_y": 0.992764699459076
+          },
+          "ema": {
+            "count": 80,
+            "rmse_c": 5.279829515351772,
+            "mae_c": 4.646924449503421,
+            "psnr_y_db": 20.61172246003168,
+            "ssim_y": 0.7604147225618363
+          }
+        },
+        {
+          "step": 800,
+          "split": "training_only_development80",
+          "final_test_images_evaluated": 0,
+          "raw": {
+            "count": 80,
+            "rmse_c": 0.14300709513562404,
+            "mae_c": 0.09243871080689132,
+            "psnr_y_db": 52.1806949528419,
+            "ssim_y": 0.9943020910024643
+          },
+          "ema": {
+            "count": 80,
+            "rmse_c": 4.4052943796392805,
+            "mae_c": 3.877845986187458,
+            "psnr_y_db": 22.162948450340174,
+            "ssim_y": 0.8186111722141505
+          }
+        },
+        {
+          "step": 1000,
+          "split": "training_only_development80",
+          "final_test_images_evaluated": 0,
+          "raw": {
+            "count": 80,
+            "rmse_c": 0.14024658100195575,
+            "mae_c": 0.09472241988405586,
+            "psnr_y_db": 51.928443984229226,
+            "ssim_y": 0.9941033028066159
+          },
+          "ema": {
+            "count": 80,
+            "rmse_c": 3.683726047231533,
+            "mae_c": 3.2445333525538445,
+            "psnr_y_db": 23.69767540818143,
+            "ssim_y": 0.8653643220663071
+          }
+        }
+      ],
+      "training": [
+        {
+          "step": "100",
+          "lr": "0.0002",
+          "mean_l1_last_window": "0.09351442876737565",
+          "elapsed_seconds": "32.80632175318897"
+        },
+        {
+          "step": "200",
+          "lr": "0.0002",
+          "mean_l1_last_window": "0.0195247575128451",
+          "elapsed_seconds": "64.82429321296513"
+        },
+        {
+          "step": "300",
+          "lr": "0.0002",
+          "mean_l1_last_window": "0.01320294888690114",
+          "elapsed_seconds": "97.75362860970199"
+        },
+        {
+          "step": "400",
+          "lr": "0.0002",
+          "mean_l1_last_window": "0.00872789808548987",
+          "elapsed_seconds": "130.15436615236104"
+        },
+        {
+          "step": "500",
+          "lr": "0.0002",
+          "mean_l1_last_window": "0.005545589088578709",
+          "elapsed_seconds": "162.96201277896762"
+        },
+        {
+          "step": "600",
+          "lr": "0.0002",
+          "mean_l1_last_window": "0.003990429855766706",
+          "elapsed_seconds": "194.7256068997085"
+        },
+        {
+          "step": "700",
+          "lr": "0.0002",
+          "mean_l1_last_window": "0.0033600567700341343",
+          "elapsed_seconds": "227.55609423294663"
+        },
+        {
+          "step": "800",
+          "lr": "0.0002",
+          "mean_l1_last_window": "0.0032178147311788053",
+          "elapsed_seconds": "259.38739915564656"
+        },
+        {
+          "step": "900",
+          "lr": "0.0002",
+          "mean_l1_last_window": "0.003141237117233686",
+          "elapsed_seconds": "292.2082931138575"
+        },
+        {
+          "step": "1000",
+          "lr": "0.0002",
+          "mean_l1_last_window": "0.0028402629247284493",
+          "elapsed_seconds": "324.08918524719775"
+        }
+      ],
+      "local_checkpoint": "ARCHIVE_ROOT/下一阶段/强模型选型_20261109/cloud_recovered/pilot/results/WMSR_OISST_x4_s10/checkpoints/pilot_final.pt",
+      "best_recorded_raw_psnr": {
+        "step": 800,
+        "split": "training_only_development80",
+        "final_test_images_evaluated": 0,
+        "raw": {
+          "count": 80,
+          "rmse_c": 0.14300709513562404,
+          "mae_c": 0.09243871080689132,
+          "psnr_y_db": 52.1806949528419,
+          "ssim_y": 0.9943020910024643
+        },
+        "ema": {
+          "count": 80,
+          "rmse_c": 4.4052943796392805,
+          "mae_c": 3.877845986187458,
+          "psnr_y_db": 22.162948450340174,
+          "ssim_y": 0.8186111722141505
+        }
+      },
+      "minimum_recorded_raw_rmse": {
+        "step": 1000,
+        "split": "training_only_development80",
+        "final_test_images_evaluated": 0,
+        "raw": {
+          "count": 80,
+          "rmse_c": 0.14024658100195575,
+          "mae_c": 0.09472241988405586,
+          "psnr_y_db": 51.928443984229226,
+          "ssim_y": 0.9941033028066159
+        },
+        "ema": {
+          "count": 80,
+          "rmse_c": 3.683726047231533,
+          "mae_c": 3.2445333525538445,
+          "psnr_y_db": 23.69767540818143,
+          "ssim_y": 0.8653643220663071
+        }
+      }
+    }
+  },
+  "formal18job_training_hours": {
+    "10000updates": 29.559364713107545,
+    "20000updates": 59.11872942621509
+  },
+  "user_preference": "先看预实验结果，再决定长训练预算",
+  "recommendation": "Do not automatically expand to18jobs. Review PFT validation instability and EMA lag before choosing a bounded follow-up or another model."
+}

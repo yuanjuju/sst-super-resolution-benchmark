@@ -1,0 +1,50 @@
+{
+  "at": "2026-11-09T12:50:56.971353+00:00",
+  "status": "fail",
+  "test200_evaluated": 0,
+  "pilot_training_started": false,
+  "equal_control_fields": [
+    "dataset",
+    "scale",
+    "seed",
+    "updates",
+    "development_manifest_sha256",
+    "batch_size",
+    "micro_batch",
+    "accumulation_steps",
+    "optimizer",
+    "loss",
+    "warmup_updates",
+    "scheduler",
+    "ema_decay",
+    "validation_every",
+    "augmentations",
+    "precision",
+    "initialization"
+  ],
+  "accumulation_equivalence": {
+    "status": "pass",
+    "scale": 4,
+    "direct_batch": 8,
+    "micro_batch": 2,
+    "loss_abs_difference": 2.9802322387695312e-08,
+    "max_output_abs_difference": 2.0265579223632812e-06,
+    "max_parameter_gradient_abs_difference": 7.450580596923828e-08
+  },
+  "profile": {
+    "scale": 4,
+    "measured_seconds_per_update": [
+      3.2060320284217596,
+      3.0872036330401897,
+      3.0519570484757423,
+      3.129004267975688,
+      3.1931997295469046
+    ],
+    "median_seconds_per_update": 3.129004267975688,
+    "peak_allocated_mib_with_optimizer_and_ema": 453.44873046875,
+    "discarded_optimizer_updates": 8,
+    "boundary": "3warmup +5timed updates on8 training images; states discarded, no candidate predictive score"
+  },
+  "error": "Traceback (most recent call last):\n  File \"/root/wmsr-repro/strong_models/candidate_screen_20261109/cloud_profile_and_reference.py\", line 70, in main\n    raw,_=create_model({'model':'WMSR','scale':4,'channels':64})\n  File \"/root/wmsr-repro/extended_models/factory.py\", line 51, in create_model\n    from models.wmsr_network import create_model as upstream_create\n  File \"/root/wmsr-repro/upstream/models/wmsr_network.py\", line 9, in <module>\n    from models.wmsr_block import WAM, MeanShift\n  File \"/root/wmsr-repro/upstream/models/wmsr_block.py\", line 13, in <module>\n    from mamba_ssm.ops.selective_scan_interface import selective_scan_fn, selective_scan_ref\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/mamba_ssm/__init__.py\", line 3, in <module>\n    from mamba_ssm.ops.selective_scan_interface import selective_scan_fn, mamba_inner_fn\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/mamba_ssm/ops/selective_scan_interface.py\", line 18, in <module>\n    from mamba_ssm.ops.triton.layer_norm import _layer_norm_fwd\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/mamba_ssm/ops/triton/layer_norm.py\", line 179, in <module>\n    def _layer_norm_fwd_1pass_kernel(\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/triton/runtime/autotuner.py\", line 378, in decorator\n    return Autotuner(fn, fn.arg_names, configs, key, reset_to_zero, restore_value, pre_hook=pre_hook,\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/triton/runtime/autotuner.py\", line 130, in __init__\n    self.do_bench = driver.active.get_benchmarker()\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/triton/runtime/driver.py\", line 23, in __getattr__\n    self._initialize_obj()\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/triton/runtime/driver.py\", line 20, in _initialize_obj\n    self._obj = self._init_fn()\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/triton/runtime/driver.py\", line 9, in _create_driver\n    return actives[0]()\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/triton/backends/nvidia/driver.py\", line 535, in __init__\n    self.utils = CudaUtils()  # TODO: make static\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/triton/backends/nvidia/driver.py\", line 89, in __init__\n    mod = compile_module_from_src(Path(os.path.join(dirname, \"driver.c\")).read_text(), \"cuda_utils\")\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/triton/backends/nvidia/driver.py\", line 66, in compile_module_from_src\n    so = _build(name, src_path, tmpdir, library_dirs(), include_dir, libraries)\n  File \"/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/triton/runtime/build.py\", line 36, in _build\n    subprocess.check_call(cc_cmd, stdout=subprocess.DEVNULL)\n  File \"/usr/lib/python3.10/subprocess.py\", line 369, in check_call\n    raise CalledProcessError(retcode, cmd)\nsubprocess.CalledProcessError: Command '['/usr/bin/gcc', '/tmp/tmpa_ic05y1/main.c', '-O3', '-shared', '-fPIC', '-Wno-psabi', '-o', '/tmp/tmpa_ic05y1/cuda_utils.cpython-310-x86_64-linux-gnu.so', '-lcuda', '-L/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/triton/backends/nvidia/lib', '-L/lib/x86_64-linux-gnu', '-I/root/wmsr-repro/.venv5090/lib/python3.10/site-packages/triton/backends/nvidia/include', '-I/tmp/tmpa_ic05y1', '-I/usr/include/python3.10']' returned non-zero exit status 1.\n",
+  "finished_at": "2026-11-09T12:51:39.716189+00:00"
+}

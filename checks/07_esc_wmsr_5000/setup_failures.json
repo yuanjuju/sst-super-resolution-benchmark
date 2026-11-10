@@ -1,0 +1,6 @@
+{
+  "at": "2026-11-10T06:07:38.370891+00:00",
+  "phase": "pre-training initialization",
+  "error": "Archive transfer omitted empty directories; resume_inputs did not exist for first copy.",
+  "fix": "Initializer creates required stage-owned directories before copying. No training, optimizer update or source-file modification occurred."
+}

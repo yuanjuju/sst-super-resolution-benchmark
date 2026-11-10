@@ -1,0 +1,268 @@
+{
+  "at": "2026-11-09T12:02:21.082207+00:00",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "torch": "2.7.1+cu128",
+  "test_images_evaluated": 0,
+  "training_started": false,
+  "upstream": [
+    [
+      {
+        "operator": "QmK",
+        "case": "topk_unique",
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 9.5367431640625e-07,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 0.0,
+            "pass": true
+          }
+        ]
+      },
+      {
+        "operator": "AmV",
+        "case": "topk_unique",
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 9.5367431640625e-07,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 4.160835266113281,
+            "pass": false
+          }
+        ]
+      },
+      {
+        "operator": "QmK",
+        "case": "with_duplicates",
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 9.5367431640625e-07,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 7.662604808807373,
+            "pass": false
+          }
+        ]
+      },
+      {
+        "operator": "AmV",
+        "case": "with_duplicates",
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 1.9073486328125e-06,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 7.812532901763916,
+            "pass": false
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "operator": "QmK",
+        "case": "topk_unique",
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 9.5367431640625e-07,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 0.0,
+            "pass": true
+          }
+        ]
+      },
+      {
+        "operator": "AmV",
+        "case": "topk_unique",
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 9.5367431640625e-07,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 3.2712860107421875,
+            "pass": false
+          }
+        ]
+      },
+      {
+        "operator": "QmK",
+        "case": "with_duplicates",
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 9.5367431640625e-07,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 7.662604808807373,
+            "pass": false
+          }
+        ]
+      },
+      {
+        "operator": "AmV",
+        "case": "with_duplicates",
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 1.9073486328125e-06,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 7.812532901763916,
+            "pass": false
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "operator": "QmK",
+        "case": "topk_unique",
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 9.5367431640625e-07,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 0.0,
+            "pass": true
+          }
+        ]
+      },
+      {
+        "operator": "AmV",
+        "case": "topk_unique",
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 9.5367431640625e-07,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 3.2712860107421875,
+            "pass": false
+          }
+        ]
+      },
+      {
+        "operator": "QmK",
+        "case": "with_duplicates",
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 9.5367431640625e-07,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 7.662604808807373,
+            "pass": false
+          }
+        ]
+      },
+      {
+        "operator": "AmV",
+        "case": "with_duplicates",
+        "checks": [
+          {
+            "quantity": "forward",
+            "max_abs_difference": 1.9073486328125e-06,
+            "pass": true
+          },
+          {
+            "quantity": "grad_A",
+            "max_abs_difference": 0.0,
+            "pass": true
+          },
+          {
+            "quantity": "grad_B",
+            "max_abs_difference": 7.812532901763916,
+            "pass": false
+          }
+        ]
+      }
+    ]
+  ],
+  "upstream_all_pass": false
+}

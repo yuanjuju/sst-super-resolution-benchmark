@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "count": 200,
+  "saved_psnr_y_db": 54.07267311318728,
+  "current_psnr_y_db": 54.072678533798616,
+  "difference_db": 5.4206113375698806e-06,
+  "checkpoint_sha256": "b78490652ac05416f4c3d68bdd0ef42ead5ae5b156c91a59703103ac453bf5ef",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "torch": "2.7.1+cu128"
+}

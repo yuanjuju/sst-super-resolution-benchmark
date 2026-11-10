@@ -1,0 +1,38 @@
+{
+  "verified_at": "2026-11-09T05:39:32.997899+00:00",
+  "status": "pass",
+  "data": {
+    "OISST": {
+      "count": 1000,
+      "train": 800,
+      "test": 200,
+      "manifest_and_npz_sha256_match": true
+    },
+    "HYCOM": {
+      "count": 1000,
+      "train": 800,
+      "test": 200,
+      "manifest_and_npz_sha256_match": true
+    },
+    "GHRSST": {
+      "count": 1000,
+      "train": 800,
+      "test": 200,
+      "manifest_and_npz_sha256_match": true
+    }
+  },
+  "trainer_and_factory_unchanged": true,
+  "reference_config_hashes_match": true,
+  "checkpoint_sha256": "b05d53d0b2e08e7043bef60e1f36bbbb4300a7fa6c005aa4f792fd6117c9f3cb",
+  "resume_epoch": 9,
+  "saved_epoch": 8,
+  "saved_step": 800,
+  "optimizer_scheduler_all_rng_present": true,
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "torch": "2.7.1+cu128",
+  "cuda": "12.8",
+  "source_commit": "33d7b3460c4665229334cc8de38c7f4c766ed3be",
+  "user_authorized_resume": "2026-11-09",
+  "new_training_jobs": 0,
+  "remaining_existing_jobs": 2
+}
